@@ -1,11 +1,78 @@
-.img-content{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-}
+.login-register-container{
+    .img-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.img-content img{
-    width: 40%;
-    height: auto;
+        img {
+            width: 40%;
+            height: auto;
+        }
+    }
+
+    .form-login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+
+        .login-input-area{
+            width: 115%;
+        }
+
+        button{
+            width: 115%;
+            padding: 10%;
+            color: white;
+            background-color: #336666;
+            border: solid 1px #122525;
+
+            :hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .link-recupera-senha{
+        a{
+            font-size: 4vw;
+            color: black;
+        }
+    }
+
+    .sign-up {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding: 3%;
+
+        button {
+            border: 1px solid black;
+            border-radius: 2vw;
+            background: black;
+            color: white;
+            width: 70%;
+            padding: 5%;
+            cursor: pointer;
+        }
+
+        span {
+            margin-top: 5%;
+            text-align: center;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    label{
+        padding-top: 5%;
+    }
 }

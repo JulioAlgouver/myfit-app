@@ -7,15 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
 // Exemplo de rota para testar
 app.get('/', (req, res) => {
     res.send('API rodando com SQLite!');
 });
 
-
-//CADASTRO DE USUARIO
-app.post('/usuarios',async(request, response)=>{
+// CADASTRO DE USUARIO
+app.post('/usuarios', async (request, response) => {
     const {
         nome,
         email,
@@ -26,7 +24,8 @@ app.post('/usuarios',async(request, response)=>{
         sexo
     } = request.body;
 
-    const senhaCriptografada = await bcrypt.hash(senha,10);
+    // Criptografando a senha
+    const senhaCriptografada = await bcrypt.hash(senha, 10);
 
     const sql = `
         INSERT INTO USUARIOS
@@ -35,53 +34,62 @@ app.post('/usuarios',async(request, response)=>{
             (?,?,?,?,?,?,?)
     `;
 
-    db.query(
+    db.run(  // Usando db.run em vez de db.query, porque é para inserir dados
         sql,
-            [nome, email, senha, cpf, telefone, dataNascimento,sexo, senhaCriptografada],
-            (err,result)=>{
-                if (err){
-                    return response.status(500).json(err);
-                }
-                response.status(201).json({
-                    message:'Usuário cadastrado com sucesso!'
-                });
+        [nome, email, senhaCriptografada, cpf, telefone, dataNascimento, sexo],
+        (err) => {
+            if (err) {
+                return response.status(500).json({ error: 'Erro ao cadastrar o usuário', details: err });
             }
-    );
-});
-
-//LOGIN DO USUARIO
-
-app.post('/login',(request, response)=>{
-    const {
-        cpf,
-        senha
-    } = request.body;
-
-    db.query(
-        `SELECT * FROM USUARIOS WHERE cpf = ?`, [cpf],
-        async (err, results)=>{
-            if(err || results.length === 0){
-                return response.status(401).json({
-                    message:'Usuário não encontrado!'
-                });
-            }
-
-            const usuario = results[0];
-            const senhaValida = await bcrypt.compare(senha, usuario.senha);
-
-            if(!senhaValida){
-                return results.status(401).json({
-                    message: 'Senha invalida'
-                });
-            }
-
-            response.json({
-                message: 'Login realizado com sucesso!'
+            response.status(201).json({
+                message: 'Usuário cadastrado com sucesso!'
             });
         }
     );
 });
 
-app. listen(3000, ()=>{
-    console.log('API rodando em http://localhost:3000')
+// LOGIN DO USUARIO
+app.post('/login', (request, response) => {
+    const { cpf, senha } = request.body;
+
+    db.get( // Usando db.get porque só esperamos um único usuário
+        `SELECT * FROM USUARIOS WHERE cpf = ?`, [cpf],
+        async (err, usuario) => {
+            if (err || !usuario) {
+                return response.status(401).json({
+                    message: 'Usuário não encontrado!'
+                });
+            }
+
+            // Comparando a senha informada com a criptografada no banco
+            const senhaValida = await bcrypt.compare(senha, usuario.senha);
+
+            if (!senhaValida) {
+                return response.status(401).json({
+                    message: 'Senha inválida'
+                });
+            }
+
+            response.json({
+                message: 'Login realizado com sucesso!',
+                user: usuario  // Retornando dados do usuário logado (opcional)
+            });
+        }
+    );
+});
+
+// Rota para listar todos os usuários
+app.get('/usuarios', (req, res) => {
+    db.all('SELECT id, nome, email, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios', [], (err, rows) => {
+        if (err) {
+            return res.status(500).json({ error: 'Erro ao buscar usuários', details: err });
+        }
+        res.json(rows);
+    });
+});
+
+
+// Rodar o servidor
+app.listen(3000, () => {
+    console.log('API rodando em http://localhost:3000');
 });

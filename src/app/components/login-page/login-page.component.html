@@ -4,7 +4,7 @@
     </div>
     <br/>
     <div class="form-login">
-        <mat-form-field>
+        <mat-form-field class="login-input-area">
             <mat-label>Login</mat-label>
             <input
                 type="text"
@@ -13,7 +13,7 @@
             />
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field class="login-input-area">
             <mat-label>Senha</mat-label>
             <input
                 type="password"
@@ -30,9 +30,17 @@
         </button>
     </div>
 
+    <div class="link-recupera-senha">
+        <a routerLink="/recupera-senha">Esqueceu sua senha?</a>
+    </div>    
 
-
-    <div>
-        <a routerLink="/sign-in">Register</a>
+    <div class="sign-up">
+        <span>Não possui conta ainda?</span>
+        <br/>
+        <button class="sign-up button">
+            <a routerLink="/sign-in"><b>Cadastre-se</b></a>
+        </button>
     </div>
+
+    <label>Versão 1.0</label>
 </div>
