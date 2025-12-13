@@ -6,6 +6,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ComponentsModule } from './components/components.module';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
     ComponentsModule,
     AngularMaterialModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration(),
