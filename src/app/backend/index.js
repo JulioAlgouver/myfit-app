@@ -1,11 +1,18 @@
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
-const db = require('../backend/database');
+const db = require('../backend/db.js');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+
+// Exemplo de rota para testar
+app.get('/', (req, res) => {
+    res.send('API rodando com SQLite!');
+});
+
 
 //CADASTRO DE USUARIO
 app.post('/usuarios',async(request, response)=>{

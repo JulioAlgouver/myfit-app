@@ -1,9 +1,11 @@
+import { Sexo } from "../enum/sexo.enum";
+
 export interface IUser{
     nome: string;
     email: string;
     senha: string;
-    cpf: number;
-    sexo: number;
+    cpf: string;
+    sexo: Sexo;
     telefone: string;
-    data_nascimento: Date;
+    dataNascimento: Date;
 }
