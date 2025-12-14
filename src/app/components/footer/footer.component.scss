@@ -2,4 +2,33 @@
     width: 100vw;
     height: 10vh;
     background-color: #122525;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;    
+
+    .footer-links{
+        display: inline-block;
+        width: 20vw;
+        height: 10vh;
+
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+
+            text-decoration: none;
+            color: whitesmoke;
+
+            padding: 3vw;
+
+            img{
+                width: 8vw;
+            }
+        }
+    }
 }
