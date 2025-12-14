@@ -24,6 +24,7 @@ export class SignUpPageComponent {
         dataNascimento: ['', Validators.required],
         senha:['', Validators.required],
         sexo:[null, Validators.required],
+        termAccepted:[false, Validators.requiredTrue],
       })
     }
 
@@ -32,4 +33,7 @@ export class SignUpPageComponent {
     this.router.navigate(['/'])
   }
 
+  signUpUser() {
+
+  }
 }

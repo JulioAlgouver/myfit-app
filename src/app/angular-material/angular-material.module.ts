@@ -5,8 +5,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
-
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -16,6 +15,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
         MatButtonModule,
         MatRadioModule,
         MatDatepickerModule,
+        MatCheckboxModule,        
     ],
     providers:[
         provideNativeDateAdapter(),
@@ -29,6 +29,7 @@ import {provideNativeDateAdapter} from '@angular/material/core';
         MatButtonModule,
         MatRadioModule,
         MatDatepickerModule,
+        MatCheckboxModule,
     ]
 })
 export class AngularMaterialModule{
