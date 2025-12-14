@@ -10,6 +10,8 @@ import { UserService } from '../../services/user.service';
 })
 export class SignUpPageComponent {
   signUpForm!: FormGroup;
+  erro: string = '';
+
 
     constructor(
       private fb: FormBuilder,
@@ -34,6 +36,29 @@ export class SignUpPageComponent {
   }
 
   signUpUser() {
+    if(this.signUpForm.invalid){
+      return
+    }
 
+    const {
+        nome,
+        email,
+        senha,
+        cpf,
+        sexo,
+        telefone,
+        dataNascimento      
+    } = this.signUpForm.value;
+
+    this.userService.cadastrarUsuario(nome,email,senha,cpf,sexo,telefone,dataNascimento).subscribe({
+      next: (response) =>{
+        console.log('Cadastro realizado', response);
+        this.router.navigate(['/']);
+      },
+      error: (err)=>{
+        console.log('Erro ao cadastrar usuário', err);
+        this.erro = err.error?.message || 'Erro ao cadastrar usuário'
+      }
+    })
   }
 }
