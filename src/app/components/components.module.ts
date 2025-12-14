@@ -6,6 +6,8 @@ import { AngularMaterialModule } from "../angular-material/angular-material.modu
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HomePageComponent } from './home-page/home-page.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -19,10 +21,14 @@ import { HomePageComponent } from './home-page/home-page.component';
         LoginPageComponent,
         SignUpPageComponent,
         HomePageComponent,
+        HeaderComponent,
+        FooterComponent,
   ],
     exports:[
         LoginPageComponent,
-        SignUpPageComponent
+        SignUpPageComponent,
+        HeaderComponent,
+        FooterComponent,
     ],
 })
 export class ComponentsModule{

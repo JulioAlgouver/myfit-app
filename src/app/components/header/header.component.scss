@@ -1,0 +1,42 @@
+.header-container{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+
+    background-color: #3366637d;
+
+    .logo{
+        width: 22vw;
+        height: 10vh;
+        padding: 3vw;
+        img{
+            width: 15vw;
+            height: 7vh;
+        }        
+    }
+
+    .top-menu-content{
+        position: relative;
+        display: flex;
+        justify-content: right;
+        align-content: center;
+        align-items: center;
+        padding-left: 15vw;
+
+        span{
+            margin-right: 3vw;
+        }
+
+        button{
+            width: 20vw;
+            height: 10vh;
+            border: none;
+            background: none;
+            justify-content: right;
+
+            img{
+                width: 13vw;
+            }
+        }
+    }
+}
