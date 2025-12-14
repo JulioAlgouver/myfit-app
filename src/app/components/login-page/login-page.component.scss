@@ -1,4 +1,5 @@
-.login-register-container{
+.login-register-container {
+
     .img-content {
         width: 100%;
         display: flex;
@@ -7,37 +8,39 @@
 
         img {
             width: 40%;
+            max-width: 200px;
             height: auto;
         }
     }
 
-    .form-login{
+    .form-login {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 5%;
+        margin-bottom: 2rem;
 
-        .login-input-area{
+        .login-input-area {
             width: 115%;
+            max-width: 400px;
         }
 
-        button{
-            width: 115%;
-            padding: 10%;
+        button {
+            width: 90%;
+            max-width: 400px;
             color: white;
             background-color: #336666;
             border: solid 1px #122525;
 
-            :hover{
+            &:hover {
                 cursor: pointer;
             }
         }
     }
 
-    .link-recupera-senha{
-        a{
-            font-size: 4vw;
+    .link-recupera-senha {
+        a {
+            font-size: clamp(14px, 4vw, 18px);
             color: black;
         }
     }
@@ -47,21 +50,22 @@
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
-        padding: 3%;
+        width: 95%;
+        max-width: 400px;
+        padding: 1rem;
 
         button {
             border: 1px solid black;
-            border-radius: 2vw;
+            border-radius: 12px;
             background: black;
             color: white;
-            width: 70%;
-            padding: 5%;
+            width: 60%;
+            padding: 10px;
             cursor: pointer;
         }
 
         span {
-            margin-top: 5%;
+            margin-top: 1rem;
             text-align: center;
             width: 100%;
         }
@@ -72,7 +76,7 @@
         }
     }
 
-    label{
-        padding-top: 5%;
+    label {
+        padding-top: 0.5rem;
     }
 }

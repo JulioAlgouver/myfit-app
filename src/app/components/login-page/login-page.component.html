@@ -1,46 +1,50 @@
 <div class="login-register-container">
-    <div class="img-content">
-        <img src="../../../assets/logo_login_screen - Copia.png"/>
-    </div>
+  <div class="img-content">
+    <img src="../../../assets/logo_login_screen - Copia.png"/>
+  </div>
+  <br/>
+  <form class="form-login" [formGroup]="loginForm" (ngSubmit)="authUser()">
+    <mat-form-field class="login-input-area">
+      <mat-label>CPF</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="cpf"
+        maxlength="11"
+        required
+      />
+      <mat-error *ngIf="loginForm.get('cpf')?.hasError('required')">CPF obrigatório</mat-error>
+      <mat-error *ngIf="loginForm.get('cpf')?.hasError('minlength')">CPF inválido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="login-input-area">
+      <mat-label>Senha</mat-label>
+      <input
+        type="password"
+        matInput
+        formControlName="senha"
+        maxlength="20"
+        required
+      />
+      <mat-error *ngIf="loginForm.get('senha')?.hasError('required')">Senha obrigatória</mat-error>
+    </mat-form-field>
+
+    <div class="error-message" *ngIf="erro">{{ erro }}</div>
+
+    <button type="submit" mat-button color="primary">Entrar</button>
+  </form>
+
+  <div class="link-recupera-senha">
+    <a routerLink="/recupera-senha">Esqueceu sua senha?</a>
+  </div>
+
+  <div class="sign-up">
+    <span>Não possui conta ainda?</span>
     <br/>
-    <div class="form-login">
-        <mat-form-field class="login-input-area">
-            <mat-label>Login</mat-label>
-            <input
-                type="text"
-                matInput
-                required
-            />
-        </mat-form-field>
+    <button class="sign-up button">
+      <a routerLink="/sign-up"><b>Cadastre-se</b></a>
+    </button>
+  </div>
 
-        <mat-form-field class="login-input-area">
-            <mat-label>Senha</mat-label>
-            <input
-                type="password"
-                matInput
-                required
-            />
-        </mat-form-field>
-        
-        <button 
-            type="submit"
-            mat-button 
-            color="primary">
-                Entrar
-        </button>
-    </div>
-
-    <div class="link-recupera-senha">
-        <a routerLink="/recupera-senha">Esqueceu sua senha?</a>
-    </div>    
-
-    <div class="sign-up">
-        <span>Não possui conta ainda?</span>
-        <br/>
-        <button class="sign-up button">
-            <a routerLink="/sign-in"><b>Cadastre-se</b></a>
-        </button>
-    </div>
-
-    <label>Versão 1.0</label>
+  <label>Versão 1.0</label>
 </div>

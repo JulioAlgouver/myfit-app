@@ -1,21 +1,28 @@
 import { NgModule } from "@angular/core";
 import { LoginPageComponent } from './login-page/login-page.component';
-import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
+import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { AppRoutingModule } from "../app-routing.module";
 import { AngularMaterialModule } from "../angular-material/angular-material.module";
+import { CommonModule } from "@angular/common";
+import { ReactiveFormsModule } from "@angular/forms";
+import { HomePageComponent } from './home-page/home-page.component';
+
 
 @NgModule({
     imports: [
     AppRoutingModule,
-    AngularMaterialModule
+    CommonModule,
+    ReactiveFormsModule,
+    AngularMaterialModule,
 ],
     declarations:[
         LoginPageComponent,
-        SignInPageComponent,
+        SignUpPageComponent,
+        HomePageComponent,
   ],
     exports:[
         LoginPageComponent,
-        SignInPageComponent
+        SignUpPageComponent
     ],
 })
 export class ComponentsModule{

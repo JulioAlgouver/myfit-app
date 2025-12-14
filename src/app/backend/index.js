@@ -80,7 +80,7 @@ app.post('/login', (request, response) => {
 
 // Rota para listar todos os usuários
 app.get('/usuarios', (req, res) => {
-    db.all('SELECT id, nome, email, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios', [], (err, rows) => {
+    db.all('SELECT id, nome, email, senha, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios', [], (err, rows) => {
         if (err) {
             return res.status(500).json({ error: 'Erro ao buscar usuários', details: err });
         }

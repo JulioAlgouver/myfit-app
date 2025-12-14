@@ -1,22 +1,17 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { IUser } from "../interface/user.interface";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
-    providedIn:'root'
+  providedIn: 'root'
 })
-export class UserService{
-    private _apiUrl = 'http:localhost:3000';
+export class UserService {
+  private apiUrl = 'http://localhost:3000'; // URL do seu backend
 
-    constructor(private httpClient:HttpClient){
+  constructor(private http: HttpClient) {}
 
-    }
-
-    cadastrarUsuario(usuario:IUser){
-        return this.httpClient.post(`${this._apiUrl}/usuarios`,usuario);
-    }
-
-    loginUsuario(usuario:IUser){
-        return this.httpClient.post(`${this._apiUrl}/login`,usuario);
-    }
+  loginUsuario(cpf: string, senha: string): Observable<any> {
+    // Retorna o objeto JSON do backend
+    return this.http.post(`${this.apiUrl}/login`, { cpf, senha });
+  }
 }

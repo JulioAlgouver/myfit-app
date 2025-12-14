@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: none;
@@ -10,24 +10,22 @@
 }
 
 html, body {
-    margin: 0; 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
     background: linear-gradient(220deg, #ffffff, #e7e7e7);
+    overflow-x: hidden; /* evita estouro horizontal */
 }
 
-
-//CSS DE PADRONIZAÇÃO DAS TELAS DE LOGIN E REGISTRO
-
-.login-register-container{
+/* CSS DE PADRONIZAÇÃO DAS TELAS DE LOGIN E REGISTRO */
+.login-register-container {
     width: 100%;
+    min-height: 100vh;
     height: 100%;
     background: linear-gradient(220deg, #45eae9, #a1a1a1);
 
     display: flex;
     flex-direction: column;
-    align-items: center;      // centraliza horizontalmente
-    justify-content: center;  // centraliza verticalmente
-    width: 100%;
-    min-height: 100vh;        // ocupa a tela inteira
+    align-items: center;      /* centraliza horizontalmente */
+    justify-content: center;  /* centraliza verticalmente */
 }
