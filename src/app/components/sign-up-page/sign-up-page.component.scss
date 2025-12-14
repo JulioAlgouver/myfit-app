@@ -91,6 +91,18 @@
                 justify-content: center;
                 margin-top: 5vw;
             }
+
+            .error-message{
+                text-align: center;
+                padding: 3vw;
+                color: #d70e00;
+            }
+
+            .successful-message{
+                text-align: center;
+                padding: 3vw;
+                color: rgb(11, 45, 11);
+            }            
         }
     }
 

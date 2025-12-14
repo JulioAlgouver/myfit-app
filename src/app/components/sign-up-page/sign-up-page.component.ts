@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.service';
 export class SignUpPageComponent {
   signUpForm!: FormGroup;
   erro: string = '';
-
+  successful: string = '';
 
     constructor(
       private fb: FormBuilder,
@@ -19,14 +19,14 @@ export class SignUpPageComponent {
       private router: Router
     ){
       this.signUpForm = this.fb.group({
-        nome:['', Validators.required],
-        email:['', Validators.required],
-        cpf: ['', Validators.required],
-        telefone:['', Validators.required],
-        dataNascimento: ['', Validators.required],
-        senha:['', Validators.required],
-        sexo:[null, Validators.required],
-        termAccepted:[false, Validators.requiredTrue],
+        nome:['Julio', Validators.required],
+        email:['julioalgouver@gmail.com', Validators.required],
+        cpf: ['08180912906', Validators.required],
+        telefone:['41999315480', Validators.required],
+        dataNascimento: ['11/07/1992', Validators.required],
+        senha:['123456', Validators.required],
+        sexo:['1', Validators.required],
+        termAccepted:[true, Validators.requiredTrue],
       })
     }
 
@@ -53,11 +53,21 @@ export class SignUpPageComponent {
     this.userService.cadastrarUsuario(nome,email,senha,cpf,sexo,telefone,dataNascimento).subscribe({
       next: (response) =>{
         console.log('Cadastro realizado', response);
-        this.router.navigate(['/']);
+        this.successful = 'Usuário cadastrado com sucesso!'
+
+        setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 2000);
+
       },
       error: (err)=>{
-        console.log('Erro ao cadastrar usuário', err);
-        this.erro = err.error?.message || 'Erro ao cadastrar usuário'
+        if(err.status === 409||500){
+          console.log('Erro ao cadastrar usuário. Usuário já foi cadastrado anteriormente!', err);
+          this.erro = 'Erro ao cadastrar usuário. Usuário já foi cadastrado anteriormente!'
+        }else{
+          console.log('Erro ao cadastrar usuário', err);
+          this.erro = err.error?.message || 'Erro ao cadastrar usuário'
+        }
       }
     })
   }
