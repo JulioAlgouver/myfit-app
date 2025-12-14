@@ -1,3 +1,138 @@
 <div class="login-register-container">
-    <p>sign-in-page works!</p>
+    <div class="sign-up-header">
+        <img src="../../../assets/logo_login_screen - Copia.png"/>
+        <strong><b>Cadastro</b></strong>
+    </div>
+    <div class="form-container">
+        <form class="sign-up-form" [formGroup]="signUpForm">
+            <div class="input-area">
+                <span>Nome:</span>
+                <mat-form-field appearance="fill" class="form-field-small">
+                    <input
+                        type="text"
+                        placeholder="Digite seu nome completo"
+                        matInput
+                        required
+                        formControlName="nome"        
+                    />
+                    <mat-error>
+                        O <b>nome</b> é obrigatório!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-area">
+                <span>E-mail:</span>
+                <mat-form-field appearance="fill" class="form-field-small">
+                    <input
+                        type="text"
+                        placeholder="Digite seu e-mail"
+                        matInput
+                        required
+                        formControlName="email"        
+                    />
+                    <mat-error>
+                        O <b>E-mail</b> é obrigatório!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div class="input-area">
+                <span>CPF:</span>
+                <mat-form-field class="form-field-small">
+                    <input
+                        type="text"
+                        placeholder="Digite seu CPF"
+                        matInput
+                        required
+                        formControlName="cpf"        
+                    />
+                    <mat-error>
+                        O <b>CPF</b> é obrigatório!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-area">
+                <span>Telefone:</span>
+                <mat-form-field class="form-field-small">
+                    <input
+                        type="text"
+                        placeholder="Digite o telefone com DDD"
+                        matInput
+                        required
+                        formControlName="telefone"        
+                    />
+                    <mat-error>
+                        O <b>telefone</b> é obrigatório!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-area">
+                <span>Data Nasc:</span>
+                <mat-form-field class="form-field-small">
+                    <input
+                        type="text"
+                        placeholder="DD/MM/AAAA"
+                        matInput
+                        required
+                        formControlName="dataNascimento"        
+                    />
+                    <mat-error>
+                        A <b>Data de Nasc.</b> é obrigatória!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-area">
+                <span>Senha:</span>
+                <mat-form-field class="form-field-small">
+                    <input
+                        type="text"
+                        placeholder="Digite sua Senha"
+                        matInput
+                        required
+                        formControlName="senha"        
+                    />
+                    <mat-error>
+                        A <b>senha</b> é obrigatório!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="input-area">
+                <span>Sexo:</span>
+                <mat-radio-group 
+                    class="form-field-small" 
+                    formControlName="sexo"
+                    required
+                >
+                    <mat-radio-button value="1">Masculino</mat-radio-button>
+                    <mat-radio-button value="2">Feminino</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div class="radio-validator-error"
+                *ngIf="signUpForm.get('sexo')?.hasError('required') && signUpForm.touched">
+                    O campo <b>Sexo</b> é obrigatório!
+            </div>            
+            
+            <div class="accept-terms">
+                <span>Eu li e concordo com os Termos de Uso.</span>
+            </div>
+
+            <div class="submit-area">
+                <button type="submit" class="signup-button">
+                    Cadastrar
+                </button>
+            </div>
+
+        </form>
+    </div>
+    <div class="footer">
+        <button (click)="backLoginScreen()">
+            <span>←</span>
+        </button>
+    </div>
 </div>

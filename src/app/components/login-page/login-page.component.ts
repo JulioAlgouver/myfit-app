@@ -25,7 +25,6 @@ export class LoginPageComponent {
 
   authUser() {
     if (this.loginForm.invalid) {
-      this.erro = 'Por favor, preencha CPF e senha corretamente.';
       return;
     }
 

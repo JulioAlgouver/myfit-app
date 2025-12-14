@@ -1,0 +1,125 @@
+.login-register-container{
+    .sign-up-header{      
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        padding: 10%;
+
+        img{
+            width: 20%;
+            height: auto;
+        }
+
+        strong{
+            font-size: 13vw;
+            font-weight: 600;
+        }
+    }
+
+    .form-container{
+        width: 100%;
+        height: 68%;
+
+        .sign-up-form{
+            width: 100vw;
+            height: 68vh;
+            display: inline-block;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding-left: 5vw;
+
+            .input-area{
+                display: flex;
+                height: auto;
+
+                span{
+                    display: inline-block;
+                    width: 25vw;
+                    font-size: 1em;
+                    padding-top: 1.5vw;
+                }
+    
+                .form-field-small{
+                    
+                    font-size: 12px;
+                    left: 5vw;
+                    width: 60vw;
+                    height: 7vh;                
+    
+                    .mat-mdc-text-field-wrapper {
+                        height: 7vh;
+                    }
+    
+                    .mat-mdc-form-field-infix {
+                        min-height: 7px;
+                    }
+    
+                    input {
+                        position: relative;
+                        bottom: 1.2em;
+                        height: 25px;
+                    }
+                }
+            }
+
+            .radio-validator-error{
+                font-size: 12px;
+                color: #f44336; // mesmo vermelho do Angular Material
+                margin-top: -15px;
+            }
+
+            
+
+            .accept-terms{
+                width: 90vw;
+                display: flex;
+                justify-content: center;
+                background-color: #336666;
+
+                span{
+                    width: 90%;
+                }
+            }
+
+            .submit-area{
+                display: flex;
+                justify-content: center;
+                margin-top: 5vw;
+            }
+        }
+    }
+
+    .footer{
+        width: 100%;
+        height: 12%;
+        
+        display: flex;
+        justify-content: right;
+        align-content: center;
+        align-items: center;
+
+        button{
+            width: 17%;
+            height: 68%;
+            margin-right: 3%;
+            border-radius: 100pc;
+            background-color: #336666;
+
+            font-size: 200%;
+            color: whitesmoke;
+            text-align: center;
+
+            span{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 2vw;
+            }
+        }
+    }
+}
