@@ -73,12 +73,13 @@
                 <span>Data Nasc:</span>
                 <mat-form-field class="form-field-small">
                     <input
-                        type="text"
                         placeholder="DD/MM/AAAA"
-                        matInput
-                        required
+                        matInput [matDatepicker]="picker"
                         formControlName="dataNascimento"        
-                    />
+                        required
+                        />
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
                     <mat-error>
                         A <b>Data de Nasc.</b> é obrigatória!
                     </mat-error>
