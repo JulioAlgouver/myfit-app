@@ -78,6 +78,32 @@ app.post('/login', (request, response) => {
     );
 });
 
+// Buscar usuario por ID
+app.get('/usuarios/:id', (req, res) => {
+    const { id } = req.params;
+
+    db.get(
+        'SELECT id, nome, email, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios WHERE id = ?',
+        [id],
+        (err, row) => {
+            if (err) {
+                return res.status(500).json({
+                    error: 'Erro ao buscar usuário',
+                    details: err
+                });
+            }
+
+            if (!row) {
+                return res.status(404).json({
+                    message: 'Usuário não encontrado'
+                });
+            }
+
+            res.json(row);
+        }
+    );
+});
+
 // Rota para listar todos os usuários
 app.get('/usuarios', (req, res) => {
     db.all('SELECT id, nome, email, senha, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios', [], (err, rows) => {

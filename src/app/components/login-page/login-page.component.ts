@@ -33,6 +33,7 @@ export class LoginPageComponent {
     this.userService.loginUsuario(cpf, senha).subscribe({
       next: (res) => {
         console.log('Login bem-sucedido:', res);
+        localStorage.setItem('userId',res.user.id);
         // Redireciona para home
         this.router.navigate(['/home']);
       },

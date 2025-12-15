@@ -4,6 +4,56 @@
     <div class="title">
         Meus Dados
     </div>
+    <div class="user-info-field">
+        <p><strong>Nome:</strong> <span>{{usuario.nome}}</span></p>
+        <p><strong>E-mail:</strong> <span>{{usuario.email}}</span></p>
+        <p><strong>CPF:</strong> <span>{{usuario.cpf}}</span></p>
+        <p><strong>Telefone:</strong> <span>{{usuario.telefone}}</span></p>
+        <p><strong>Data Nasc:</strong> <span>{{usuario.data_nascimento || 'YY-mm-dd' }}</span></p>
+        <p><strong>Sexo:</strong> <span>{{usuario.sexo}}</span></p>
+    </div>
+    <div class="security-field">
+        <strong>Segurança</strong>
+        <img src="../../../assets/security.png"/>
+        <br/>
+        <button>Alterar Senha</button>
+    </div>
+    <div class="change-password-field">
+        <form>
+            <mat-form-field>
+                <mat-label>Senha atual:</mat-label>
+                <input 
+                    type="text"
+                    placeholder="Informe a senha atual"
+                    matInput
+                    required
+                />
+                <mat-error>Campo obrigatório</mat-error>
+            </mat-form-field>
+
+                        <mat-form-field>
+                <mat-label>Nova senha:</mat-label>
+                <input 
+                    type="text"
+                    placeholder="Digite a nova senha"
+                    matInput
+                    required
+                />
+                <mat-error>Campo obrigatório</mat-error>
+            </mat-form-field>
+
+                        <mat-form-field>
+                <mat-label>Confirmação:</mat-label>
+                <input 
+                    type="text"
+                    placeholder="Confirme a nova senha"
+                    matInput
+                    required
+                />
+                <mat-error>Campo obrigatório</mat-error>
+            </mat-form-field>
+        </form>
+    </div>
 </div>
 
 <app-footer></app-footer>
