@@ -8,6 +8,10 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AguaPageComponent } from './agua-page/agua-page.component';
+import { RefeicoesPageComponent } from './refeicoes-page/refeicoes-page.component';
+import { MeuPesoPageComponent } from './meu-peso-page/meu-peso-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 
 @NgModule({
@@ -23,12 +27,20 @@ import { FooterComponent } from './footer/footer.component';
         HomePageComponent,
         HeaderComponent,
         FooterComponent,
+        AguaPageComponent,
+        RefeicoesPageComponent,
+        MeuPesoPageComponent,
+        ProfilePageComponent,
   ],
     exports:[
         LoginPageComponent,
         SignUpPageComponent,
         HeaderComponent,
         FooterComponent,
+        AguaPageComponent,
+        RefeicoesPageComponent,
+        MeuPesoPageComponent,
+        ProfilePageComponent,
     ],
 })
 export class ComponentsModule{

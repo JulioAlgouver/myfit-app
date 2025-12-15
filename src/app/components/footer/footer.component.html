@@ -1,35 +1,35 @@
 <div class="footer-container">
     <div class="footer-links">
-        <a routerLink="/home">
-            <img src="../../../assets/home_menu_icon.png"/>
+        <a routerLink="/home" (click)="setActiveMenu('home')" [ngStyle]="getMenuStyle('home')">
+            <img src="../../../assets/home_menu_icon-removebg-preview.png"/>
             <span>Inicio</span>
         </a>
     </div>
 
     <div class="footer-links">
-        <a routerLink="/agua">
-            <img src="../../../assets/water_menu_icon.png"/>
+        <a routerLink="/agua" (click)="setActiveMenu('agua')" [ngStyle]="getMenuStyle('agua')">
+            <img src="../../../assets/water_menu_icon-removebg-preview.png"/>
             <span>Água</span>
         </a>
     </div>
 
     <div class="footer-links">
-        <a routerLink="/refeicoes">
-            <img src="../../../assets/food_menu_icon.png"/>
+        <a routerLink="/refeicoes" (click)="setActiveMenu('refeicoes')" [ngStyle]="getMenuStyle('refeicoes')">
+            <img src="../../../assets/food_menu_icon-removebg-preview.png"/>
             <span>Refeições</span>
         </a>
     </div>
 
-    <div class="footer-links">
+    <div class="footer-links" (click)="setActiveMenu('meu-peso')" [ngStyle]="getMenuStyle('meu-peso')">
         <a routerLink="/meu-peso">
-            <img src="../../../assets/weigth_menu_icon.png"/>
+            <img src="../../../assets/weigth_menu_icon-removebg-preview.png"/>
             <span>Peso</span>
         </a>
     </div>
 
     <div class="footer-links">
-        <a routerLink="/perfil">
-            <img src="../../../assets/profile_menu_icon.png"/>
+        <a routerLink="/perfil" (click)="setActiveMenu('perfil')" [ngStyle]="getMenuStyle('perfil')">
+            <img src="../../../assets/profile_menu_icon-removebg-preview.png"/>
             <span>Perfil</span>
         </a>
     </div>
