@@ -30,5 +30,13 @@
                 width: 8vw;
             }
         }
+
+        .menu-item {
+            background-color: #122525;
+        }
+
+        .menu-item.active {
+            background-color: #336666ff;
+        }
     }
 }

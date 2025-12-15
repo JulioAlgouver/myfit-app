@@ -33,6 +33,18 @@ html, body {
 .app-container{
     width: 100vw;
     height: 80vh;
+
+    .title{
+        width: 100vw;
+        height: 12vh;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+
+        font-size: 10vw;
+    }
 }
 
 .signup-button{
