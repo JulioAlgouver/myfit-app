@@ -62,7 +62,13 @@
     .change-password-field{
         .input-area{
                 display: flex;
+                flex-direction: column;
+                width: 80vw;
                 height: auto;
+                padding: 5vw;
+                border: #122525 solid 1px;
+                border-radius: 5vw;
+                background-color: rgb(181, 181, 181);
 
                 span{
                     display: inline-block;
