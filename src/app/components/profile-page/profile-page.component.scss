@@ -60,6 +60,12 @@
     }
 
     .change-password-field{
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        bottom: 22vw;
+
         .input-area{
                 display: flex;
                 flex-direction: column;
@@ -82,20 +88,17 @@
                     font-size: 12px;
                     left: 5vw;
                     width: 60vw;
-                    height: 7vh;                
-    
-                    .mat-mdc-text-field-wrapper {
-                        height: 7vh;
-                    }
+                    height: 8vh;                
+
     
                     .mat-mdc-form-field-infix {
-                        min-height: 7px;
+                        height: 12vh;
                     }
     
                     input {
-                        position: relative;
-                        bottom: 1.2em;
-                        height: 25px;
+                        bottom: 1.0em;
+                        font-size: 15px;
+                        padding-bottom: 5px;
                     }
                 }
             }
