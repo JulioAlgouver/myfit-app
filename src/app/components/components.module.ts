@@ -12,6 +12,7 @@ import { AguaPageComponent } from './agua-page/agua-page.component';
 import { RefeicoesPageComponent } from './refeicoes-page/refeicoes-page.component';
 import { MeuPesoPageComponent } from './meu-peso-page/meu-peso-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
         RefeicoesPageComponent,
         MeuPesoPageComponent,
         ProfilePageComponent,
+        ChangePasswordComponent,
   ],
     exports:[
         LoginPageComponent,
@@ -41,6 +43,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
         RefeicoesPageComponent,
         MeuPesoPageComponent,
         ProfilePageComponent,
+        ChangePasswordComponent,
     ],
 })
 export class ComponentsModule{

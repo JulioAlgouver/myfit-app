@@ -18,45 +18,11 @@
         <br/>
         <button>Alterar Senha</button>
     </div>
-    <div class="change-password-field">
-        <form class="input-area">
-            <span>Alterar Senha</span>
-            <br/>
-            <mat-form-field appearance="fill" class="form-field-small">
-                <mat-label>Senha atual:</mat-label>
-                <input 
-                    type="text"
-                    placeholder="Informe a senha atual"
-                    matInput
-                    required
-                />
-                <mat-error>Campo obrigatório</mat-error>
-            </mat-form-field>
 
-            <mat-form-field appearance="fill" class="form-field-small">
-                <mat-label>Nova senha:</mat-label>
-                <input 
-                    type="text"
-                    placeholder="Digite a nova senha"
-                    matInput
-                    required
-                />
-                <mat-error>Campo obrigatório</mat-error>
-            </mat-form-field>
-
-            <mat-form-field appearance="fill" class="form-field-small">
-                <mat-label>Confirmação:</mat-label>
-                <input 
-                    type="text"
-                    placeholder="Confirme a nova senha"
-                    matInput
-                    required
-                />
-                <mat-error>Campo obrigatório</mat-error>
-            </mat-form-field>
-            <button>Salvar</button>
-        </form>
+    <div *ngIf="changePasswordIsActive===true">
+        <app-change-password></app-change-password>
     </div>
+
 </div>
 
 <app-footer></app-footer>

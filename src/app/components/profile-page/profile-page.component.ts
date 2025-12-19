@@ -8,6 +8,7 @@ import { UserService } from '../../services/user.service';
 })
 export class ProfilePageComponent implements OnInit {
 
+  changePasswordIsActive=false;
   usuario: any;
 
   constructor(private userService: UserService) {}
@@ -22,4 +23,5 @@ export class ProfilePageComponent implements OnInit {
       }
     });
   }
+
 }
