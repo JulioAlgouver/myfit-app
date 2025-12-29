@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Sexo } from '../enum/sexo.enum';
 
 @Injectable({
@@ -45,4 +45,18 @@ export class UserService {
   filtrarPorId(id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/usuarios/${id}`);
   }
+
+
+  // Mostrar tela de alteração de Senha do usuario
+
+  private showChangePassword = new BehaviorSubject<boolean>(false);
+  showChangePassword$ = this.showChangePassword.asObservable();
+
+  showChangePasswordScreen(){
+    this.showChangePassword.next(true);
+  }
+
+  closeChangePasswordScreen(){
+    this.showChangePassword.next(false);
+  }  
 }

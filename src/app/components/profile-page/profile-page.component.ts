@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { PasswordService } from '../../services/password.service';
 
 @Component({
   selector: 'app-profile-page',
@@ -8,7 +9,6 @@ import { UserService } from '../../services/user.service';
 })
 export class ProfilePageComponent implements OnInit {
 
-  changePasswordIsActive=false;
   usuario: any;
 
   constructor(private userService: UserService) {}
@@ -24,4 +24,7 @@ export class ProfilePageComponent implements OnInit {
     });
   }
 
+  showPasswordScreen(){
+    this.userService.showChangePasswordScreen();
+  }
 }

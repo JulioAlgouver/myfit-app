@@ -16,10 +16,10 @@
         <strong>Segurança</strong>
         <img src="../../../assets/security.png"/>
         <br/>
-        <button>Alterar Senha</button>
+        <button (click)="showPasswordScreen()">Alterar Senha</button>
     </div>
 
-    <div *ngIf="changePasswordIsActive===true">
+    <div *ngIf="">
         <app-change-password></app-change-password>
     </div>
 
