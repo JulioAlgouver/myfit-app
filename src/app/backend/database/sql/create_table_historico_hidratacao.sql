@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS historico_hidratacao (
+    id_hidratacao INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_usuario INTEGER NOT NULL,
+    quantidade INTEGER NOT NULL,
+    data_hora_medicao DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+
+    FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id)
+)
