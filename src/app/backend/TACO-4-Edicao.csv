@@ -1,0 +1,598 @@
+﻿Número do Alimento;Categoria;Descrição dos alimentos;Umidade (%);Energia (kcal);Energia (kJ);Proteína (g);Lipídeos (g);Colesterol (mg);Carboidrato (g);Fibra Alimentar (g);Cinzas (g);Cálcio (mg);Magnésio (mg);Manganês (mg);Fósforo (mg);Ferro (mg);Sódio (mg);Potássio (mg);Cobre (mg);Zinco (mg);Retinol (mcg);RE (mcg);RAE (mcg);Tiamina (mg);Riboflavina (mg);Piridoxina (mg);Niacina (mg);Vitamina C (mg)
+1;Cereais e derivados;Arroz, integral, cozido;70,10;123;516;2,6;1;NA;25,8;2,7;0,5;5;58;0,63;105;0,3;1;75;0,02;0,7;NA;;;0,08;Tr;0,08;Tr;
+2;Cereais e derivados;Arroz, integral, cru;12,20;359;1504;7,3;1,9;NA;77,5;4,8;1,2;7;109;2,99;250;0,9;1;173;0,07;1,4;NA;;;0,26;Tr;0,17;4,18;
+3;Cereais e derivados;Arroz, tipo 1, cozido;69,10;128;536;2,5;0,2;NA;28,1;1,6;0,1;3;2;0,3;17;0,1;1;14;0,01;0,5;NA;;;Tr;Tr;Tr;Tr;
+4;Cereais e derivados;Arroz, tipo 1, cru;13,20;357;1496;7,2;0,3;NA;78,8;1,6;0,5;4;30;1,03;104;0,7;1;62;0,11;1,2;NA;;;0,16;Tr;0,07;1,12;
+5;Cereais e derivados;Arroz, tipo 2, cozido;68,70;130;544;2,6;0,4;NA;28,2;1,1;0,1;3;6;0,37;21;0,1;1;20;0,04;0,5;NA;;;Tr;Tr;Tr;Tr;
+6;Cereais e derivados;Arroz, tipo 2, cru;13,20;358;1498;7,2;0,3;NA;78,9;1,7;0,4;4;29;0,83;82;0,6;0;57;0,05;1,3;NA;;;0,16;Tr;0,05;0,92;
+7;Cereais e derivados;Aveia, flocos, crua;9,10;393;1647;13,9;8,5;NA;66,6;9,1;1,8;47;118;1,89;153;4,4;4;336;0,44;2,6;NA;;;0,55;0,03;Tr;4,47;1,4
+8;Cereais e derivados;Biscoito, doce, maisena;3,20;442;1852;8,1;12;NA;75,2;2,1;1,5;54;37;0,78;166;1,8;352;141;0,17;1;NA;;;1,01;0,42;0,23;3,91;6,2
+9;Cereais e derivados;Biscoito, doce, recheado com chocolate;2,20;471;1974;6,4;19,6;Tr;70,5;3;1,3;27;47;0,59;139;2,3;239;232;0,27;1;Tr;; ;0,32;0,39;0,46;2,52;3,5
+10;Cereais e derivados;Biscoito, doce, recheado com morango;2,70;471;1971;5,7;19,6;Tr;71;1,5;1;35;27;0,66;137;1,5;229;113;0,13;0,7;Tr;; ;0,9;0,42;0,21;1,5;Tr
+11;Cereais e derivados;Biscoito, doce, wafer, recheado de chocolate;1,20;502;2102;5,6;24,7;Tr;67,5;1,8;1,1;23;47;0,43;124;2,4;137;240;0,26;0,9;Tr; ; ;0,37;0,03;0,3;1,12;Tr
+12;Cereais e derivados;Biscoito, doce, wafer, recheado de morango;1,20;513;2148;4,5;26,4;1;67,4;0,8;0,6;13;18;0,28;73;1,1;119;74;0,08;0,5;Tr; ; ;0,36;Tr;0,94;0,37;
+13;Cereais e derivados;Biscoito, salgado, cream cracker;4,10;431;1806;10,1;14,4;NA;68,7;2,5;2,7;20;39;0,69;148;2,2;854;180;0,18;1,1;NA;;;0,71;0,13;0,17;7,14;
+14;Cereais e derivados;Bolo, mistura para;1,00;418;1751;6,2;6,1;Tr;84,7;1,7;2;58;27;0,46;332;1,2;462;75;0,15;0,6;NA;;;0,18;Tr;1,5;1,52;Tr
+15;Cereais e derivados;Bolo, pronto, aipim;34,10;323;1354;4,4;12,7;73;47,9;0,7;0,8;85;10;0,11;122;0,5;111;134;0,05;0,4;Tr; ; ;0,13;0,07;Tr;Tr;Tr
+16;Cereais e derivados;Bolo, pronto, chocolate;19,30;410;1715;6,2;18,5;76;54,7;1,4;1,3;74;27;0,38;196;2,1;283;211;0,05;0,7;Tr; ; ;0,13;0,09;0,05;Tr;Tr
+17;Cereais e derivados;Bolo, pronto, coco;29,30;333;1395;5,7;11,3;63;52,3;1,1;1,4;57;16;0,4;303;0,8;190;143;0,09;0,7;Tr;Tr;Tr;0,15;0,06;Tr;Tr;Tr
+18;Cereais e derivados;Bolo, pronto, milho;36,70;311;1302;4,8;12,4;81;45,1;0,7;1;82;10;0,11;128;0,7;133;118;0,04;0,4;56;;;0,11;0,05;Tr;Tr;Tr
+19;Cereais e derivados;Canjica, branca, crua;13,60;357;1496;7,2;1;NA;78,1;5,5;0,2;1;12;0,09;48;0,3;0;92;0,04;0,4;NA;;;Tr;Tr;Tr;Tr;Tr
+20;Cereais e derivados;Canjica, com leite integral;72,50;112;470;2,4;1,2;1;23,6;1,2;0,3;42;5;0,02;40;0,1;27;69;0,03;0,3;Tr;;;Tr;0,04;Tr;Tr;Tr
+21;Cereais e derivados;Cereais, milho, flocos, com sal;9,30;369;1546;7,3;1,6;NA;80,8;5,3;1;1;20;Tr;90;0,5;271;68;Tr;0,6;NA;;;0,12;Tr;0,06;Tr;Tr
+22;Cereais e derivados;Cereais, milho, flocos, sem sal;11,20;363;1520;6,9;1,2;NA;80,4;1,8;0,3;1;16;Tr;58;1,7;30;28;0,24;0,3;NA;;;0,05;Tr;0,04;Tr;Tr
+23;Cereais e derivados;Cereais, mingau, milho, infantil;4,70;394;1650;6,4;1,1;NA;87,3;3,2;0,5;218;16;0,11;169;3;399;82;0,04;0,4;21;;;3,72;0,47;5,08;24,16;109,4
+24;Cereais e derivados;Cereais, mistura para vitamina, trigo, cevada e aveia;4,40;381;1594;8,9;2,1;NA;81,6;5;3;584;72;2,28;515;12,6;1163;244;0,21;2;Tr;;;0,76;0,88;1,49;7,46;13,1
+25;Cereais e derivados;Cereal matinal, milho;5,50;365;1528;7,2;1;NA;83,8;4,1;2,5;142;10;0,06;100;3;654;83;0,06;7,6;NA;30;15;0,76;1,02;2,25;11,04;17,3
+26;Cereais e derivados;Cereal matinal, milho, açúcar;4,30;376;1575;4,7;0,7;NA;88,8;2,1;1,5;56;7;0,13;43;3,9;405;51;0,04;8,5;NA;30;15;0,73;1,11;0,79;10,13;14,6
+27;Cereais e derivados;Creme de arroz, pó;7,30;386;1615;7;1,2;NA;83,9;1,1;0,5;7;50;1,24;153;0,6;1;114;0,04;1,9;NA;;;0,22;Tr;0,05;Tr;Tr
+28;Cereais e derivados;Creme de milho, pó;5,70;333;1393;4,8;1,6;NA;86,1;3,7;1,7;323;30;0,2;303;4,3;593;165;0,04;0,8;NA;;;0,74;Tr;2,05;Tr;96,3
+29;Cereais e derivados;Curau, milho verde;81,60;78;328;2,4;1,6;4;13,9;0,5;0,5;52;15;0,06;74;0,4;20;161;0,03;0,4;12;20;16;0,04;0,07;Tr;Tr;Tr
+30;Cereais e derivados;Curau, milho verde, mistura para;3,90;402;1683;2,2;13,4;NA;79,8;2,5;0,7;30;8;0,05;44;0,9;222;55;0,03;0,2;NA;;;0,13;Tr;Tr;Tr;Tr
+31;Cereais e derivados;Farinha, de arroz, enriquecida;12,70;363;1519;1,3;0,3;NA;85,5;0,6;0,2;1;4;0,04;35;31,4;17;12;Tr;8,5;NA;;;3,23;Tr;3,47;24,42;173,6
+32;Cereais e derivados;Farinha, de centeio, integral;10,80;335;1404;12,5;1,8;NA;73,3;15,5;1,7;33;120;3,86;339;4,7;41;333;0,56;2,7;NA;;;0,29;0,03;0,08;Tr;Tr
+33;Cereais e derivados;Farinha, de milho, amarela;11,80;350;1466;7,2;1,5;NA;79,1;5,5;0,5;1;30;Tr;84;2,3;44;57;0,27;0,6;NA;18;9;0,25;Tr;0,25;Tr;Tr
+34;Cereais e derivados;Farinha, de rosca;9,80;370;1550;11,4;1,5;NA;75,8;4,8;1,6;35;56;1,62;194;6,7;332;212;0,26;1,7;NA;;;0,25;Tr;0,09;Tr;Tr
+35;Cereais e derivados;Farinha, de trigo;13,00;360;1508;9,8;1,4;NA;75,1;2,3;0,8;17;31;0,46;114;0,9;0;151;0,15;0,8;NA;;;0,31;Tr;Tr;0,89;Tr
+36;Cereais e derivados;Farinha, láctea, de cereais;2,70;414;1735;11,9;5,8;11;77,8;1,9;1,9;196;57;1,49;296;8,7;125;365;0,19;1,7;492;;;1,43;1,13;1,14;9,5;24,3
+37;Cereais e derivados;Lasanha, massa fresca, cozida;59,60;163;685;5,8;1,2;NA;32,5;1,6;0,9;9;3;0,2;42;1,2;206;53;0,07;0,4;NA;;;0,04;Tr;Tr;3,96; 
+38;Cereais e derivados;Lasanha, massa fresca, crua;45,00;220;921;7;1,3;NA;45,1;1,6;1,6;16;12;0,34;81;1,9;666;136;0,1;0,8;NA;;;0,08;Tr;Tr;Tr; 
+39;Cereais e derivados;Macarrão, instantâneo;6,00;435;1823;8,8;17,2;NA;62,4;5,6;5,6;17;19;0,25;112;0,8;1515;147;0,1;0,5;NA;;;1,18;0,04;0,53;9,37;Tr
+40;Cereais e derivados;Macarrão, trigo, cru;10,20;371;1552;10;1,3;NA;77,9;2,9;0,5;17;27;0,53;99;0,9;7;147;0,15;0,8;NA;;;0,18;0,02;Tr;3,57;Tr
+41;Cereais e derivados;Macarrão, trigo, cru, com ovos;10,60;370;1550;10,3;2;17;76,6;2,3;0,5;19;Tr;0,4;118;0,9;14;134;0,14;0,8;Tr;;;0,11;0,05;0,03;4,37;Tr
+42;Cereais e derivados;Milho, amido, cru;12,20;361;1511;0,6;Tr;NA;87,1;0,7;0,1;1;3;0,02;12;0,1;8;8;0,02;0,1;NA;;;Tr;Tr;Tr;Tr;Tr
+43;Cereais e derivados;Milho, fubá, cru;11,50;353;1478;7,2;1,9;NA;78,9;4,7;0,6;2;41;0,34;107;0,8;Tr;168;0,08;1,1;NA;26;13;0,25;Tr;Tr;0,75;Tr
+44;Cereais e derivados;Milho, verde, cru;63,50;138;578;6,6;0,6;NA;28,6;3,9;0,7;1;32;0,12;112;0,4;1;184;0,05;0,5;NA;32;16;0,3;Tr;0,04;Tr;Tr
+45;Cereais e derivados;Milho, verde, enlatado, drenado;76,20;97;408;3,2;2,4;NA;17,1;4,6;1,1;2;20;0,09;61;0,6;260;162;0,05;0,5;NA;48;24;Tr;0,05;Tr;3,74;1,7
+46;Cereais e derivados;Mingau tradicional, pó;8,10;373;1562;0,6;0,4;NA;89,3;0,9;1,6;522;4;Tr;273;42;14;Tr;Tr;15,2;1533;;;3,41;Tr;3,11;19,39;Tr
+47;Cereais e derivados;Pamonha, barra para cozimento, pré-cozida;61,30;171;716;2,6;4,8;NA;30,7;2,4;0,6;4;15;0,12;54;0,4;131;125;0,03;0,4;NA;;;Tr;Tr;Tr;Tr;Tr
+48;Cereais e derivados;Pão, aveia, forma;19,90;343;1435;12,3;5,7;Tr;59,6;6;2,5;108;56;1,08;182;4,7;605;210;0,14;1,7;Tr; ; ;0,09;0,03;0,08;Tr;Tr
+49;Cereais e derivados;Pão, de soja;26,00;308;1291;11,3;3,6;NA;56,5;5,7;2,5;90;48;0,57;153;3,3;662;296;0,16;1,5;NA;;;0,07;0,04;0,79;Tr;Tr
+50;Cereais e derivados;Pão, glúten, forma;40,70;252;1058;12;2,7;NA;44,1;2,5;0,5;155;24;0,51;105;5,7;22;64;0,06;1,3;NA;;;0,04;0,03;Tr;Tr;Tr
+51;Cereais e derivados;Pão, milho, forma;30,40;292;1221;8,3;3,1;5;56,4;4,3;1,8;77;29;0,37;110;3;506;89;0,1;0,8;Tr;;;0,08;Tr;0,08;Tr;Tr
+52;Cereais e derivados;Pão, trigo, forma, integral;34,70;253;1059;9,4;3,7;NA;49,9;6,9;2,3;131;60;1,62;193;3;506;162;0,15;1,6;NA;;;0,08;0,04;0,15;Tr;Tr
+53;Cereais e derivados;Pão, trigo, francês;28,50;299;1254;8;3,1;NA;58,6;2,3;1,8;15;25;0,46;94;1;647;142;0,13;0,8;2;;;0,39;0,67;0,6;2,34; 
+54;Cereais e derivados;Pão, trigo, sovado;25,80;310;1301;8,4;2,8;16;61,5;2,4;1,5;51;22;0,31;100;2,3;430;91;Tr;2,7;Tr; ; ;0,08;0,04;0,15;Tr;Tr
+55;Cereais e derivados;Pastel, de carne, cru;34,40;288;1207;10,7;8,8;18;42;1;4,1;16;17;0,34;117;2;1309;165;0,11;1,7;Tr;;;0,06;0,03;Tr;1,58;Tr
+56;Cereais e derivados;Pastel, de carne, frito;22,90;388;1624;10,1;20,1;25;43,8;1;3,1;12;14;0,22;90;2,5;1039;155;0,12;1,1;Tr;;;0,06;0,05;Tr;1,83;
+57;Cereais e derivados;Pastel, de queijo, cru;31,30;308;1290;9,9;9,6;14;45,9;1,1;3,3;154;15;0,24;168;1;984;102;0,1;1;Tr;;;0,07;0,03;Tr;Tr;Tr
+58;Cereais e derivados;Pastel, de queijo, frito;17,50;422;1766;8,7;22,7;15;48,1;0,9;2,9;126;14;0,2;123;1,3;821;123;0,1;0,8;17;;;0,09;0,04;Tr;Tr;Tr
+59;Cereais e derivados;Pastel, massa, crua;27,10;310;1297;6,9;5,5;NA;57,4;1,4;3,2;12;14;0,38;72;1,1;1344;166;0,11;0,6;NA;;;0,15;Tr;Tr;Tr; 
+60;Cereais e derivados;Pastel, massa, frita;1,00;569;2383;6;40,9;NA;49,3;1,3;2,8;11;12;0,36;62;1,4;1174;142;0,08;0,5;NA;;;0,16;Tr;Tr;Tr; 
+61;Cereais e derivados;Pipoca, com óleo de soja, sem sal;2,80;448;1875;9,9;15,9;NA;70,3;14,3;1;2;90;0,65;225;1,2;4;255;0,46;2;NA;;;0,03;0,03;Tr;Tr;Tr
+62;Cereais e derivados;Polenta, pré-cozida;72,70;102;429;2,3;0,3;NA;23,3;2,4;1,4;1;4;Tr;16;Tr;441;99;0,04;0,1;NA;;;0,04;Tr;Tr;Tr;Tr
+63;Cereais e derivados;Torrada, pão francês;9,00;377;1579;10,5;3,3;NA;74,6;3,4;2,6;18;31;0,55;113;1,2;829;189;0,16;0,9;NA;;;0,38;Tr;Tr;Tr;Tr
+64;Verduras;Abóbora, cabotian, cozida;86,40;48;201;1,4;0,7;NA;10,8;2,5;0,7;7;9;0,26;32;0,3;1;199;0,06;0,3;NA;;;0,08;Tr;0,07;Tr;7,5
+65;Verduras;Abóbora, cabotian, crua;88,50;38;161;1,7;0,5;NA;8,4;2,2;0,8;17;8;0,11;25;0,4;Tr;350;0,06;0,3;NA;446;223;Tr;Tr;0,1;Tr;5,1
+66;Verduras;Abóbora, menina brasileira, crua;95,70;13;56;0,6;Tr;NA;3,3;1,2;0,4;8;4;0,01;11;0,1;Tr;164;0,02;Tr;NA;1108;554;0,07;Tr;0,04;Tr;1,5
+67;Verduras;Abóbora, moranga, crua;95,90;12;51;1;0,1;NA;2,7;1,7;0,4;3;1;0,01;7;Tr;Tr;124;0,05;0,1;NA;278;139;Tr;Tr;0,06;Tr;9,6
+68;Verduras;Abóbora, moranga, refogada;92,50;29;121;0,4;0,8;NA;6;1,5;0,4;19;7;0,02;11;0,1;3;183;0,04;0,1;NA;95;47;0,05;Tr;0,05;Tr;6,7
+69;Verduras;Abóbora, pescoço, crua;92,50;24;102;0,7;0,1;NA;6,1;2,3;0,6;8;7;0,07;31;0,3;0;263;0,09;0,2;NA;;;Tr;Tr;0,06;Tr;2,1
+70;Verduras;Abobrinha, italiana, cozida;95,30;15;62;1,1;0,2;NA;3;1,6;0,4;16;16;0,11;22;0,2;0;125;0,01;0,3;NA;;;0,05;Tr;0,06;Tr;2,1
+71;Verduras;Abobrinha, italiana, crua;93,90;19;80;1,1;0,1;NA;4,3;1,4;0,6;15;19;0,09;32;0,2;Tr;253;0,05;0,2;NA;40;20;Tr;0,06;0,03;Tr;6,9
+72;Verduras;Abobrinha, italiana, refogada;93,50;24;102;1,1;0,8;NA;4,2;1,4;0,4;20;12;0,14;31;0,4;2;193;0,02;0,3;NA;41;20;0,04;Tr;Tr;Tr;7,5
+73;Verduras;Abobrinha, paulista, crua;90,90;30;128;0,6;0,1;NA;7,9;2,6;0,5;18;9;0,11;32;0,2;0;212;0,1;0,2;NA;;;Tr;Tr;0,03;Tr;17,5
+74;Verduras;Acelga, crua;93,20;20;87;1,4;0,1;NA;4,6;1,1;0,6;42;10;0,11;40;0,3;1;239;0,1;0,3;NA;;;0,04;Tr;0,16;Tr;22,6
+75;Verduras;Agrião, cru;93,90;16;69;2,7;0,2;NA;2,3;2,1;0,9;132;18;0,28;50;3,1;7;217;0,1;0,7;NA;458;229;0,11;0,23;0,09;1,19;60,1
+76;Verduras;Aipo, cru;93,80;19;79;0,8;0,1;NA;4,3;1;1,1;65;8;0,18;28;0,7;9;273;0,31;0,1;NA;916;458;Tr;Tr;0,18;Tr;5,9
+77;Verduras;Alface, americana, crua;97,20;8;36;0,6;0,1;NA;1,7;1;0,3;14;5;0,12;19;0,3;7;136;0,02;0,2;NA;;;0,03;Tr;0,04;Tr;11
+78;Verduras;Alface, crespa, crua;96,10;10;44;1,3;0,2;NA;1,7;1,8;0,7;37;10;0,2;25;0,4;3;267;0,03;0,3;NA;234;117;0,11;0,12;Tr;1,09;15,6
+79;Verduras;Alface, lisa, crua;95,00;13;57;1,7;0,1;NA;2,4;2,3;0,8;27;9;0,33;26;0,6;4;348;0,03;0,3;NA;368;184;0,09;0,08;0,07;0,75;21,4
+80;Verduras;Alface, roxa, crua;95,70;12;53;0,9;0,2;NA;2,5;2;0,7;33;9;0,12;51;2,5;7;308;0,04;0,2;NA;312;156;Tr;Tr;Tr;Tr;13,5
+81;Verduras;Alfavaca, crua;90,20;29;122;2,7;0,5;NA;5,2;4,1;1,4;258;84;0,15;49;1,3;4;260;0,15;0,7;NA;;;Tr;0,12;0,56;Tr;Tr
+82;Verduras;Alho, cru;67,50;113;473;7;0,2;NA;23,9;4,3;1,3;13;21;0,24;149;0,8;5;534;0,15;0,8;NA;;;0,18;Tr;0,44;Tr;*
+83;Verduras;Alho-poró, cru;91,00;31;131;1,4;0,1;NA;6,9;2,5;0,6;33;10;0,1;36;0,6;1;224;0,29;0,2;NA;16;8;0,06;Tr;0,08;0,34;14,1
+84;Verduras;Almeirão, cru;93,70;18;75;1,8;0,2;NA;3,3;2,6;1;19;21;0,17;39;0,7;2;369;0,1;0,3;NA;566;283;0,1;0,18;Tr;0,63;1,7
+85;Verduras;Almeirão, refogado;86,50;65;272;1,7;4,8;NA;5,7;3,4;1,2;63;17;0,28;30;1,6;14;315;0,06;0,2;NA;;;0,03;0,06;0,05;4,03;1,5
+86;Verduras;Batata, baroa, cozida;79,30;80;335;0,9;0,2;NA;18,9;1,8;0,8;11;7;0,22;29;0,4;2;258;0,15;0,4;NA;;;0,06;Tr;Tr;1,98;17,1
+87;Verduras;Batata, baroa, crua;73,70;100;422;1;0,2;NA;24;2,1;1,1;17;11;0,07;45;0,3;Tr;505;0,05;0,2;NA;24;12;0,05;Tr;0,12;Tr;7,5
+88;Verduras;Batata, doce, cozida;80,40;76;321;0,6;0,1;NA;18,4;2,2;0,4;17;11;0,14;15;0,2;2;148;0,06;0,1;NA;;;0,08;Tr;0,05;2,57;23,8
+89;Verduras;Batata, doce, crua;69,50;118;494;1,3;0,1;NA;28,2;2,6;0,9;21;16;0,18;36;0,4;8;340;0,11;0,2;NA;;;0,06;Tr;0,1;Tr;16,5
+90;Verduras;Batata, frita, tipo chips, industrializada;2,70;542;2270;5,6;36,6;NA;51,2;2,5;3,9;11;24;0,23;96;0,7;607;1014;0,12;0,6;NA;;;0,2;Tr;0,13;2,61;Tr
+91;Verduras;Batata, inglesa, cozida;86,40;51;215;1,2;Tr;NA;11,9;1,3;0,5;3;5;0,07;24;0,2;2;161;0,06;0,2;NA;;;0,05;Tr;0,08;Tr;3,8
+92;Verduras;Batata, inglesa, crua;82,90;64;269;1,8;Tr;NA;14,7;1,2;0,6;3;14;0,1;38;0,4;Tr;302;0,09;0,2;NA;;;0,1;Tr;0,15;Tr;31,1
+93;Verduras;Batata, inglesa, frita;44,10;267;1117;5;13,1;NA;35,6;8,1;2,2;6;14;0,15;69;0,4;1;488;0,1;0,4;NA;;;0,17;Tr;0,1;2,51;16,3
+94;Verduras;Batata, inglesa, sauté;83,10;67;284;1,3;0,9;NA;14,1;1,4;0,6;4;6;0,08;31;0,2;8;199;0,05;0,2;NA;;;0,07;Tr;0,09;1,38;Tr
+95;Verduras;Berinjela, cozida;94,40;18;78;0,7;0,1;NA;4,5;2,5;0,3;10;8;0,11;15;0,2;1;105;0,04;0,1;NA;;;0,04;Tr;Tr;Tr;Tr
+96;Verduras;Berinjela, crua;93,80;19;82;1,2;0,1;NA;4,4;2,9;0,4;9;12;0,1;20;0,2;Tr;204;0,06;0,1;NA;24;12;0,04;0,05;Tr;Tr;3
+97;Verduras;Beterraba, cozida;90,60;32;134;1,3;0,1;NA;7,2;1,9;0,8;15;16;0,19;30;0,2;22;245;0,04;0,4;NA;;;0,09;Tr;Tr;Tr;1,2
+98;Verduras;Beterraba, crua;86,00;48;204;1,9;0,1;NA;11,1;3,4;0,9;18;24;1,23;19;0,3;9;375;0,08;0,5;NA;;;0,04;Tr;0,04;Tr;3,1
+99;Verduras;Biscoito, polvilho doce;5,40;437;1830;1,3;12,2;9;80,5;1,2;0,5;30;5;0,08;23;1,8;97;53;0,04;0,1;Tr;;;Tr;0,03;0,07;Tr;Tr
+100;Verduras;Brócolis, cozido;92,60;24;103;2,1;0,5;NA;4,4;3,4;0,4;50;14;0,12;33;0,5;2;118;0,08;0,2;NA;;;0,04;0,03;Tr;Tr;42
+101;Verduras;Brócolis, cru;91,20;25;106;3,6;0,3;NA;4;2,9;0,8;85;29;0,26;78;0,6;3;322;0,06;0,5;NA;279;139;0,12;0,18;0,08;1,39;34,3
+102;Verduras;Cará, cozido;78,90;77;324;1,5;0,1;NA;18,9;2,6;0,6;5;14;0,02;27;0,3;1;203;0,11;0,2;NA;;;0,12;Tr;0,12;Tr;Tr
+103;Verduras;Cará, cru;73,70;95;400;2,3;0,1;NA;23;7,3;0,9;3;11;0,01;34;0,2;Tr;211;0,06;0,2;NA;;;0,11;Tr;0,02;Tr;8,8
+104;Verduras;Caruru, cru;87,60;34;142;3,2;0,6;NA;6;4,5;2,6;455;197;0,89;77;4,5;13;278;0,37;6;NA;1906;953;Tr;0,1;0,11;Tr;5,4
+105;Verduras;Catalonha, crua;91,80;23;99;1,9;0,3;NA;4,8;2;1,3;56;17;0,34;32;3,1;9;411;0,27;0,5;NA;;;Tr;0,03;0,36;1,54;7,3
+106;Verduras;Catalonha, refogada;87,40;63;265;1,9;4,8;NA;4,8;3,6;1;63;16;0,64;35;1,2;24;452;0,18;0,4;NA;850;425;0,04;Tr;0,03;0,6;Tr
+107;Verduras;Cebola, crua;88,90;39;164;1,7;0,1;NA;8,9;2,2;0,4;14;11;0,13;37;0,2;0;176;0,05;0,2;NA;;;0,04;Tr;0,14;Tr;4,7
+108;Verduras;Cebolinha, crua;93,90;19;81;1,9;0,3;NA;3,4;3,5;0,5;79;24;0,13;26;0,6;1;206;0,04;0,3;NA;134;67;0,03;0,04;0,08;Tr;31,8
+109;Verduras;Cenoura, cozida;91,70;29;124;0,8;0,2;NA;6,7;2,6;0,6;25;14;0,04;26;0,1;7;175;0,01;0,2;NA;612;306;0,07;Tr;0,06;2,68;Tr
+110;Verduras;Cenoura, crua;90,10;34;142;1,3;0,2;NA;7,7;3,2;0,9;22;11;0,05;27;0,2;3;314;0,05;0,2;NA;1326;663;Tr;Tr;0,05;Tr;5,1
+111;Verduras;Chicória, crua;95,10;13;57;1,1;0,1;NA;2,9;2,2;0,8;44;14;0,13;13;0,5;13;424;0,04;0,1;NA;;;0,03;0,1;Tr;0,68;6,5
+112;Verduras;Chuchu, cozido;94,60;18;77;0,4;Tr;NA;4,8;1;0,2;7;6;0,07;12;0,1;1;54;Tr;0,1;NA;;;0,03;Tr;Tr;Tr;5,6
+113;Verduras;Chuchu, cru;94,80;16;71;0,7;0,1;NA;4,1;1,3;0,3;11;7;0,08;17;0,2;Tr;125;0,03;0,1;NA; ; ;Tr;Tr;Tr;Tr;10,6
+114;Verduras;Coentro, folhas desidratadas;10,60;309;1293;20,9;10,4;NA;48;37,3;10,2;783;392;10,48;388;81,4;18;3222;4,09;4,7;NA;;;0,1;0,11;0,09;Tr;40,8
+115;Verduras;Couve, manteiga, crua;90,90;27;113;2,9;0,5;NA;4,3;3,1;1,3;130;34;1,02;48;0,5;6;403;0,06;0,4;NA;496;248;0,2;0,31;0,06;2,29;96,7
+116;Verduras;Couve, manteiga, refogada ;81,50;90;378;1,7;6,6;NA;8,7;5,7;1,5;177;26;0,12;33;0,5;11;314;0,02;0,2;NA;384;192;Tr;0,05;0,07;Tr;76,9
+117;Verduras;Couve-flor, crua;92,80;22;94;1,9;0,2;NA;4,5;2,4;0,6;17;11;0,16;57;0,5;3;256;0,03;0,3;NA;2;1;0,03;0,09;0,1;Tr;36
+118;Verduras;Couve-flor, cozida;94,30;19;79;1,2;0,3;NA;3,9;2,1;0,3;16;5;0,1;25;0,1;1;80;Tr;0,3;NA;;;0,04;Tr;Tr;Tr;23,7
+119;Verduras;Espinafre, Nova Zelândia, cru;94,00;16;67;2;0,2;NA;2,6;2,1;1,2;97;81;0,71;25;0,4;17;336;0,06;0,3;NA;484;242;0,1;0,21;0,06;Tr;2,4
+120;Verduras;Espinafre, Nova Zelândia, refogado;86,60;67;281;2,7;5,4;NA;4,2;2,5;1;112;122;0,61;33;0,6;47;149;0,04;0,6;NA;623;311;0,08;0,13;0,13;Tr;5,3
+121;Verduras;Farinha, de mandioca, crua;9,40;360;1509;1,6;0,3;NA;87,9;6,4;0,9;64;37;Tr;41;1,1;1;340;0,08;0,4;NA;;;0,14;Tr;0,04;Tr;Tr
+122;Verduras;Farinha, de mandioca, torrada;8,30;365;1528;1,2;0,3;NA;89,2;6,5;0,9;75;40;0,37;38;1,2;10;327;Tr;0,4;NA;;;Tr;Tr;0,81;Tr;Tr
+123;Verduras;Farinha, de puba;9,80;360;1506;1,6;0,5;NA;87,3;4,2;0,8;41;27;0,16;32;1,4;3;337;0,07;0,3;NA;;;0,09;Tr;Tr;Tr;Tr
+124;Verduras;Fécula, de mandioca;17,80;330;1384;0,5;0,3;NA;81,1;0,6;0,3;11;3;Tr;60;0,1;2;48;Tr;Tr;NA;;;0,03;Tr;Tr;Tr;Tr
+125;Verduras;Feijão, broto, cru;87,50;38;162;4,2;0,1;NA;7,8;2;0,5;14;25;0,19;74;0,8;1;189;0,17;0,6;NA;;;Tr;0,04;0,15;Tr;12
+126;Verduras;Inhame, cru;73,30;96;404;2,1;0,2;NA;23,2;1,7;1,2;11;28;0,15;64;0,4;Tr;567;0,17;0,3;NA;;;0,08;Tr;0,11;Tr;5,6
+127;Verduras;Jiló, cru;91,60;27;114;1,4;0,2;NA;6,2;4,8;0,6;19;20;0,14;29;0,3;Tr;212;0,07;0,1;NA;12;6;0,07;0,04;Tr;Tr;6,8
+128;Verduras;Jurubeba, crua;66,60;125;526;4,4;3,9;NA;23,1;23,9;2;151;65;0,52;155;0,9;0;619;1,16;0,6;NA;;;0,13;0,02;0,2;Tr;13,8
+129;Verduras;Mandioca, cozida;68,70;125;524;0,6;0,3;NA;30,1;1,6;0,3;18;26;0,06;22;0,1;0;100;0,01;0,2;NA;;;0,06;Tr;0,03;Tr;11,1
+130;Verduras;Mandioca, crua;61,80;151;633;1,1;0,3;NA;36,2;1,9;0,6;15;44;0,05;29;0,3;2;208;0,07;0,2;NA;;;Tr;Tr;0,04;Tr;16,5
+131;Verduras;Mandioca, farofa, temperada;6,40;405;1697;2,1;9,1;NA;80,3;7,8;2,1;65;34;0,29;44;1,4;574;201;Tr;0,2;NA;;;0,1;Tr;0,15;Tr;Tr
+132;Verduras;Mandioca, frita;36,60;300;1255;1,4;11,2;NA;50,3;1,9;0,6;23;94;0,18;56;0,3;8;176;0,12;0,4;NA;;;0,05;Tr;0,04;Tr;Tr
+133;Verduras;Manjericão, cru;93,00;21;88;2;0,4;NA;3,6;3,3;1;210;57;0,17;39;1;3;251;0,16;0,5;NA;1034;517;0,06;0,21;0,06;0,9;2,3
+134;Verduras;Maxixe, cru;95,10;13;57;1,4;0,1;NA;2,7;2,2;0,7;20;9;0,07;24;0,3;10;327;0,02;0,2;NA;5;2;0,06;0,02;0,04;Tr;9,6
+135;Verduras;Mostarda, folha, crua;93,40;18;75;2,1;0,2;NA;3,2;1,9;1,1;68;15;0,14;58;1,1;2;363;0,05;0,3;NA;;;0,05;0,04;0,05;Tr;38,6
+136;Verduras;Nhoque, batata, cozido;55,00;180;756;5,9;1,9;15;36,8;1,8;0,5;11;17;0,3;68;1,6;7;163;0,1;0,5;15;;;0,08;Tr;0,04;Tr;Tr
+137;Verduras;Nabo, cru;93,80;18;76;1,2;0,1;NA;4,1;2,6;0,8;42;14;4,42;16;0,2;2;279;0,02;0,2;NA;;;0,07;Tr;0,03;Tr;9,6
+138;Verduras;Palmito, juçara, em conserva;91,40;23;97;1,8;0,4;NA;4,3;3,1;2,1;58;33;10,82;40;0,3;513;243;0,23;0,7;NA;;;0,06;0,04;Tr;Tr;2
+139;Verduras;Palmito, pupunha, em conserva;89,40;29;123;2,5;0,5;NA;5,5;2,5;2,1;32;25;0,14;54;0,2;562;206;0,08;0,4;NA;;;0,03;Tr;Tr;Tr;8,7
+140;Verduras;Pão, de queijo, assado;33,70;363;1519;5,1;24,6;67;34,2;0,6;2,3;102;8;0,03;93;0,3;773;93;0,01;0,6;61;;;0,04;0,1;0,04;Tr; 
+141;Verduras;Pão, de queijo, cru;41,80;294;1232;3,6;14;63;38,5;1;2;87;6;Tr;78;0,3;404;58;Tr;0,4;47;;;Tr;0,08;Tr;Tr; 
+142;Verduras;Pepino, cru;96,80;9;39;0,9;Tr;NA;2;1,1;0,3;9;9;0,08;12;0,1;Tr;153;0,04;0,1;NA;3;1;Tr;0,03;Tr;Tr;5
+143;Verduras;Pimentão, amarelo, cru;91,90;27;116;1,2;0,4;NA;6;1,9;0,5;9;10;0,08;22;0,4;Tr;221;0,04;0,1;NA;40;20;0,04;0,03;0,06;Tr;201,4
+144;Verduras;Pimentão, verde, cru;93,50;21;89;1,1;0,1;NA;4,9;2,6;0,4;8;7;0,14;16;0,4;Tr;174;0,07;0,1;NA;46;23;Tr;Tr;Tr;Tr;100,2
+145;Verduras;Pimentão, vermelho, cru;92,90;23;97;1;0,1;NA;5,5;1,6;0,4;6;11;0,06;19;0,3;Tr;210;0,04;0,2;NA;86;43;0,05;0,06;0,02;Tr;158,2
+146;Verduras;Polvilho, doce;12,60;351;1469;0,4;Tr;NA;86,8;0,2;0,2;27;4;0,09;8;0,5;1;37;Tr;Tr;NA;;;Tr;Tr;Tr;Tr;Tr
+147;Verduras;Quiabo, cru;90,60;29;125;1,9;0,3;NA;6,4;4,6;0,8;112;49;0,46;55;0,4;0;248;0,17;0,6;NA;49;24;0,1;Tr;0,03;Tr;5,6
+148;Verduras;Rabanete, cru;95,10;13;57;1,4;0,1;NA;2,7;2,2;0,7;20;9;0,07;24;0,3;10;327;0,02;0,2;NA;;;0,06;0,02;0,04;Tr;9,6
+149;Verduras;Repolho, branco, cru;94,70;17;71;0,9;0,1;NA;3,9;1,9;0,4;34;8;0,13;14;0,1;3;150;0,02;0,1;NA;6;3;Tr;0,03;0,06;Tr;18,7
+150;Verduras;Repolho, roxo, cru;90,10;30;129;1,9;0,1;NA;7,2;2;0,7;43;18;0,25;57;0,5;2;328;0,9;0,3;NA;;;0,07;Tr;0,09;Tr;43,2
+151;Verduras;Repolho, roxo, refogado;88,70;41;174;1,8;1,2;NA;7,6;1,8;0,7;42;17;0,26;59;0,5;3;321;0,02;0,3;NA;;;0,07;Tr;0,07;0,63;40,5
+152;Verduras;Rúcula, crua;94,80;13;54;1,8;0,1;NA;2,2;1,7;1,1;116;17;0,24;25;0,9;9;233;0,04;0,2;NA;532;266;0,04;Tr;Tr;0,35;46,3
+153;Verduras;Salsa, crua;88,70;33;139;3,3;0,6;NA;5,7;1,9;1,8;179;20;1,88;49;3,2;2;711;0,2;1,3;NA;1743;871;0,12;0,15;0,47;0,72;51,7
+154;Verduras;Seleta de legumes, enlatada;82,10;56;236;3,4;0,4;NA;12,7;3,1;1,4;16;15;0,13;49;1,1;398;122;0,08;0,5;NA;244;122;0,03;Tr;Tr;3,72;Tr
+155;Verduras;Serralha, crua;90,20;30;127;2,7;0,7;NA;4,9;3,5;1,4;126;29;0,23;48;1,3;19;265;0,2;1,3;NA;1134;567;Tr;0,11;0,08;Tr;1,5
+156;Verduras;Taioba, crua;89,20;34;143;2,9;0,9;NA;5,4;4,5;1,5;141;37;0,66;52;1,9;1;290;0,16;0,6;NA;1160;580;Tr;0,1;0,1;Tr;17,9
+157;Verduras;Tomate, com semente, cru;95,10;15;64;1,1;0,2;NA;3,1;1,2;0,5;6;10;0,07;20;0,2;1;222;0,04;0,1;NA;54;27;0,12;Tr;0,02;Tr;21,2
+158;Verduras;Tomate, extrato;79,70;60;254;2,4;0,2;NA;15;2,8;2,8;29;29;0,18;47;2,1;497;679;0,2;0,4;NA;166;83;Tr;Tr;0,11;2,42;18
+159;Verduras;Tomate, molho industrializado;88,10;38;160;1,4;0,9;NA;7,7;3,1;1,9;11;16;0,08;27;1,6;418;388;0,08;0,1;NA;76;38;Tr;Tr;0,06;Tr;2,7
+160;Verduras;Tomate, purê;90,80;27;116;1,4;Tr;NA;6,9;1;0,9;13;15; ;30;1,2;103;308;0,09;0,3;NA;90;45;Tr;Tr;0,07;1,18;5,4
+161;Verduras;Tomate, salada;93,60;20;85;0,8;Tr;NA;5,1;2,3;0,4;6;9;0,04;23;0,3;5;161;0,07;0,2;NA;;;0,06;0,04;0,05;Tr;12,8
+162;Verduras;Vagem, crua;92,20;24;104;1,8;0,2;NA;5,3;2,4;0,5;41;17;0,5;27;0,4;Tr;208;0,06;0,3;NA;32;16;Tr;0,08;Tr;Tr;1,2
+163;Frutas e derivados;Abacate, cru;83,80;96;402;1,2;8,4;NA;6;6,3;0,5;7;14;0,17;21;0,2;Tr;206;0,15;0,2;NA;;;Tr;0,04;Tr;Tr;8,7
+164;Frutas e derivados;Abacaxi, cru;86,30;48;202;0,9;0,1;NA;12,3;1;0,4;22;18;1,62;12;0,3;Tr;131;0,11;0,1;NA;;;0,17;0,02;Tr;Tr;34,6
+165;Frutas e derivados;Abacaxi, polpa, congelada;91,30;30;127;0,5;0,1;NA;7,8;0,3;0,3;13;10;1,02;7;0,4;1;106;0,04;0,1;NA;2;1;0,05;Tr;Tr;Tr;1,2
+166;Frutas e derivados;Abiu, cru;83,10;62;261;0,8;0,7;NA;14,9;1,7;0,4;5;9;0,08;20;0,2;Tr;128;0,09;0,1;NA;;;Tr;0,04;0,05;Tr;10,3
+167;Frutas e derivados;Açaí, polpa, com xarope de guaraná e glucose;73,90;110;461;0,7;3,7;NA;21,5;1,7;0,3;22;12;3,29;10;0,3;15;75;0,14;0,2;NA;;;Tr;Tr;0,07;Tr;10,3
+168;Frutas e derivados;Açaí, polpa, congelada;88,70;58;242;0,8;3,9;NA;6,2;2,6;0,3;35;17;6,16;16;0,4;5;123;0,18;0,3;NA;;;Tr;0,04;0,07;Tr;Tr
+169;Frutas e derivados;Acerola, crua;90,50;33;140;0,9;0,2;NA;8;1,5;0,4;12;13;0,07;9;0,2;Tr;164;0,07;0,1;NA;247;123;Tr;0,04;Tr;1,38;941,4
+170;Frutas e derivados;Acerola, polpa, congelada;93,60;21;91;0,6;Tr;NA;5,5;0,7;0,3;7;8;0,03;12;0,2;1;111;0,04;0,1;NA;192;96;Tr;0,1;Tr;Tr;623,2
+171;Frutas e derivados;Ameixa, calda, enlatada ;52,20;182;765;0,4;Tr;NA;46,9;0,5;0,5;13;9;0,1;20;2,2;2;221;0,03;0,1;NA;;;Tr;0,23;0,37;Tr;4,3
+172;Frutas e derivados;Ameixa, crua;84,80;52;219;0,8;Tr;NA;13,9;2,4;0,6;5;5;0,03;13;0,1;Tr;134;0,06;0,1;NA;27;13;0,07;Tr;0,03;Tr;7,6
+173;Frutas e derivados;Ameixa, em calda, enlatada, drenada ;50,30;177;742;1;0,3;NA;47,7;4,5;0,7;39;14;0,2;26;2,7;2;263;0,16;0,2;NA;;;Tr;0,22;0,08;Tr;5,2
+174;Frutas e derivados;Atemóia, crua;72,70;96;405;1;0,3;NA;25,3;2,1;0,7;22;24;0,16;23;0,2;0;300;0,17;0,2;NA;;;0,09;0,07;0,07;1,58;10,1
+175;Frutas e derivados;Banana, da terra, crua;63,90;128;535;1,4;0,2;NA;33,7;1,5;0,8;4;23;0,16;25;0,3;Tr;328;0,05;0,2;NA;238;119;0,03;0,02;0,14;Tr;15,7
+176;Frutas e derivados;Banana, doce em barra;21,10;280;1171;2,2;0,1;NA;75,7;3,8;1;11;49;0,84;36;0,6;9;518;0,16;0,3;NA;27;13;0,03;Tr;0,06;1,41;Tr
+177;Frutas e derivados;Banana, figo, crua;70,10;105;439;1,1;0,1;NA;27,8;2,8;0,8;6;30;0,21;15;0,2;Tr;386;0,06;0,1;NA;;;0,09;Tr;0,03;Tr;17,5
+178;Frutas e derivados;Banana, maçã, crua;75,20;86;363;1,8;0,1;NA;22,3;2,6;0,6;3;23;0,6;28;0,2;Tr;264;0,11;0,1;NA;6;3;Tr;Tr;0,14;Tr;10,5
+179;Frutas e derivados;Banana, nanica, crua;73,80;91;382;1,4;0,1;NA;23,8;1,9;0,8;3;27;0,14;26;0,3;Tr;376;0,1;0,2;NA;13;6;Tr;0,02;0,14;Tr;5,9
+180;Frutas e derivados;Banana, ouro, crua;68,20;112;470;1,5;0,2;NA;29,3;2;0,8;3;28;0,09;22;0,3;Tr;354;0,08;0,3;NA;49;24;Tr;Tr;0,14;Tr;7,6
+181;Frutas e derivados;Banana, pacova, crua;77,70;77;325;1,2;0,1;NA;20,3;2;0,7;5;30;0,41;19;0,4;0;267;0,06;0,1;NA;;;0,05;0,03;0,17;Tr;Tr
+182;Frutas e derivados;Banana, prata, crua;71,90;98;411;1,3;0,1;NA;26;2;0,8;7;26;0,42;22;0,4;Tr;357;0,05;0,1;NA;32;16;Tr;0,02;0,1;Tr;21,6
+183;Frutas e derivados;Cacau, cru;79,20;74;310;1;0,1;NA;19,4;2,2;0,3;12;24;0,04;9;0,3;0;71;0,15;0,6;NA;;;0,25;Tr;0,04;Tr;13,6
+184;Frutas e derivados;Cajá-Manga, cru;86,90;45;190;1,3;Tr;NA;11,4;2,6;0,4;12;11;0,05;24;0,2;1;119;0,02;0,2;NA;;;0,11;Tr;0,05;Tr;26,7
+185;Frutas e derivados;Cajá, polpa, congelada;92,40;26;110;0,6;0,2;NA;6,4;1,4;0,4;9;7;0,07;25;0,3;6;148;0,1;0,1;NA;106;53;0,04;Tr;Tr;Tr;Tr
+186;Frutas e derivados;Caju, cru;88,10;43;180;1;0,3;NA;10,3;1,7;0,3;1;10;0,12;15;0,2;2;123;0,07;0,1;NA;14;7;Tr;Tr;Tr;Tr;219,3
+187;Frutas e derivados;Caju, polpa, congelada;89,80;36;153;0,5;0,2;NA;9,4;0,8;0,2;0;7;0,05;9;0,1;4;87;0,07;0,1;NA;22;11;Tr;0,02;Tr;2,25;119,7
+188;Frutas e derivados;Caju, suco concentrado, envasado;88,40;45;188;0,4;0,2;NA;10,7;0,6;0,3;0;8;0,06;11;0,1;45;106;0,04;0,1;NA;10;5;Tr;0,03;Tr;Tr;138,7
+189;Frutas e derivados;Caqui, chocolate, cru;79,70;71;298;0,4;0,1;NA;19,3;6,5;0,5;17;8;0,39;18;0,1;2;163;Tr;0,2;NA;;;Tr;Tr;0,03;Tr;29,6
+190;Frutas e derivados;Carambola, crua;87,10;45;191;0,9;0,2;NA;11,5;2;0,4;4;7;0,13;10;0,2;4;132;0,08;0,2;NA;;;0,12;Tr;Tr;Tr;60,9
+191;Frutas e derivados;Ciriguela, crua;78,70;75;316;1,4;0,4;NA;18,9;3,9;0,7;27;17;0,06;48;0,4;1;248;0,12;0,5;NA;;;0,14;Tr;Tr;Tr;27
+192;Frutas e derivados;Cupuaçu, cru;86,20;49;206;1,2;1;NA;10,4;3,1;1,2;13;18;0,07;21;0,5;3;331;0,07;0,3;NA;;;0,37;0,04;0,07;4,34;24,5
+193;Frutas e derivados;Cupuaçu, polpa, congelada;86,60;48;204;0,8;0,6;NA;11,4;1,6;0,6;5;13;0,17;14;0,3;0;291;0,14;0,2;NA;;;0,07;0,07;0,05;Tr;10,5
+194;Frutas e derivados;Figo, cru;88,20;41;173;1;0,2;NA;10,2;1,8;0,4;27;11;0,06;14;0,2;Tr;174;0,13;0,1;NA;;;0,05;Tr;Tr;Tr;0,8
+195;Frutas e derivados;Figo, enlatado, em calda;48,80;184;771;0,6;0,1;NA;50,3;2;0,2;32;6;0,16;6;0,5;6;39;0,25;0,1;NA;;;Tr;Tr;Tr;Tr;5,2
+196;Frutas e derivados;Fruta-pão, crua;80,90;67;280;1,1;0,2;NA;17,2;5,5;0,7;33;24;0,04;27;0,2;0;188;0,07;0,1;NA;;;0,03;Tr;Tr;Tr;9,9
+197;Frutas e derivados;Goiaba, branca, com casca, crua;85,70;51;216;0,9;0,5;NA;12,4;6,3;0,5;5;7;0,07;16;0,2;Tr;219;0,04;0,2;NA;;;Tr;Tr;0,03;Tr;99,2
+198;Frutas e derivados;Goiaba, doce em pasta;24,80;268;1125;0,6;0;NA;74,1;3,7;0,5;10;6;0,11;53;0,4;3;164;0,06;0,1;NA;136;68;0,07;Tr;Tr;Tr;23,1
+199;Frutas e derivados;Goiaba, doce, cascão;20,30;285;1194;0,4;0,1;NA;78,7;4,4;0,5;14;9;0,16;28;0,4;11;250;0,08;0,1;NA;50;25;Tr;Tr;Tr;1,41;34,3
+200;Frutas e derivados;Goiaba, vermelha, com casca, crua;85,00;54;226;1,1;0,4;NA;13;6,2;0,5;4;6;0,09;15;0,2;Tr;197;0,04;0,1;NA;38;19;Tr;Tr;0,03;Tr;80,6
+201;Frutas e derivados;Graviola, crua;82,20;61;257;0,8;0,2;NA;15,8;1,9;1;40;23;0,08;19;0,2;4;249;0,04;0,1;NA;;;0,17;0,12;0,03;Tr;19,1
+202;Frutas e derivados;Graviola, polpa, congelada;89,20;38;160;0,6;0,1;NA;9,8;1,2;0,3;5;9;0,06;16;0,1;3;169;0,06;0,1;NA;;;Tr;0,09;Tr;Tr;10,5
+203;Frutas e derivados;Jabuticaba, crua;83,60;58;242;0,6;0,1;NA;15,3;2,3;0,4;8;17;0,3;14;0,1;Tr;129;0,07;0,3;NA;;;0,06;Tr;Tr;Tr;16,2
+204;Frutas e derivados;Jaca, crua;75,10;87;367;1,4;0,3;NA;22,5;2,4;0,8;11;40;0,48;13;0,4;1;233;0,09;0,2;NA;;;0,1;0,04;0,05;Tr;14,8
+205;Frutas e derivados;Jambo, cru;92,10;26;112;0,9;0,1;NA;6,5;5,1;0,5;13;14;0,05;18;0,1;21;134;0,02;0,1;NA;;;0,08;Tr;Tr;1,18;3,8
+206;Frutas e derivados;Jamelão, cru;87,70;41;171;0,5;0,1;NA;10,6;1,8;1;3;2;Tr;4;0;1;394;0,03;0;NA;7;3;0,17;Tr;0,12;Tr;27,1
+207;Frutas e derivados;Kiwi, cru;85,90;51;213;1,3;0,6;NA;11,5;2,7;0,7;23;10;0,05;33;0,3;Tr;268;0,15;0,1;NA;5;2;Tr;Tr;0,06;Tr;70,8
+208;Frutas e derivados;Laranja, baía, crua;87,10;45;190;1;0,1;NA;11,5;1,1;0,4;35;9;0,04;23;0,1;Tr;174;0,04;0,1;NA;3;1;0,06;0,02;Tr;Tr;56,9
+209;Frutas e derivados;Laranja, baía, suco;90,20;36;153;0,7;Tr;NA;8,7;Tr;0,4;5;7;0,02;21;0,1;Tr;172;0,02;Tr;NA;4;2;0,03;Tr;0,02;Tr;94,5
+210;Frutas e derivados;Laranja, da terra, crua;85,40;51;215;1,1;0,2;NA;12,9;4;0,5;51;14;0,04;20;0,1;0;172;0,04;0,2;NA;;;0,07;0,09;0,03;Tr;34,7
+211;Frutas e derivados;Laranja, da terra, suco;89,20;40;171;0,7;0,1;NA;9,6;1;0,4;13;10;0,02;14;0,1;Tr;145;0,02;0,1;NA;4;2;0,04;Tr;0,04;Tr;44,3
+212;Frutas e derivados;Laranja, lima, crua;87,00;45;191;1,1;0,1;NA;11,5;1,8;0,4;31;10;0,05;14;0,1;1;129;0,03;0,1;NA;;;0,09;0,05;0,04;Tr;43,5
+213;Frutas e derivados;Laranja, lima, suco;89,70;39;164;0,7;0,1;NA;9,2;0,4;0,3;7;10;0,02;16;Tr;Tr;128;0,02;0;NA;;;0,1;0,03;0,04;Tr;41,3
+214;Frutas e derivados;Laranja, pêra, crua;89,50;36;153;1;0,1;NA;8,9;0,8;0,3;21;8;0,05;22;0,1;Tr;162;0,03;0,1;NA;0;0;0,07;0,02;0,02;Tr;53,7
+215;Frutas e derivados;Laranja, pêra, suco;91,30;32;136;0,7;0,1;NA;7,6;Tr;0,3;7;7;0,03;14;Tr;Tr;148;0,01;Tr;NA;1;0;Tr;Tr;Tr;Tr;73,3
+216;Frutas e derivados;Laranja, valência, crua;86,90;46;192;0,8;0,2;NA;11,7;1,7;0,4;33;14;0,06;19;0,1;0;157;0,04;0,1;NA;;;0,07;0,04;0,03;Tr;47,8
+217;Frutas e derivados;Laranja, valência, suco;90,50;36;151;0,5;0,1;NA;8,6;0,4;0,3;9;9;0,03;17;Tr;Tr;143;0,02;Tr;NA;2;1;*;*;0,03;Tr;*
+218;Frutas e derivados;Limão, cravo, suco;94,20;14;59;0,3;Tr;NA;5,2;Tr;0,2;10;8;0,03;11;0,1;Tr;119;0,03;;NA;31;15;Tr;Tr;Tr;Tr;32,8
+219;Frutas e derivados;Limão, galego, suco;91,80;22;92;0,6;0,1;NA;7,3;Tr;0,2;5;5;0,01;13;0,1;Tr;112;0,02;0,1;NA;;;Tr;Tr;0,03;Tr;34,5
+220;Frutas e derivados;Limão, tahiti, cru;87,40;31;133;0,9;0,1;NA;11,1;1,2;0,4;50;9;0,07;23;0,2;1;128;0,06;0,2;NA;;;0,3;0,04;Tr;Tr;38,2
+221;Frutas e derivados;Maçã, Argentina, com casca, crua;82,60;62;261;0,2;0,2;NA;16,6;2;0,3;3;4;0,01;11;0,1;1;117;0,03;Tr;NA;;;0,05;Tr;Tr;Tr;1,5
+222;Frutas e derivados;Maçã, Fuji, com casca, crua;84,30;55;232;0,3;Tr;NA;15,2;1,3;0,2;1;2;0,03;9;0,1;Tr;74;0,06;Tr;NA;3;1;Tr;Tr;0,03;Tr;2,4
+223;Frutas e derivados;Macaúba, crua;41,50;404;1691;2,1;40,7;NA;13,9;13,4;1,8;66;66;0,07;43;0,8;0;305;0,35;0,7;NA;1020;510;0,11;0,11;0,03;Tr;13,4
+224;Frutas e derivados; Mamão, doce em calda, drenado;45,50;195;818;0,2;0,1;NA;54;1,3;0,2;20;5;0,02;4;0,1;2;68;0,02;0,1;NA;;;0,03;Tr;Tr;Tr;3,9
+225;Frutas e derivados;Mamão, Formosa, cru;86,90;45;189;0,8;0,1;NA;11,6;1,8;0,6;24;17;0,04;10;0,2;3;221;1,36;0,1;NA;148;74;0,03;0,03;Tr;Tr;78,5
+226;Frutas e derivados;Mamão, Papaia, cru;88,60;40;168;0,5;0,1;NA;10,4;1;0,4;22;22;0,01;10;0,2;1;126;0,02;0,1;NA;118;59;0,03;0,04;Tr;1,03;82,2
+227;Frutas e derivados; Mamão verde, doce em calda, drenado;41,90;209;876;0,3;0,1;NA;57,6;1,2;0,1;12;4;0,04;3;0,2;4;8;0,01;0;NA;;;Tr;Tr;Tr;Tr;Tr
+228;Frutas e derivados;Manga, Haden, crua;82,30;63;265;0,4;0,3;NA;16,7;1,6;0,4;11;7;0,17;9;0,1;0;147;0,1;0,1;NA;162;81;0,02;0,06;0,05;Tr;17,4
+229;Frutas e derivados;Manga, Palmer, crua;79,70;72;303;0,4;0,2;NA;19,4;1,6;0,3;11;8;0,05;14;0,1;1;156;0,09;0,1;NA;786;393;0,09;0,03;Tr;Tr;65,5
+230;Frutas e derivados;Manga, polpa, congelada;86,50;48;202;0,4;0,2;NA;12,5;1,1;0,4;7;9;0,12;9;0,1;6;131;0,06;0,1;NA;;;Tr;0,07;0,03;Tr;24,9
+231;Frutas e derivados;Manga, Tommy Atkins, crua;85,80;50;212;0,9;0,2;NA;12,8;2,1;0,3;7;7;0,34;13;0,1;Tr;138;0,06;0,1;NA;118;59;Tr;0,04;0,03;Tr;7,9
+232;Frutas e derivados;Maracujá, cru;82,90;68;286;2;2,1;NA;12,3;1,1;0,8;5;27;0,12;50;0,6;1;338;0,19;0,4;NA;114;57;Tr;0,05;0,05;Tr;19,8
+233;Frutas e derivados;Maracujá, polpa, congelada;88,90;38;162;0,8;0,2;NA;9,6;0,5;0,5;4;9;0,07;15;0,3;8;227;0,05;0,2;NA;;;Tr;0,09;0,06;Tr;7,3
+234;Frutas e derivados;Maracujá, suco concentrado, envasado;88,90;41;175;0,8;0,2;NA;9,6;0,4;0,5;4;4;0,07;13;0,3;21;200;0,05;0,1;NA;;;Tr;0,08;0,05;1,92;13,7
+235;Frutas e derivados;Melancia, crua;90,70;32;136;0,9;Tr;NA;8,1;0,1;0,3;7;9;0,14;12;0,2;Tr;104;0,04;0,1;NA;61;30;Tr;Tr;Tr;Tr;6,1
+236;Frutas e derivados;Melão, cru;91,30;29;122;0,7;Tr;NA;7,5;0,2;0,5;2;5;0,05;10;0,2;11;216;0,04;0,1;NA;2;1;Tr;Tr;0,02;Tr;8,7
+237;Frutas e derivados;Mexerica, Murcote, crua;83,70;57;240;0,9;0,1;NA;14,9;3,1;0,5;33;12;0,05;19;0,1;1;158;0,06;0,1;NA;;;0,08;0,07;0,05;Tr;21,8
+238;Frutas e derivados;Mexerica, Rio, crua;89,60;36;154;0,7;0,1;NA;9,3;2,7;0,3;17;8;0,04;13;0,1;1;124;0,07;0,2;NA;;;0,03;Tr;Tr;Tr;112
+239;Frutas e derivados;Morango, cru;91,50;30;126;0,9;0,3;NA;6,8;1,7;0,5;10;9;0,33;22;0,3;Tr;184;0,06;0,2;NA;;;Tr;0,03;0,03;Tr;63,6
+240;Frutas e derivados;Nêspera, crua;87,80;42;177;0,3;Tr;NA;11,5;3;0,4;19;9;0,07;10;0,1;Tr;112;0,12;0,1;NA;170;85;Tr;Tr;Tr;Tr;3,2
+241;Frutas e derivados;Pequi, cru;65,90;204;857;2,3;18;NA;13;19;0,8;32;29;0,64;33;0,3;Tr;297;0,21;1;NA;60;30;0,17;0,48;0,06;2,57;8,3
+242;Frutas e derivados;Pêra, Park, crua;83,20;60;253;0,2;0,2;NA;16,1;3;0,3;8;6;0,04;11;0,3;0;102;0,08;0,1;NA;;;0,06;Tr;Tr;Tr;2,4
+243;Frutas e derivados;Pêra, Williams, crua;85,00;53;223;0,6;0,1;NA;14;3;0,3;8;5;0,04;11;0,1;Tr;115;0,07;0,1;NA; ; ;Tr;Tr;Tr;Tr;2,8
+244;Frutas e derivados;Pêssego, Aurora, cru;89,30;36;151;0,8;Tr;NA;9,3;1,4;0,5;3;4;0,05;15;0,2;Tr;123;0,02;0,1;NA;;;0,05;Tr;Tr;Tr;3,3
+245;Frutas e derivados;Pêssego, enlatado, em calda;82,20;63;264;0,7;Tr;NA;16,9;1;0,2;4;4;0,03;8;0,6;3;94;0,04;0,1;NA;47;23;Tr;Tr;Tr;Tr;Tr
+246;Frutas e derivados;Pinha, crua;75,00;88;370;1,5;0,3;NA;22,4;3,4;0,7;20;30;0,15;34;0,2;1;283;0,11;0,2;NA;;;0,12;0,04;0,09;Tr;35,9
+247;Frutas e derivados;Pitanga, crua;88,30;41;173;0,9;0,2;NA;10,2;3,2;0,4;17;12;0,36;13;0,4;1;113;0,08;0,4;NA;154;77;0,03;0,1;Tr;Tr;24,9
+248;Frutas e derivados;Pitanga, polpa, congelada;94,60;19;79;0,3;0,1;NA;4,8;0,7;0,3;7;6;0,05;12;0,4;5;87;0,06;0,1;NA;145;72;Tr;Tr;Tr;Tr;Tr
+249;Frutas e derivados;Romã, crua;84,00;55;233;0,4;Tr;NA;15,1;0,4;0,5;4;12;0,13;40;0,3;0;484;0,19;0,7;NA;;;0,12;0,17;0,05;Tr;8,1
+250;Frutas e derivados;Tamarindo, cru;21,90;275;1153;3,2;0,5;NA;72,5;6,4;1,9;37;59;0,34;54;0,6;0;722;0,29;0,7;NA;;;0,31;Tr;0,1;Tr;7,2
+251;Frutas e derivados;Tangerina, Poncã, crua;89,20;37;158;0,8;0,1;NA;9,6;0,9;0,3;12;7;0,04;12;0,1;Tr;131;0,03;Tr;NA;47;23;0,06;0,02;0,02;Tr;48,8
+252;Frutas e derivados;Tangerina, Poncã, suco;90,40;36;150;0,5;Tr;NA;8,8;Tr;0,3;4;6;0,02;9;Tr;Tr;119;0,02;Tr;NA;51;25;0,06;Tr;0,03;Tr;41,8
+253;Frutas e derivados;Tucumã, cru;51,30;262;1096;2,1;19,1;NA;26,5;12,7;1,1;46;121;0,55;52;0,6;3;401;0,39;0,9;NA;2362;1181;0,04;Tr;0,11;Tr;18
+254;Frutas e derivados;Umbu, cru;89,20;37;154;0,8;Tr;NA;9,4;2;0,5;11;11;0,03;13;0,1;Tr;151;0,04;0,4;NA;;;0,05;0,06;0,03;Tr;24,1
+255;Frutas e derivados;Umbu, polpa, congelada;90,20;33;142;0,5;0,1;NA;8,8;1,3;0,4;10;8;0,05;12;0,2;5;153;0,04;0,1;NA;;;Tr;0,06;Tr;Tr;4
+256;Frutas e derivados;Uva, Itália, crua;85,00;52;221;0,7;0,2;NA;13,6;0,9;0,6;6;4;0,13;12;0,1;Tr;161;0,11;Tr;NA;5;2;Tr;Tr;0,03;Tr;3,3
+257;Frutas e derivados;Uva, Rubi, crua;86,10;49;205;0,6;0,2;NA;12,7;0,9;0,5;7;5;0,07;22;0,2;7;158;0,05;Tr;NA;;;0,02;0,02;Tr;Tr;1,9
+258;Frutas e derivados;Uva, suco concentrado, envasado;85,10;57;241;Tr;Tr;NA;14,7;0,2;0,2;9;7;0,2;10;0,1;9;53;0,13;0,1;NA;;;0,07;0,02;0,05;Tr;21
+259;Gorduras e óleos;Azeite, de dendê;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+260;Gorduras e óleos;Azeite, de oliva, extra virgem;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+261;Gorduras e óleos;Manteiga, com sal;15,80;725;3037;0,4;82,4;200;0,1;NA;1,4;9;1;Tr;27;0,2;578;14;Tr;Tr;923;;;Tr;Tr;Tr;Tr;Tr
+262;Gorduras e óleos;Manteiga, sem sal;13,60;757;3169;0,4;86;213;0;NA;0,1;3;1;Tr;7;Tr;3;5;0,04;Tr;1013;;;Tr;Tr;Tr;Tr;Tr
+263;Gorduras e óleos;Margarina, com óleo hidrogenado, com sal (65% de lipídeos);32,20;596;2494;Tr;67,4;NA;0;NA;1,9;5;1;Tr;7;0,1;894;21;Tr;Tr;462;;;Tr;Tr;Tr;Tr;Tr
+264;Gorduras e óleos;Margarina, com óleo hidrogenado, sem sal (80% de lipídeos);19,60;722;3023;Tr;81,7;NA;0;NA;0,2;2;0;Tr;3;0,1;77;1;Tr;Tr;534;;;Tr;Tr;Tr;Tr;Tr
+265;Gorduras e óleos;Margarina, com óleo interesterificado, com sal (65%de lipídeos);32,00;594;2487;Tr;67,2;NA;0;NA;1,2;4;1;Tr;5;Tr;560;14;Tr;Tr;385;;;Tr;Tr;Tr;Tr;Tr
+266;Gorduras e óleos;Margarina, com óleo interesterificado, sem sal (65% de lipídeos);33,40;593;2481;Tr;67,1;NA;0;NA;0,1;4;1;Tr;7;0,1;33;4;Tr;Tr;245;;;Tr;Tr;Tr;Tr;Tr
+267;Gorduras e óleos;Óleo, de babaçu;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+268;Gorduras e óleos;Óleo, de canola;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+269;Gorduras e óleos;Óleo, de girassol;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+270;Gorduras e óleos;Óleo, de milho;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+271;Gorduras e óleos;Óleo, de pequi;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+272;Gorduras e óleos;Óleo, de soja;NA;884;3698;NA;100;NA;NA;NA;;;;;;;;;;;NA;;;;;;;
+273;Pescados e frutos do mar;Abadejo, filé, congelado, assado;74,30;111;466;23,5;1,2;102;0;NA;1,6;22;20;Tr;337;0,5;334;155;0,03;0,5;Tr;Tr;Tr;Tr;Tr;Tr;0,44;
+274;Pescados e frutos do mar;Abadejo, filé, congelado,cozido;79,70;91;381;19,3;0,9;86;0;NA;0,9;16;15;Tr;350;0,3;189;145;0,03;0,4;Tr;Tr;Tr;Tr;Tr;Tr;Tr;
+275;Pescados e frutos do mar;Abadejo, filé, congelado, cru;86,40;59;247;13,1;0,4;31;0;NA;0,6;10;14;0,01;90;0,1;78;148;0,14;0,4;Tr;Tr;Tr;0,04;Tr;Tr;4,6;
+276;Pescados e frutos do mar;Abadejo, filé, congelado, grelhado;71,00;129;542;27,6;1,3;135;0;NA;1,6;20;22;Tr;581;0,3;305;278;Tr;0,4;5;5;5;0,03;Tr;Tr;0,44;
+277;Pescados e frutos do mar;Atum, conserva em óleo;64,50;165;694;26,2;6;52;0;NA;1,5;6;29;Tr;211;1,2;362;279;0,04;0,6;Tr;Tr;Tr;0,15;0,03;Tr;3,17;
+278;Pescados e frutos do mar;Atum, fresco, cru;73,10;117;491;25,7;0,9;47;0;NA;1,3;6;32;Tr;253;1,3;30;307;0,09;0,4;20;20;20;Tr;0,04;Tr;5,94;
+279;Pescados e frutos do mar;Bacalhau, salgado, cru;47,90;135;568;29;1,3;138;0;NA;22,5;156;49;0,03;186;0,9;13585;433;0,09;0,7;Tr;Tr;Tr;Tr;0,21;Tr;*;
+280;Pescados e frutos do mar;Bacalhau, salgado, refogado;65,90;139;584;24;3,6;111;1,2;*;5,3;59;15;Tr;51;0,2;1256;50;0,04;0,6;Tr;Tr;Tr;0,03;0,05;Tr;5,17;Tr
+281;Pescados e frutos do mar;Cação, posta, com farinha de trigo, frita;60,60;208;871;25;10;74;3,1;0,5;1,4;30;25;0,06;461;1;160;419;Tr;0,6;17;17;17;Tr;Tr;Tr;0,77;
+282;Pescados e frutos do mar;Cação, posta, cozida;75,90;116;485;25,6;0,7;83;0;NA;1,2;10;21;Tr;203;0,3;114;248;0,03;0,6;11;11;12;Tr;0,04;Tr;9,77;
+283;Pescados e frutos do mar;Cação, posta, crua;81,40;83;348;17,9;0,8;36;0;NA;1,2;8;19;0,04;181;0,2;176;299;0,13;0,3;5;5;5;0,04;Tr;Tr;1,31;
+284;Pescados e frutos do mar;Camarão, Rio Grande, grande, cozido;78,70;90;376;19;1;240;0;NA;1,7;89;18;0,06;265;1,3;366;101;0,17;1,2;Tr;Tr;Tr;Tr;Tr;Tr;1,07;
+285;Pescados e frutos do mar;Camarão, Rio Grande, grande, cru;89,10;47;197;10;0,5;123;0;NA;0,8;51;27;0,04;233;0,7;201;72;0,11;0,7;20;20;20;Tr;Tr;Tr;Tr;
+286;Pescados e frutos do mar;Camarão, Sete Barbas, sem cabeça, com casca, frito;61,00;231;967;18,4;15,6;283;2,9;NA;2,1;959;73;0,38;336;2,4;99;106;0,19;1,1;Tr;Tr;Tr;0,05;Tr;Tr;0,35;
+287;Pescados e frutos do mar;Caranguejo, cozido;77,00;82;346;18,5;0,4;84;0;NA;3,5;357;52;0,07;153;2,9;360;185;0,72;5,7;Tr;Tr;Tr;0,04;0,31;Tr;4,17;Tr
+288;Pescados e frutos do mar;Corimba, cru;75,60;128;536;17,4;6;40;0;NA;1;40;22;0,02;190;0,5;47;316;0,03;0,4;Tr;Tr;Tr;Tr;Tr;Tr;1,87;
+289;Pescados e frutos do mar;Corimbatá, assado;59,90;261;1093;19,9;19,6;80;0;NA;1;22;24;0,01;220;1;40;326;0,03;0,7;Tr;Tr;Tr;0,13;0,06;Tr;2,7;
+290;Pescados e frutos do mar;Corimbatá, cozido;64,60;238;998;20,1;16,9;74;0;NA;0,8;64;22;0,02;185;0,6;37;253;0,05;1;Tr;Tr;Tr;Tr;Tr;Tr;2,09;
+291;Pescados e frutos do mar;Corvina de água doce, crua;79,20;101;422;18,9;2,2;73;0;NA;1;39;24;0,02;153;0,3;45;293;0,02;0,4;8;8;8;Tr;0,08;Tr;*;
+292;Pescados e frutos do mar;Corvina do mar, crua;79,40;94;391;18,6;1,6;67;0;NA;1,1;*;23;0,01;183;0,4;67;338;0,03;0,4;65;65;65;0,12;0,05;Tr;2,62;
+293;Pescados e frutos do mar;Corvina grande, assada;69,00;146;613;26,8;3,6;117;0;NA;1,3;60;24;0,03;175;0,5;85;291;0,02;0,7;Tr;Tr;Tr;0,11;0,1;Tr;4,23;
+294;Pescados e frutos do mar;Corvina grande, cozida;73,60;100;418;23,4;2,6;122;0;NA;0,9;69;22;0,02;163;0,6;68;194;0,03;0,7;6;6;6;Tr;0,03;Tr;0,77;
+295;Pescados e frutos do mar;Dourada de água doce, fresca;76,20;131;548;18,8;5,6;51;0;NA;1,1;12;26;0,01;189;0,2;40;392;0,02;0,5;Tr;Tr;Tr;Tr;Tr;Tr;3,7;
+296;Pescados e frutos do mar;Lambari, congelado, cru;71,90;130;547;16,8;6,5;158;0;NA;3,6;1181;44;0,28;696;0,9;47;244;0,09;3,3;4;4;4;0,05;Tr;Tr;3,3;
+297;Pescados e frutos do mar;Lambari, congelado, frito;40,10;326;1367;28,4;22,8;246;0;NA;6,2;1881;66;0,34;1067;0,8;64;331;0,31;5,6;9;9;9;0,25;0,03;0,04;8,93;
+298;Pescados e frutos do mar;Lambari, fresco, cru;72,20;151;634;15,7;9,4;144;0;NA;2,2;590;31;0,41;440;0,6;41;207;0,05;2,4;Tr;Tr;Tr;Tr;0,03;0,07;1,86;
+299;Pescados e frutos do mar;Manjuba, com farinha de trigo, frita;41,30;343;1437;23,4;22,6;281;10,2;0,4;2,4;763;46;0,36;577;3;36;319;0,15;3,8;29;29;29;0,05;0,07;Tr;0,79;
+300;Pescados e frutos do mar;Manjuba, frita;40,70;349;1461;30,1;24,5;270;0;NA;4,2;575;31;0,21;735;0,9;40;318;0,14;3,2;12;12;12;0,03;0,03;Tr;7,27;
+301;Pescados e frutos do mar;Merluza, filé, assado;70,70;121;510;26,6;0,9;90;0;NA;1,2;35;20;0,03;273;0,4;119;363;0,03;0,9;Tr;Tr;Tr;0,05;Tr;Tr;7,97;
+302;Pescados e frutos do mar;Merluza, filé, cru;82,10;89;372;16,6;2;57;0;NA;1,1;20;27;0,01;184;0,2;79;339;Tr;0,3;Tr;Tr;Tr;Tr;Tr;Tr;1,34;
+303;Pescados e frutos do mar;Merluza, filé, frito;63,50;191;801;26,9;8,5;109;0;NA;1,5;35;38;0,02;278;0,4;89;446;0,03;0,6;Tr;Tr;Tr;0,05;Tr;Tr;0,77;
+304;Pescados e frutos do mar;Pescada, branca, crua;79,60;110;463;16,3;4,6;50;0;NA;0,9;15;19;0,01;135;0,2;76;261;Tr;0,2;2;2;2;Tr;0,04;Tr;0,6;
+305;Pescados e frutos do mar;Pescada, branca, frita;57,00;223;933;27,4;11,8;165;0;NA;3,2;378;30;0,06;504;0,5;107;355;0,08;1,1;39;39;39;0,08;0,11;Tr;8,07;
+306;Pescados e frutos do mar;Pescada, filé, com farinha de trigo, frito;53,20;283;1185;21,4;19,1;72;5;Tr;1,2;26;28;0,07;216;0,9;90;216;0,03;0,4;17;17;17;Tr;0,03;Tr;0,6;
+307;Pescados e frutos do mar;Pescada, filé, cru;79,50;107;448;16,6;4;64;0;NA;0,9;13;22;0,01;141;0,2;77;253;Tr;0,3;47;47;47;Tr;0,05;Tr;3,1;
+308;Pescados e frutos do mar;Pescada, filé, frito;66,80;154;645;28,6;3,6;80;0;NA;1,7;10;21;Tr;203;0,3;114;248;0,03;0,6;4;4;4;0,14;Tr;Tr;8,87;
+309;Pescados e frutos do mar;Pescada, filé, molho escabeche;74,50;141;593;11,8;8;43;5;0,8;0,7;20;18;0,08;105;1,5;51;208;0,36;0,3;19;;;Tr;0,03;Tr;1,1;6,9
+310;Pescados e frutos do mar;Pescadinha, crua;80,60;76;319;15,5;1,1;83;0;NA;2;331;33;0,07;326;0,5;120;303;0,1;0,6;Tr;Tr;Tr;0,08;Tr;Tr;6,6;
+311;Pescados e frutos do mar;Pintado, assado;57,00;191;801;36,5;4;125;0;NA;2;113;42;0,08;331;0,8;80;527;0,04;2,1;6;6;6;0,03;Tr;Tr;6,63;
+312;Pescados e frutos do mar;Pintado, cru;80,30;91;381;18,6;1,3;50;0;NA;1,1;12;23;0,01;174;0,2;43;293;0,03;0,4;Tr;Tr;Tr;Tr;Tr;Tr;4,95;
+313;Pescados e frutos do mar;Pintado, grelhado;65,50;152;636;30,8;2,3;99;0;NA;1,6;68;26;0,03;237;0,5;53;360;0,04;0,8;5;5;5;0,03;Tr;Tr;2,87;
+314;Pescados e frutos do mar;Porquinho, cru;79,20;93;389;20,5;0,6;48;0;NA;1,3;25;24;0,05;207;0,4;66;313;0,04;0,7;4;4;4;Tr;Tr;Tr;1,19;
+315;Pescados e frutos do mar;Salmão, filé, com pele, fresco,  grelhado;60,90;228;957;23,9;14;85;0;NA;1,3;28;27;0,02;299;0,5;85;383;0,04;0,6;Tr;Tr;Tr;0,13;0,06;Tr;5,35;
+316;Pescados e frutos do mar;Salmão, sem pele, fresco, cru;69,00;169;710;19,3;9,7;53;0;NA;1,2;8;27;Tr;258;0,2;64;376;0,02;0,3;Tr;Tr;Tr;0,2;0,03;Tr;3,21;
+317;Pescados e frutos do mar;Salmão, sem pele, fresco, grelhado;58,10;242;1015;26,1;14,5;72;0;NA;1,6;15;37;0,01;352;0,4;95;517;0,04;0,5;Tr;Tr;Tr;0,23;0,03;Tr;6,3;
+318;Pescados e frutos do mar;Sardinha, assada;60,10;164;687;32,2;3;108;0;NA;4,4;437;51;0,24;577;1,3;74;574;0,14;1,8;Tr;Tr;Tr;0,06;Tr;Tr;5,83;
+319;Pescados e frutos do mar;Sardinha, conserva em óleo;55,10;284;1192;15,9;24;72;0;NA;2,9;550;35;0,11;496;3,5;665;367;0,03;1,6;Tr;Tr;Tr;0,42;0,04;Tr;6,55;
+320;Pescados e frutos do mar;Sardinha, frita;48,50;257;1075;33,4;12,7;102;0;NA;4,3;482;38;0,25;628;1,1;60;459;0,14;1,6;Tr;Tr;Tr;0,06;Tr;Tr;7,1;
+321;Pescados e frutos do mar;Sardinha, inteira, crua;76,60;113;476;21,1;2,6;60;0;NA;1,6;167;28;0,1;293;1,3;60;312;0,13;1,3;Tr;Tr;Tr;Tr;0,07;Tr;7,7;
+322;Pescados e frutos do mar;Tucunaré, filé, congelado, cru;79,90;87;366;18;1,2;46;0;NA;1;19;25;0,01;167;0,3;56;288;0,1;0,4;Tr;Tr;Tr;Tr;0,05;Tr;0,9;
+323;Carnes e derivados;Apresuntado;73,70;128;539;13,4;6,7;37;2,9;NA;3,3;22;15;0,04;225;0,9;942;270;0,03;1,6;Tr;;;0,62;0,04;Tr;0,7;Tr
+324;Carnes e derivados;Caldo de carne, tablete;2,90;240;1006;7,8;16,6;Tr;15,1;0,6;57,6;129;22;0,02;123;Tr;22179;218;Tr;Tr;Tr; ;;0,7;0,07;0,27;Tr;
+325;Carnes e derivados;Caldo de galinha, tablete;3,40;251;1052;6,3;20,4;2;10,6;11,8;59,3;16;12;0,13;48;0,7;22299;68;Tr;0,3;Tr; ; ;0,05;0,04;Tr;*;
+326;Carnes e derivados;Carne, bovina, acém, moído, cozido;61,60;212;888;26,7;10,9;103;0;NA;0,8;4;17;0,01;164;2,7;52;255;0,06;8,1;Tr;Tr;Tr;Tr;0,32;Tr;1,76;
+327;Carnes e derivados;Carne, bovina, acém, moído, cru;72,70;136;571;19,4;5,9;57;0;NA;0,9;2;14;Tr;157;1,8;48;237;0,08;6,3;2;2;2;0,15;0,21;0,03;4,33;
+328;Carnes e derivados;Carne, bovina, acém, sem gordura, cozido;60,40;214;897;27,3;10,9;106;0;NA;0,8;7;14;Tr;164;2,4;56;254;0,07;8;Tr;Tr;Tr;Tr;0,04;0,07;1,63;
+329;Carnes e derivados;Carne, bovina, acém, sem gordura, cru;71,50;144;602;20,8;6,1;53;0;NA;1;4;13;Tr;144;1,5;49;233;0,04;5,2;2;2;2;0,12;0,12;Tr;2,33;
+330;Carnes e derivados;Carne, bovina, almôndegas, cruas;64,30;189;791;12,3;11,2;33;9,8;*;2,4;22;23;0,17;144;1,6;621;328;0,15;2,3;Tr; ; ;0,11;0,04;Tr;2,2; 
+331;Carnes e derivados;Carne, bovina, almôndegas, fritas;48,10;271;1137;18,2;15,8;36;14,3;*;3,7;26;48;0,41;244;1,9;1030;536;0,19;2,6;Tr; ; ;0,13;0,07;Tr;6,6;
+332;Carnes e derivados;Carne, bovina, bucho, cozido;74,10;133;556;21,6;4,5;245;0;NA;0,3;13;7;0,01;62;0,6;38;69;0,05;2,5;Tr;Tr;Tr;Tr;Tr;Tr;2,18;
+333;Carnes e derivados;Carne, bovina, bucho, cru;75,00;137;574;20,5;5,5;144;0;NA;0,4;9;6;0,01;61;0,5;45;84;0,06;2,1;Tr;Tr;Tr;Tr;Tr;Tr;2,13;
+334;Carnes e derivados;Carne, bovina, capa de contra-filé, com gordura, crua;64,80;216;907;19,2;15;62;0;NA;0,9;5;17;0,01;144;1,5;57;266;0,06;3,5;3;3;3;0,09;0,09;0,12;1,55;
+335;Carnes e derivados;Carne, bovina, capa de contra-filé, com gordura, grelhada;47,90;311;1304;30,7;20;120;0;NA;1,1;7;18;Tr;213;2,6;80;323;0,13;6,2;Tr;Tr;Tr;Tr;0,06;Tr;1,74;
+336;Carnes e derivados;Carne, bovina, capa de contra-filé, sem gordura, crua;73,00;131;548;21,5;4,3;58;0;NA;1;6;19;Tr;178;2;79;325;0,06;4,6;Tr;Tr;Tr;Tr;0,04;Tr;1,81;
+337;Carnes e derivados;Carne, bovina, capa de contra-filé, sem gordura, grelhada;53,70;239;1001;35,1;9,9;80;0;NA;1,2;8;25;0,01;287;2,8;82;384;0,12;7,6;Tr;Tr;Tr;0,03;0,08;Tr;1,86;
+338;Carnes e derivados;Carne, bovina, charque, cozido;45,80;262;1099;36,4;11,9;113;0;NA;3,6;14;12;0,02;100;3,5;1442;89;0,07;6,1;Tr;Tr;Tr;0,05;0,07;Tr;1,5;
+339;Carnes e derivados;Carne, bovina, charque, cru;44,50;248;1041;22,7;16,8;80;0;NA;14,5;15;13;Tr;122;1,5;5875;236;0,03;3,9;Tr;Tr;Tr;0,12;0,07;Tr;1,63;
+340;Carnes e derivados;Carne, bovina, contra-filé, à milanesa;42,20;351;1471;20,6;24;99;12,2;0,4;1,1;14;27;0,27;202;2,9;77;270;0,1;2,9;15;;;0,07;0,04;Tr;3,02;
+341;Carnes e derivados;Carne, bovina, contra-filé de costela, cru;66,40;202;846;19,8;13,1;52;0;NA;1;3;14;Tr;163;1,6;38;245;0,04;4,3;3;3;3;0,14;0,08;Tr;2,68;
+342;Carnes e derivados;Carne, bovina, contra-filé de costela, grelhado;52,20;274;1150;29,9;16,3;97;0;NA;1,2;4;23;0,01;251;2,8;50;382;0,08;6,7;Tr;Tr;Tr;Tr;0,19;0,17;2,75;
+343;Carnes e derivados;Carne, bovina, contra-filé, com gordura, cru;65,70;205;861;21,1;12,8;72;0;NA;0,9;3;18;0,01;164;1,3;44;284;0,04;2,8;3;3;3;0,11;0,08;0,03;3,79;
+344;Carnes e derivados;Carne, bovina, contra-filé, com gordura, grelhado;51,70;278;1163;32,4;15,5;143;0;NA;1,2;4;18;Tr;218;2,4;57;351;0,09;4,8;Tr;Tr;Tr;Tr;0,18;0,13;4,91;
+345;Carnes e derivados;Carne, bovina, contra-filé, sem gordura, cru;69,10;156;655;24;6;59;0;NA;1;4;20;Tr;183;1,7;52;334;0,05;3,2;Tr;Tr;Tr;Tr;0,2;Tr;4,64;
+346;Carnes e derivados;Carne, bovina, contra-filé, sem gordura, grelhado;57,50;193;810;35,9;4,5;101;0;NA;1,3;4;21;Tr;240;2,4;57;386;0,09;5,1;Tr;Tr;Tr;Tr;0,17;0,16;4,93;
+347;Carnes e derivados;Carne, bovina, costela, assada;43,20;373;1560;28,8;27,7;94;0;NA;1;28;19;Tr;179;2,2;91;270;0,08;5,5;Tr;Tr;Tr;Tr;0,08;0,35;0,56;
+348;Carnes e derivados;Carne, bovina, costela, crua;52,70;357;1496;16,7;31,8;44;0;NA;0,9;*;11;Tr;129;1,2;69;151;Tr;2,7;4;4;4;0,12;0,11;Tr;5,99;
+349;Carnes e derivados;Carne, bovina, coxão duro, sem gordura, cozido;58,50;216;906;31,9;8,9;71;0;NA;0,9;3;13;Tr;188;1,7;41;251;0,07;5;2;2;2;Tr;Tr;Tr;3,26;
+350;Carnes e derivados;Carne, bovina, coxão duro, sem gordura, cru;69,80;147;619;21,5;6,2;59;0;NA;1,1;2;21;Tr;188;1,9;48;357;0,05;2,8;2;2;2;0,12;0,2;Tr;4,38;
+351;Carnes e derivados;Carne, bovina, coxão mole, sem gordura, cozido;58,00;218;914;32,4;8,9;84;0;NA;1,2;3;13;Tr;182;2,6;43;238;0,11;4,7;2;2;2;Tr;Tr;Tr;4,09;
+352;Carnes e derivados;Carne, bovina, coxão mole, sem gordura, cru;68,60;169;707;21,2;8,7;83;0;NA;1;2;20;Tr;175;1,9;60;334;0,05;2,6;2;2;2;0,12;0,19;Tr;2,32;
+353;Carnes e derivados;Carne, bovina, cupim, assado;48,40;330;1381;28,6;23;90;0;NA;1;7;18;Tr;212;2,7;71;321;0,08;5,3;Tr;Tr;Tr;Tr;0,08;0,14;2,16;
+354;Carnes e derivados;Carne, bovina, cupim, cru;64,80;221;926;19,5;15,3;50;0;NA;0,9;3;12;Tr;220;1,1;46;150;0,03;2,4;2;2;2;0,11;0,05;0,03;3,33;
+355;Carnes e derivados;Carne, bovina, fígado, cru;71,30;141;590;20,7;5,4;392;1,1;NA;1,5;4;12;0,26;334;5,6;75;264;9,01;3,5;7936;7936;7936;0,14;0,9;Tr;10,66;
+356;Carnes e derivados;Carne, bovina, fígado, grelhado;55,00;225;941;29,9;9;601;4,2;NA;2;5;9;0,22;419;5,8;82;309;12,58;4;14574;14574;14574;0,21;2,69;Tr;11,92;
+357;Carnes e derivados;Carne, bovina, filé mingnon, sem gordura, cru;71,90;142;597;21,6;5,6;54;0;NA;1,1;2;21;0,01;192;1,9;48;321;0,08;2,8;3;3;3;0,12;0,1;0,04;1,78;
+358;Carnes e derivados;Carne, bovina, filé mingnon, sem gordura, grelhado;57,00;219;919;32,8;8,8;102;0;NA;1,3;4;28;0,02;308;2,9;57;325;0,14;4,1;Tr;Tr;Tr;0,03;0,08;0,05;4,27;
+359;Carnes e derivados;Carne, bovina, flanco, sem gordura, cozido;62,00;195;818;29,4;7,8;62;0;NA;0,9;3;13;Tr;181;2,8;41;248;0,07;5,6;1;1;1;Tr;Tr;Tr;2,32;
+360;Carnes e derivados;Carne, bovina, flanco, sem gordura, cru;72,10;141;591;20;6,2;50;0;NA;1;2;17;Tr;166;1,6;54;324;0,05;4,5;2;2;2;0,11;0,16;Tr;3,28;
+361;Carnes e derivados;Carne, bovina, fraldinha, com gordura, cozida;49,70;338;1416;24,2;26;64;0;NA;0,7;3;14;Tr;160;2;38;206;0,07;6,5;Tr;Tr;Tr;Tr;0,05;0,07;1,61;
+362;Carnes e derivados;Carne, bovina, fraldinha, com gordura, crua;65,40;220;923;17,6;16,1;54;0;NA;0,9;3;16;0;131;1,5;51;274;0,04;4,2;4;4;4;0,08;0,07;0,03;3,56;
+363;Carnes e derivados;Carne, bovina, lagarto, cozido;57,60;222;930;32,9;9,1;55;0;NA;0,9;3;12;Tr;167;1,9;47;254;0,05;7;2;2;2;Tr;Tr;Tr;2,55;
+364;Carnes e derivados;Carne, bovina, lagarto, cru;71,00;134;564;20,5;5,2;55;0;NA;1,1;2;19;Tr;184;1,3;53;361;0,05;2,4;1;1;1;0,1;0,14;0,03;2,19;
+365;Carnes e derivados;Carne, bovina, língua, cozida;53,40;314;1317;21,4;24,8;105;0;NA;0,7;5;11;0,01;136;2,1;59;175;0,08;4,1;Tr;Tr;Tr;Tr;0,08;Tr;1,83;
+366;Carnes e derivados;Carne, bovina, língua, crua;65,00;215;900;17,1;15,8;117;0;NA;0,8;5;15;0,02;163;1,7;73;250;0,09;2,9;Tr;Tr;Tr;0,05;0,04;Tr;1,18;
+367;Carnes e derivados;Carne, bovina, maminha, crua;70,00;152;639;20,9;7;50;0;NA;1;2;15;Tr;181;1,1;37;273;0,03;3,5;3;3;3;0,12;0,08;0,03;4,27;
+368;Carnes e derivados;Carne, bovina, maminha, grelhada;65,30;153;640;30,7;2,4;87;0;NA;1,4;4;20;Tr;237;2,4;58;386;0,08;5,6;Tr;Tr;Tr;Tr;0,04;0,13;1,46;
+369;Carnes e derivados;Carne, bovina, miolo de alcatra, sem gordura, cru;69,50;162;681;21,6;7,8;60;0;NA;1;3;20;0,01;165;2;43;298;0,06;3;3;3;3;0,12;0,07;Tr;3,59;
+370;Carnes e derivados;Carne, bovina, miolo de alcatra, sem gordura, grelhado;52,40;241;1009;31,9;11,6;92;0;NA;1,2;4;25;0,02;279;3,2;51;385;0,11;4,8;Tr;Tr;Tr;0,03;0,05;0,05;4,66;
+371;Carnes e derivados;Carne, bovina, músculo, sem gordura, cozido;62,80;193;810;31,2;6,7;56;0;NA;0,9;4;13;Tr;175;2,4;61;252;0,08;6,4;1;1;1;Tr;Tr;Tr;1,97;
+372;Carnes e derivados;Carne, bovina, músculo, sem gordura, cru;72,40;141;592;21,6;5,5;50;0;NA;1;3;17;Tr;162;1,9;66;295;0,05;3,6;1;1;1;0,09;0,19;0,04;2,79;
+373;Carnes e derivados;Carne, bovina, paleta, com gordura, crua;70,60;158;664;21,4;7,5;58;0;NA;0,9;4;14;Tr;157;1,8;64;249;0,08;3,6;Tr;Tr;Tr;Tr;0,04;,0,02;0,91;
+374;Carnes e derivados;Carne, bovina, paleta, sem gordura, cozida;62,90;193;810;29,7;7,4;55;0;NA;0,8;5;17;Tr;197;2,2;57;249;0,1;6,8;Tr;Tr;Tr;0,03;0,04;Tr;2,16;
+375;Carnes e derivados;Carne, bovina, paleta, sem gordura, crua;72,10;140;589;21;5,7;42;0;NA;1;3;17;Tr;163;1,9;65;319;0,05;3,3;3;3;3;0,13;0,21;Tr;2,67;
+376;Carnes e derivados;Carne, bovina, patinho, sem gordura, cru;72,90;133;558;21,7;4,5;55;0;NA;1;3;20;0,01;170;1,8;49;317;0,05;4,5;1;1;1;0,11;0,08;Tr;3,61;
+377;Carnes e derivados;Carne, bovina, patinho, sem gordura, grelhado;55,10;219;917;35,9;7,3;125;0;NA;1,3;4;27;0,02;288;3;60;420;0,12;8,1;Tr;Tr;Tr;0,04;0,03;Tr;3,01;
+378;Carnes e derivados;Carne, bovina, peito, sem gordura, cozido;51,20;338;1416;22,2;27;99;0;NA;0,7;4;13;Tr;135;1,6;55;204;0,05;3,9;Tr;Tr;Tr;Tr;0,3;Tr;4,54;
+379;Carnes e derivados;Carne, bovina, peito, sem gordura, cru;61,50;259;1084;17,6;20,4;59;0;NA;0,8;3;15;Tr;124;1,3;63;241;0,06;2,6;4;4;4;0,11;0,07;0,03;3,91;
+380;Carnes e derivados;Carne, bovina, picanha, com gordura, crua;65,60;212;890;18,8;14,7;59;0;NA;0,9;2;14;Tr;165;1,7;37;231;0,06;3,8;3;3;3;0,13;0,16;Tr;4,77;
+381;Carnes e derivados;Carne, bovina, picanha, com gordura, grelhada;53,40;288;1208;26,4;19,5;91;0;NA;1,1;4;24;Tr;246;3,2;60;355;0,14;5,5;Tr;Tr;Tr;0,03;0,06;0,13;1,6;
+382;Carnes e derivados;Carne, bovina, picanha, sem gordura, crua;72,40;133;558;21,2;4,7;75;0;NA;1;3;20;Tr;183;2,1;61;322;0,08;4,2;Tr;Tr;Tr;Tr;0,05;Tr;1,89;
+383;Carnes e derivados;Carne, bovina, picanha, sem gordura, grelhada;54,60;238;997;31,9;11,3;99;0;NA;1,2;4;25;0,02;281;3,6;60;376;0,17;6,7;Tr;Tr;Tr;Tr;0,08;0,03;1,82;
+384;Carnes e derivados;Carne, bovina, seca, cozida;47,20;312;1308;26,9;21,9;100;0;NA;4,7;12;11;0,02;82;1,9;1943;86;0,03;7,7;Tr;Tr;Tr;Tr;0,06;Tr;2,32;
+385;Carnes e derivados;Carne, bovina, seca, crua;39,20;312;1308;19,7;25,4;91;0;NA;15,3;14;12;0,01;100;1,3;4439;190;Tr;3,7;Tr;Tr;Tr;Tr;0,07;Tr;2,83;
+386;Carnes e derivados;Coxinha de frango, frita;42,20;283;1184;9,6;11,8;14;34,5;5;1,8;18;16;0,28;92;1,3;532;166;0,09;0,5;Tr;;;0,09;Tr;Tr;2,6;Tr
+387;Carnes e derivados;Croquete, de carne, cru;56,00;245;1028;12;15,6;29;13,9;;2,5;15;23;0,34;144;2,5;710;221;0,1;2,7;Tr;;;0,11;0,04;Tr;1,95;Tr
+388;Carnes e derivados;Croquete, de carne, frito;39,20;346;1450;16,9;22,7;38;18,1;;3,1;18;29;0,39;176;2,3;916;313;0,09;3,3;Tr;;;0,14;0,04;Tr;4,77;Tr
+389;Carnes e derivados;Empada de frango, pré-cozida, assada;28,20;358;1498;6,9;15,6;22;47,5;2,2;1,8;15;18;0,32;77;1,2;524;137;0,07;0,6;Tr;;;0,12;Tr;Tr;Tr; 
+390;Carnes e derivados;Empada, de frango, pré-cozida;32,00;377;1579;7,3;22,9;23;35,5;2,2;2,2;13;17;0,25;77;0,7;770;156;0,09;0,5;Tr;;;0,11;Tr;0,03;Tr; 
+391;Carnes e derivados;Frango, asa, com pele, crua;67,50;213;891;18,1;15,1;113;0;NA;0,7;10;23;0,01;154;0,6;96;211;0,02;1,2;10;10;10;0,11;0,04;Tr;2,58;
+392;Carnes e derivados;Frango, caipira, inteiro, com pele, cozido;59,70;242;1016;23,9;15,6;109;0;NA;0,8;16;18;0,01;161;1,7;56;210;0,08;1,7;16;16;16;0,03;Tr;Tr;6,33;
+393;Carnes e derivados;Frango, caipira, inteiro, sem pele, cozido;61,40;195;819;29,6;7,7;105;0;NA;1,1;66;23;0,02;209;2,1;53;223;0,15;2,7;6;6;6;0,03;0,03;Tr;9,2;
+394;Carnes e derivados;Frango, coração, cru;69,00;221;926;12,6;18,6;159;0;NA;0,8;5;19;0,05;193;4,1;95;220;0,2;2;9;9;9;0,23;0,35;Tr;3,39;
+395;Carnes e derivados;Frango, coração, grelhado;63,50;207;867;22,4;12,1;280;0,6;NA;1,3;8;20;0,06;275;6,5;128;242;0,3;3,4;Tr;Tr;Tr;0,2;0,19;Tr;9,7;
+396;Carnes e derivados;Frango, coxa, com pele, assada;59,80;215;900;28,5;10,4;145;0,1;NA;1,3;8;13;Tr;251;1,2;94;318;0,05;2,6;5;5;5;0,05;0,05;Tr;10,4;
+397;Carnes e derivados;Frango, coxa, com pele, crua;72,80;161;675;17,1;9,8;97;0;NA;0,8;8;25;0,02;185;0,7;94;274;0,03;2;10;10;10;0,16;0,05;Tr;2,04;
+398;Carnes e derivados;Frango, coxa, sem pele, cozida;66,70;167;700;26,9;5,8;132;0;NA;0,9;11;11;Tr;186;0,8;64;191;0,03;2,8;Tr;Tr;Tr;0,07;Tr;Tr;8,2;
+399;Carnes e derivados;Frango, coxa, sem pele, crua;76,40;119;501;17,8;4,9;90;0;NA;0,9;7;27;0,02;196;0,8;98;291;0,03;2,2;11;11;11;0,17;0,05;Tr;3,53;
+400;Carnes e derivados;Frango, fígado, cru;77,80;106;445;17,6;3,5;340;0;NA;1,2;5;27;0,35;343;9,5;82;280;0,26;3,7;3863;3863;3863;0,62;0,56;Tr;6,36;
+401;Carnes e derivados;Frango, filé, à milanesa;54,90;220;924;28,5;7,8;84;7,5;1,1;1,3;8;34;0,06;249;1,1;122;407;0,05;0,8;6;6;6;0,05;0,04;0,52;11,07;
+402;Carnes e derivados;Frango, inteiro, com pele, cru;66,50;226;946;16,4;17,3;84;0;NA;0,7;6;24;0,01;173;0,6;62;217;0,04;1,1;7;7;7;0,08;0,03;Tr;3,28;
+403;Carnes e derivados;Frango, inteiro, sem pele, assado;63,20;187;783;28;7,5;110;0;NA;1,2;9;13;Tr;232;0,6;70;283;0,03;1,6;Tr;Tr;Tr;0,09;Tr;Tr;11,2;
+404;Carnes e derivados;Frango, inteiro, sem pele, cozido;67,50;170;712;25;7,1;98;0;NA;0,9;8;12;Tr;193;0,5;50;216;0,04;1,2;Tr;Tr;Tr;0,1;Tr;Tr;12,83;
+405;Carnes e derivados;Frango, inteiro, sem pele, cru;74,90;129;540;20,6;4,6;78;0;NA;0,9;6;27;0,01;190;0,5;72;237;0,03;1,2;3;3;3;0,12;0,03;Tr;3,28;
+406;Carnes e derivados;Frango, peito, com pele, assado;58,50;211;885;33,4;7,6;109;0;NA;1,5;8;18;0,01;297;0,5;55;380;0,01;1;6;6;6;0,12;Tr;Tr;15,8;
+407;Carnes e derivados;Frango, peito, com pele, cru;71,90;149;625;20,8;6,7;79;0;NA;0,9;8;28;0,01;212;0,4;62;251;0,05;0,6;4;4;4;0,09;Tr;Tr;2,58;
+408;Carnes e derivados;Frango, peito, sem pele, cozido;65,60;162;681;31,5;3,2;88;0;NA;1;6;13;Tr;224;0,3;36;231;0,02;0,9;Tr;Tr;Tr;0,1;Tr;Tr;7,6;
+409;Carnes e derivados;Frango, peito, sem pele, cru;74,80;119;498;21,5;3;58;0;NA;1;7;31;0,01;222;0,4;56;267;0,03;0,7;2;2;2;0,1;Tr;Tr;5,86;
+410;Carnes e derivados;Frango, peito, sem pele, grelhado;63,80;159;666;32;2,5;89;0;NA;1,4;5;18;Tr;295;0,3;50;387;0,02;0,8;Tr;Tr;Tr;0,11;Tr;Tr;24,83;
+411;Carnes e derivados;Frango, sobrecoxa, com pele, assada;55,00;259;1086;28,7;15,2;158;0;NA;1,3;10;14;Tr;252;1,2;95;323;0,06;2,2;8;8;8;0,1;0,05;Tr;11,2;
+412;Carnes e derivados;Frango, sobrecoxa, com pele, crua;63,60;254;1064;15,5;20,9;87;0;NA;0,8;7;21;0,01;154;0,7;68;190;0,05;1,3;6;6;6;0,09;0,06;Tr;3,4;
+413;Carnes e derivados;Frango, sobrecoxa, sem pele, assada;55,60;232;974;29,2;12;145;0;NA;1,5;12;17;Tr;281;1,2;106;382;0,07;2,2;10;10;10;0,1;0,05;Tr;10,2;
+414;Carnes e derivados;Frango, sobrecoxa, sem pele, crua;72,70;161;676;17,6;9,6;84;0;NA;0,9;6;26;0,02;187;0,9;79;241;0,06;1,7;3;3;3;0,12;0,06;Tr;4,06;
+415;Carnes e derivados;Hambúrguer, bovino, cru;63,60;214;898;13,2;16,2;70;4,2;*;2,9;34;24;0,36;140;1,9;869;382;0,16;1,7;Tr;;;0,06;0,08;0,04;3,53;
+416;Carnes e derivados;Hambúrguer, bovino, frito;52,50;258;1080;20;17;48;6,3;*;4,2;62;59;0,52;324;3;1251;660;0,17;3,2;Tr;;;0,13;0,06;Tr;2,73;
+417;Carnes e derivados;Hambúrguer, bovino, grelhado;59,20;209;877;13,2;12,4;58;11,3;*;3,9;56;47;0,4;262;2,6;1090;537;0,18;3;Tr;;;0,18;0,06;Tr;5,77;
+418;Carnes e derivados;Lingüiça, frango, crua;64,80;218;912;14,2;17,4;64;0;NA;3,3;10;18;0,05;181;0,5;1125;279;0,05;0,7;Tr;;;0,11;0,05;Tr;4,6;
+419;Carnes e derivados;Lingüiça, frango, frita;59,60;245;1027;18,3;18,5;75;0;NA;3,8;15;29;0,1;262;0,8;1373;363;0,04;1,2;Tr;;;0,11;0,05;Tr;5,67;
+420;Carnes e derivados;Lingüiça, frango, grelhada;58,60;243;1019;18,2;18,4;80;0;NA;3,8;13;21;0,1;228;0,7;1351;355;0,09;1;Tr;;;0,12;0,04;Tr;5,97;
+421;Carnes e derivados;Lingüiça, porco, crua;62,50;227;950;16,1;17,6;52;0;NA;3,2;6;14;0,01;157;0,4;1175;316;0,04;1,4;Tr;;;0,49;0,05;Tr;2,6;
+422;Carnes e derivados;Lingüiça, porco, frita;54,60;279;1169;20,5;21,3;74;0;NA;3,9;8;18;0,01;210;0,9;1431;408;0,06;3,1;Tr;;;0,41;0,07;Tr;5,83;
+423;Carnes e derivados;Lingüiça, porco, grelhada;50,50;296;1240;23,2;21,9;81;0;NA;4;8;18;0,01;209;1;1455;426;0,07;3,5;Tr;;;0,4;0,07;Tr;6,6;
+424;Carnes e derivados;Mortadela;56,40;268;1124;12;21,6;82;5,8;NA;4,1;66;19;0,11;215;1,5;1212;247;0,08;1;24;;;0,14;0,06;Tr;3;
+425;Carnes e derivados;Peru, congelado, assado;65,30;163;682;26,2;5,7;91;0;NA;2,2;13;11;0,02;197;0,6;627;175;0,03;1,2;Tr;Tr;Tr;0,06;Tr;Tr;6,23;
+426;Carnes e derivados;Peru, congelado, cru;78,20;93;392;18,1;1,8;68;0;NA;2,5;9;18;Tr;216;0,9;710;281;0,36;1,4;Tr;Tr;Tr;0,06;Tr;Tr;4,23;
+427;Carnes e derivados;Porco, bisteca, crua;67,70;164;686;21,5;8;56;0;NA;1;6;24;Tr;195;0,5;54;334;0,07;1,4;Tr;Tr;Tr;0,9;Tr;Tr;2,65;
+428;Carnes e derivados;Porco, bisteca, frita;47,30;311;1301;33,7;18,5;126;0;NA;1,6;69;29;0,01;289;0,8;63;403;0,07;2,2;9;9;9;0,34;Tr;Tr;3,25;
+429;Carnes e derivados;Porco, bisteca, grelhada;51,80;280;1171;28,9;17,4;81;0;NA;1,2;34;24;Tr;229;0,9;51;366;0,06;2,3;Tr;Tr;Tr;0,77;0,14;0,03;1,92;
+430;Carnes e derivados;Porco, costela, assada;36,90;402;1682;30,2;30,3;112;0;NA;1,4;16;14;Tr;200;1;62;245;0,07;3,1;Tr;Tr;Tr;0,71;0,05;Tr;10,63;
+431;Carnes e derivados;Porco, costela, crua;61,20;255;1069;18;19,8;68;0;NA;0,9;14;17;Tr;159;0,9;87;248;0,05;2,3;Tr;Tr;Tr;0,62;Tr;Tr;8,27;
+432;Carnes e derivados;Porco, lombo, assado;56,60;210;879;35,7;6,4;103;0;NA;1,4;19;18;Tr;238;0,5;38;311;0,03;1,8;Tr;Tr;Tr;0,75;0,07;0,11;12,43;
+433;Carnes e derivados;Porco, lombo, cru;67,70;175;734;22,6;8,8;55;0;NA;1;4;23;Tr;194;0,5;53;334;0,01;0,9;Tr;Tr;Tr;0,95;Tr;Tr;13,83;
+434;Carnes e derivados;Porco, orelha, salgada, crua;59,70;258;1081;18,5;19,9;83;0;NA;2;5;2;0,01;30;1,4;615;228;0,23;0,6;Tr;Tr;Tr;0,07;0,03;Tr;Tr;
+435;Carnes e derivados;Porco, pernil, assado;49,30;262;1097;32,1;13,9;109;0;NA;1,4;17;27;0,01;247;1,3;62;395;0,09;3,3;Tr;Tr;Tr;0,77;0,09;Tr;6,57;
+436;Carnes e derivados;Porco, pernil, cru;67,10;186;778;20,1;11,1;58;0;NA;1;12;22;Tr;192;0,9;101;255;0,16;1,7;Tr;Tr;Tr;1,06;0,06;Tr;5,67;
+437;Carnes e derivados;Porco, rabo, salgado, cru;43,80;377;1579;15,6;34,5;89;0;NA;3,5;21;3;0,01;42;0,6;1157;23;0,05;1,4;Tr;Tr;Tr;0,2;0,06;Tr;1,43;
+438;Carnes e derivados;Presunto, com capa de gordura;73,90;127;534;14,4;6,8;39;1,4;NA;3,5;12;17;0,04;273;0,7;1020;294;0,04;1,3;Tr; ; ;0,62;0,03;Tr;3,78;
+439;Carnes e derivados;Presunto, sem capa de gordura;77,20;93;392;14,3;2,7;35;2,1;NA;3,7;23;17;0,04;244;0,8;1039;307;0,04;1,5;Tr; ; ;0,5;0,03;Tr;4;
+440;Carnes e derivados;Quibe, assado;69,00;136;569;14,6;2,7;33;12,9;1,9;0,9;15;36;0,76;174;2,2;39;287;0,51;4,1;Tr;;;0,04;0,04;Tr;1,81;Tr
+441;Carnes e derivados;Quibe, cru;74,50;109;458;12,4;1,7;26;10,8;1,6;0,7;12;25;0,39;125;1,7;38;241;0,13;2,8;Tr;;;0,09;0,03;Tr;1,2;Tr
+442;Carnes e derivados;Quibe, frito;54,00;253;1062;14,9;15,8;37;12,3;;3;21;38;0,72;165;2;835;322;0,16;2,8;Tr;;;0,12;0,1;Tr;1,5;Tr
+443;Carnes e derivados;Salame;34,70;397;1664;25,8;30,6;85;2,9;NA;5,9;87;29;0,03;354;1,3;1574;547;0,05;3,2;Tr;;;0,88;0,23;Tr;12,49;
+444;Carnes e derivados;Toucinho, cru;27,60;592;2479;11,5;60,3;73;0;NA;0,3;2;3;Tr;35;0,4;49;57;0,11;0,2;Tr;Tr;Tr;Tr;Tr;Tr;5,1;
+445;Carnes e derivados;Toucinho, frito;6,30;696;2914;27,3;64,3;89;0;NA;0,7;9;9;0,01;94;0,9;124;170;0,1;0,8;Tr;Tr;Tr;Tr;Tr;Tr;5,03;
+446;Leite e derivados;Bebida láctea, pêssego;87,70;55;230;2,1;1,9;5;7,6;0,3;0,7;88;8;Tr;63;Tr;46;62;0,02;0,2;Tr;;;0,03;0,14;Tr;0,33;2,1
+447;Leite e derivados;Creme de Leite;70,90;221;926;1,5;22,5;66;4,5;NA;0,6;82;7;0,01;118;0,3;51;118;0,02;0,3;127;;;Tr;0,1;Tr;0;Tr
+448;Leite e derivados;Iogurte, natural;90,00;51;215;4,1;3;13;1,9;NA;0,9;143;11;Tr;119;Tr;51;71;0,02;0,4;22;;;0,04;0,22;Tr;Tr;0,9
+449;Leite e derivados;Iogurte, natural, desnatado;89,20;41;173;3,8;0,3;3;5,8;NA;0,9;156;11;Tr;109;Tr;59;182;Tr;0,5;*;;;Tr;0,22;Tr;Tr;0,3
+450;Leite e derivados;Iogurte, sabor abacaxi;*;*;*;*;*;5;*;*;*;*;*;*;*;*;*;*;*;*;*;;;*;*;*;*;
+451;Leite e derivados;Iogurte, sabor morango;84,60;69;291;2,7;2,3;7;9,7;0,2;0,6;101;8;Tr;73;Tr;37;52;0,02;0,3;27;;;0,03;0,12;0,02;Tr;Tr
+452;Leite e derivados;Iogurte, sabor pêssego;85,10;67;283;2,5;2,3;8;9,4;0,7;0,6;95;7;Tr;65;0,1;36;52;0,02;0,3;21;;;0,02;0,1;Tr;0,38;Tr
+453;Leite e derivados;Leite, condensado;27,00;312;1307;7,7;6,7;27;57;NA;1,6;246;21;Tr;187;0,1;93;328;0,03;0,9;52;;;0,06;0,33;0,57;Tr;2,1
+454;Leite e derivados;Leite, de cabra;87,10;66;277;3,1;3,8;13;5,2;NA;0,9;112;9;Tr;113;0,1;73;139;0,04;0,4;34;;;Tr;0,14;Tr;Tr;Tr
+455;Leite e derivados;Leite, de vaca, achocolatado;80,90;82;346;2,1;2,2;6;14,2;0,6;0,7;69;12;0,05;70;0,5;71;155;0,04;0,3;38;;;0,07;0,29;0,14;1,23;3,3
+456;Leite e derivados;Leite, de vaca, desnatado, pó;3,10;361;1512;34,7;0,9;24;53;NA;8,2;1363;108;Tr;1673;0,9;431;1555;0,16;3,8;299;;;0,32;1,2;Tr;0,81;
+457;Leite e derivados;Leite, de vaca, desnatado, UHT;*;*;*;*;*;3;*;NA;0,8;133;10;Tr;85;Tr;51;140;0,02;0,4;Tr;;;0,04;0,26;Tr;1,49;Tr
+458;Leite e derivados;Leite, de vaca, integral;*;*;*;*;*;10;*;NA;0,8;122;9;Tr;81;Tr;63;133;0,02;0,4;20;;;0,04;0,24;Tr;1,52;Tr
+459;Leite e derivados;Leite, de vaca, integral, pó;2,70;496;2077;25,4;26,9;85;39,2;NA;5,8;890;77;Tr;1242;0,5;323;1131;0,11;2,7;361;;;0,24;1,03;Tr;Tr;*
+460;Leite e derivados;Leite, fermentado;81,90;69;291;1,9;0,1;1;15,7;NA;0,5;71;6;0,02;62;Tr;33;94;0,01;0,3;Tr;;;0,07;0,11;Tr;Tr;0,5
+461;Leite e derivados;Queijo, minas, frescal;56,10;264;1105;17,4;20,2;61;3,2;NA;3;579;6;0,02;123;0,9;31;104;Tr;0,3;160;;;Tr;0,25;Tr;Tr;Tr
+462;Leite e derivados;Queijo, minas, meia cura;47,10;320;1341;21,2;24,6;76;3,6;NA;3,5;695;27;0,02;402;0,2;501;119;0,07;2,7;111;;;0,03;0,32;Tr;Tr;
+463;Leite e derivados;Queijo, mozarela;45,30;329;1380;22,6;25,2;79;3;NA;3,8;875;23;0,03;469;0,3;581;61;0,08;3,5;109;;;Tr;0,2;Tr;Tr;
+464;Leite e derivados;Queijo, parmesão;21,20;452;1895;35,6;33,5;105;1,7;NA;8;991;33;0,05;744;0,5;1844;96;0,17;4,4;66;;;Tr;0,44;0,23;Tr;Tr
+465;Leite e derivados;Queijo, pasteurizado;54,40;303;1268;9,4;27,4;82;5,7;NA;3,1;323;16;0,01;577;0,3;780;193;0,05;1,3;57;;;Tr;0,2;Tr;Tr;Tr
+466;Leite e derivados;Queijo, petit suisse, morango;72,20;121;506;5,8;2,8;12;18,5;NA;0,7;730;26;0,02;448;0,1;412;121;0,01;2,7;272;;;0,22;0,27;0,21;2,68;Tr
+467;Leite e derivados;Queijo, prato;42,40;359;1505;22,7;29,1;90;1,9;NA;3,9;939;28;0,03;460;0,3;579;73;0,1;3,5;122;;;Tr;0,22;Tr;Tr;
+468;Leite e derivados;Queijo, requeijão, cremoso;62,50;256;1073;9,6;23,4;73;2,4;NA;2;259;11;0,02;447;0,1;557;93;0,04;1,3;194;;;Tr;0,19;Tr;Tr;Tr
+469;Leite e derivados;Queijo, ricota;73,60;139;584;12,6;8,1;48;3,8;NA;1,9;253;11;Tr;161;0,1;282;112;Tr;0,5;52;;;Tr;0,15;Tr;Tr;Tr
+470;Bebidas (alcoólicas e não alcoólicas);Bebida isotônica, sabores variados;93,50;25;107;0;0;NA;6,4;NA;0,1;1;Tr;Tr;8;0,7;44;13;Tr;Tr;NA;;;;;;;
+471;Bebidas (alcoólicas e não alcoólicas);Café, infusão 10%;97,40;9;37;0,7;0,1;NA;1,5;NA;0,4;3;9;0,04;9;Tr;1;155;0,01;Tr;NA;;;;;;;
+472;Bebidas (alcoólicas e não alcoólicas);Cana, aguardente 1;;215;902;;;NA;;NA;;Tr;Tr;Tr;Tr;Tr;3;Tr;0,06;Tr;NA;;;Tr;Tr;Tr;Tr;
+473;Bebidas (alcoólicas e não alcoólicas);Cana, caldo de;81,7;65;273;Tr;Tr;NA;18,2;0,1;0,1;9;11;0,21;4;0,8;Tr;17;0,01;0,1;NA;;;Tr;Tr;0,03;Tr;2,8
+474;Bebidas (alcoólicas e não alcoólicas);Cerveja, pilsen 2;92,4;40;170;0,6;Tr;NA;3,3;NA;0,1;4;6;0,01;19;Tr;4;29;Tr;Tr;NA;;;Tr;Tr;0,14;2,92;Tr
+475;Bebidas (alcoólicas e não alcoólicas);Chá, erva-doce, infusão 5%;99,6;1;5;0;0;NA;0,4;NA;0;1;0;0,01;0;Tr;0;9;0,01;Tr;NA;;;1,23;0,23; ; ; 
+476;Bebidas (alcoólicas e não alcoólicas);Chá, mate, infusão 5%;99,3;2;11;0;0,1;NA;0,6;NA;0;0;2;0,27;Tr;Tr;Tr;5;Tr;Tr;NA;;;0,89;Tr; ; ; 
+477;Bebidas (alcoólicas e não alcoólicas);Chá, preto, infusão 5%;99,4;2;9;0;0;NA;0,6;NA;0;0;0;0,09;1;Tr;Tr;13;Tr;Tr;NA;;;3,11;0,48; ; ; 
+478;Bebidas (alcoólicas e não alcoólicas);Coco, água de;94,3;21;89;0;0;NA;5,3;0,1;0,5;18;5;0,25;3;Tr;1;161;Tr;Tr;NA;;;0,01;Tr;Tr;Tr;2,4
+479;Bebidas (alcoólicas e não alcoólicas);Refrigerante, tipo água tônica;92;30;128;0;0;NA;8;NA;0;1;Tr;Tr;0;Tr;8;1;Tr;Tr;NA;;;;;;;
+480;Bebidas (alcoólicas e não alcoólicas);Refrigerante, tipo cola;91,3;33;140;0;0;NA;8,7;NA;0,1;1;Tr;Tr;16;Tr;7;0;Tr;Tr;NA;;;;;;;
+481;Bebidas (alcoólicas e não alcoólicas);Refrigerante, tipo guaraná;90;38;161;0;0;NA;10;NA;0;1;Tr;Tr;Tr;Tr;9;1;Tr;Tr;NA;;;;;;;
+482;Bebidas (alcoólicas e não alcoólicas);Refrigerante, tipo laranja;88,2;45;190;0;0;NA;11,8;NA;0;2;1;Tr;1;Tr;9;15;Tr;Tr;NA;;;;;;;
+483;Bebidas (alcoólicas e não alcoólicas);Refrigerante, tipo limão;89,7;39;166;0;0;NA;10,3;NA;0;1;0;Tr;Tr;Tr;8;4;Tr;Tr;NA;;;;;;;
+484;Ovos e derivados;Omelete, de queijo;60,5;268;1121;15,6;22;383;0,4;NA;1,5;165;14;0,03;313;1,4;216;126;0,03;1,4;58;;;0,03;0,24;Tr;Tr;Tr
+485;Ovos e derivados;Ovo, de codorna, inteiro, cru;71,7;176;740;13,7;12,7;568;0,8;NA;1,2;78;11;Tr;279;3,3;128;78;0,04;2,1;305;;;0,11;0,12;Tr;0,97; 
+486;Ovos e derivados;Ovo, de galinha, clara, cozida/10minutos;85,2;59;248;13,4;0,1;NA;0;NA;0,7;6;11;Tr;15;0,1;180;145;0,03;Tr;NA;;;Tr;0,08;Tr;Tr; 
+487;Ovos e derivados;Ovo, de galinha, gema, cozida/10minutos;50;352;1475;15,9;30,8;1272;1,6;NA;1,7;114;9;0,06;385;2,9;44;87;Tr;2,9;148;;;0,18;0,22;Tr;Tr; 
+488;Ovos e derivados;Ovo, de galinha, inteiro, cozido/10minutos;75,8;145;609;13,3;9,5;396;0,6;NA;0,8;49;11;0,02;184;1,5;145;138;0,04;1,2;32;;;0,08;0,3;Tr;Tr; 
+489;Ovos e derivados;Ovo, de galinha, inteiro, cru;75,6;143;598;13;8,9;355;1,6;NA;0,8;42;12;Tr;164;1,6;167;150;0,06;1,1;78;;;0,07;0,58;Tr;0,75; 
+490;Ovos e derivados;Ovo, de galinha, inteiro, frito;63,5;240;1004;15,6;18,6;516;1,2;NA;1,1;72;16;0,03;422;2,1;166;184;0,04;1,5;93;;;0,06;0,32;Tr;Tr;Tr
+491;Produtos açucarados;Achocolatado, pó;1,1;401;1677;4,2;2,2;Tr;91,2;3,9;1,4;44;76;0,55;199;5,4;64;496;0,56;1;795;;;1,38;1,02;1,52;4,99;Tr
+492;Produtos açucarados;Açúcar, cristal;0,1;386;1619;0,3;Tr;NA;99,6;NA;Tr;7;1; ;Tr;0,2;Tr;2; Tr;Tr;NA;;;;;;;
+493;Produtos açucarados;Açúcar, mascavo;3,3;368;1542;0,8;0,1;NA;94,5;NA;1,4;126;79;2,03;38;8,3;25;521;0,17;0,5;NA;;;Tr;0,03;Tr;Tr;Tr
+494;Produtos açucarados;Açúcar, refinado;0,1;386;1617;0,3;Tr;NA;99,5;NA;Tr;3;0; ;Tr;0,1;12;6; Tr;Tr;NA;;;;;;;
+495;Produtos açucarados;Chocolate, ao leite;1,3;539;2257;7,2;30,3;16;59,6;2,2;1,7;191;57;0,3;212;1,6;77;354;0,31;1,1;Tr; ; ;0,05;0,22;0,59;0,63;Tr
+496;Produtos açucarados;Chocolate, ao leite, com castanha do Pará;1,2;558;2338;7,4;34,2;15;55,4;2,5;1,8;171;79;0,36;302;1,5;64;430;0,45;1,3;36;;;0,04;0,24;Tr;1,37;1,4
+497;Produtos açucarados;Chocolate, ao leite, dietético;1,7;556;2329;6,9;33,8;12;56,3;2,8;1,3;187;67;0,41;276;3,3;84;458;0,43;1,1;7;;;0,31;0,25;Tr;0,79;2
+498;Produtos açucarados;Chocolate, meio amargo;1;474;1987;4,9;29,9;2;62,4;4,9;1,8;44;107;0,83;219;3,6;8;431;0,77;1,5;Tr;;;0,2;0,04;Tr;1,06;2,1
+499;Produtos açucarados;Cocada branca;3,4;448;1877;1,1;13,6;NA;81,4;3,6;0,5;7;17;0,36;396;1,2;28;183;0,2;0,4;NA;;;Tr;Tr;0,16;0,47;Tr
+500;Produtos açucarados;Doce, de abóbora, cremoso;43,9;198;832;0,9;0,2;NA;54,6;2,3;0,4;12;5;0,01;13;0,9;Tr;136;Tr;Tr;NA;;;0,08;Tr;0,04;Tr;0,1
+501;Produtos açucarados;Doce, de leite, cremoso;27,5;306;1281;5,5;6;20;59,5;NA;1,5;195;16;0,01;140;0,1;120;259;0,02;0,5;35;35;35;0,05;0,26;Tr;Tr;Tr
+502;Produtos açucarados;Geléia, mocotó, natural;73,5;106;443;2,1;0,1;Tr;24,2;NA;0,1;3;0;Tr;Tr;0,1;42;2;Tr;Tr;Tr; ; ;0,19;Tr;0,22;Tr;Tr
+503;Produtos açucarados;Glicose de milho;20,4;292;1222;0;0;NA;79,4;NA;0,2;5;1;Tr;4;0,1;58;5;Tr;Tr;NA;;; ; ; ; ; 
+504;Produtos açucarados;Maria mole;21,6;301;1260;3,8;0,2;NA;73,6;0,7;0,9;13;6;0,06;4;0,4;15;23;0,2;0,1;NA;;;0,04;Tr;Tr;Tr;Tr
+505;Produtos açucarados;Maria mole, coco queimado;20,7;306;1282;3,9;0,1;NA;75,1;0,6;0,2;19;5;0,09;5;0,5;14;35;0,03;0,1;NA;;;0,04;Tr;Tr;Tr;Tr
+506;Produtos açucarados;Marmelada;28,5;257;1076;0,4;0,1;NA;70,8;4,1;0,2;11;5;0,06;19;0,7;10;83;0,09;0,1;NA;;;Tr;Tr;Tr;Tr;Tr
+507;Produtos açucarados;Mel, de abelha;15,8;309;1293;0;0;NA;84;NA;0,1;10;5;0,38;3;0,3;6;99;Tr;0,2;NA;;;0,11;Tr;Tr;Tr;0,7
+508;Produtos açucarados;Melado;22,1;296;1240;0;0;NA;76,6;NA;1,3;102;115;2,62;73;5,4;4;395;0,84;0,3;NA;;;Tr;0,05;0,2;Tr;Tr
+509;Produtos açucarados;Quindim;23,9;411;1721;4,7;24,4;271;46,3;3,2;0,6;37;14;0,25;167;1,4;27;111;0,1;1,1;75;;;Tr;0,04;0,04;1,14;Tr
+510;Produtos açucarados;Rapadura;7,1;351;1472;1;0,1;NA;90,8;NA;1,1;30;47;1,66;21;4,4;21;458;0,17;0,6;NA;;;Tr;Tr;0,04;Tr;Tr
+511;Miscelâneas;Café, pó, torrado;2,9;418;1751;14,7;11,9;NA;65,8;51,2;4,7;106;165;2,58;169;8,1;1;1608;1,3;0,5;NA;;;Tr;Tr;Tr;11,89;Tr
+512;Miscelâneas;Capuccino, pó;2,6;417;1746;11,3;8,6;28;73,6;2,4;3,8;466;70;0,17;357;2,3;382;885;Tr;1,1;51;;;Tr;1,41;Tr;Tr;Tr
+513;Miscelâneas;Fermento em pó, químico;7,1;89;375;0,5;0,1;NA;43,9;NA;48,5; ; ; ; ; ;10052; ; ; ;NA;;; ; ; ; ; 
+514;Miscelâneas;Fermento, biológico, levedura, tablete;71,9;89;375;17;1,5;NA;7,7;4,2;1,9;18;38;0,2;418;2,6;39;576;0,29;11;NA;;;0,3;0,36;Tr;Tr;Tr
+515;Miscelâneas;Gelatina, sabores variados, pó;1,2;380;1590;8,9;Tr;NA;89,2;NA;0,6;26;2;0,03;1;0,3;234;7;Tr;Tr;NA;;;Tr;Tr;Tr;Tr;40
+516;Miscelâneas;Sal, dietético;0,6;NA;NA;NA;NA;NA;NA;NA;99,4;;;;;;23431;20467;;;NA;;;;;;;
+517;Miscelâneas;Sal, grosso;0,4;NA;NA;NA;NA;NA;NA;NA;;;;;;;39943;;;;NA;;;;;;;
+518;Miscelâneas;Shoyu;70,6;60;254;3,3;0,3;NA;11,6;NA;14,1;14;23;0,07;47;0,5;5024;165;Tr;0,2;NA;;;0,83;0,06;0,15;2,1;Tr
+519;Miscelâneas;Tempero a base de sal;7,7;21;89;2,7;0,3;NA;2,1;0,6;87,3;;;;;;32560;;;;NA;;;;;;;
+520;Outros alimentos industrializados;Azeitona, preta, conserva;68,5;194;812;1,2;20,3;NA;5,5;4,6;4,5;58;4;0,06;16;5,5;1566;78;0,25;0,3;NA;;;Tr;Tr;0,04;Tr;Tr
+521;Outros alimentos industrializados;Azeitona, verde, conserva;76,3;136;572;0,9;14,2;NA;4,1;3,8;4,5;45;3;0,03;5;0,2;1347;19;0,14;0,1;NA;;;Tr;Tr;Tr;Tr;Tr
+522;Outros alimentos industrializados;Chantilly, spray, com gordura vegetal;55,1;314;1317;0,5;27,3;Tr;16,9;NA;0,2;2;0;Tr;15;Tr;109;5;0,01;0,1;Tr; ; ;0,07;Tr;Tr;Tr;
+523;Outros alimentos industrializados;Leite, de coco;78;166;695;1;18,4;NA;2,2;0,7;0,4;5;16;0,24;25;0,5;44;143;0,16;0,3;NA;;;Tr;Tr;Tr;Tr;Tr
+524;Outros alimentos industrializados;Maionese, tradicional com ovos;58,4;302;1264;0,6;30,5;42;7,9;NA;2,6;3;0;Tr;14;0,1;786;16;Tr;0,1;8;;;Tr;0,05;Tr;Tr;Tr
+525;Alimentos preparados;Acarajé;50,5;289;1210;8,3;19,9;25;19,1;9,4;2,1;124;51;0,59;141;1,9;304;353;0,23;1,2;Tr;;;0,06;Tr;Tr;Tr; 
+526;Alimentos preparados;Arroz carreteiro;68;153;643;10,8;7,1;36;11,6;1,5;2,4;13;9;0,18;47;1;1621;87;0,08;2,7;Tr;;;0,03;Tr;0,07;1,6; 
+527;Alimentos preparados;Baião de dois, arroz e feijão-de-corda;69,1;135;567;6,2;3,2;4;20,4;5,1;1,1;33;18;0,27;71;0,6;93;157;0,08;0,6;Tr;;;0,04;Tr;0,04;Tr;Tr
+528;Alimentos preparados;Barreado;71,2;164;690;18,3;9,5;60;0,2;0,1;0,8;14;21;0,05;169;2,4;47;294;0,17;4,8;Tr;;;0,03;0,04;Tr;2,09;Tr
+529;Alimentos preparados;Bife à cavalo, com contra filé;54,2;291;1218;23,7;21,1;256;0;NA;1,1;25;19;0,02;215;2,1;82;272;0,06;3,2;36;;;0,05;0,1;Tr;2,92;
+530;Alimentos preparados;Bolinho de arroz;41,5;273;1144;8;8,3;70;41,7;2,7;0,5;23;13;0,42;87;2,1;58;96;0,13;0,9;Tr;;;0,08;0,05;Tr;Tr;Tr
+531;Alimentos preparados;Camarão à baiana;82;100;421;7,9;6;116;3,2;0,4;0,9;42;14;0,11;244;1,4;84;139;0,07;0,5;Tr;;;Tr;Tr;Tr;0,31;4,1
+532;Alimentos preparados;Charuto, de repolho;81,5;78;327;6,8;1,1;21;10,1;1,5;0,4;22;13;0,22;67;0,9;12;184;1,45;1,8;Tr;;;0,03;Tr;Tr;0,32;4,8
+533;Alimentos preparados;Cuscuz, de milho, cozido com sal;71,1;113;474;2,2;0,7;NA;25,3;2,1;0,7;1;2;0,02;23;0,2;247;10;Tr;0,2;Tr;;;Tr;Tr;0,06;Tr;Tr
+534;Alimentos preparados;Cuscuz, paulista;68,9;142;594;2,6;4,6;15;22,5;2,4;1,3;14;5;0,06;25;0,3;235;52;0,05;0,2;Tr;;;Tr;Tr;Tr;0,93;Tr
+535;Alimentos preparados;Cuxá, molho;81;80;335;5,6;3,6;58;5,7;3;4;105;33;0,23;111;0,9;1344;124;0,17;0,6;Tr;32;16;0,04;Tr;0,03;1,1;10,3
+536;Alimentos preparados;Dobradinha;75,3;124;520;19,8;4,4;144;0;NA;0,3;11;8;0,1;57;1;28;57;0,06;2,7;Tr;;;Tr;Tr;Tr;4,27; 
+537;Alimentos preparados;Estrogonofe de carne;70,1;173;724;15;10,8;66;3;;1,1;28;21;0,03;185;2,7;122;322;0,14;2;27;;;0,06;0,05;Tr;3,25;Tr
+538;Alimentos preparados;Estrogonofe de frango;70,9;156;656;17,6;8;79;2,6;;1;26;24;0,03;195;1,5;99;307;0,12;0,6;28;;;0,07;0,04;0,03;3,37;Tr
+539;Alimentos preparados;Feijão tropeiro mineiro;61,7;151;634;10,2;6,8;67;19,6;3,6;1,8;41;36;0,38;199;2,2;365;348;0,22;1,4;8;;;Tr;Tr;Tr;1,44;Tr
+540;Alimentos preparados;L;71,8;116;489;8,7;6,5;21;11,6;5,1;1,4;32;31;0,24;105;1,3;278;303;0,15;0,8;Tr; ; ;0,08;0,03;Tr;0,93;Tr
+541;Alimentos preparados;Frango, com açafrão;79,5;112;471;9,7;6,2;50;4,1;0,2;0,5;12;16;0,09;166;0,8;28;256;0,02;0,5;8;;;0,03;Tr;Tr;1,64;5,3
+542;Alimentos preparados;Macarrão, molho bolognesa;71,4;119;500;4,9;0,9;6;22,5;0,8;0,2;10;9;0,22;53;1,4;8;83;0,09;0,8;Tr;;;0,04;Tr;Tr;1,44;Tr
+543;Alimentos preparados;Maniçoba;76,4;134;561;10;8,7;42;3,4;2,2;1,5;65;23;0,6;54;3,2;406;147;0,16;2;Tr;221;110;0,04;0,07;0,05;2,58;Tr
+544;Alimentos preparados;Quibebe;81,1;86;361;8,6;2,7;NA;6,6;1,7;1;7;10;0,05;42;0,8;246;152;0,61;1,6;Tr;104;52;Tr;0,03;0,04;;Tr
+545;Alimentos preparados;Salada, de legumes, com maionese;82;96;402;1,1;7;7;8,9;2,2;0,9;12;8;0,1;22;0,2;228;141;0,04;0,2;Tr;282;141;0,04;Tr;0,04;Tr;Tr
+546;Alimentos preparados;Salada, de legumes, cozida no vapor;90;35;148;2;0,3;NA;7,1;2,5;0,6;32;18;0,24;44;0,4;2;244;0,17;0,3;NA;510;255;0,05;0,03;0,03;Tr;29,4
+547;Alimentos preparados;Salpicão, de frango;72,5;147;618;13,9;7,8;52;4,6;0,4;1,1;9;13;0,03;102;0,3;248;148;0,08;0,4;Tr;14;7;0,05;Tr;Tr;1,48;9,3
+548;Alimentos preparados;Sarapatel;75;122;514;18,5;4,4;315;1,1;;1,1;12;12;0,1;163;7,2;215;198;1,48;1,8;1463;;;Tr;0,11;Tr;3,84;Tr
+549;Alimentos preparados;Tabule;85,8;57;240;2;1,2;NA;10,6;2,1;0,4;18;17;0,37;35;0,6;1;187;0,12;0,6;NA;;;0,03;Tr;Tr;0,6;16,2
+550;Alimentos preparados;Tacacá;85,2;46;196;7;0,4;70;3,4;0,2;4,1;44;29;0,12;89;0,9;1349;240;0,22;0,8;Tr;35;17;0,05;Tr;Tr;;Tr
+551;Alimentos preparados;Tapioca, com manteiga;24,9;347;1455;0,1;10,9;31;63,6;Tr;0,5;30;3;0,06;8;0,2;157;19;0,01;0;75;;;Tr;Tr;Tr;Tr;Tr
+552;Alimentos preparados;Tucupi, com pimenta-de-cheiro;91,9;27;113;2,1;0,3;NA;4,7;0,2;1;28;42;0,52;30;1,1;5;390;0,12;0,9;NA;50;25;Tr;Tr;0,05;Tr;46,4
+553;Alimentos preparados;Vaca atolada;75;144;606;5,1;9,3;18;10,1;2,3;0,5;62;15;0,04;71;0,7;25;219;0,12;1,2;Tr;;;Tr;Tr;Tr;0,77;Tr
+554;Alimentos preparados;Vatapá;58,4;254;1066;6;23,2;44;9,7;1,7;2,7;46;39;0,48;108;1,4;879;209;0,28;0,9;Tr;;;Tr;Tr;Tr;1,8;Tr
+555;Alimentos preparados;Virado à paulista;48,6;306;1284;10,2;25,6;65;14,1;2,2;1,5;40;21;0,15;135;1,1;345;237;0,07;1;10;;;0,14;0,05;Tr;2,6;Tr
+556;Alimentos preparados;Yakisoba;69,4;112;471;7,5;2,6;NA;18,3;1,1;2,2;13;13;0,15;83;0,6;793;158;0,06;0,7;NA;62;31;0,16;Tr;Tr;2,09;Tr
+557;Leguminosas e derivados;Amendoim, grão, cru;6,4;544;2276;27,2;43,9;NA;20,3;8;2,2;Tr;170;1,96;407;2,5;Tr;580;0,78;3,2;NA;;;0,1;0,03;0,76;10,18;Tr
+558;Leguminosas e derivados;Amendoim, torrado, salgado;1,7;605;2534;22,5;54;NA;18,7;7,8;3,2;39;159;1,7;260;1,3;375;495;0,68;2,1;NA;;;0,08;Tr;0,21;7,47;Tr
+559;Leguminosas e derivados;Ervilha, em vagem;76,8;88;366;7,5;0,5;NA;14,2;9,7;1;24;41;0,4;151;1,4;Tr;310;0,2;1,2;NA;;;0,27;0,07;0,06;1,16;12,4
+560;Leguminosas e derivados;Ervilha, enlatada, drenada;80,1;73;308;4,6;0,4;NA;13,4;5,1;1,4;22;23;0,46;78;1,4;372;147;0,14;0,9;NA;9;4;0,07;0,03;Tr;Tr; 
+561;Leguminosas e derivados;Feijão, carioca, cozido;80,4;76;319;4,8;0,5;NA;13,6;8,5;0,7;26;42;0,28;86;1,3;1;254;0,19;0,7;NA;;;0,04;Tr;Tr;Tr;Tr
+562;Leguminosas e derivados;Feijão, carioca, cru;14;329;1376;20;1,3;NA;61,2;18,4;3,5;122;209;1,02;385;8;Tr;1352;0,79;2,9;NA;;;0,17;Tr;0,65;4,02; 
+563;Leguminosas e derivados;Feijão, fradinho, cozido;80;78;326;5,1;0,6;NA;13,5;7,5;0,8;17;38;0,53;84;1,1;0;252;0,1;1,1;NA;;;0,12;Tr;Tr;Tr;Tr
+564;Leguminosas e derivados;Feijão, fradinho, cru;12,7;339;1419;20,2;2,4;NA;61,2;23,6;3,5;77;178;1,43;354;5,1;10;1082;0,7;3,9;NA;;;0,14;0,03;0,26;Tr;Tr
+565;Leguminosas e derivados;Feijão, jalo, cozido;75,8;92;388;6,1;0,5;NA;16,5;13,9;1;29;44;0,32;121;1,9;0;347;0,24;1;NA;;;0,13;Tr;0,04;Tr;Tr
+566;Leguminosas e derivados;Feijão, jalo, cru;13,5;327;1371;20,1;0,9;NA;61,5;30,3;3,9;97;169;0,99;427;7;24;1275;0,95;3;NA;;;0,1;Tr;0,12;Tr;Tr
+567;Leguminosas e derivados;Feijão, preto, cozido;80,2;77;322;4,5;0,5;NA;14;8,4;0,8;29;40;0,37;88;1,5;1;256;0,2;0,7;NA;;;0,06;Tr;0,03;Tr;Tr
+568;Leguminosas e derivados;Feijão, preto, cru;14,9;323;1353;21,3;1,2;NA;58,8;21,8;3,8;110;188;1,32;471;6,5;Tr;1415;0,83;2,9;NA;;;0,12;Tr;0,59;4,6; 
+569;Leguminosas e derivados;Feijão, rajado, cozido;77,9;84;354;5,5;0,4;NA;15,3;9,3;0,9;29;41;0,29;112;1,4;0;314;0,23;0,9;NA;;;0,09;Tr;0,04;Tr;Tr
+570;Leguminosas e derivados;Feijão, rajado, cru;15;325;1363;17,3;1,2;NA;62,9;24;3,7;111;169;1,17;334;18,6;13;1134;0,84;2,6;NA;;;0,07;0,03;0,07;Tr;Tr
+571;Leguminosas e derivados;Feijão, rosinha, cozido;82,6;67;283;4,5;0,5;NA;11,8;4,8;0,6;19;42;0,46;89;1,2;2;240;0,09;1,3;NA;;;Tr;Tr;Tr;3,69;Tr
+572;Leguminosas e derivados;Feijão, rosinha, cru;12;336;1409;20,9;1,3;NA;62,2;20,6;3,6;67;184;1,08;393;5,3;24;1108;0,6;4;NA;;;0,16;0,03;Tr;3,92;Tr
+573;Leguminosas e derivados;Feijão, roxo, cozido;80;76;321;5,7;0,5;NA;12,9;11,5;0,8;22;34;0,32;106;1,4;1;268;0,22;1;NA;;;0,15;Tr;0,03;Tr;Tr
+574;Leguminosas e derivados;Feijão, roxo, cru;12,6;331;1386;22,2;1,2;NA;60;33,8;4;120;161;1,34;393;6,9;9;1221;1,04;3,3;NA;;;0,26;Tr;0,08;Tr;Tr
+575;Leguminosas e derivados;Grão-de-bico, cru;12,3;354;1484;21,2;5,4;NA;57,9;12,4;3,2;114;146;3,16;342;5,4;5;1115;0,67;3,2;NA;;;0,52;Tr;0,75;Tr;Tr
+576;Leguminosas e derivados;Guandu, cru;11,4;344;1439;19;2,1;NA;64;21,3;3,5;129;166;1,02;269;1,9;1;1214;0,57;2;NA;;;1,06;Tr;0,07;2,69;1,5
+577;Leguminosas e derivados;Lentilha, cozida;76,3;92;387;6,3;0,5;NA;16,3;7,9;0,6;16;21;0,29;103;1,5;1;219;0,17;1,1;NA;;;0,03;Tr;Tr;Tr;Tr
+578;Leguminosas e derivados;Lentilha, crua;11,5;339;1418;23,2;0,8;NA;62;16,9;2,6;53;93;1,08;367;7;Tr;886;0,83;3,5;NA; ; ;0,11;Tr;0,42;5,07; 
+579;Leguminosas e derivados;Paçoca, amendoim;1,8;486;2037;16;26,1;NA;52,4;7,3;3,8;22;100;1,05;198;1,1;166;347;0,38;1,6;NA;;;Tr;Tr;1,2;Tr;Tr
+580;Leguminosas e derivados;Pé-de-moleque, amendoim;2,9;503;2105;13,2;28;NA;54,7;3,4;1,1;27;107;1,09;170;1,3;16;355;0,43;1,4;NA;;;0,04;0,03;0,11;5,94;Tr
+581;Leguminosas e derivados;Soja, farinha;5,8;403;1690;36;14,6;NA;38,4;20,2;5,1;206;241;2,87;539;13,1;5;1922;1,29;4,5;NA;;;0,2;0,04;0,03;Tr;Tr
+582;Leguminosas e derivados;Soja, extrato solúvel, natural, fluido;91,3;39;163;2,4;1,6;NA;4,3;0,4;0,5;16;15;0,15;52;0,4;56;121;0,08;0,3;NA;;;Tr;Tr;Tr;Tr;Tr
+583;Leguminosas e derivados;Soja, extrato solúvel, pó;4,5;458;1920;35,7;26,2;NA;28,5;7,3;5,2;359;215;2,68;646;7;83;1606;1,19;5,8;NA;;;Tr;0,11;0,35;Tr;9,2
+584;Leguminosas e derivados;Soja, queijo (tofu);86,6;64;269;6,6;4;NA;2,1;0,8;0,7;80;38;0,33;129;1,4;1;181;0,18;0,9;NA;;;0,04;Tr;0,03;Tr;Tr
+585;Leguminosas e derivados;Tremoço, cru;9,7;381;1595;33,6;10,3;NA;43,8;32,3;2,6;176;121;*;264;2,8;3;708;0,79;4,2;NA;;;0,24;Tr;0,07;Tr;25
+586;Leguminosas e derivados;Tremoço, em conserva;67,7;120;504;11,1;3,8;NA;12,4;14,4;5;15;3;*;39;0,3;1808;5;0,27;0,6;NA;;;Tr;Tr;Tr;Tr;Tr
+587;Nozes e sementes;Amêndoa, torrada, salgada;3,1;580;2429;18,6;47,3;NA;29,5;11,6;1,5;236;222;1,95;493;3,1;278;639;0,93;2,6;NA;;;0,29;0,16;Tr;Tr;Tr
+588;Nozes e sementes;Castanha-de-caju, torrada, salgada;3,5;570;2385;18,5;46,3;NA;29,1;3,7;2,6;32;236;1,59;594;5,2;125;671;1,92;4,7;NA;;;0,29;0,05;0,39;Tr;Tr
+589;Nozes e sementes;Castanha-do-Brasil, crua;3,5;642;2690;14,5;63,5;NA;15,1;7,9;3,4;146;365;1,1;853;2,3;0;650;1,79;4,2;NA;;;0,3;Tr;0,44;Tr;Tr
+590;Nozes e sementes;Coco, cru;43;406;1700;3,7;42;NA;10,4;5,4;1;6;51;1;117;1,8;15;354;0,45;0,9;NA;;;Tr;Tr;0,03;Tr;2,5
+591;Nozes e sementes;Coco,  verde, cru;*;*;*;*;*;*;*;*;*;*;*;*;*;*;*;*;*;*;NA;;;*;*;*;*;*
+592;Nozes e sementes;Farinha, de mesocarpo de babaçu, crua;15,8;328;1375;1,4;0,2;NA;79,2;17,9;3,4;60;39;0,38;25;18,3;12;362;0,22;0,3;NA;;;Tr;Tr;Tr;2,58;Tr
+593;Nozes e sementes;Gergelim, semente;3,9;583;2441;21,2;50,4;NA;21,6;11,9;2,9;825;360;2,67;740;5,4;2;546;1,51;5,2;NA;;;0,94;Tr;0,13;5,92;Tr
+594;Nozes e sementes;Linhaça, semente;6,7;495;2071;14,1;32,3;NA;43,3;33,5;3,7;211;346;2,81;615;4,7;8;869;1,09;4,4;NA;;;0,12;Tr;0,13;Tr;Tr
+595;Nozes e sementes;Pinhão, cozido;50,5;174;729;3;0,7;NA;43,9;15,6;1,8;15;52;0,41;165;0,8;0;727;0,18;0,8;NA;;;Tr;Tr;Tr;Tr;27,7
+596;Nozes e sementes;Pupunha, cozida;54,5;218;914;2,5;12,8;NA;29,6;4,3;0,7;27;25;0,13;48;0,5;0;303;0,28;0,3;NA;875;437;Tr;0,09;0,03;Tr;2,2
+597;Nozes e sementes;Noz, crua;6,2;620;2594;14;59,4;NA;18,4;7,2;2,1;105;152;4,05;396;2;4;533;0,75;2,1;NA;;;0,38;Tr;0,13;1,08;Tr
