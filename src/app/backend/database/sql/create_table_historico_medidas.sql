@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS historico_medidas (
+    id_medicao INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_usuario INTEGER NOT NULL,
+    coxa INTEGER NOT NULL,
+    braco INTEGER NOT NULL,
+    cintura INTEGER NOT NULL,
+    umbigo INTEGER NOT NULL,
+    quadril INTEGER NOT NULL,
+    altura INTEGER NOT NULL,
+    data_hora_medicao DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+
+    FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id)
+)

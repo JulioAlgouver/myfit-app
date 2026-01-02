@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS historico_pesagem (
+    id_pesagem INTEGER PRIMARY KEY AUTOINCREMENT,
+    peso INTEGER NOT NULL,
+    data_hora_pesagem DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    id_usuario INTEGER NOT NULL,
+
+    FOREIGN KEY (id_usuario) REFERENCES USUARIOS(id)
+)
