@@ -6,6 +6,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -15,13 +17,15 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         MatButtonModule,
         MatRadioModule,
         MatDatepickerModule,
-        MatCheckboxModule,        
+        MatCheckboxModule,
+        MatDialogModule,
+        BrowserAnimationsModule,     
     ],
     providers:[
         provideNativeDateAdapter(),
     ],
     declarations:[
-
+        
     ],
     exports:[
         MatInputModule,
@@ -30,6 +34,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
         MatRadioModule,
         MatDatepickerModule,
         MatCheckboxModule,
+        MatDialogModule,
+        BrowserAnimationsModule,  
     ]
 })
 export class AngularMaterialModule{

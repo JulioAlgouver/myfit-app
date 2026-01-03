@@ -13,6 +13,7 @@ import { RefeicoesPageComponent } from './refeicoes-page/refeicoes-page.componen
 import { MeuPesoPageComponent } from './meu-peso-page/meu-peso-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -20,8 +21,9 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     AppRoutingModule,
     CommonModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     AngularMaterialModule,
-],
+],        
     declarations:[
         LoginPageComponent,
         SignUpPageComponent,
@@ -35,6 +37,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
         ChangePasswordComponent,
   ],
     exports:[
+        BrowserAnimationsModule,
         LoginPageComponent,
         SignUpPageComponent,
         HeaderComponent,
