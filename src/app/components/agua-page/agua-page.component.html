@@ -9,12 +9,12 @@
     <div class="progress-wrapper">
       <mat-progress-bar
         mode="determinate"
-        [value]="30"
+        [value]="percentualAtingido"
         class="progressBar">
       </mat-progress-bar>
 
       <span class="progress-text">
-        1050ml / 3000ml<br/>
+        {{aguaConsumida}}ml / {{meta}}ml<br/>
         <span>Meta Diária</span>
       </span>
     </div>
@@ -24,14 +24,14 @@
   </div>
   <div class="selection_field">
     <div class="row">
-      <button><img src="../../../assets/caneca_agua.png"/><p>200ml</p></button>
-      <button><img src="../../../assets/copo_agua_2.png"/><p>350ml</p></button>
-      <button><img src="../../../assets/garrafa_agua.png"/><p>600ml</p></button>
+      <button (click)="acrescenta200ml()"><img src="../../../assets/caneca_agua.png"/><p>200ml</p></button>
+      <button (click)="acrescenta350ml()"><img src="../../../assets/copo_agua_2.png"/><p>350ml</p></button>
+      <button (click)="acrescenta600ml()"><img src="../../../assets/garrafa_agua.png"/><p>600ml</p></button>
     </div>
     <div class="row">
-      <button><img src="../../../assets/garrafa_agua_2.png"/><p>1000ml</p></button>
-      <button><img src="../../../assets/garrafa_agua_3.png"/><p>1500ml</p></button>
-      <button><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></button>
+      <button (click)="acrescenta1000ml()"><img src="../../../assets/garrafa_agua_2.png"/><p>1000ml</p></button>
+      <button (click)="acrescenta1500ml()"><img src="../../../assets/garrafa_agua_3.png"/><p>1500ml</p></button>
+      <button (click)="acrescenta2000ml()"><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></button>
     </div>
     <div class="sendButton">
       <button class="send_button">Beber Água</button>
