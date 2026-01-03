@@ -1,0 +1,37 @@
+.selection_field{
+    width: 100vw;
+    height: auto;
+    padding-top: 7vw;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    .row{
+        width: 100%;
+
+        button{
+            background: none;
+            width: 30vw;
+            height: 30vw;
+            margin: 1vw;
+        }
+
+        p{
+            padding-top: 3vw;
+        }
+
+        img{
+            width: 85%;
+            height: auto;
+        }
+    }
+
+    .sendButton{
+        position: relative;
+        margin-top: 8vw;
+    }
+}

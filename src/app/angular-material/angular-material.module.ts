@@ -7,7 +7,10 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {provideNativeDateAdapter} from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDialogModule} from '@angular/material/dialog';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 
 @NgModule({
@@ -19,7 +22,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         MatDatepickerModule,
         MatCheckboxModule,
         MatDialogModule,
-        BrowserAnimationsModule,     
+        BrowserAnimationsModule,
+        MatProgressBarModule,
+        MatDividerModule,     
     ],
     providers:[
         provideNativeDateAdapter(),
@@ -36,6 +41,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         MatCheckboxModule,
         MatDialogModule,
         BrowserAnimationsModule,  
+        MatProgressBarModule,
+        MatDividerModule,
     ]
 })
 export class AngularMaterialModule{

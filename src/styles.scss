@@ -59,6 +59,20 @@ html, body {
     cursor: pointer;
 }
 
+.send_button{
+    width: 50vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+
+    border-radius: 3vw;
+    background-color: #122525;
+    color: whitesmoke;
+}
+
 .change-password-dialog {
   padding: 0 !important;
   border-radius: 10vw !important;
@@ -69,4 +83,50 @@ html, body {
 .change-password-dialog .mat-mdc-dialog-container {
   padding: 0 !important;
   border-radius: 10vw !important;
+}
+
+.progressBar_content {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  height: 10vh;
+}
+
+.progress-wrapper {
+  position: relative;
+  width: 70vw;
+  height: 10vh;
+}
+
+/* Altura e bordas arredondadas */
+.progressBar {
+  height: 22px !important;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Fundo da barra */
+.mat-progress-bar-buffer {
+  background-color: #dff6f8 !important;
+  height: 10px !important;
+}
+
+/* Barra de progresso */
+.mat-progress-bar-fill::after {
+  background-color: #7cecf2 !important;
+  border-radius: 999px;
+  height: 10px !important;
+}
+
+/* Texto dentro da barra */
+.progress-text {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f4f4f;
+  pointer-events: none;
 }
