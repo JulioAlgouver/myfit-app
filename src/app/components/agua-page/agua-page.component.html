@@ -24,25 +24,27 @@
   </div>
 
   <div class="selection_field">
-    <form>
+    <form [formGroup]="form">
       <div class="row">
-        <mat-radio-group class="radioButtonGroup" aria-label="Selecione uma opção">
+        <mat-radio-group class="radioButtonGroup" 
+                         aria-label="Selecione uma opção"
+                         formControlName="quantidade">
           <div class="row">
-            <mat-radio-button class="radioButtomItem" value="200"><img src="../../../assets/caneca_agua.png"/><p>200ml</p></mat-radio-button>
-            <mat-radio-button class="radioButtomItem" value="1000"><img src="../../../assets/copo_agua_2.png"/><p>1000ml</p></mat-radio-button>
+            <mat-radio-button class="radioButtomItem" value="200" name="AguaPageRadioButton" #AguaPageRadioButton><img src="../../../assets/caneca_agua.png"/><p>200ml</p></mat-radio-button>
+            <mat-radio-button class="radioButtomItem" value="1000" #AguaPageRadioButton><img src="../../../assets/copo_agua_2.png"/><p>1000ml</p></mat-radio-button>
           </div>
           <div class="row">
-            <mat-radio-button class="radioButtomItem" value="350"><img src="../../../assets/garrafa_agua.png"/><p>350ml</p></mat-radio-button>
-            <mat-radio-button class="radioButtomItem" value="1500"><img src="../../../assets/garrafa_agua_2.png"/><p>1500ml</p></mat-radio-button>
+            <mat-radio-button class="radioButtomItem" value="350" #AguaPageRadioButton><img src="../../../assets/garrafa_agua.png"/><p>350ml</p></mat-radio-button>
+            <mat-radio-button class="radioButtomItem" value="1500" #AguaPageRadioButton><img src="../../../assets/garrafa_agua_2.png"/><p>1500ml</p></mat-radio-button>
           </div>
           <div class="row">
-            <mat-radio-button class="radioButtomItem" value="600"><img src="../../../assets/garrafa_agua_3.png"/><p>600ml</p></mat-radio-button>
-            <mat-radio-button class="radioButtomItem" value="2000"><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></mat-radio-button>          
+            <mat-radio-button class="radioButtomItem" value="600" #AguaPageRadioButton><img src="../../../assets/garrafa_agua_3.png"/><p>600ml</p></mat-radio-button>
+            <mat-radio-button class="radioButtomItem" value="2000" #AguaPageRadioButton><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></mat-radio-button>          
           </div>
         </mat-radio-group>
       </div>
       <div class="sendButton">
-        <button class="send_button">Beber Água</button>
+        <button type="button" class="send_button" (click)="beberAgua()">Beber Água</button>
       </div>
     </form>
   </div>
