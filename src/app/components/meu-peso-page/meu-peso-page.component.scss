@@ -1,0 +1,38 @@
+.data_container{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vw;
+    margin-bottom: 5vw;
+    
+    strong{
+        width: 85vw;
+        font-size: 7vw;
+        font-weight: 500;
+        text-align: justify;
+        margin-top: 2vw;
+        margin-bottom: 5vw;
+    }
+
+    span{
+        width: 85vw;
+        text-align: justify;
+        justify-content: center;
+        margin: 2vw;
+    }
+
+    img{
+        width: 30vw;
+        height: auto;
+        position: absolute;
+        left: 65vw;
+        opacity: 35%;
+    }
+
+    button{
+        margin-top: 2vw;
+    }
+}

@@ -14,6 +14,7 @@ import { MeuPesoPageComponent } from './meu-peso-page/meu-peso-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-page.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         MeuPesoPageComponent,
         ProfilePageComponent,
         ChangePasswordComponent,
+        AtualizaPesoPageComponent,
   ],
     exports:[
         BrowserAnimationsModule,
@@ -47,6 +49,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
         MeuPesoPageComponent,
         ProfilePageComponent,
         ChangePasswordComponent,
+        AtualizaPesoPageComponent,
     ],
 })
 export class ComponentsModule{

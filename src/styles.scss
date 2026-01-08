@@ -73,6 +73,20 @@ html, body {
     color: whitesmoke;
 }
 
+.slim_button{
+    width: 40vw;
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+
+    border-radius: 2vw;
+    background-color: #122525;
+    color: whitesmoke;
+}
+
 .change-password-dialog {
   padding: 0 !important;
   border-radius: 10vw !important;
