@@ -1,0 +1,36 @@
+.form-container{
+    width: 100vw;
+    padding-top: 5vw;
+
+    span{
+        padding: 10vw;
+    }
+
+    .formField-atualizar-peso{
+        width: 95vw;
+        padding: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input{
+            font-size: 4vw;
+        }
+    }
+
+    .button-area{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+    
+        input{
+            width: 90vw;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

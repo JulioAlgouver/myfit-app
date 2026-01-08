@@ -1,1 +1,26 @@
-<p>atualiza-peso-page works!</p>
+<app-header></app-header>
+
+<div class="app-container">
+    <div class="title">Atualizar Peso</div>
+
+    <div class="form-container">
+        <form class="form_atualiza_peso" [formGroup]="atualizarPesoForm">
+            <span>Peso Atual</span><br/>
+            <mat-form-field class="formField-atualizar-peso">
+                <input
+                    type="text"
+                    matInput 
+                    placeholder="Informe o seu peso atual"
+                    formControlName="pesoAtual"
+                    required/>
+                    <mat-error *ngIf="atualizarPesoForm.get('pesoAtual')?.hasError('required')">O campo é obrigatório</mat-error>
+                </mat-form-field>
+            <div class="button-area">
+                <button class="cancel_button" type="reset"><a routerLink="/meu-peso">Cancelar</a></button>
+                <button class="confirm_button">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<app-clean-footer></app-clean-footer>

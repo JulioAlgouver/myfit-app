@@ -17,6 +17,10 @@ html, body {
     overflow-x: hidden; /* evita estouro horizontal */
 }
 
+a{
+  text-decoration: none;
+}
+
 /* CSS DE PADRONIZAÇÃO DAS TELAS DE LOGIN E REGISTRO */
 .login-register-container {
     width: 100vw;
@@ -72,6 +76,35 @@ html, body {
     background-color: #122525;
     color: whitesmoke;
 }
+
+.confirm_button{
+    width: 35vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+
+    border-radius: 3vw;
+    background-color: #122525;
+    color: whitesmoke;
+ }
+
+ .cancel_button{
+    width: 35vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-self: center;
+
+    border-radius: 3vw;
+    background-color: #33666661;
+    border: #336666 solid 1px;
+    color: black;
+ }
 
 .slim_button{
     width: 40vw;

@@ -15,6 +15,8 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-page.component';
+import { CleanFooterComponent } from './clean-footer/clean-footer.component';
+import { CdkOverlayOrigin } from "@angular/cdk/overlay";
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-pa
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    CdkOverlayOrigin
 ],        
     declarations:[
         LoginPageComponent,
@@ -37,6 +40,7 @@ import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-pa
         ProfilePageComponent,
         ChangePasswordComponent,
         AtualizaPesoPageComponent,
+        CleanFooterComponent,
   ],
     exports:[
         BrowserAnimationsModule,
@@ -50,6 +54,7 @@ import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-pa
         ProfilePageComponent,
         ChangePasswordComponent,
         AtualizaPesoPageComponent,
+        CleanFooterComponent,
     ],
 })
 export class ComponentsModule{

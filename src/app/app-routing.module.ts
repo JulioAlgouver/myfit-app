@@ -8,6 +8,7 @@ import { ProfilePageComponent } from './components/profile-page/profile-page.com
 import { MeuPesoPageComponent } from './components/meu-peso-page/meu-peso-page.component';
 import { RefeicoesPageComponent } from './components/refeicoes-page/refeicoes-page.component';
 import { AguaPageComponent } from './components/agua-page/agua-page.component';
+import { AtualizaPesoPageComponent } from './components/atualiza-peso-page/atualiza-peso-page.component';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'refeicoes', component: RefeicoesPageComponent },
   { path: 'meu-peso', component: MeuPesoPageComponent },
   { path: 'perfil', component: ProfilePageComponent },
+  { path: 'atualiza-peso', component: AtualizaPesoPageComponent },
 ];
 
 @NgModule({
