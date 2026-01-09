@@ -1,10 +1,31 @@
-.formField_atualiza_medida{
-    position: relative;
-    width: 75vw;
-    height: 8vh;
-    font-size: 3.5vw;
+.form-container{
+    width: 100vw;
+    display: flex;
+    padding-top: 5vw;
 
-    input{
-        padding-bottom: 5vw;
+    span{
+        display: inline-flex;
+        width: 20vw;
+        margin-top: 5vw;
+        margin-left: 5vw;
+    }
+
+    .formField_atualiza_medida{
+        position: relative;
+        display: inline-flex;   
+        width: 70vw;
+        height: 8vh;
+        font-size: 3.5vw;
+        
+        input{
+
+        }
+    }
+
+    .button-area{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
     }
 }

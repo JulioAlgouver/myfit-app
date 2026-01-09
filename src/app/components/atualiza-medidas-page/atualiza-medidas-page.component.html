@@ -5,69 +5,102 @@
         Atualizar Medidas
     </div>
     <div class="form-container">
-        <form>
-            <span>Quadril:</span>
-            <mat-form-field class="formField_atualiza_medida">
-                <input
-                    type="text"
-                    matInput
-                    placeholder="Informe o diametro do quadril (em cm)"
-                    required
-                />
-            </mat-form-field>
+        <form [formGroup]="formMedidas">
+            <div class="inputField">
+                <span>Quadril:</span>
+                <mat-form-field class="formField_atualiza_medida">
+                    <input
+                        type="text"
+                        matInput
+                        placeholder="Informe a medida do quadril (cm)"
+                        maxlength="3"
+                        formControlName="quadril"
+                        required
+                    />
+                    <mat-error>Campo Obrigatório</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <span>Umbigo:</span>
+                <mat-form-field class="formField_atualiza_medida">
+                    <input 
+                        type="text"
+                        matInput
+                        placeholder="Informe a medida do umbigo (cm)"
+                        maxlength="3"
+                        formControlName="umbigo"
+                        required
+                    />
+                    <mat-error>Campo Obrigatório</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <span>Cintura:</span>
+                <mat-form-field class="formField_atualiza_medida">
+                    <input 
+                        type="text"
+                        matInput
+                        placeholder="Informe a medida da cintura (cm)"
+                        maxlength="3"
+                        formControlName="cintura"
+                        required
+                    />
+                    <mat-error>Campo Obrigatório</mat-error>
+                </mat-form-field >
+            </div>
+
+            <div>
+                <span>Braço:</span>
+                <mat-form-field class="formField_atualiza_medida">
+                    <input 
+                        type="text"
+                        matInput
+                        placeholder="Informe a medida do seu braço (cm)"
+                        maxlength="3"
+                        formControlName="braco"
+                        required
+                    />
+                    <mat-error>Campo Obrigatório</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <span>Coxa:</span>
+                <mat-form-field class="formField_atualiza_medida">
+                    <input 
+                        type="text"
+                        matInput
+                        placeholder="Informe a medida da sua coxa (cm)"
+                        maxlength="3"
+                        formControlName="coxa"
+                        required
+                    />
+                    <mat-error>Campo Obrigatório</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <span>Altura:</span>
+                <mat-form-field class="formField_atualiza_medida">
+                    <input 
+                        type="text"
+                        matInput
+                        placeholder="Informe sua altura (cm)"
+                        maxlength="3"
+                        formControlName="altura"
+                        required
+                    />
+                    <mat-error>Campo Obrigatório</mat-error>
+                </mat-form-field>
+            </div>
             <br/>
-            <span>Umbigo:</span>
-            <mat-form-field class="formField_atualiza_medida">
-                <input 
-                    type="text"
-                    matInput
-                    placeholder="Informe o diametro do umbigo (em cm)"
-                    required
-                />
-            </mat-form-field>
-            <br/>
-            <span>Cintura:</span>
-            <mat-form-field class="formField_atualiza_medida">
-                <input 
-                    type="text"
-                    matInput
-                    placeholder="Informe o diametro do Umbigo (em cm)"
-                    required
-                />
-            </mat-form-field >
-            <br/>
-            <span>Braço:</span>
-            <mat-form-field class="formField_atualiza_medida">
-                <input 
-                    type="text"
-                    matInput
-                    placeholder="Informe o diametro do seu braço (em cm)"
-                    required
-                />
-            </mat-form-field>
-            <br/>
-            <span>Coxa:</span>
-            <mat-form-field class="formField_atualiza_medida">
-                <input 
-                    type="text"
-                    matInput
-                    placeholder="Informe o diametro da sua coxa (em cm)"
-                    required
-                />
-            </mat-form-field>
-            <br/>
-            <span>Altura:</span>
-            <mat-form-field class="formField_atualiza_medida">
-                <input 
-                    type="text"
-                    matInput
-                    placeholder="Informe sua altura (em cm)"
-                    required
-                />
-            </mat-form-field>
-            <br/>
-        </form>
-            
+            <div class="button-area">
+                <button class="cancel_button" type="reset">Cancelar</button>
+                <button class="confirm_button">Salvar</button>
+            </div>
+        </form>  
     </div>
 </div>
 
