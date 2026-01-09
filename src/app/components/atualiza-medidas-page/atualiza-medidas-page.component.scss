@@ -16,10 +16,6 @@
         width: 70vw;
         height: 8vh;
         font-size: 3.5vw;
-        
-        input{
-
-        }
     }
 
     .button-area{
@@ -27,5 +23,10 @@
         height: auto;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
     }
 }
