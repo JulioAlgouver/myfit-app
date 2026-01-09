@@ -16,7 +16,7 @@ export class AtualizaPesoPageComponent implements OnInit {
 
   ngOnInit(){
     this.atualizarPesoForm = this.fb.group({
-      peso:['',Validators.required]
+      pesoAtual:['',Validators.required]
     });
   }
 }

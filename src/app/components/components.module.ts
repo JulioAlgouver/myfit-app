@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-page.component';
 import { CleanFooterComponent } from './clean-footer/clean-footer.component';
 import { CdkOverlayOrigin } from "@angular/cdk/overlay";
+import { AtualizaMedidasPageComponent } from './atualiza-medidas-page/atualiza-medidas-page.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { CdkOverlayOrigin } from "@angular/cdk/overlay";
         ChangePasswordComponent,
         AtualizaPesoPageComponent,
         CleanFooterComponent,
+        AtualizaMedidasPageComponent,
   ],
     exports:[
         BrowserAnimationsModule,
@@ -55,6 +57,7 @@ import { CdkOverlayOrigin } from "@angular/cdk/overlay";
         ChangePasswordComponent,
         AtualizaPesoPageComponent,
         CleanFooterComponent,
+        AtualizaMedidasPageComponent,
     ],
 })
 export class ComponentsModule{

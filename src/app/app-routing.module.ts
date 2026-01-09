@@ -9,6 +9,7 @@ import { MeuPesoPageComponent } from './components/meu-peso-page/meu-peso-page.c
 import { RefeicoesPageComponent } from './components/refeicoes-page/refeicoes-page.component';
 import { AguaPageComponent } from './components/agua-page/agua-page.component';
 import { AtualizaPesoPageComponent } from './components/atualiza-peso-page/atualiza-peso-page.component';
+import { AtualizaMedidasPageComponent } from './components/atualiza-medidas-page/atualiza-medidas-page.component';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'meu-peso', component: MeuPesoPageComponent },
   { path: 'perfil', component: ProfilePageComponent },
   { path: 'atualiza-peso', component: AtualizaPesoPageComponent },
+  { path: 'atualiza-medidas', component: AtualizaMedidasPageComponent },
 ];
 
 @NgModule({
