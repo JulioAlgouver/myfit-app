@@ -10,6 +10,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -24,7 +25,9 @@ import {MatDividerModule} from '@angular/material/divider';
         MatDialogModule,
         BrowserAnimationsModule,
         MatProgressBarModule,
-        MatDividerModule,     
+        MatDividerModule,
+        MatSelectModule,
+             
     ],
     providers:[
         provideNativeDateAdapter(),
@@ -43,6 +46,7 @@ import {MatDividerModule} from '@angular/material/divider';
         BrowserAnimationsModule,  
         MatProgressBarModule,
         MatDividerModule,
+        MatSelectModule,
     ]
 })
 export class AngularMaterialModule{

@@ -1,0 +1,40 @@
+.form_nova_refeicao{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 4vw;
+    
+    strong{
+        width: 100%;
+        font-size: 5vw;
+        font-weight: 500;
+        text-align: left;
+        margin-bottom: 5vw;
+    }
+
+    .grid{
+        margin-bottom: 2vw;
+
+        span{
+            display: inline-flex;
+            margin-bottom: 2vw;
+        }
+        
+        .inputField{
+            width: 95%;
+        }
+
+    }
+}
+
+.mapa{
+    width: 100vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

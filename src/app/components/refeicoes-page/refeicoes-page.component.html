@@ -4,6 +4,49 @@
     <div class="title">
         Refeições
     </div>
+    <div class="form_container">
+        <form class="form_nova_refeicao">
+            <strong>Registre sua refeição:</strong>
+            
+            <div class="grid">
+                <span>O que você comeu/bebeu?</span>
+                <mat-form-field class="inputField">
+                    <mat-label>Alimento</mat-label>
+                    <mat-select>
+                        <mat-option [value]="1">-</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="grid">
+                <span>Quantas gramas/ml?</span>
+                <mat-form-field class="inputField">
+                    <mat-label>Quantidade (g/ml)</mat-label>
+                    <input
+                        type="text"
+                        matInput
+                        formControlName="quantidade"
+                        required
+                    />
+                </mat-form-field>
+            </div>
+
+            <div class="grid">
+                <span>Período da Refeição</span>
+                <mat-form-field class="inputField">
+                    <mat-label>Período</mat-label>
+                    <mat-select>
+                        <mat-option>-</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <button class="send_button">Adicionar</button>
+        </form>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="mapa">
+        <button class="send_button">Mapa de Refeições</button>
+    </div>
 </div>
 
 <app-footer></app-footer>
