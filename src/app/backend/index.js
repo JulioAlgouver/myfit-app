@@ -104,6 +104,33 @@ app.get('/usuarios/:id', (req, res) => {
     );
 });
 
+//Buscar alimento por ID
+app.get('/alimentos/:id',(req, res) => {
+    const { id } = req.params;
+
+    db.get(
+        'SELECT id_alimento, descricao, categoria, caloria, proteina, carboidrato, fibra, sodio, lipideo FROM alimentos WHERE id_alimento = ?',
+        [id],
+        (err,row) => {
+            if (err){
+                return res.status(500).json({
+                    error: 'Erro ao buscar alimento',
+                    details: err
+                });
+            }
+
+            if (!row){
+                return res.status(404).json({
+                    message: 'Alimento não encontrado'
+                });
+            }
+
+            res.json(row);
+        }
+    );
+})
+
+
 // Rota para listar todos os usuários
 app.get('/usuarios', (req, res) => {
     db.all('SELECT id, nome, email, senha, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios', [], (err, rows) => {
@@ -113,6 +140,16 @@ app.get('/usuarios', (req, res) => {
         res.json(rows);
     });
 });
+
+// Rota para listar todos os alimentos
+app.get('/alimentos',(req, res) => {
+    db.all('SELECT id_alimento, descricao, categoria, caloria, proteina, carboidrato, fibra, sodio, lipideo FROM alimentos',[], (err,rows) =>{
+        if(err){
+            return res.status(500).json({ error: 'Erro ao buscar alimentos', details: err });
+        }
+        res.json(rows);
+    })
+})
 
 
 // Rodar o servidor
