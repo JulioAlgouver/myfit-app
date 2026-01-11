@@ -5,18 +5,26 @@
         Refeições
     </div>
     <div class="form_container">
-        <form class="form_nova_refeicao">
+        <form class="form_nova_refeicao" [formGroup]="form">
             <strong>Registre sua refeição:</strong>
             
             <div class="grid">
                 <span>O que você comeu/bebeu?</span>
                 <mat-form-field class="inputField">
                     <mat-label>Alimento</mat-label>
-                    <mat-select>
-                        <mat-option [value]="1">-</mat-option>
-                    </mat-select>
+                    <input
+                        type="text"
+                        placeholder="Digite o nome do alimento"
+                        matInput
+                        formControlName="alimento"
+                        [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let alimento of filteredAlimentos | async" [value]="alimento.descricao">
+                            {{alimento.descricao}}
+                        </mat-option>
+                    </mat-autocomplete>
                 </mat-form-field>
-            </div>
+            </div>            
 
             <div class="grid">
                 <span>Quantas gramas/ml?</span>
@@ -36,7 +44,12 @@
                 <mat-form-field class="inputField">
                     <mat-label>Período</mat-label>
                     <mat-select>
-                        <mat-option>-</mat-option>
+                        <mat-option [value]="'Café da Manhã'">Café da Manhã</mat-option>
+                        <mat-option [value]="'Almoço'">Almoço</mat-option>
+                        <mat-option [value]="'Lanche'">Lanche</mat-option>
+                        <mat-option [value]="'Café da Tarde'">Café da Tarde</mat-option>
+                        <mat-option [value]="'Jantar'">Jantar</mat-option>
+                        <mat-option [value]="'Ceia'">Ceia</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
