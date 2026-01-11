@@ -18,6 +18,8 @@ import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-pa
 import { CleanFooterComponent } from './clean-footer/clean-footer.component';
 import { CdkOverlayOrigin } from "@angular/cdk/overlay";
 import { AtualizaMedidasPageComponent } from './atualiza-medidas-page/atualiza-medidas-page.component';
+import { MapaRefeicoesPageComponent } from './mapa-refeicoes-page/mapa-refeicoes-page.component';
+import { DetalhesPesoPageComponent } from './detalhes-peso-page/detalhes-peso-page.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import { AtualizaMedidasPageComponent } from './atualiza-medidas-page/atualiza-m
         AtualizaPesoPageComponent,
         CleanFooterComponent,
         AtualizaMedidasPageComponent,
+        MapaRefeicoesPageComponent,
+        DetalhesPesoPageComponent,
   ],
     exports:[
         BrowserAnimationsModule,
@@ -58,6 +62,8 @@ import { AtualizaMedidasPageComponent } from './atualiza-medidas-page/atualiza-m
         AtualizaPesoPageComponent,
         CleanFooterComponent,
         AtualizaMedidasPageComponent,
+        MapaRefeicoesPageComponent,
+        DetalhesPesoPageComponent,
     ],
 })
 export class ComponentsModule{

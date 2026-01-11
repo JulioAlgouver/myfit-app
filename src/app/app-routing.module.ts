@@ -10,6 +10,9 @@ import { RefeicoesPageComponent } from './components/refeicoes-page/refeicoes-pa
 import { AguaPageComponent } from './components/agua-page/agua-page.component';
 import { AtualizaPesoPageComponent } from './components/atualiza-peso-page/atualiza-peso-page.component';
 import { AtualizaMedidasPageComponent } from './components/atualiza-medidas-page/atualiza-medidas-page.component';
+import { MapaRefeicoesPageComponent } from './components/mapa-refeicoes-page/mapa-refeicoes-page.component';
+import { DetalhesPesoPageComponent } from './components/detalhes-peso-page/detalhes-peso-page.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
@@ -21,6 +24,8 @@ const routes: Routes = [
   { path: 'perfil', component: ProfilePageComponent },
   { path: 'atualiza-peso', component: AtualizaPesoPageComponent },
   { path: 'atualiza-medidas', component: AtualizaMedidasPageComponent },
+  { path: 'mapa-refeicoes', component: MapaRefeicoesPageComponent },
+  { path: 'detalhes', component: DetalhesPesoPageComponent }
 ];
 
 @NgModule({

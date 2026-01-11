@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { IUser } from '../../interface/user.interface';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { UserService } from '../../services/user.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
-usuario: any;
+usuario!: IUser;
 
 constructor( private userService:UserService){}
 
