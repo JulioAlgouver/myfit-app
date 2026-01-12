@@ -4,22 +4,46 @@
     <div class="title">Atualizar Peso</div>
 
     <div class="form-container">
-        <form class="form_atualiza_peso" [formGroup]="atualizarPesoForm">
-            <span>Peso Atual</span><br/>
-            <mat-form-field class="formField-atualizar-peso">
-                <input
-                    type="text"
-                    matInput 
-                    placeholder="Informe o seu peso atual"
-                    formControlName="pesoAtual"
-                    required/>
-                    <mat-error *ngIf="atualizarPesoForm.get('pesoAtual')?.hasError('required')">O campo é obrigatório</mat-error>
-                </mat-form-field>
-            <div class="button-area">
-                <button class="cancel_button" type="reset"><a routerLink="/meu-peso">Cancelar</a></button>
-                <button class="confirm_button">Salvar</button>
-            </div>
-        </form>
+<form 
+  class="form_atualiza_peso"
+  [formGroup]="atualizarPesoForm"
+  (ngSubmit)="registraPesagem()">
+
+  <span>Peso Atual</span><br/>
+
+  <mat-form-field class="formField-atualizar-peso">
+    <input
+      type="number"
+      matInput
+      placeholder="Informe o seu peso atual"
+      formControlName="pesoAtual" />
+
+    <mat-error *ngIf="atualizarPesoForm.get('pesoAtual')?.hasError('required')">
+      O campo é obrigatório
+    </mat-error>
+
+    <mat-error *ngIf="atualizarPesoForm.get('pesoAtual')?.hasError('min')">
+      Peso inválido
+    </mat-error>
+  </mat-form-field>
+
+  <p class="erro" *ngIf="erro">{{ erro }}</p>
+  <p class="sucesso" *ngIf="successful">{{ successful }}</p>
+
+  <div class="button-area">
+    <button type="button" class="cancel_button" routerLink="/meu-peso">
+      Cancelar
+    </button>
+
+    <button 
+      class="confirm_button"
+      type="submit"
+      [disabled]="atualizarPesoForm.invalid">
+      Salvar
+    </button>
+  </div>
+</form>
+
     </div>
 </div>
 

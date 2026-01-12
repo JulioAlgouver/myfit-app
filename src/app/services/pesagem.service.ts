@@ -1,0 +1,23 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+
+@Injectable({
+    providedIn:'root'
+})
+export class PesagemService{
+    private apiUrl = 'http://localhost:3000'
+
+    constructor(private http: HttpClient){}
+
+
+    // Atualizar peso do usuario
+    registrarPesagem(
+        pesoAtual:number,
+        idUsuario:string
+    ){
+        return this.http.post(`${this.apiUrl}/pesagem`,{
+            pesoAtual,
+            idUsuario,
+        });
+    }    
+}

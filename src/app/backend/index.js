@@ -152,6 +152,42 @@ app.get('/alimentos',(req, res) => {
 })
 
 
+
+// Registrar peso do usuario
+// Registrar peso do usuario
+app.post('/pesagem', (req, res) => {
+  const { pesoAtual, idUsuario } = req.body;
+
+  // Validação básica
+  if (!pesoAtual || !idUsuario) {
+    return res.status(400).json({ message: 'Peso ou usuário não informado' });
+  }
+
+  const sql = `
+    INSERT INTO historico_pesagem (peso, id_usuario) VALUES (?, ?)
+  `;
+
+  db.run(sql, [pesoAtual, idUsuario], function (err) {
+    if (err) {
+      console.error('Erro ao registrar peso:', err);
+      return res.status(500).json({
+        message: 'Erro ao registrar peso',
+        details: err.message, // envia só a mensagem do erro
+      });
+    }
+
+    // Use this.lastID se quiser retornar o ID do registro inserido
+    res.status(201).json({
+      message: 'Pesagem registrada com sucesso!',
+      id: this.lastID,
+    });
+  });
+});
+
+
+
+
+
 // Rodar o servidor
 app.listen(3000, () => {
     console.log('API rodando em http://localhost:3000');

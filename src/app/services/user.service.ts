@@ -47,6 +47,7 @@ export class UserService {
   }
 
 
+
   // Mostrar tela de alteração de Senha do usuario
 
   private showChangePassword = new BehaviorSubject<boolean>(false);
@@ -58,5 +59,5 @@ export class UserService {
 
   closeChangePasswordScreen(){
     this.showChangePassword.next(false);
-  }  
+  }
 }

@@ -19,14 +19,14 @@ export class SignUpPageComponent {
       private router: Router
     ){
       this.signUpForm = this.fb.group({
-        nome:['Julio', Validators.required],
-        email:['julioalgouver@gmail.com', Validators.required],
-        cpf: ['08180912906', Validators.required],
-        telefone:['41999315480', Validators.required],
-        dataNascimento: ['11/07/1992', Validators.required],
-        senha:['123456', Validators.required],
-        sexo:['1', Validators.required],
-        termAccepted:[true, Validators.requiredTrue],
+        nome:['', Validators.required],
+        email:['', Validators.required],
+        cpf: ['', Validators.required],
+        telefone:['', Validators.required],
+        dataNascimento: ['', Validators.required],
+        senha:['', Validators.required],
+        sexo:['', Validators.required],
+        termAccepted:[false, Validators.requiredTrue],
       })
     }
 
