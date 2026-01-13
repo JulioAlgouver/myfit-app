@@ -5,19 +5,20 @@
         Meu Peso
     </div>
     <div class="data_container">
-        <span><b>Ultima pesagem: {{pesagem?.data_hora_pesagem}} </b></span>
-        <span><b>Peso atual: {{usuario?.peso_atual}} kg</b></span>
+        <span><b>Ultima pesagem:</b>{{pesagem?.data_hora_pesagem}}</span>
+        <span><b>Peso atual:</b>{{usuario?.peso_atual}} kg</span>
         <a class="slim_button" routerLink="/atualiza-peso" routerLinkActive="active">Atualizar</a>
     </div>
     <mat-divider></mat-divider>
     <div class="data_container">
         <strong>Medida Corporal</strong>
-        <span><b>Quadril: {{usuario?.quadril_atual}} cm</b></span>
-        <span><b>Umbigo: {{usuario?.umbigo_atual}} cm</b></span>
-        <span><b>Cintura: {{usuario?.cintura_atual}} cm</b></span>
-        <span><b>Braço: {{usuario?.braco_atual}} cm</b></span>
-        <span><b>Coxa: {{usuario?.coxa_atual}} cm</b></span>
+        <span><b>Quadril:</b>{{usuario?.quadril_atual}} cm</span>
+        <span><b>Umbigo:</b>{{usuario?.umbigo_atual}} cm</span>
+        <span><b>Cintura:</b>{{usuario?.cintura_atual}} cm</span>
+        <span><b>Braço:</b>{{usuario?.braco_atual}} cm</span>
+        <span><b>Coxa:</b>{{usuario?.coxa_atual}} cm</span>
         <img src="../../../assets/body.png"/>
+        <br/>
         <a class="slim_button" routerLink="/atualiza-medidas" routerLinkActive="active">Atualizar</a>        
     </div>
     <mat-divider></mat-divider>

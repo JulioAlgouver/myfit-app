@@ -5,8 +5,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2vw;
+    margin-top: 3.5vw;
     margin-bottom: 5vw;
+
+    b{
+        display: inline-flex;
+        width: 35vw;
+    }
     
     strong{
         width: 85vw;
