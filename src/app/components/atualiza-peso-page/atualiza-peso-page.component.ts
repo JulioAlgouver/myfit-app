@@ -57,7 +57,7 @@ export class AtualizaPesoPageComponent {
         this.successful = 'Peso registrado com sucesso!';
         setTimeout(() => {
           this.router.navigate(['/meu-peso']);
-        },2000);
+        },1500);
       },
       error: () => {
         this.erro = 'Erro ao registrar pesagem';
@@ -68,6 +68,5 @@ export class AtualizaPesoPageComponent {
         });
       }
     });
-
   }
 }

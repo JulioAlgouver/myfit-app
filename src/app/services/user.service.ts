@@ -42,6 +42,25 @@ export class UserService {
     });
   }
 
+  atualizarMedida(
+    alturaAtual:Number,
+    bracoAtual:Number,
+    quadrilAtual:Number,
+    cinturaAtual:Number,
+    coxaAtual:Number,
+    umbigoAtual:Number,
+    id:string
+  ){
+    return this.http.put(`${this.apiUrl}/usuarios/${id}`,{
+      alturaAtual,
+      bracoAtual,
+      quadrilAtual,
+      cinturaAtual,
+      coxaAtual,
+      umbigoAtual,
+    });
+  }
+
   loginUsuario(cpf: string, senha: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, { cpf, senha });
   }

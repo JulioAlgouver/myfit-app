@@ -5,7 +5,7 @@
         Atualizar Medidas
     </div>
     <div class="form-container">
-        <form [formGroup]="formMedidas">
+        <form [formGroup]="formMedidas" (submit)="registrarMedidas()">
             <div class="inputField">
                 <span>Quadril:</span>
                 <mat-form-field class="formField_atualiza_medida">
@@ -97,8 +97,12 @@
             </div>
             <br/>
             <div class="button-area">
-                <button class="cancel_button" type="reset"><a routerLink="/meu-peso">Cancelar</a></button>
-                <button class="confirm_button">Salvar</button>
+                <button 
+                    class="cancel_button" 
+                    type="reset"><a routerLink="/meu-peso">Cancelar</a></button>
+                <button 
+                    class="confirm_button"
+                    type="submit">Salvar</button>
             </div>
         </form>  
     </div>

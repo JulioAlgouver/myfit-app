@@ -19,7 +19,7 @@ app.listen(3000, () => {
 
 
 // CADASTRO DE USUARIO
-app.post('/usuarios', async (request, response) => {
+app.post('/usuarios', async (req, res) => {
     const {
         nome,
         email,
@@ -28,7 +28,7 @@ app.post('/usuarios', async (request, response) => {
         telefone,
         dataNascimento,
         sexo
-    } = request.body;
+    } = req.body;
 
     // Criptografando a senha
     const senhaCriptografada = await bcrypt.hash(senha, 10);
@@ -45,9 +45,9 @@ app.post('/usuarios', async (request, response) => {
         [nome, email, senhaCriptografada, cpf, telefone, dataNascimento, sexo],
         (err) => {
             if (err) {
-                return response.status(500).json({ error: 'Erro ao cadastrar o usuário', details: err });
+                return res.status(500).json({ error: 'Erro ao cadastrar o usuário', details: err });
             }
-            response.status(201).json({
+            res.status(201).json({
                 message: 'Usuário cadastrado com sucesso!'
             });
         }
@@ -214,6 +214,41 @@ app.put('/usuarios/:id', (req, res) => {
 });
 
 
+// ATUALIZAR MEDIDAS NO CADASTRO DO USUARIO
+app.put('/usuarios/:id', (req, res) => {
+    const { id } = req.params;
+    const { alturaAtual } = req.body;
+    const { bracoAtual } = req.body;
+    const { quadrilAtual } = req.body;
+    const { cinturaAtual } = req.body;
+    const { coxaAtual } = req.body;
+    const { umbigoAtual } = req.body;
+
+    const sql = `
+        UPDATE usuarios SET altura_atual = ? WHERE id_usuario = ?
+        UPDATE usuarios SET braco_atual = ? WHERE id_usuario = ?
+        UPDATE usuarios SET quadril_atual = ? WHERE id_usuario = ?
+        UPDATE usuarios SET cintura_atual = ? WHERE id_usuario = ?
+        UPDATE usuarios SET coxa_atual = ? WHERE id_usuario = ?
+        UPDATE usuarios SET umbigo_atual = ? WHERE id_usuario = ?
+    `;
+
+    db.run(sql, [alturaAtual,bracoAtual,quadrilAtual,cinturaAtual,coxaAtual,umbigoAtual,id], function(err){
+        if (err) {
+            console.error('Erro ao atualizar as medidas no cadastro do usuario');
+            return res.status(500).json({
+                message: 'Erro ao atualizar peso',
+                details: err.message,
+            });
+        }
+
+        res.status(201).json({
+            message: 'Medidas atualizadas no cadastro do usuário',
+        });
+    });
+});
+
+
 // LISTAR PESAGENS
 
 app.get('/pesagem', (req, res) => {
@@ -284,3 +319,74 @@ app.get('/pesagem/ultima/:id_usuario', (req, res) => {
         res.json(row);
     });
 });
+
+
+
+// REGISTRAR MEDIDAS
+app.post('/medidas', (req, res) =>{
+    const {
+        quadril,
+        umbigo,
+        cintura,
+        braco,
+        coxa,
+        altura,
+        idUsuario
+    } = req.body;
+
+    const sql = `
+        INSERT INTO historico_medidas
+            (quadril, umbigo, cintura, braco, coxa, altura, id_usuario)
+        VALUES
+        (?,?,?,?,?,?,?)
+    `
+
+    db.run(
+        sql,
+        [quadril, umbigo, cintura, braco, coxa, altura, idUsuario],
+        (err) =>{
+            if(err){
+                return res.status(500).json({
+                    message: 'Não foi possivel registrar medição.'
+                })
+            }
+            res.status(200).json({
+                message: 'Medição cadastrada com sucesso.'
+            });
+        }
+    );
+});
+
+
+// CONSULTAR MEDIDAS
+app.get('/medidas',(req, res) => {
+    db.all(` SELECT * FROM historico_medidas`,[],(err,rows) => {
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao buscar medidas',
+                details: err
+            })
+        }
+        res.json(rows);
+    })
+})
+
+
+// CONSULTAR MEDIDAS POR USUARIO
+app.get('/medidas/:id_usuario',(req, res) => {
+    const id_usuario = req.params;
+
+    db.all(` SELECT * FROM historico_medidas WHERE id_usuario = ?`,[id_usuario],(err,rows) => {
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao buscar medidas'
+            })
+        }
+        if(!rows){
+            return res.status(404).json({
+                message: 'Nenhuma medida encontrada para este usuario'
+            })
+        }
+        res.json(rows)
+    })
+})
