@@ -212,3 +212,75 @@ app.put('/usuarios/:id', (req, res) => {
         });
     });
 });
+
+
+// LISTAR PESAGENS
+
+app.get('/pesagem', (req, res) => {
+    db.all('SELECT * FROM historico_pesagem', [], (err, rows) => {
+        if (err) {
+            return res.status(500).json({ 
+                error: 'Erro ao buscar pesagem', 
+                details: err 
+            });
+        }
+        res.json(rows);
+    });
+});
+
+// LISTAR PESAGENS POR USUARIO
+
+app.get('/pesagem/:id_usuario', (req, res) => {
+    const { id_usuario } = req.params;
+
+    db.all(
+        'SELECT * FROM historico_pesagem WHERE id_usuario = ?',
+        [id_usuario],
+        (err, rows) => {
+            if (err) {
+                return res.status(500).json({
+                    error: 'Erro ao buscar pesagem',
+                    details: err
+                });
+            }
+
+            if (!rows) {
+                return res.status(404).json({
+                    message: 'Pesagem não encontrada'
+                });
+            }
+
+            res.json(rows);
+        }
+    );
+});
+
+
+
+// PEGAR DATA DA ULTIMA PESAGEM DO USUARIO
+app.get('/pesagem/ultima/:id_usuario', (req, res) => {
+    const {id_usuario} = req.params;
+
+    db.get(`SELECT 
+                data_hora_pesagem 
+            FROM 
+                historico_pesagem 
+            WHERE 
+                id_usuario = ?
+            ORDER BY data_hora_pesagem DESC
+            LIMIT 1`, 
+            [id_usuario],(err, row) => {
+        if(err){
+            return res.status(500).json({
+                error: 'Erro ao buscar registro de pesagem', 
+                details: err
+            });
+        }
+        if (!row) {
+                return res.status(404).json({
+                    message: 'Nenhuma pesagem encontrada'
+                });
+            }
+        res.json(row);
+    });
+});

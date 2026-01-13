@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable, pipe } from "rxjs";
 
 @Injectable({
     providedIn:'root'
@@ -20,4 +21,14 @@ export class PesagemService{
             idUsuario,
         });
     }    
+
+    pegarDataHoraUltimaPesagem(): Observable<any>{
+        const userId = localStorage.getItem('userId')
+        return this.http.get(`${this.apiUrl}/pesagem/ultima/${userId}`)
+    }
+
+      getUsuarioLogado(): Observable<any> {
+        const userId = localStorage.getItem('userId');
+        return this.http.get(`${this.apiUrl}/usuarios/${userId}`);
+      }
 }

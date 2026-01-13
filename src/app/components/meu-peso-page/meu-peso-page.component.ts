@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
+import { PesagemService } from '../../services/pesagem.service';
 
 @Component({
   selector: 'app-meu-peso-page',
@@ -8,9 +9,11 @@ import { UserService } from '../../services/user.service';
 })
 export class MeuPesoPageComponent implements OnInit{
   usuario: any;
+  pesagem: any;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private pesagemService: PesagemService
   ){}
 
   ngOnInit():void{
@@ -18,5 +21,10 @@ export class MeuPesoPageComponent implements OnInit{
       next: res => this.usuario = res,
       error: err => console.error('Erro ao carregar informações do usuário', err)
     });
+
+    this.pesagemService.pegarDataHoraUltimaPesagem().subscribe({
+      next: res => this.pesagem = res,
+      error: err => console.error('Erro ao consultar a pesagem do usuario')
+    })
   }
 }
