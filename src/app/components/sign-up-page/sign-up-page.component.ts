@@ -27,6 +27,7 @@ export class SignUpPageComponent {
         senha:['', Validators.required],
         sexo:['', Validators.required],
         termAccepted:[false, Validators.requiredTrue],
+        pesoAtual:['']
       })
     }
 
@@ -47,10 +48,11 @@ export class SignUpPageComponent {
         cpf,
         sexo,
         telefone,
-        dataNascimento      
+        dataNascimento,
+        pesoAtual     
     } = this.signUpForm.value;
 
-    this.userService.cadastrarUsuario(nome,email,senha,cpf,sexo,telefone,dataNascimento).subscribe({
+    this.userService.cadastrarUsuario(nome,email,senha,cpf,sexo,telefone,dataNascimento,pesoAtual).subscribe({
       next: (response) =>{
         console.log('Cadastro realizado', response);
         this.successful = 'Usuário cadastrado com sucesso!'

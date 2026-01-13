@@ -19,6 +19,7 @@ export class UserService {
     sexo: Sexo,
     telefone: string,
     dataNascimento: Date,
+    pesoAtual:number,
   ) {
     return this.http.post(`${this.apiUrl}/usuarios`, {
       nome,
@@ -28,6 +29,16 @@ export class UserService {
       sexo,
       telefone,
       dataNascimento,
+      pesoAtual,
+    });
+  }
+
+  atualizarPeso(
+    pesoAtual: Number,
+    id:string
+  ){
+    return this.http.put(`${this.apiUrl}/usuarios/${id}`,{
+      pesoAtual
     });
   }
 

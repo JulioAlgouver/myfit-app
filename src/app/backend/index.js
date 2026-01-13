@@ -7,10 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Exemplo de rota para testar
+// EXEMPLO DE ROTA PARA TESTAR
 app.get('/', (req, res) => {
     res.send('API rodando com SQLite!');
 });
+
+// RODAR O SERVIDOR
+app.listen(3000, () => {
+    console.log('API rodando em http://localhost:3000');
+});
+
 
 // CADASTRO DE USUARIO
 app.post('/usuarios', async (request, response) => {
@@ -78,12 +84,12 @@ app.post('/login', (request, response) => {
     );
 });
 
-// Buscar usuario por ID
+// BUSCAR USUARIOS POR ID
 app.get('/usuarios/:id', (req, res) => {
     const { id } = req.params;
 
     db.get(
-        'SELECT id, nome, email, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios WHERE id = ?',
+        'SELECT * FROM usuarios WHERE id = ?',
         [id],
         (err, row) => {
             if (err) {
@@ -104,12 +110,12 @@ app.get('/usuarios/:id', (req, res) => {
     );
 });
 
-//Buscar alimento por ID
+//BUSCAR ALIMENTO POR ID
 app.get('/alimentos/:id',(req, res) => {
     const { id } = req.params;
 
     db.get(
-        'SELECT id_alimento, descricao, categoria, caloria, proteina, carboidrato, fibra, sodio, lipideo FROM alimentos WHERE id_alimento = ?',
+        'SELECT * FROM alimentos WHERE id_alimento = ?',
         [id],
         (err,row) => {
             if (err){
@@ -131,9 +137,9 @@ app.get('/alimentos/:id',(req, res) => {
 })
 
 
-// Rota para listar todos os usuários
+// ROTA PARA LISTAR TODOS OS USUARIOS
 app.get('/usuarios', (req, res) => {
-    db.all('SELECT id, nome, email, senha, cpf, telefone, data_nascimento, sexo, created_at FROM usuarios', [], (err, rows) => {
+    db.all('SELECT * FROM usuarios', [], (err, rows) => {
         if (err) {
             return res.status(500).json({ error: 'Erro ao buscar usuários', details: err });
         }
@@ -141,9 +147,9 @@ app.get('/usuarios', (req, res) => {
     });
 });
 
-// Rota para listar todos os alimentos
+// ROTA PARA LISTAR TODOS OS ALIMENTOS
 app.get('/alimentos',(req, res) => {
-    db.all('SELECT id_alimento, descricao, categoria, caloria, proteina, carboidrato, fibra, sodio, lipideo FROM alimentos',[], (err,rows) =>{
+    db.all('SELECT * FROM alimentos',[], (err,rows) =>{
         if(err){
             return res.status(500).json({ error: 'Erro ao buscar alimentos', details: err });
         }
@@ -152,9 +158,7 @@ app.get('/alimentos',(req, res) => {
 })
 
 
-
-// Registrar peso do usuario
-// Registrar peso do usuario
+// REGISTRAR PESO DO USUARIO
 app.post('/pesagem', (req, res) => {
   const { pesoAtual, idUsuario } = req.body;
 
@@ -185,10 +189,26 @@ app.post('/pesagem', (req, res) => {
 });
 
 
+// ATUALIZAR PESO NO CADASTRO DO USUARIO
+app.put('/usuarios/:id', (req, res) => {
+    const { id } = req.params;
+    const { pesoAtual } = req.body;
 
+    const sql = `
+        UPDATE usuarios SET peso_atual = ? WHERE id = ?
+    `;
 
+    db.run(sql, [pesoAtual, id], function(err){
+        if (err) {
+            console.error('Erro ao atualizar o peso no cadastro do usuario');
+            return res.status(500).json({
+                message: 'Erro ao atualizar peso',
+                details: err.message,
+            });
+        }
 
-// Rodar o servidor
-app.listen(3000, () => {
-    console.log('API rodando em http://localhost:3000');
+        res.status(201).json({
+            message: 'Peso atualizado no cadastro do usuário',
+        });
+    });
 });

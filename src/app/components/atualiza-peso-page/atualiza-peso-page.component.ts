@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PesagemService } from '../../services/pesagem.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-atualiza-peso-page',
@@ -17,6 +18,7 @@ export class AtualizaPesoPageComponent {
   constructor(
     public fb: FormBuilder,
     private pesagemService:PesagemService,
+    private userService:UserService,
     private router: Router
   ){
     this.atualizarPesoForm = this.fb.group({
@@ -37,6 +39,19 @@ export class AtualizaPesoPageComponent {
       return
     }
 
+    this.userService.atualizarPeso(pesoAtual,idUser).subscribe({
+      next: () => {
+        this.successful = 'Peso atualizado no cadastro';
+      },
+      error: () =>{
+        this.erro = 'Erro ao atualizar o peso no cadastro';
+
+        console.log('Payload enviado:',{
+          pesoAtual
+        })
+      }
+    })
+
     this.pesagemService.registrarPesagem(pesoAtual,idUser).subscribe({
       next: () => {
         this.successful = 'Peso registrado com sucesso!';
@@ -48,10 +63,11 @@ export class AtualizaPesoPageComponent {
         this.erro = 'Erro ao registrar pesagem';
 
         console.log('Payload enviado:', {
-  pesoAtual,
-  idUser
-});
+          pesoAtual,
+          idUser
+        });
       }
     });
+
   }
 }
