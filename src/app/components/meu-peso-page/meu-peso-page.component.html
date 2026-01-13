@@ -12,11 +12,11 @@
     <mat-divider></mat-divider>
     <div class="data_container">
         <strong>Medida Corporal</strong>
-        <span><b>Quadril:</b></span>
-        <span><b>Umbigo:</b></span>
-        <span><b>Cintura:</b></span>
-        <span><b>Braço:</b></span>
-        <span><b>Coxa:</b></span>
+        <span><b>Quadril: {{usuario?.quadril_atual}} cm</b></span>
+        <span><b>Umbigo: {{usuario?.umbigo_atual}} cm</b></span>
+        <span><b>Cintura: {{usuario?.cintura_atual}} cm</b></span>
+        <span><b>Braço: {{usuario?.braco_atual}} cm</b></span>
+        <span><b>Coxa: {{usuario?.coxa_atual}} cm</b></span>
         <img src="../../../assets/body.png"/>
         <a class="slim_button" routerLink="/atualiza-medidas" routerLinkActive="active">Atualizar</a>        
     </div>

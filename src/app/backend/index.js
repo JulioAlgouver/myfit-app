@@ -190,7 +190,7 @@ app.post('/pesagem', (req, res) => {
 
 
 // ATUALIZAR PESO NO CADASTRO DO USUARIO
-app.put('/usuarios/:id', (req, res) => {
+app.put('/usuarios/:id/peso', (req, res) => {
     const { id } = req.params;
     const { pesoAtual } = req.body;
 
@@ -215,7 +215,7 @@ app.put('/usuarios/:id', (req, res) => {
 
 
 // ATUALIZAR MEDIDAS NO CADASTRO DO USUARIO
-app.put('/usuarios/:id', (req, res) => {
+app.put('/usuarios/:id/medidas', (req, res) => {
     const { id } = req.params;
     const { alturaAtual } = req.body;
     const { bracoAtual } = req.body;
@@ -225,12 +225,17 @@ app.put('/usuarios/:id', (req, res) => {
     const { umbigoAtual } = req.body;
 
     const sql = `
-        UPDATE usuarios SET altura_atual = ? WHERE id_usuario = ?
-        UPDATE usuarios SET braco_atual = ? WHERE id_usuario = ?
-        UPDATE usuarios SET quadril_atual = ? WHERE id_usuario = ?
-        UPDATE usuarios SET cintura_atual = ? WHERE id_usuario = ?
-        UPDATE usuarios SET coxa_atual = ? WHERE id_usuario = ?
-        UPDATE usuarios SET umbigo_atual = ? WHERE id_usuario = ?
+        UPDATE 
+            usuarios 
+        SET 
+            altura_atual = ?,
+            braco_atual = ?,
+            quadril_atual = ?,
+            cintura_atual = ?,
+            coxa_atual = ?,
+            umbigo_atual  = ?
+        WHERE 
+            id = ?
     `;
 
     db.run(sql, [alturaAtual,bracoAtual,quadrilAtual,cinturaAtual,coxaAtual,umbigoAtual,id], function(err){

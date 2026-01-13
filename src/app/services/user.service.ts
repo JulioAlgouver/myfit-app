@@ -37,7 +37,7 @@ export class UserService {
     pesoAtual: Number,
     id:string
   ){
-    return this.http.put(`${this.apiUrl}/usuarios/${id}`,{
+    return this.http.put(`${this.apiUrl}/usuarios/${id}/peso`,{
       pesoAtual
     });
   }
@@ -51,7 +51,7 @@ export class UserService {
     umbigoAtual:Number,
     id:string
   ){
-    return this.http.put(`${this.apiUrl}/usuarios/${id}`,{
+    return this.http.put(`${this.apiUrl}/usuarios/${id}/medidas`,{
       alturaAtual,
       bracoAtual,
       quadrilAtual,
