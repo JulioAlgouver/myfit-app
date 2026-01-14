@@ -1,0 +1,3 @@
+interface IHidratacao{
+    valorDiario:number;
+}

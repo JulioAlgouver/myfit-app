@@ -432,7 +432,7 @@ app.post('/hidratacao', (req, res) =>{
 
 // CONSULTAR HISTORICO HIDRATACAO
 app.get('/hidratacao',(req, res) => {
-    db.all(` SELECT * FROM historico_hidratacao`,[],(err,rows) => {
+    db.all(`SELECT * FROM historico_hidratacao`,[],(err,rows) => {
         if(err){
             return res.status(500).json({
                 message:'Erro ao buscar registros',
@@ -448,7 +448,8 @@ app.get('/hidratacao',(req, res) => {
 app.get('/hidratacao/:id_usuario/valorDiario',(req, res) => {
     const {id_usuario} = req.params;
 
-    db.all(` SELECT * 
+    db.all(` SELECT 
+                SUM(quantidade) as valor_diario 
              FROM 
                 historico_hidratacao 
              WHERE 

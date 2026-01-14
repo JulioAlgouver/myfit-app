@@ -74,6 +74,6 @@ export class AtualizaMedidasPageComponent {
       next: () => {
         this.successful = 'Medidas atualizadas '
       }
-    })
+    });
   }
 }
