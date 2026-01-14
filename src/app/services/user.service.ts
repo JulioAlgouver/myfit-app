@@ -33,6 +33,15 @@ export class UserService {
     });
   }
 
+  atualizarAgua(
+    quantidade: Number,
+    id:string
+  ){
+    return this.http.put(`${this.apiUrl}/usuarios/${id}/agua`,{
+      quantidade
+    });
+  }
+
   atualizarPeso(
     pesoAtual: Number,
     id:string
@@ -43,21 +52,21 @@ export class UserService {
   }
 
   atualizarMedida(
-    alturaAtual:Number,
-    bracoAtual:Number,
     quadrilAtual:Number,
-    cinturaAtual:Number,
-    coxaAtual:Number,
     umbigoAtual:Number,
+    cinturaAtual:Number,
+    bracoAtual:Number,
+    coxaAtual:Number,
+    alturaAtual:Number,
     id:string
   ){
     return this.http.put(`${this.apiUrl}/usuarios/${id}/medidas`,{
-      alturaAtual,
-      bracoAtual,
       quadrilAtual,
-      cinturaAtual,
-      coxaAtual,
       umbigoAtual,
+      cinturaAtual,
+      bracoAtual,
+      coxaAtual,
+      alturaAtual,
     });
   }
 

@@ -12,11 +12,6 @@ app.get('/', (req, res) => {
     res.send('API rodando com SQLite!');
 });
 
-// RODAR O SERVIDOR
-app.listen(3000, () => {
-    console.log('API rodando em http://localhost:3000');
-});
-
 
 // CADASTRO DE USUARIO
 app.post('/usuarios', async (req, res) => {
@@ -217,28 +212,35 @@ app.put('/usuarios/:id/peso', (req, res) => {
 // ATUALIZAR MEDIDAS NO CADASTRO DO USUARIO
 app.put('/usuarios/:id/medidas', (req, res) => {
     const { id } = req.params;
-    const { alturaAtual } = req.body;
-    const { bracoAtual } = req.body;
     const { quadrilAtual } = req.body;
-    const { cinturaAtual } = req.body;
-    const { coxaAtual } = req.body;
     const { umbigoAtual } = req.body;
+    const { cinturaAtual } = req.body;
+    const { bracoAtual } = req.body;
+    const { coxaAtual } = req.body;
+    const { alturaAtual } = req.body;
 
     const sql = `
         UPDATE 
             usuarios 
         SET 
-            altura_atual = ?,
-            braco_atual = ?,
             quadril_atual = ?,
+            umbigo_atual  = ?,
             cintura_atual = ?,
+            braco_atual = ?,
             coxa_atual = ?,
-            umbigo_atual  = ?
+            altura_atual = ?
         WHERE 
             id = ?
     `;
 
-    db.run(sql, [alturaAtual,bracoAtual,quadrilAtual,cinturaAtual,coxaAtual,umbigoAtual,id], function(err){
+    db.run(sql, [
+        quadrilAtual,
+        umbigoAtual,
+        cinturaAtual,
+        bracoAtual,
+        coxaAtual,
+        alturaAtual,
+        id], function(err){
         if (err) {
             console.error('Erro ao atualizar as medidas no cadastro do usuario');
             return res.status(500).json({
@@ -379,7 +381,7 @@ app.get('/medidas',(req, res) => {
 
 // CONSULTAR MEDIDAS POR USUARIO
 app.get('/medidas/:id_usuario',(req, res) => {
-    const id_usuario = req.params;
+    const {id_usuario} = req.params;
 
     db.all(` SELECT * FROM historico_medidas WHERE id_usuario = ?`,[id_usuario],(err,rows) => {
         if(err){
@@ -395,3 +397,127 @@ app.get('/medidas/:id_usuario',(req, res) => {
         res.json(rows)
     })
 })
+
+
+// REGISTRAR HIDRATAÇÃO
+app.post('/hidratacao', (req, res) =>{
+    const {
+        quantidade,
+        id_usuario
+    } = req.body;
+
+    const sql = `
+        INSERT INTO historico_hidratacao
+            (quantidade, id_usuario)
+        VALUES
+        (?,?)
+    `
+
+    db.run(
+        sql,
+        [quantidade, id_usuario],
+        (err) =>{
+            if(err){
+                return res.status(500).json({
+                    message: 'Não foi possivel registrar.'
+                })
+            }
+            res.status(200).json({
+                message: 'Hidratação registrada com sucesso.'
+            });
+        }
+    );
+});
+
+
+// CONSULTAR HISTORICO HIDRATACAO
+app.get('/hidratacao',(req, res) => {
+    db.all(` SELECT * FROM historico_hidratacao`,[],(err,rows) => {
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao buscar registros',
+                details: err
+            })
+        }
+        res.json(rows);
+    })
+})
+
+
+// CONSULTAR HISTORICO HIDRATACAO POR USUARIO E DIA
+app.get('/hidratacao/:id_usuario/valorDiario',(req, res) => {
+    const {id_usuario} = req.params;
+
+    db.all(` SELECT * 
+             FROM 
+                historico_hidratacao 
+             WHERE 
+                id_usuario = ? AND
+                data_hora_medicao >= date('now','localtime') and data_hora_medicao < date('now','localtime', '+1 day')`,
+             [id_usuario],(err,rows) => {
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao buscar medidas'
+            })
+        }
+        if(!rows){
+            return res.status(404).json({
+                message: 'Nenhuma medida encontrada para este usuario'
+            })
+        }
+        res.json(rows)
+    })
+})
+
+
+// CONSULTAR HISTORICO HIDRATACAO POR USUARIO
+app.get('/hidratacao/:id_usuario',(req, res) => {
+    const {id_usuario} = req.params;
+
+    db.all(` SELECT * FROM historico_hidratacao WHERE id_usuario = ?`,[id_usuario],(err,rows) => {
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao buscar registros'
+            })
+        }
+        if(!rows){
+            return res.status(404).json({
+                message: 'Nenhum registro encontrado para este usuario'
+            })
+        }
+        res.json(rows)
+    })
+})
+
+
+
+// ATUALIZAR AGUA NO CADASTRO DO USUARIO
+app.put('/usuarios/:id/agua', (req, res) => {
+    const { id } = req.params;
+    const { quantidade } = req.body;
+
+    const sql = `
+        UPDATE usuarios SET agua = ? WHERE id = ?
+    `;
+
+    db.run(sql, [quantidade, id], function(err){
+        if (err) {
+            console.error('Erro ao atualizar a agua no cadastro do usuario');
+            return res.status(500).json({
+                message: 'Erro ao atualizar agua',
+                details: err.message,
+            });
+        }
+
+        res.status(201).json({
+            message: 'Agua atualizada no cadastro do usuário',
+        });
+    });
+});
+
+
+
+// RODAR O SERVIDOR
+app.listen(3000, () => {
+    console.log('API rodando em http://localhost:3000');
+});

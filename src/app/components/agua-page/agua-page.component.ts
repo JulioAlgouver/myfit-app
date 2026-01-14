@@ -1,26 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
+import { HidratacaoService } from '../../services/hidratacao.service';
 
 @Component({
   selector: 'app-agua-page',
   templateUrl: './agua-page.component.html',
   styleUrl: './agua-page.component.scss'
 })
-export class AguaPageComponent implements OnInit{
+export class AguaPageComponent {
   public meta: number = 3000;
   public aguaConsumida: number = 1200;
   public percentualAtingido: number = 0;
 
+
   form!:FormGroup;
+  erro: string = '';
+  successful: string = '';
 
-  constructor(private fb: FormBuilder){
-    this.calcularPercentualAtingido();  
-  }
-
-  ngOnInit():void{
+  constructor(
+    private fb: FormBuilder,
+    private userService:UserService,
+    private hidratacaoService:HidratacaoService
+    
+  ){
     this.form = this.fb.group({
-      quantidade:[200]
-    });
+      quantidade:['',Validators.required]
+    })
+
+    this.calcularPercentualAtingido();
   }
 
   public calcularPercentualAtingido(){
@@ -31,38 +39,41 @@ export class AguaPageComponent implements OnInit{
     const valorSelecionado = this.form.value.quantidade;
     this.aguaConsumida += Number(valorSelecionado);
     this.calcularPercentualAtingido();
+
+    this.registrarHidratacao();
   }
 
-  /*
-  acrescenta200ml(){
-    this.aguaConsumida += 200;
-    this.calcularPercentualAtingido();
-  }
+  registrarHidratacao(){
+    const idUsuario = localStorage.getItem('userId');
+    const quantidade = Number(this.form.value.quantidade);
 
-  acrescenta350ml(){
-    this.aguaConsumida += 350;
-    this.calcularPercentualAtingido();
-  }
+    if(this.form.invalid){
+      return
+    }
 
-  acrescenta600ml(){
-    this.aguaConsumida += 600;
-    this.calcularPercentualAtingido()
-  }
+    if(!idUsuario){
+      this.erro = ('Usuario não encontrado');
+      return
+    }
 
-  acrescenta1000ml(){
-    this.aguaConsumida += 1000;
-    this.calcularPercentualAtingido();
-  }
+    this.hidratacaoService.registrarHidratacao(quantidade,idUsuario).subscribe({
+      next: () => {
+        this.successful = 'Registro realizado com sucesso!'
+      },
+      error: () => {
+        this.erro = 'Erro ao registrar';
 
-  acrescenta1500ml(){
-    this.aguaConsumida += 1500;
-    this.calcularPercentualAtingido();
-  }
+        console.log('Payload Enviado:' ,{
+          quantidade,
+          idUsuario
+        })
+      }
+    })
 
-  acrescenta2000ml(){
-    this.aguaConsumida += 2000;
-    this.calcularPercentualAtingido();
+    this.userService.atualizarAgua(quantidade,idUsuario).subscribe({
+      next: () => {
+        this.successful = 'Agua atualizada'
+      }
+    })
   }
-
-  */
 }
