@@ -1,0 +1,38 @@
+.grid-content{
+    width: 70vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 5vw;
+
+    strong{
+        font-size: 6vw;
+        margin-bottom: 5vw;
+    }
+
+    span{
+        font-size: 4vw;
+        line-height: 8vw;
+    }
+
+    
+    .img-area{
+        width: 90vw;
+        height: 10%;
+        
+        display: flex;
+        position: absolute;
+        justify-content: right;
+        align-content: center;
+        align-items: center;
+        z-index: 0;
+        
+        img{
+            width: 20vw;
+            opacity: 50%;
+        }
+    }
+
+}
