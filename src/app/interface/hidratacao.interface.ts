@@ -1,3 +1,3 @@
-interface IHidratacao{
+export interface IHidratacao{
     valorDiario:number;
 }

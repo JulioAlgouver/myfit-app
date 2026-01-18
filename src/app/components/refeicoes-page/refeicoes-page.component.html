@@ -19,7 +19,10 @@
                         formControlName="alimento"
                         [matAutocomplete]="auto">
                     <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option *ngFor="let alimento of filteredAlimentos | async" [value]="alimento.descricao">
+                        <mat-option 
+                            *ngFor="let alimento of filteredAlimentos | async" 
+                            [value]="alimento.descricao"
+                            (onSelectionChange)="onSelectFood()">
                             {{alimento.descricao}}
                         </mat-option>
                     </mat-autocomplete>
