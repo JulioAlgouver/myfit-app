@@ -45,15 +45,18 @@ export class RefeicoesPageComponent implements OnInit {
     return this.alimentos.filter(alimento => alimento.descricao.toLowerCase().includes(filterValue));
   }
 
-  public onSelectFood(){
-    this.alimentoService.listarAlimentos().subscribe((alimentos) => {
-      const id = alimentos[0].id;
-      const descricao = alimentos[0].descricao;
 
-      console.log('Dados:',{
+  public onSelectFood(alimento:IAlimento){
+      const id = alimento.id_alimento;
+      const descricao = alimento.descricao;
+
+      console.log('Selecionado:',{
         id,
         descricao
-      })
-    });
+      });
+
+      this.alimentoService.buscarAlimentoPorId(id).subscribe( res => {
+        console.log('Detalhes:', res);
+      });
   }
 }

@@ -14,4 +14,8 @@ export class AlimentoService{
     listarAlimentos():Observable<IAlimento[]>{
         return this.http.get<IAlimento[]>(this.apiUrl);
     }
+
+    buscarAlimentoPorId(id:number){
+        return this.http.get(`${this.apiUrl}/${id}`);
+    }
 }

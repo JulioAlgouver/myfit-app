@@ -22,7 +22,7 @@
                         <mat-option 
                             *ngFor="let alimento of filteredAlimentos | async" 
                             [value]="alimento.descricao"
-                            (onSelectionChange)="onSelectFood()">
+                            (onSelectionChange)="onSelectFood(alimento)">
                             {{alimento.descricao}}
                         </mat-option>
                     </mat-autocomplete>

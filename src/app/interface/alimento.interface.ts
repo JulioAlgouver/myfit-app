@@ -1,5 +1,5 @@
 export interface IAlimento{
-    id:number;
+    id_alimento:number;
     descricao:String;
     categoria:String;
     caloria:number;
