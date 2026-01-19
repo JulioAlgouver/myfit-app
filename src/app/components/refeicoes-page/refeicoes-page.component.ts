@@ -3,6 +3,8 @@ import { IAlimento } from '../../interface/alimento.interface';
 import { AlimentoService } from '../../services/alimento.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { map, Observable, startWith } from 'rxjs';
+import { UserService } from '../../services/user.service';
+import { RefeicaoService } from '../../services/refeicao.service';
 
 @Component({
   selector: 'app-refeicoes-page',
@@ -14,10 +16,13 @@ export class RefeicoesPageComponent implements OnInit {
   filteredAlimentos!:Observable<IAlimento[]>;
 
   form!:FormGroup;
+  alimentoSelecionado!:IAlimento;
 
   constructor(
+    private fb:FormBuilder,
     private alimentoService: AlimentoService,
-    private fb:FormBuilder
+    private userService:UserService,
+    private refeicaoService:RefeicaoService
   ){}
 
   ngOnInit():void {
@@ -48,15 +53,32 @@ export class RefeicoesPageComponent implements OnInit {
 
   public onSelectFood(alimento:IAlimento){
       const id = alimento.id_alimento;
-      const descricao = alimento.descricao;
 
-      console.log('Selecionado:',{
-        id,
-        descricao
-      });
+      this.alimentoSelecionado = alimento;
+      console.log('Alimento selecionado:', alimento);
+  }
+  
+  public registrarRefeicao():void{
+    if(this.form.invalid || !this.alimentoSelecionado){
+          console.error('Form inválido ou alimento não selecionado');
+      return;
+    }
+    
+    const dados = {
+      id_alimento : this.alimentoSelecionado.id_alimento,
+      descricao : this.form.value.descricao,
+      tipo_refeicao : this.form.value.tipo_refeicao,
+      categoria : this.alimentoSelecionado.categoria,
+      quantidade : this.form.value.quantidade,
+      total_calorias : '',
+      total_proteinas : [''],
+      total_sodio : [''],
+      total_fibras : [''],
+      total_gorduras : [''],
+      total_carboidratos : [''],    
+      id_usuario : localStorage.getItem('userId'),
+    }
 
-      this.alimentoService.buscarAlimentoPorId(id).subscribe( res => {
-        console.log('Detalhes:', res);
-      });
+    console.log('Dados:', dados);
   }
 }

@@ -517,6 +517,64 @@ app.put('/usuarios/:id/agua', (req, res) => {
 });
 
 
+// REGISTRAR REFEIÇÃO
+app.post('/refeicoes',(req,res) => {
+    const {
+            id_usuario,
+            id_alimento,
+            descricao,
+            tipo_refeicao,
+            categoria,
+            quantidade,
+            total_calorias,
+            total_proteinas,
+            total_sodio,
+            total_fibras,
+            total_gorduras,
+            total_carboidratos
+    } = req.body;
+
+    const sql = `
+        INSERT INTO refeicoes (
+            id_usuario,
+            id_alimento,
+            descricao,
+            tipo_refeicao,
+            categoria,
+            quantidade,
+            total_calorias,
+            total_proteinas,
+            total_sodio,
+            total_fibras,
+            total_gorduras,
+            total_carboidratos) 
+        VALUES (?,?,?,?,?,?,?,?,?,?,?,?)    
+        `
+    db.run(sql,[
+        id_usuario,
+            id_alimento,
+            descricao,
+            tipo_refeicao,
+            categoria,
+            quantidade,
+            total_calorias,
+            total_proteinas,
+            total_sodio,
+            total_fibras,
+            total_gorduras,
+            total_carboidratos
+    ],(err)=>{
+        if (err){
+            return res.status(500).json({
+                message:'Não foi possível registrar refeição'
+            })
+        }
+        res.status(200).json({
+            message: 'Refeição registrada com sucesso'
+        })
+    })
+})
+
 
 // RODAR O SERVIDOR
 app.listen(3000, () => {

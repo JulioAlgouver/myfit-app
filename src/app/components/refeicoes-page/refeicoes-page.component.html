@@ -5,7 +5,7 @@
         Refeições
     </div>
     <div class="form_container">
-        <form class="form_nova_refeicao" [formGroup]="form">
+        <form class="form_nova_refeicao" [formGroup]="form" (submit)="registrarRefeicao()">
             <strong>Registre sua refeição:</strong>
             
             <div class="grid">
@@ -46,7 +46,7 @@
                 <span>Período da Refeição</span>
                 <mat-form-field class="inputField">
                     <mat-label>Período</mat-label>
-                    <mat-select>
+                    <mat-select formControlName="tipo_refeicao">
                         <mat-option [value]="'Café da Manhã'">Café da Manhã</mat-option>
                         <mat-option [value]="'Almoço'">Almoço</mat-option>
                         <mat-option [value]="'Lanche'">Lanche</mat-option>
