@@ -7,11 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// EXEMPLO DE ROTA PARA TESTAR
-app.get('/', (req, res) => {
-    res.send('API rodando com SQLite!');
-});
 
+/* ------------------------------ USUARIOS ------------------------------*/
 
 // CADASTRO DE USUARIO
 app.post('/usuarios', async (req, res) => {
@@ -105,6 +102,21 @@ app.get('/usuarios/:id', (req, res) => {
     );
 });
 
+// ROTA PARA LISTAR TODOS OS USUARIOS
+app.get('/usuarios', (req, res) => {
+    db.all('SELECT * FROM usuarios', [], (err, rows) => {
+        if (err) {
+            return res.status(500).json({ error: 'Erro ao buscar usuários', details: err });
+        }
+        res.json(rows);
+    });
+});
+
+
+
+/* ----------------------------- ALIMENTOS -----------------------------*/
+
+
 //BUSCAR ALIMENTO POR ID
 app.get('/alimentos/:id',(req, res) => {
     const { id } = req.params;
@@ -131,17 +143,6 @@ app.get('/alimentos/:id',(req, res) => {
     );
 })
 
-
-// ROTA PARA LISTAR TODOS OS USUARIOS
-app.get('/usuarios', (req, res) => {
-    db.all('SELECT * FROM usuarios', [], (err, rows) => {
-        if (err) {
-            return res.status(500).json({ error: 'Erro ao buscar usuários', details: err });
-        }
-        res.json(rows);
-    });
-});
-
 // ROTA PARA LISTAR TODOS OS ALIMENTOS
 app.get('/alimentos',(req, res) => {
     db.all('SELECT * FROM alimentos',[], (err,rows) =>{
@@ -151,6 +152,11 @@ app.get('/alimentos',(req, res) => {
         res.json(rows);
     })
 })
+
+
+
+/* -------------------------------- PESO --------------------------------*/
+
 
 
 // REGISTRAR PESO DO USUARIO
@@ -183,7 +189,6 @@ app.post('/pesagem', (req, res) => {
   });
 });
 
-
 // ATUALIZAR PESO NO CADASTRO DO USUARIO
 app.put('/usuarios/:id/peso', (req, res) => {
     const { id } = req.params;
@@ -207,6 +212,78 @@ app.put('/usuarios/:id/peso', (req, res) => {
         });
     });
 });
+
+// LISTAR PESAGENS
+app.get('/pesagem', (req, res) => {
+    db.all('SELECT * FROM historico_pesagem', [], (err, rows) => {
+        if (err) {
+            return res.status(500).json({ 
+                error: 'Erro ao buscar pesagem', 
+                details: err 
+            });
+        }
+        res.json(rows);
+    });
+});
+
+// LISTAR PESAGENS POR USUARIO
+app.get('/pesagem/:id_usuario', (req, res) => {
+    const { id_usuario } = req.params;
+
+    db.all(
+        'SELECT * FROM historico_pesagem WHERE id_usuario = ?',
+        [id_usuario],
+        (err, rows) => {
+            if (err) {
+                return res.status(500).json({
+                    error: 'Erro ao buscar pesagem',
+                    details: err
+                });
+            }
+
+            if (!rows) {
+                return res.status(404).json({
+                    message: 'Pesagem não encontrada'
+                });
+            }
+
+            res.json(rows);
+        }
+    );
+});
+
+// PEGAR DATA DA ULTIMA PESAGEM DO USUARIO
+app.get('/pesagem/ultima/:id_usuario', (req, res) => {
+    const {id_usuario} = req.params;
+
+    db.get(`SELECT 
+                data_hora_pesagem 
+            FROM 
+                historico_pesagem 
+            WHERE 
+                id_usuario = ?
+            ORDER BY data_hora_pesagem DESC
+            LIMIT 1`, 
+            [id_usuario],(err, row) => {
+        if(err){
+            return res.status(500).json({
+                error: 'Erro ao buscar registro de pesagem', 
+                details: err
+            });
+        }
+        if (!row) {
+                return res.status(404).json({
+                    message: 'Nenhuma pesagem encontrada'
+                });
+            }
+        res.json(row);
+    });
+});
+
+
+/* ------------------------------ MEDIDAS ------------------------------*/
+
+
 
 
 // ATUALIZAR MEDIDAS NO CADASTRO DO USUARIO
@@ -255,80 +332,6 @@ app.put('/usuarios/:id/medidas', (req, res) => {
     });
 });
 
-
-// LISTAR PESAGENS
-
-app.get('/pesagem', (req, res) => {
-    db.all('SELECT * FROM historico_pesagem', [], (err, rows) => {
-        if (err) {
-            return res.status(500).json({ 
-                error: 'Erro ao buscar pesagem', 
-                details: err 
-            });
-        }
-        res.json(rows);
-    });
-});
-
-// LISTAR PESAGENS POR USUARIO
-
-app.get('/pesagem/:id_usuario', (req, res) => {
-    const { id_usuario } = req.params;
-
-    db.all(
-        'SELECT * FROM historico_pesagem WHERE id_usuario = ?',
-        [id_usuario],
-        (err, rows) => {
-            if (err) {
-                return res.status(500).json({
-                    error: 'Erro ao buscar pesagem',
-                    details: err
-                });
-            }
-
-            if (!rows) {
-                return res.status(404).json({
-                    message: 'Pesagem não encontrada'
-                });
-            }
-
-            res.json(rows);
-        }
-    );
-});
-
-
-
-// PEGAR DATA DA ULTIMA PESAGEM DO USUARIO
-app.get('/pesagem/ultima/:id_usuario', (req, res) => {
-    const {id_usuario} = req.params;
-
-    db.get(`SELECT 
-                data_hora_pesagem 
-            FROM 
-                historico_pesagem 
-            WHERE 
-                id_usuario = ?
-            ORDER BY data_hora_pesagem DESC
-            LIMIT 1`, 
-            [id_usuario],(err, row) => {
-        if(err){
-            return res.status(500).json({
-                error: 'Erro ao buscar registro de pesagem', 
-                details: err
-            });
-        }
-        if (!row) {
-                return res.status(404).json({
-                    message: 'Nenhuma pesagem encontrada'
-                });
-            }
-        res.json(row);
-    });
-});
-
-
-
 // REGISTRAR MEDIDAS
 app.post('/medidas', (req, res) =>{
     const {
@@ -364,7 +367,6 @@ app.post('/medidas', (req, res) =>{
     );
 });
 
-
 // CONSULTAR MEDIDAS
 app.get('/medidas',(req, res) => {
     db.all(` SELECT * FROM historico_medidas`,[],(err,rows) => {
@@ -377,7 +379,6 @@ app.get('/medidas',(req, res) => {
         res.json(rows);
     })
 })
-
 
 // CONSULTAR MEDIDAS POR USUARIO
 app.get('/medidas/:id_usuario',(req, res) => {
@@ -397,6 +398,13 @@ app.get('/medidas/:id_usuario',(req, res) => {
         res.json(rows)
     })
 })
+
+
+
+
+/* -------------------------------- AGUA --------------------------------*/
+
+
 
 
 // REGISTRAR HIDRATAÇÃO
@@ -429,7 +437,6 @@ app.post('/hidratacao', (req, res) =>{
     );
 });
 
-
 // CONSULTAR HISTORICO HIDRATACAO
 app.get('/hidratacao',(req, res) => {
     db.all(`SELECT * FROM historico_hidratacao`,[],(err,rows) => {
@@ -442,7 +449,6 @@ app.get('/hidratacao',(req, res) => {
         res.json(rows);
     })
 })
-
 
 // CONSULTAR HISTORICO HIDRATACAO POR USUARIO E DIA
 app.get('/hidratacao/:id_usuario/valorDiario',(req, res) => {
@@ -470,7 +476,6 @@ app.get('/hidratacao/:id_usuario/valorDiario',(req, res) => {
     })
 })
 
-
 // CONSULTAR HISTORICO HIDRATACAO POR USUARIO
 app.get('/hidratacao/:id_usuario',(req, res) => {
     const {id_usuario} = req.params;
@@ -489,8 +494,6 @@ app.get('/hidratacao/:id_usuario',(req, res) => {
         res.json(rows)
     })
 })
-
-
 
 // ATUALIZAR AGUA NO CADASTRO DO USUARIO
 app.put('/usuarios/:id/agua', (req, res) => {
@@ -515,6 +518,13 @@ app.put('/usuarios/:id/agua', (req, res) => {
         });
     });
 });
+
+
+
+
+/* ----------------------------- REFEIÇÃO -----------------------------*/
+
+
 
 
 // REGISTRAR REFEIÇÃO
@@ -575,8 +585,64 @@ app.post('/refeicoes',(req,res) => {
     })
 })
 
+// CONSULTAR REFEIÇÕES
+app.get('/refeicoes', (req,res) => {
+    db.all(`
+            SELECT * FROM refeicoes
+        `,[], (err,rows) => {
+            if(err){
+                return res.status(500).json({
+                    message:'Erro ao buscar registros'
+                })
+            }
+            if(!rows){
+                return res.status(404).json({
+                    message:'Nenhum registro encontrado'
+                })
+            }
+
+            res.status(200).json(rows);
+        })
+})
+
+// CONSULTAR REFEIÇÕES POR USUARIO
+app.get('/refeicoes/:id_usuario', (req,res) => {
+
+    const {id_usuario} = req.params;
+
+    db.all(`
+            SELECT * FROM refeicoes WHERE id_usuario = ?
+        `,[id_usuario],(err,rows) => {
+            if(err){
+                return res.status(500).json({
+                    message: 'Erro ao buscar registro'
+                })
+            }
+            if(!rows){
+                return res.status(404).json({
+                    message: 'Nenhum registro encontrado'
+                })
+            }
+
+            res.status(200).json(rows);
+        })
+})
+
+
+
+
+/* ----------------------------- SERVIDOR -----------------------------*/
+
+
+
 
 // RODAR O SERVIDOR
 app.listen(3000, () => {
     console.log('API rodando em http://localhost:3000');
+});
+
+
+// EXEMPLO DE ROTA PARA TESTAR
+app.get('/', (req, res) => {
+    res.send('API rodando com SQLite!');
 });

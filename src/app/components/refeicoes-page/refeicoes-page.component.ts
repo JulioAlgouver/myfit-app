@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IAlimento } from '../../interface/alimento.interface';
 import { AlimentoService } from '../../services/alimento.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { map, Observable, startWith } from 'rxjs';
 import { UserService } from '../../services/user.service';
 import { RefeicaoService } from '../../services/refeicao.service';
@@ -17,6 +17,8 @@ export class RefeicoesPageComponent implements OnInit {
 
   form!:FormGroup;
   alimentoSelecionado!:IAlimento;
+  successful: string = 'Registrado com sucesso!';
+  error: string = 'Erro ao registrar refeição!';
 
   constructor(
     private fb:FormBuilder,
@@ -27,9 +29,9 @@ export class RefeicoesPageComponent implements OnInit {
 
   ngOnInit():void {
     this.form=this.fb.group({
-      alimento:[''],
-      quantidade:[''],
-      tipo_refeicao:['']
+      alimento:['', Validators.required],
+      quantidade:['',Validators.required],
+      tipo_refeicao:['', Validators.required]
     });
 
     this.alimentoService.listarAlimentos().subscribe({
@@ -73,10 +75,11 @@ export class RefeicoesPageComponent implements OnInit {
     }
     
     const dados = {
+      id_usuario : String(localStorage.getItem('userId')),
       id_alimento : this.alimentoSelecionado.id_alimento,
-      descricao : this.alimentoSelecionado.descricao,
+      descricao : String(this.alimentoSelecionado.descricao),
       tipo_refeicao : String(this.form.value.tipo_refeicao),
-      categoria : this.alimentoSelecionado.categoria,
+      categoria : String(this.alimentoSelecionado.categoria),
       quantidade : this.toNumber(this.form.value.quantidade),
       total_calorias : this.toNumber(this.alimentoSelecionado.caloria)/100*this.form.value.quantidade,
       total_proteinas : this.toNumber(this.alimentoSelecionado.proteina)/100*this.form.value.quantidade,
@@ -84,9 +87,32 @@ export class RefeicoesPageComponent implements OnInit {
       total_fibras : this.toNumber(this.alimentoSelecionado.fibra)/100*this.form.value.quantidade,
       total_gorduras : this.toNumber(this.alimentoSelecionado.lipideo)/100*this.form.value.quantidade,
       total_carboidratos : this.toNumber(this.alimentoSelecionado.carboidrato)/100*this.form.value.quantidade,    
-      id_usuario : localStorage.getItem('userId'),
     }
 
-    console.log('Dados:', dados);
+    this.refeicaoService.registrarRefeicao(
+      dados.id_usuario, 
+      dados.id_alimento,
+      dados.descricao,
+      dados.tipo_refeicao,
+      dados.categoria,
+      dados.quantidade,
+      dados.total_calorias,
+      dados.total_proteinas,
+      dados.total_sodio,
+      dados.total_fibras,
+      dados.total_gorduras,
+      dados.total_carboidratos,
+    ).subscribe({
+      next: () =>{
+        console.log(this.successful);
+      },
+      error: () =>{
+        console.log(this.error);
+
+        console.log('Dados:', dados);
+      }
+    })
+
+    this.form.reset();
   }
 }

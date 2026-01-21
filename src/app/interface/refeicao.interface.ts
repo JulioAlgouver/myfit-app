@@ -1,7 +1,6 @@
 export interface IRefeicao{
     id_refeicao:number,
     id_alimento:number,
-    id_usuario:number,
     descricao:string,
     tipo_refeicao:string,
     categoria:string,

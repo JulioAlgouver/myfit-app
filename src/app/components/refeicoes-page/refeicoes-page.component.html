@@ -26,6 +26,7 @@
                             {{alimento.descricao}}
                         </mat-option>
                     </mat-autocomplete>
+                    <mat-error *ngIf="form.get('alimento')?.hasError('required')">Campo Obrigatório</mat-error>
                 </mat-form-field>
             </div>            
 
@@ -39,6 +40,7 @@
                         formControlName="quantidade"
                         required
                     />
+                    <mat-error *ngIf="form.get('quantidade')?.hasError('required')">Campo Obrigatório</mat-error>
                 </mat-form-field>
             </div>
 
@@ -54,6 +56,7 @@
                         <mat-option [value]="'Jantar'">Jantar</mat-option>
                         <mat-option [value]="'Ceia'">Ceia</mat-option>
                     </mat-select>
+                    <mat-error *ngIf="form.get('tipo_refeicao')?.hasError('required')">Campo Obrigatório</mat-error>
                 </mat-form-field>
             </div>
             <button type="submit" class="send_button">Adicionar</button>

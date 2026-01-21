@@ -13,7 +13,7 @@ export class RefeicaoService{
     ){}
 
     public registrarRefeicao(
-        id_usuario:number,
+        id_usuario:string,
         id_alimento:number,
         descricao:string,
         tipo_refeicao:string,
