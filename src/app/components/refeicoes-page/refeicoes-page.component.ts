@@ -28,7 +28,8 @@ export class RefeicoesPageComponent implements OnInit {
   ngOnInit():void {
     this.form=this.fb.group({
       alimento:[''],
-      quantidade:['']
+      quantidade:[''],
+      tipo_refeicao:['']
     });
 
     this.alimentoService.listarAlimentos().subscribe({
@@ -43,6 +44,13 @@ export class RefeicoesPageComponent implements OnInit {
       
       error: err => console.error(err)   
     });
+  }
+
+  private toNumber(valor:any) : number {
+    if(typeof valor === 'string'){
+      return Number(valor.replace(',','.'));
+    }
+    return Number(valor);
   }
 
   private _filter(value:string): IAlimento[]{
@@ -66,16 +74,16 @@ export class RefeicoesPageComponent implements OnInit {
     
     const dados = {
       id_alimento : this.alimentoSelecionado.id_alimento,
-      descricao : this.form.value.descricao,
-      tipo_refeicao : this.form.value.tipo_refeicao,
+      descricao : this.alimentoSelecionado.descricao,
+      tipo_refeicao : String(this.form.value.tipo_refeicao),
       categoria : this.alimentoSelecionado.categoria,
-      quantidade : this.form.value.quantidade,
-      total_calorias : '',
-      total_proteinas : [''],
-      total_sodio : [''],
-      total_fibras : [''],
-      total_gorduras : [''],
-      total_carboidratos : [''],    
+      quantidade : this.toNumber(this.form.value.quantidade),
+      total_calorias : this.toNumber(this.alimentoSelecionado.caloria)/100*this.form.value.quantidade,
+      total_proteinas : this.toNumber(this.alimentoSelecionado.proteina)/100*this.form.value.quantidade,
+      total_sodio : this.toNumber(this.alimentoSelecionado.sodio)/100*this.form.value.quantidade,
+      total_fibras : this.toNumber(this.alimentoSelecionado.fibra)/100*this.form.value.quantidade,
+      total_gorduras : this.toNumber(this.alimentoSelecionado.lipideo)/100*this.form.value.quantidade,
+      total_carboidratos : this.toNumber(this.alimentoSelecionado.carboidrato)/100*this.form.value.quantidade,    
       id_usuario : localStorage.getItem('userId'),
     }
 
