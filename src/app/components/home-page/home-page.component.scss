@@ -13,9 +13,18 @@
     }
 
     span{
-        font-size: 4vw;
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        font-size: 3.8vw;
         line-height: 8vw;
+
+        b{
+            width: 48vw;
+            margin: 0;
+        }
     }
+    
 
     
     .img-area{
@@ -30,7 +39,7 @@
         z-index: 0;
         
         img{
-            width: 20vw;
+            width: 18vw;
             opacity: 50%;
         }
     }

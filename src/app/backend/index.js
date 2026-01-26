@@ -628,7 +628,36 @@ app.get('/refeicoes/:id_usuario', (req,res) => {
         })
 })
 
+// CONSULTAR HISTORICO REFEICAO POR USUARIO E DIA
+app.get('/refeicoes/:id_usuario/valorDiario',(req, res) => {
+    const {id_usuario} = req.params;
 
+    db.all(` SELECT 
+                SUM(total_calorias) as total_calorias_diario,
+                SUM(total_proteinas) as total_proteinas_diario,
+                SUM(total_sodio) as total_sodio_diario,
+                SUM(total_fibras) as total_fibras_diario,
+                SUM(total_gorduras) as total_gorduras_diario,
+                SUM(total_carboidratos) as total_carboidratos_diario 
+             FROM 
+                refeicoes 
+             WHERE 
+                id_usuario = ? AND
+                data_hora_refeicao >= date('now','localtime') and data_hora_refeicao < date('now','localtime', '+1 day')`,
+             [id_usuario],(err,rows) => {
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao buscar medidas'
+            })
+        }
+        if(!rows){
+            return res.status(404).json({
+                message: 'Nenhuma medida encontrada para este usuario'
+            })
+        }
+        res.json(rows)
+    })
+})
 
 
 /* ----------------------------- SERVIDOR -----------------------------*/
