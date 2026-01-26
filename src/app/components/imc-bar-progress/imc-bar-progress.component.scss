@@ -1,0 +1,25 @@
+.label-value{
+    
+}
+
+.progress-container{
+    width: 80vw;
+    height: 20%;
+    border: 2vw;
+    border-radius: 3vw;
+    background-color: gainsboro;
+    overflow: hidden;
+}
+
+.progress-fill{
+    height: 100%;
+    background-color: rgb(121, 182, 186);
+    transition: width 0.4s ease;
+    text-align: center;
+    line-height: 5vh;
+    color: white;
+}
+
+.label-imc-description{
+
+}

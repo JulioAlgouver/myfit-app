@@ -39,11 +39,11 @@ export class HomePageComponent implements OnInit{
 
     this.refeicaoService.pegarValorTotalDiario(idUsuario).subscribe({
       next: (res:ValorRefeicaoDiariResponse) => {
-          this.caloriaConsumuda = Number(res.total_calorias_diario);
-          this.proteinaConsumida = Number(res.total_proteinas_diario);
-          this.carboidratoConsumido = Number(res.total_carboidratos_diario);
-          this.gorduraConsumida = Number(res.total_gorduras_diario);
-          this.fibraConsumida = Number(res.total_fibras_diario);
+          this.caloriaConsumuda = Number(res.total_calorias_diario.toFixed(0));
+          this.proteinaConsumida = Number(res.total_proteinas_diario.toFixed(2));
+          this.carboidratoConsumido = Number(res.total_carboidratos_diario.toFixed(2));
+          this.gorduraConsumida = Number(res.total_gorduras_diario.toFixed(2));
+          this.fibraConsumida = Number(res.total_fibras_diario.toFixed(2));
       },
       error: (err) => {
         this.erro;
