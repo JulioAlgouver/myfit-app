@@ -4,11 +4,39 @@
     <div class="title">
         Detalhes
     </div>
+
+    <app-tabela-imc></app-tabela-imc>
+    
     <div class="imc-content">
         <strong>IMC</strong>
+        <div class="info-button-area">
+            <button><img src="../../../assets/info_2.png"/></button>
+        </div>
         <div class="imc-progress-bar">
             <app-imc-bar-progress></app-imc-bar-progress>
         </div>
+    </div>
+    
+    <mat-divider></mat-divider>
+    
+    <div class="peso-content">
+        <strong>Peso</strong>
+        <div class="graphic-area">
+
+        </div>
+    </div>
+    
+    <mat-divider></mat-divider>
+    
+    <div class="medidas-content">
+        <strong>Medida Corporal</strong>
+        <div class="graphic-area">
+
+        </div>
+        <div class="info-button-area">
+            <button><img src="../../../assets/info_2.png"/></button>
+        </div>
+        <a routerLink="/meu-peso" class="cancel_button">Voltar</a>
     </div>
 </div>
 

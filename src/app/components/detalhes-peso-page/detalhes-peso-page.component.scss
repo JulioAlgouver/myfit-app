@@ -13,5 +13,64 @@
             width: 100%;
             text-align: left;
         }
+
+    }
+
+    .graphic-area{
+        width: 70vw;
+        height: 10vh;
+        margin-top: 2vw;
+        background-color: rgb(170, 144, 144);
+    }
+
+    .peso-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3vw;
+
+        strong{
+            width: 100%;
+            text-align: left;
+        }
+    }
+
+    .medidas-content{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vw;
+
+        strong{
+            width: 100%;
+            text-align: left;
+        }
+
+        a{
+            position: relative;
+            margin-top: 5vw;
+            left: 25vw;
+        }
+    }
+
+    .info-button-area{
+        position: absolute;
+        display: flex;
+        justify-content: right;
+        width: 90vw;
+
+        button{
+            width: 8vw;
+            height: auto;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }

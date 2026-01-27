@@ -10,11 +10,12 @@
 
 .progress-container{
     width: 80vw;
-    height: 20%;
+    height: 10%;
     border: 2vw;
     border-radius: 3vw;
     background-color: gainsboro;
     overflow: hidden;
+    margin-top: 3vw;
 }
 
 .progress-fill{
@@ -34,4 +35,5 @@
 
 .label-imc-description{
     text-align: center;
+    margin-top: 3vw;
 }

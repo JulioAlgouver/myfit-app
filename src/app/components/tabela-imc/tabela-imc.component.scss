@@ -1,0 +1,56 @@
+.imc-table-container{
+    width: 90vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    background-color: whitesmoke;
+    margin-left: 5vw;
+    border-radius: 5vw;
+    box-shadow: 0 0 5vw rgba(0, 0, 0, 0.41);
+    z-index: 1;
+
+    .table-title{
+        width: 100%;
+        padding-top: 5vw;
+        padding-left: 5vw;
+        margin-bottom: 5vw;
+        font-size: 4.5vw;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    td{
+        border: 1px solid rgba(0, 0, 0, 0.307);
+    }
+
+    .table{
+        width: 90%;
+        border: 1px solid black;
+        
+        thead{
+            font-size: 5vw;
+
+            tr th{
+                padding: 2vw;
+                width: 40%;
+                background-color: rgb(138, 158, 148);
+            }
+        }
+
+        tbody{
+            tr td{
+                padding: 3vw;
+            }
+        }
+    }
+
+    .button{
+        position: relative;
+        width: 100%;
+        top: 5vw;
+        left: 20vw;
+    }
+}
