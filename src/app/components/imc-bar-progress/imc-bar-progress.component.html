@@ -1,4 +1,5 @@
-<div class="label-value">
+<div class="label-value" 
+     [style.color]="fontColor">
     <strong>
         {{value}}
     </strong>
@@ -10,10 +11,11 @@
     >
     <br/>
     </div>
+    <div class="label-progress-bar">
+        <span>Índice de Massa Corporal</span>
+    </div>
 </div>
-<div class="label-progress-bar">
-    <span>Índice de Massa Corporal</span>
-</div>
-<div class="label-imc-description">
+<div class="label-imc-description"
+     [style.color]="fontColor">
     {{legenda}}
 </div>

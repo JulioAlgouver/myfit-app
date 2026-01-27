@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { IUser } from '../../interface/user.interface';
 
 @Component({
   selector: 'app-imc-bar-progress',
@@ -7,40 +9,69 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ImcBarProgressComponent implements OnInit{
   
-  value = 30;
+  usuario!:IUser;
+
+  value = 0;
   progress = 50;
+  fontColor = 'white'
   color = 'black';
   legenda = '';
 
+  constructor(
+    private userService:UserService,
+  ){}
+
   ngOnInit(){
-    this.progressBar();
+    this.userService.getUsuarioLogado().subscribe((usuario:IUser) => {
+      this.usuario = usuario;
+      
+      this.value = this.calculaIMC(usuario);
+      this.progressBar(this.value);
+    });
+
   }
 
-  public progressBar(){
-    if(this.value <= 18.5){
-      this.color = 'rgb(127, 209, 232)'
+  public calculaIMC(usuario:any):number{
+    const peso = (usuario.peso_atual)
+    const alturaMetros = (usuario.altura_atual / 100);
+
+    const valorIMC : number = +(peso / (alturaMetros * alturaMetros)).toFixed(2)
+
+    this.value = valorIMC;
+
+    console.log(this.usuario);
+    console.log('IMC: ',valorIMC);
+
+    return valorIMC;
+  }  
+
+
+  public progressBar(valorIMC:number){
+    if(valorIMC <= 18.5){
+      this.color = 'rgb(112, 175, 193)'
       this.progress = 16;
       this.legenda = 'Cuidado! Você está abaixo do peso.';
-    }else if(this.value >= 18.5 && this.value <= 24.9){
-      this.color = 'rgb(127, 232, 155)'
+    }else if(valorIMC > 18.5 && valorIMC < 25){
+      this.color = 'rgb(49, 136, 72)'
       this.progress = 32;
       this.legenda = 'Parabéns! Você está na faixa de peso ideal.';
-    }else if(this.value >= 25 && this.value <= 29.9){
-      this.color = 'rgb(255, 224, 110)'
+    }else if(valorIMC >= 25 && valorIMC < 30){
+      this.color = 'rgb(168, 134, 0)'
       this.progress = 48;
-      this.legenda = 'Cuidado! Você está com sobrepeso.';
-    }else if(this.value >= 30 && this.value <= 34.9){
+      this.legenda = 'Atenção! Você está com sobrepeso.';
+    }else if(valorIMC >= 30 && valorIMC < 35){
       this.color = 'rgb(255, 123, 52)'
       this.progress = 64;
       this.legenda = 'Cuidado! Você entrou em Obesidade Grau I.';
-    }else if(this.value >= 35 && this.value <= 39.9){
+    }else if(valorIMC >= 35 && valorIMC < 40){
       this.color = 'rgb(255, 106, 106)'
       this.progress = 80;
       this.legenda = 'Cuidado! Você entrou em Obesidade Grau II';
-    }else if(this.value >= 40){
+    }else if(valorIMC >= 40){
       this.color = 'rgb(192, 64, 64)'
       this.progress = 100;
       this.legenda = 'Cuidado! Você entrou em Obesidade Grau III';
     }
+    this.fontColor = this.color;
   }
 }

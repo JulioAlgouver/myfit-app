@@ -1,5 +1,11 @@
 .label-value{
-    
+    text-align: center;
+
+    strong{
+        font-size: 6vw;
+        text-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.465);
+
+    }
 }
 
 .progress-container{
@@ -20,6 +26,12 @@
     color: white;
 }
 
-.label-imc-description{
+.label-progress-bar{
+    font-size: 3vw;
+    text-align: center;
+    color: rgb(59, 59, 59);
+}
 
+.label-imc-description{
+    text-align: center;
 }

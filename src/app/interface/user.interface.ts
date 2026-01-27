@@ -8,12 +8,12 @@ export interface IUser{
     sexo: Sexo;
     telefone: string;
     dataNascimento: Date;
-    pesoAtual: Number;
-    alturaAtual:Number;
-    bracoAtual:Number;
-    quadrilAtual:Number;
-    cinturaAtual:Number;
-    coxaAtual:Number;
-    umbigoAtual:Number;
-    agua:Number;
+    pesoAtual: number;
+    alturaAtual: number;
+    bracoAtual: number;
+    quadrilAtual: number;
+    cinturaAtual: number;
+    coxaAtual: number;
+    umbigoAtual: number;
+    agua: number;
 }
