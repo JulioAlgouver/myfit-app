@@ -16,7 +16,6 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AtualizaPesoPageComponent } from './atualiza-peso-page/atualiza-peso-page.component';
 import { CleanFooterComponent } from './clean-footer/clean-footer.component';
-import { CdkOverlayOrigin } from "@angular/cdk/overlay";
 import { AtualizaMedidasPageComponent } from './atualiza-medidas-page/atualiza-medidas-page.component';
 import { MapaRefeicoesPageComponent } from './mapa-refeicoes-page/mapa-refeicoes-page.component';
 import { DetalhesPesoPageComponent } from './detalhes-peso-page/detalhes-peso-page.component';
@@ -31,7 +30,6 @@ import { TabelaImcComponent } from './tabela-imc/tabela-imc.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    CdkOverlayOrigin
 ],        
     declarations:[
         LoginPageComponent,

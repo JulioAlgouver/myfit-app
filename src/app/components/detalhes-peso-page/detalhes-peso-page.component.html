@@ -4,13 +4,11 @@
     <div class="title">
         Detalhes
     </div>
-
-    <app-tabela-imc></app-tabela-imc>
     
     <div class="imc-content">
         <strong>IMC</strong>
         <div class="info-button-area">
-            <button><img src="../../../assets/info_2.png"/></button>
+            <button (click)="showTableIMCScreen()"><img src="../../../assets/info_2.png"/></button>
         </div>
         <div class="imc-progress-bar">
             <app-imc-bar-progress></app-imc-bar-progress>

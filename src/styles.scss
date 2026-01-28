@@ -53,6 +53,11 @@ a{
     }
 }
 
+.table-imc-dialog .mat-mdc-dialog-container .mdc-dialog__surface {
+  overflow: hidden;
+  border-radius: 5vw;
+}
+
 .signup-button{
     border: 1px solid black;
     border-radius: 12px;
