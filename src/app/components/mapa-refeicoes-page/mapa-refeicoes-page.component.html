@@ -2,8 +2,49 @@
 
 <div class="app-container">
     <div class="title">
-    <span>Mapa Nutricional</span>
-</div>
+        <span>Mapa Nutricional</span>
+    </div>
+    <div class="chart-area">
+        <strong>Como está sua refeição hoje?</strong>
+    </div>
+    
+    <mat-divider></mat-divider>
+
+    <div class="legenda">
+        <div class="descricao">
+            <div class="item">
+                <span>Proteina Consumida:</span><div class="item-icon" style="background-color: #45eae9;"></div> 
+                <span>Carboidrato Consumido:</span><div class="item-icon" style="background-color: #336666;"></div>
+                <span>Gordura Consumida:</span><div class="item-icon" style="background-color: #55b5e5;"></div>
+                <span>Fibra Consumida:</span><div class="item-icon" style="background-color: #d3f6f6;"></div> 
+                <span>Sodio Consumido:</span><div class="item-icon" style="background-color: #b0c3c3;"></div>
+            </div>
+        </div>
+
+        <mat-divider vertical="true"></mat-divider>
+
+        <div class="valor_em_g">
+            <span>30g</span>
+            <span>120g</span>
+            <span>5g</span>
+            <span>3500g</span>
+            <span>900g</span>
+        </div>
+
+        <mat-divider vertical="true"></mat-divider>
+
+        <div class="valor_em_perc">
+            <span>%</span>
+            <span>%</span>
+            <span>%</span>
+            <span>%</span>
+            <span>%</span>
+        </div>
+    </div>
+
+    <div class="">
+        <button class="cancel_button">Voltar</button>
+    </div>
 </div>
 
 <app-clean-footer></app-clean-footer>
