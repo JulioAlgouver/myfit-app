@@ -21,6 +21,9 @@ import { MapaRefeicoesPageComponent } from './mapa-refeicoes-page/mapa-refeicoes
 import { DetalhesPesoPageComponent } from './detalhes-peso-page/detalhes-peso-page.component';
 import { ImcBarProgressComponent } from './imc-bar-progress/imc-bar-progress.component';
 import { TabelaImcComponent } from './tabela-imc/tabela-imc.component';
+import { ChartPesoComponent } from './chart-peso/chart-peso.component';
+import { ChartMedidasComponent } from './chart-medidas/chart-medidas.component';
+import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-detalhe-refeicoes.component';
 
 
 @NgModule({
@@ -49,6 +52,9 @@ import { TabelaImcComponent } from './tabela-imc/tabela-imc.component';
         DetalhesPesoPageComponent,
         ImcBarProgressComponent,
         TabelaImcComponent,
+        ChartPesoComponent,
+        ChartMedidasComponent,
+        ChartDetalheRefeicoesComponent,
   ],
     exports:[
         BrowserAnimationsModule,
