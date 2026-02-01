@@ -24,6 +24,7 @@ import { TabelaImcComponent } from './tabela-imc/tabela-imc.component';
 import { ChartPesoComponent } from './chart-peso/chart-peso.component';
 import { ChartMedidasComponent } from './chart-medidas/chart-medidas.component';
 import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-detalhe-refeicoes.component';
+import { NgxEchartsModule } from "ngx-echarts";
 
 
 @NgModule({
@@ -33,6 +34,9 @@ import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-
     ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    NgxEchartsModule,
+    ChartPesoComponent,
+    ChartMedidasComponent
 ],        
     declarations:[
         LoginPageComponent,
@@ -52,8 +56,6 @@ import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-
         DetalhesPesoPageComponent,
         ImcBarProgressComponent,
         TabelaImcComponent,
-        ChartPesoComponent,
-        ChartMedidasComponent,
         ChartDetalheRefeicoesComponent,
   ],
     exports:[
@@ -74,6 +76,8 @@ import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-
         DetalhesPesoPageComponent,
         ImcBarProgressComponent,
         TabelaImcComponent,
+        ChartPesoComponent,
+        ChartMedidasComponent,
     ],
 })
 export class ComponentsModule{

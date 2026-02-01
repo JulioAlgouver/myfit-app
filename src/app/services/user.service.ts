@@ -1,7 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 import { Sexo } from '../enum/sexo.enum';
+import { IUser } from '../interface/user.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +11,10 @@ import { Sexo } from '../enum/sexo.enum';
 export class UserService {
   private apiUrl = 'http://localhost:3000';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId:Object,
+    private http: HttpClient
+  ) {}
 
   cadastrarUsuario(
     nome: string,
@@ -76,7 +81,7 @@ export class UserService {
 
   // 🔐 Usuário logado (usa o ID salvo no login)
   getUsuarioLogado(): Observable<any> {
-    const userId = localStorage.getItem('userId');
+      const userId = localStorage.getItem('userId');
     return this.http.get(`${this.apiUrl}/usuarios/${userId}`);
   }
 

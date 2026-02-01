@@ -9,7 +9,7 @@ import { IUser } from '../../interface/user.interface';
 })
 export class ImcBarProgressComponent implements OnInit{
   
-  usuario!:IUser;
+  usuario!: IUser;
 
   value = 0;
   progress = 50;

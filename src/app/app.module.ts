@@ -33,10 +33,10 @@ export const PT_BR_DATE_FORMATS = {
     AngularMaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
-    provideClientHydration(),
+    //provideClientHydration(),
     provideAnimationsAsync(),
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
     { provide: MAT_DATE_FORMATS, useValue: PT_BR_DATE_FORMATS }

@@ -1,5 +1,7 @@
 .app-container{
+    position: relative;
     width: 100vw;
+    overflow-y: scroll;
 
     .imc-content{
         width: 100%;
@@ -16,11 +18,10 @@
 
     }
 
-    .graphic-area{
+    .graphic-area {
         width: 70vw;
-        height: 10vh;
+        height: 15vh; /* Muito baixo - aumente para algo como 40vh */
         margin-top: 2vw;
-        background-color: rgb(170, 144, 144);
     }
 
     .peso-content{
@@ -30,6 +31,7 @@
         flex-direction: column;
         align-items: center;
         padding: 3vw;
+        margin-bottom: 15vw;
 
         strong{
             width: 100%;
@@ -44,6 +46,7 @@
         flex-direction: column;
         align-items: center;
         padding: 5vw;
+        padding-bottom: 5vw;
 
         strong{
             width: 100%;
@@ -52,7 +55,7 @@
 
         a{
             position: relative;
-            margin-top: 5vw;
+            margin-top: 15vw;
             left: 25vw;
         }
     }
