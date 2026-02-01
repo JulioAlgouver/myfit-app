@@ -9,17 +9,16 @@
         align-items: center;
         align-content: center;
         justify-content: center;
-        width: 90vw;
-        height: 25vh;
+        width: 85vw;
+        height: 20vh;
         
         .chart-object{
             position: relative;
             justify-content: center;
             display: flex;
-            width: 55%;
+            width: 60%;
             height: 90%;
             border-radius: 100%;
-            background-color: rgb(97, 135, 148);
         }
     }
 }
@@ -92,8 +91,13 @@
             bottom: 0.5vw;
         }
     }
+}
+
+.btn-area{
+    width: 100vw;
 
     button{
-        left: 50vw;
+        position: relative;
+        left: 25vw;
     }
 }
