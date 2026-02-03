@@ -13,6 +13,13 @@
             </div>
         </div>
     </div>
+
+    <div class="label-caloria-consumida">
+        <span><b>Caloria Consumida: {{caloriaConsumuda}} kcal</b></span>
+        <br/>
+    </div>
+
+    <mat-divider></mat-divider>
     
     <div class="legenda">
         <div class="descricao">
@@ -28,21 +35,21 @@
         <mat-divider vertical="true"></mat-divider>
 
         <div class="valor_em_g">
-            <span>30g</span>
-            <span>120g</span>
-            <span>5g</span>
-            <span>3500g</span>
-            <span>900g</span>
+            <span> {{proteinaConsumida}} g</span>
+            <span> {{carboidratoConsumido}} g</span>
+            <span> {{gorduraConsumida}} g</span>
+            <span> {{fibraConsumida}} g</span>
+            <span> {{sodioConsumido}} g</span>
         </div>
 
         <mat-divider vertical="true"></mat-divider>
 
         <div class="valor_em_perc">
-            <span>%</span>
-            <span>%</span>
-            <span>%</span>
-            <span>%</span>
-            <span>%</span>
+            <span>{{proteinaEmPercent}} %</span>
+            <span>{{carboidratoEmPercent}} %</span>
+            <span>{{gorduraEmPercent}} %</span>
+            <span>{{fibraEmPercent}} %</span>
+            <span>{{sodioEmPercent}} %</span>
         </div>
     </div>
 

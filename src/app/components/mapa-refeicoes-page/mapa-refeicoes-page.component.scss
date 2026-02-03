@@ -1,103 +1,124 @@
-.chart-area{
-    width: 100vw;
-    height: 30vh;
-    padding: 5vw;
+.app-container{
+    overflow-y: scroll;
 
-    .chart{
-        display: flex;
-        position: relative;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        width: 85vw;
-        height: 20vh;
-        
-        .chart-object{
-            position: relative;
-            justify-content: center;
+    .chart-area{
+        width: 100vw;
+        height: 30vh;
+        padding: 5vw;
+        margin-bottom: 5vw;
+    
+        .chart{
             display: flex;
-            width: 60%;
-            height: 90%;
-            border-radius: 100%;
-        }
-    }
-}
-
-.legenda{
-    display: flex;
-    width: 100vw;
-    height: 30vh;
-    padding: 5vw;
-
-    .descricao{
-        display: flex;
-        flex-direction: column;
-        width: 60vw;
-        height: 25vh;
-        text-align: left;
-        font-size: 3.5vw;
-
-        span{
             position: relative;
-            padding-left: 15vw;
-            font-weight: 400;
-        }
-
-        .item{
-            .item-icon{
-                display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin-top: 5vw;
+            width: 85vw;
+            height: 27vh;
+            
+            .chart-object{
                 position: relative;
-                width: 12vw;
-                height: 3vh;
-                border-radius: 5vw;
-                box-shadow: 0 0 1vw rgba(0, 0, 0, 0.309);
-                bottom: 5.5vw;
+                justify-content: center;
+                display: flex;
+                width: 60%;
+                height: 90%;
+                border-radius: 100%;
+                box-shadow: -0 0.5vw 5vw rgba(104, 104, 104, 0.666);
             }
         }
     }
 
-    .valor_em_g{
-        position: relative;
-        flex-direction: column;
-        display: flex;
-        width: 14vw;
-        height: 25vh;
+    .label-caloria-consumida{
+        width: 100vw;
+        height: auto;
         text-align: center;
-        font-size: 3.5vw;
-        line-height: 11.5vw; 
-        bottom: 2vw;
-        
-        span{
-            position: relative;
-            font-weight: 400;
-            bottom: 0.5vw;
-        }
-    }
-
-    .valor_em_perc{
-        position: relative;
-        flex-direction: column;
-        display: flex;
-        width: 14vw;
-        height: 25vh;
-        text-align: center;
-        font-size: 3.5vw;
-        line-height: 11.5vw; 
-        bottom: 2vw; 
+        padding-top: 10vw;
+        margin-bottom: 5vw;
 
         span{
-            position: relative;
-            font-weight: 400;
-            bottom: 0.5vw;
+            font-size: 5vw;
         }
     }
-}
-
-.btn-area{
-    width: 100vw;
-
-    button{
-        position: relative;
-        left: 25vw;
+    
+    .legenda{
+        display: flex;
+        width: 100vw;
+        height: 30vh;
+        padding: 5vw;
+    
+        .descricao{
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+            height: 25vh;
+            text-align: left;
+            font-size: 3.5vw;
+    
+            span{
+                position: relative;
+                padding-left: 15vw;
+                font-weight: 400;
+            }
+    
+            .item{
+                .item-icon{
+                    display: flex;
+                    position: relative;
+                    width: 12vw;
+                    height: 3vh;
+                    border-radius: 5vw;
+                    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.309);
+                    bottom: 5.5vw;
+                }
+            }
+        }
+    
+        .valor_em_g{
+            position: relative;
+            flex-direction: column;
+            display: flex;
+            width: 14vw;
+            height: 25vh;
+            text-align: center;
+            font-size: 3.5vw;
+            line-height: 11.5vw; 
+            bottom: 2vw;
+            
+            span{
+                position: relative;
+                font-weight: 400;
+                bottom: 0.5vw;
+            }
+        }
+    
+        .valor_em_perc{
+            position: relative;
+            flex-direction: column;
+            display: flex;
+            width: 14vw;
+            height: 25vh;
+            text-align: center;
+            font-size: 3.5vw;
+            line-height: 11.5vw; 
+            bottom: 2vw; 
+    
+            span{
+                position: relative;
+                font-weight: 400;
+                bottom: 0.5vw;
+            }
+        }
+    }
+    
+    .btn-area{
+        width: 100vw;
+        margin-bottom: 10vw;
+    
+        button{
+            position: relative;
+            top: 4vw;
+            left: 25vw;
+        }
     }
 }
