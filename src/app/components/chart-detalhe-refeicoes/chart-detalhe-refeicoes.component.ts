@@ -1,5 +1,6 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ArcElement, Chart, DoughnutController, Legend, Tooltip } from 'chart.js';
+import { RefeicaoService, ValorRefeicaoDiariResponse } from '../../services/refeicao.service';
 
 Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
 
@@ -8,10 +9,25 @@ Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
   templateUrl: './chart-detalhe-refeicoes.component.html',
   styleUrl: './chart-detalhe-refeicoes.component.scss'
 })
-export class ChartDetalheRefeicoesComponent implements AfterViewInit{
+export class ChartDetalheRefeicoesComponent implements OnInit{
 
-  ngAfterViewInit(): void {
-    this.criarGraficoDonut()  
+  public total: Number = 0;
+
+  public proteinaEmPercent: Number = 0;
+  public carboidratoEmPercent: Number = 0;
+  public gorduraEmPercent: Number = 0;
+  public fibraEmPercent: Number = 0;
+  public sodioEmPercent: Number = 0;
+
+  erro: string = 'Erro ao carregar valor diario';
+  successful: string = '';
+
+  constructor(
+    private refeicaoService:RefeicaoService
+  ){}
+
+  ngOnInit(): void {
+    this.pegarValorEmPercent()  
   }
 
   criarGraficoDonut(){
@@ -21,7 +37,13 @@ export class ChartDetalheRefeicoesComponent implements AfterViewInit{
         labels: [ 'Proteinas', 'Carboidratos', 'Gordura', 'Fibra', 'Sódio' ],
         datasets: [{
           label: 'Minha Refeição',
-          data: [ 300, 50, 128, 200, 400 ],
+          data: [ 
+            Number(this.proteinaEmPercent), 
+            Number(this.carboidratoEmPercent), 
+            Number(this.gorduraEmPercent), 
+            Number(this.fibraEmPercent), 
+            Number(this.sodioEmPercent) 
+          ],
           backgroundColor: [
             '#30f0f7',
             '#035b43',
@@ -36,12 +58,44 @@ export class ChartDetalheRefeicoesComponent implements AfterViewInit{
       },
       options: {
         responsive: true,
-        cutout: '60%',
+        cutout: '70%',
         plugins: {
           legend: {
             display: false
           }
         }
+      }
+    })
+  }
+
+  pegarValorEmPercent(){
+    const idUsuario = localStorage.getItem('userId');
+
+    if(!idUsuario){
+      this.erro = 'Usuario não encontrado';
+      return;
+    }
+
+    this.refeicaoService.pegarValorTotalDiario(idUsuario).subscribe({
+      next: (res:ValorRefeicaoDiariResponse) => {
+        this.total = Number(( 
+          res.total_proteinas_diario +
+          res.total_carboidratos_diario +
+          res.total_gorduras_diario +
+          res.total_fibras_diario +
+          res.total_sodio_diario
+        ).toFixed(2));
+        this.proteinaEmPercent = Number(((res.total_proteinas_diario)/Number(this.total)).toFixed(2));
+        this.carboidratoEmPercent = Number(((res.total_carboidratos_diario)/Number(this.total)).toFixed(2));
+        this.gorduraEmPercent = Number((Number(res.total_gorduras_diario)/Number(this.total)).toFixed(2));
+        this.fibraEmPercent = Number((Number(res.total_fibras_diario)/Number(this.total)).toFixed(2));
+        this.sodioEmPercent = Number((Number(res.total_sodio_diario)/Number(this.total)).toFixed(2));
+      
+        this.criarGraficoDonut();
+      },
+      error: (err) => {
+        this.erro;
+        console.log(err);
       }
     })
   }

@@ -63,7 +63,12 @@ export class ChartMedidasComponent implements AfterViewInit{
       options: {
         responsive: true,
         maintainAspectRatio: false,
-      }
+        plugins:{
+          legend:{
+            display: false
+          }
+        }
+      },
     });
   }
 }

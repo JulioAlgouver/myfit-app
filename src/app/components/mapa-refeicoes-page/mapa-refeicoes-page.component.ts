@@ -35,8 +35,8 @@ export class MapaRefeicoesPageComponent implements OnInit{
   ){}
   
   ngOnInit(){
-    this.carregarValorDiario();
-    this.carregarValoremPercent();
+    this.carregarValorDiario()
+    this.carregarValoremPercent()
   }
 
   carregarValorDiario(){
