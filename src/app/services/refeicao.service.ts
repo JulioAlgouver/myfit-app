@@ -23,7 +23,6 @@ export class RefeicaoService{
     ){}
 
     public registrarRefeicao(
-        id_usuario:string,
         id_alimento:number,
         descricao:string,
         tipo_refeicao:string,
@@ -36,8 +35,11 @@ export class RefeicaoService{
         total_gorduras:number,
         total_carboidratos:number
     ){
-        return this.http.post(`${this.apiUrl}/refeicoes`, {
-            id_usuario,
+        const token = localStorage.getItem('token') || '';
+
+        return this.http.post(
+        `${this.apiUrl}/refeicoes`,
+        {
             id_alimento,
             descricao,
             tipo_refeicao,
@@ -49,27 +51,17 @@ export class RefeicaoService{
             total_fibras,
             total_gorduras,
             total_carboidratos
-        })
+        },
+        {
+            headers: {
+            Authorization: `Bearer ${token}`
+            }
+        }
+        );
     }
 
     pegarValorTotalDiario(idUsuario: string):Observable<ValorRefeicaoDiariResponse>{
         return this.http
-        .get<ValorRefeicaoDiariResponse[]>(`${this.apiUrl}/refeicoes/${idUsuario}/valorDiario`)
-        .pipe(
-            map(array => {
-                if(array && array.length > 0){
-                    return array[0];
-                }else{
-                    return {
-                        total_calorias_diario: 0,
-                        total_proteinas_diario: 0,
-                        total_sodio_diario: 0,
-                        total_fibras_diario: 0,
-                        total_gorduras_diario: 0,
-                        total_carboidratos_diario: 0
-                    }
-                }
-            })
-        )
+        .get<ValorRefeicaoDiariResponse>(`${this.apiUrl}/refeicoes/${idUsuario}/valorDiario`)
     }
 }

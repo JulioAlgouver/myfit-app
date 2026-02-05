@@ -22,13 +22,7 @@ export class PesagemService{
         });
     }    
 
-    pegarDataHoraUltimaPesagem(): Observable<any>{
-        const userId = localStorage.getItem('userId')
-        return this.http.get(`${this.apiUrl}/pesagem/ultima/${userId}`)
+    pegarDataHoraUltimaPesagem(idUsuario: number): Observable<any> {
+        return this.http.get(`${this.apiUrl}/pesagem/ultima/${idUsuario}`);
     }
-
-      getUsuarioLogado(): Observable<any> {
-        const userId = localStorage.getItem('userId');
-        return this.http.get(`${this.apiUrl}/usuarios/${userId}`);
-      }
 }

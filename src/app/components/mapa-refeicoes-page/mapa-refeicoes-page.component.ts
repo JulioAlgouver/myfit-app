@@ -40,7 +40,8 @@ export class MapaRefeicoesPageComponent implements OnInit{
   }
 
   carregarValorDiario(){
-    const idUsuario = localStorage.getItem('userId');
+    const usuario = localStorage.getItem('usuario');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
 
     if(!idUsuario){
       this.erro = 'Usuario não encontrado';
@@ -71,7 +72,8 @@ export class MapaRefeicoesPageComponent implements OnInit{
   }
 
   carregarValoremPercent(){
-    const idUsuario = localStorage.getItem('userId');
+    const usuario = localStorage.getItem('usuario');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
 
     if(!idUsuario){
       this.erro = 'Usuario não encontrado'
@@ -87,11 +89,11 @@ export class MapaRefeicoesPageComponent implements OnInit{
           res.total_fibras_diario +
           res.total_sodio_diario
         ).toFixed(2));
-        this.proteinaEmPercent = Number(((res.total_proteinas_diario)/Number(this.total)).toFixed(2));
-        this.carboidratoEmPercent = Number(((res.total_carboidratos_diario)/Number(this.total)).toFixed(2));
-        this.gorduraEmPercent = Number((Number(res.total_gorduras_diario)/Number(this.total)).toFixed(2));
-        this.fibraEmPercent = Number((Number(res.total_fibras_diario)/Number(this.total)).toFixed(2));
-        this.sodioEmPercent = Number((Number(res.total_sodio_diario)/Number(this.total)).toFixed(2));
+        this.proteinaEmPercent = Number(((res.total_proteinas_diario)/Number(this.total)*100).toFixed(2));
+        this.carboidratoEmPercent = Number(((res.total_carboidratos_diario)/Number(this.total)*100).toFixed(2));
+        this.gorduraEmPercent = Number((Number(res.total_gorduras_diario)/Number(this.total)*100).toFixed(2));
+        this.fibraEmPercent = Number((Number(res.total_fibras_diario)/Number(this.total)*100).toFixed(2));
+        this.sodioEmPercent = Number((Number(res.total_sodio_diario)/Number(this.total)*100).toFixed(2));
       },
       error: (err) => {
         this.erro;

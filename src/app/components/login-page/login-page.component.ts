@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { IUser } from '../../interface/user.interface';
 
 @Component({
   selector: 'app-login-page',
@@ -11,6 +12,8 @@ import { UserService } from '../../services/user.service';
 export class LoginPageComponent {
   loginForm: FormGroup;
   erro: string = '';
+
+  usuario!: IUser;
 
   constructor(
     private fb: FormBuilder,
@@ -33,7 +36,12 @@ export class LoginPageComponent {
     this.userService.loginUsuario(cpf, senha).subscribe({
       next: (res) => {
         console.log('Login bem-sucedido:', res);
-        localStorage.setItem('userId',res.user.id);
+
+        localStorage.setItem('token', res.token); // salva token
+        localStorage.setItem('usuario', JSON.stringify(res.usuario));
+
+        this.usuario = res.usuario; // opcional: já preenche
+
         // Redireciona para home
         this.router.navigate(['/home']);
       },

@@ -75,7 +75,6 @@ export class RefeicoesPageComponent implements OnInit {
     }
     
     const dados = {
-      id_usuario : String(localStorage.getItem('userId')),
       id_alimento : this.alimentoSelecionado.id_alimento,
       descricao : String(this.alimentoSelecionado.descricao),
       tipo_refeicao : String(this.form.value.tipo_refeicao),
@@ -90,7 +89,6 @@ export class RefeicoesPageComponent implements OnInit {
     }
 
     this.refeicaoService.registrarRefeicao(
-      dados.id_usuario, 
       dados.id_alimento,
       dados.descricao,
       dados.tipo_refeicao,

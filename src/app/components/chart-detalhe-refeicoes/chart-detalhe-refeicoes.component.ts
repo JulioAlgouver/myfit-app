@@ -69,7 +69,8 @@ export class ChartDetalheRefeicoesComponent implements OnInit{
   }
 
   pegarValorEmPercent(){
-    const idUsuario = localStorage.getItem('userId');
+    const usuario = localStorage.getItem('usuario');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
 
     if(!idUsuario){
       this.erro = 'Usuario não encontrado';

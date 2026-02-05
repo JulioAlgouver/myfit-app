@@ -6,10 +6,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { ComponentsModule } from './components/components.module';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+import { provideRouter } from '@angular/router';
 
 export const PT_BR_DATE_FORMATS = {
   parse:{
@@ -39,7 +40,8 @@ export const PT_BR_DATE_FORMATS = {
     //provideClientHydration(),
     provideAnimationsAsync(),
     { provide: MAT_DATE_LOCALE, useValue: 'pt-BR' },
-    { provide: MAT_DATE_FORMATS, useValue: PT_BR_DATE_FORMATS }
+    { provide: MAT_DATE_FORMATS, useValue: PT_BR_DATE_FORMATS },
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

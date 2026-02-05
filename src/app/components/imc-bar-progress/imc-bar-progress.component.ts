@@ -9,7 +9,7 @@ import { IUser } from '../../interface/user.interface';
 })
 export class ImcBarProgressComponent implements OnInit{
   
-  usuario!: IUser;
+  usuario!: any;
 
   value = 0;
   progress = 50;
@@ -22,28 +22,36 @@ export class ImcBarProgressComponent implements OnInit{
   ){}
 
   ngOnInit(){
-    this.userService.getUsuarioLogado().subscribe((usuario:IUser) => {
-      this.usuario = usuario;
-      
-      this.value = this.calculaIMC(usuario);
-      this.progressBar(this.value);
-    });
-
+    this.getAlturaPeso();
   }
 
-  public calculaIMC(usuario:any):number{
-    const peso = (usuario.peso_atual)
-    const alturaMetros = (usuario.altura_atual / 100);
+  public getAlturaPeso(){
+    const usuario = localStorage.getItem('usuario');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
 
-    const valorIMC : number = +(peso / (alturaMetros * alturaMetros)).toFixed(2)
+    this.userService.getAlturaPeso(idUsuario).subscribe({
+      next: res => {
+        this.usuario = res;
+        this.calculaIMC();
+      },
+      error: err => console.error('Erro ao carregar', err)
+      })
+    }
 
+  public calculaIMC(): number {
+    const peso = this.usuario.peso_atual;
+    const alturaMetros = this.usuario.altura_atual / 100;
+
+    const valorIMC: number = +(peso / (alturaMetros * alturaMetros)).toFixed(2);
     this.value = valorIMC;
 
     console.log(this.usuario);
-    console.log('IMC: ',valorIMC);
+    console.log('IMC: ', valorIMC);
+
+    this.progressBar(valorIMC);
 
     return valorIMC;
-  }  
+  } 
 
 
   public progressBar(valorIMC:number){

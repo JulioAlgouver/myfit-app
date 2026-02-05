@@ -79,10 +79,16 @@ export class UserService {
     return this.http.post(`${this.apiUrl}/login`, { cpf, senha });
   }
 
+  getAlturaPeso(idUsuario:number){
+    return this.http.get(`${this.apiUrl}/usuarios/${idUsuario}/imcdata`)
+  }
+
   // 🔐 Usuário logado (usa o ID salvo no login)
-  getUsuarioLogado(): Observable<any> {
-      const userId = localStorage.getItem('userId');
-    return this.http.get(`${this.apiUrl}/usuarios/${userId}`);
+  getUsuarioLogado() {
+    const token = localStorage.getItem('token');
+    return this.http.get<IUser>(`${this.apiUrl}/usuario-logado`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
   }
 
   // 🔎 Caso precise buscar outro usuário por ID

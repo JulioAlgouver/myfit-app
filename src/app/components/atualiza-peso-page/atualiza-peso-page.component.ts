@@ -32,14 +32,15 @@ export class AtualizaPesoPageComponent {
     }
 
     const pesoAtual = Number(this.atualizarPesoForm.value.pesoAtual);
-    const idUser = (localStorage.getItem('userId'));
+    const usuario = localStorage.getItem('usuario')
+    const idUsuario = usuario ? JSON.parse(usuario).id : null
 
-    if (!idUser) {
+    if (!idUsuario) {
       this.erro = 'Usuário não encontrado';
       return
     }
 
-    this.userService.atualizarPeso(pesoAtual,idUser).subscribe({
+    this.userService.atualizarPeso(pesoAtual,idUsuario).subscribe({
       next: () => {
         this.successful = 'Peso atualizado no cadastro';
       },
@@ -52,7 +53,7 @@ export class AtualizaPesoPageComponent {
       }
     })
 
-    this.pesagemService.registrarPesagem(pesoAtual,idUser).subscribe({
+    this.pesagemService.registrarPesagem(pesoAtual,idUsuario).subscribe({
       next: () => {
         this.successful = 'Peso registrado com sucesso!';
         setTimeout(() => {
@@ -64,7 +65,7 @@ export class AtualizaPesoPageComponent {
 
         console.log('Payload enviado:', {
           pesoAtual,
-          idUser
+          idUsuario
         });
       }
     });

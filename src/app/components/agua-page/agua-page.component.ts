@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { UserService } from '../../services/user.service';
 import { HidratacaoService, ValorDiarioResponse } from '../../services/hidratacao.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-agua-page',
@@ -22,7 +22,6 @@ export class AguaPageComponent implements OnInit {
     private userService: UserService,
     private hidratacaoService: HidratacaoService
   ) {
-    // Inicializa o formulário
     this.form = this.fb.group({
       quantidade: ['', Validators.required]
     });
@@ -33,21 +32,15 @@ export class AguaPageComponent implements OnInit {
   }
 
   // Calcula o percentual da barra de progresso
-  calcularPercentualAtingido(): void {
+  private calcularPercentualAtingido(): void {
     this.percentualAtingido = (this.aguaConsumida / this.meta) * 100;
   }
 
-  // Busca o valor diário atual do usuário
-  carregarValorDiario(): void {
-    const idUsuario = localStorage.getItem('userId');
-    if (!idUsuario) {
-      this.erro = 'Usuário não encontrado';
-      return;
-    }
-
-    this.hidratacaoService.pegarValorTotalDiario(idUsuario).subscribe({
+  // Carrega a quantidade diária consumida
+  private carregarValorDiario(): void {
+    this.hidratacaoService.pegarValorTotalDiario().subscribe({
       next: (res: ValorDiarioResponse) => {
-        this.aguaConsumida = Number(res.valor_diario);
+        this.aguaConsumida = Number(res.valor_diario) || 0; // garante que seja número
         this.calcularPercentualAtingido();
       },
       error: (err) => {
@@ -57,61 +50,29 @@ export class AguaPageComponent implements OnInit {
     });
   }
 
-  // Executa quando o usuário clica em "Beber Água"
+  // Executa ao clicar em "Beber Água"
   beberAgua(): void {
-    const valorSelecionado = Number(this.form.value.quantidade);
+    const quantidade = Number(this.form.value.quantidade);
 
-    if (isNaN(valorSelecionado) || valorSelecionado <= 0) {
+    if (isNaN(quantidade) || quantidade <= 0) {
       this.erro = 'Informe uma quantidade válida';
       return;
     }
 
-    const idUsuario = localStorage.getItem('userId');
-    if (!idUsuario) {
-      this.erro = 'Usuário não encontrado';
-      return;
-    }
-
-    // Pega o valor diário atual e soma a quantidade escolhida
-    this.hidratacaoService.pegarValorTotalDiario(idUsuario).subscribe({
-      next: (res: ValorDiarioResponse) => {
-        this.aguaConsumida = Number(res.valor_diario) + valorSelecionado;
-        this.calcularPercentualAtingido();
-
-        this.registrarHidratacao();
-        this.form.reset();
-      },
-      error: (err) => {
-        this.erro = 'Erro ao buscar valor diário';
-        console.error(err);
-      }
-    });
-  }
-
-  // Registra a ingestão no backend e atualiza o usuário
-  registrarHidratacao(): void {
-    const quantidade = Number(this.form.value.quantidade);
-    const idUsuario = localStorage.getItem('userId');
-    if (!idUsuario) {
-      this.erro = 'Usuário não encontrado';
-      return;
-    }
-
-    // Registro na tabela de hidratação
-    this.hidratacaoService.registrarHidratacao(quantidade, idUsuario).subscribe({
+    // Registra a ingestão no backend
+    this.hidratacaoService.registrarHidratacao(quantidade).subscribe({
       next: () => {
         this.successful = 'Registro realizado com sucesso!';
+        this.form.reset();
+        this.carregarValorDiario(); // Atualiza o valor consumido
+        // Atualiza a água no usuário
+        this.userService.atualizarAgua(quantidade, 'meu-id-ou-token').subscribe({
+          next: () => console.log('Água do usuário atualizada')
+        });
       },
-      error: () => {
-        this.erro = 'Erro ao registrar';
-        console.log('Payload enviado:', { quantidade, idUsuario });
-      }
-    });
-
-    // Atualiza a água no usuário
-    this.userService.atualizarAgua(quantidade, idUsuario).subscribe({
-      next: () => {
-        this.successful = 'Água atualizada';
+      error: (err) => {
+        this.erro = 'Erro ao registrar hidratação';
+        console.error('Erro registrarHidratacao:', err);
       }
     });
   }

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { MedidaService } from '../../services/medida.service';
 import { Router } from '@angular/router';
+import { json } from 'body-parser';
 
 @Component({
   selector: 'app-atualiza-medidas-page',
@@ -31,6 +32,8 @@ export class AtualizaMedidasPageComponent {
   }
 
   registrarMedidas():void{
+    const usuario = localStorage.getItem('usuario');
+
     if(this.formMedidas.invalid){
       return
     }
@@ -41,14 +44,14 @@ export class AtualizaMedidasPageComponent {
     const braco =  Number(this.formMedidas.value.braco);
     const coxa =  Number(this.formMedidas.value.coxa);
     const altura =  Number(this.formMedidas.value.altura);
-    const idUser = localStorage.getItem('userId');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
 
-    if(!idUser){
+    if(!idUsuario){
       this.erro = ('Usuario não encontrado');
       return
     }
 
-    this.medidasService.registraMedida(quadril,umbigo,cintura,braco,coxa,altura,idUser).subscribe({
+    this.medidasService.registraMedida(quadril,umbigo,cintura,braco,coxa,altura,idUsuario).subscribe({
       next: () => {
         this.successful = 'Medidas registradas com sucesso!';
         setTimeout(() => {
@@ -65,12 +68,12 @@ export class AtualizaMedidasPageComponent {
           braco,
           coxa,
           altura,
-          idUser
+          idUsuario
         });
       }
     });
 
-    this.userService.atualizarMedida(quadril,umbigo,cintura,braco,coxa,altura,idUser).subscribe({
+    this.userService.atualizarMedida(quadril,umbigo,cintura,braco,coxa,altura,idUsuario).subscribe({
       next: () => {
         this.successful = 'Medidas atualizadas '
       }

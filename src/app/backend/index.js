@@ -2,10 +2,87 @@ const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const db = require('../backend/db.js');
+const bodyParser = require('body-parser');
+const jwt = require('jsonwebtoken');
+
 
 const app = express();
-app.use(cors());
 app.use(express.json());
+
+const PORT = 3000;
+const SECRET_KEY = '217026b45aafede7';
+const TOKEN_EXPIRATION = 30000 // 8 HORAS E 20 MINUTOS
+
+// Middleware para analisar o corpo das requisições
+app.use(bodyParser.json());
+
+// Middleware CORS
+app.use(cors());
+
+
+// LOGIN DO USUARIO
+app.post('/login', (request, response) => {
+    const { cpf, senha } = request.body;
+
+    db.get( // Usando db.get porque só esperamos um único usuário
+        `SELECT * FROM USUARIOS WHERE cpf = ?`, [cpf],
+        async (err, usuario) => {
+            if (err || !usuario) {
+                return response.status(401).json({
+                    message: 'Usuário não encontrado!'
+                });
+            }
+
+            // Comparando a senha informada com a criptografada no banco
+            const senhaValida = await bcrypt.compare(senha, usuario.senha);
+
+            if (!senhaValida) {
+                return response.status(401).json({
+                    message: 'Senha inválida'
+                });
+            }
+
+            const token = jwt.sign({ usuario }, SECRET_KEY, {expiresIn: TOKEN_EXPIRATION });
+
+            response.json({
+                token,
+                usuario,
+                message: 'Login realizado com sucesso!',
+            })
+        }
+    );
+});
+
+
+// Middleware para verificar o token JWT
+function authenticateToken(req, res, next) {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1]
+
+    if(!token){
+        //Erro de "não autorizado"
+        return res.sendStatus(401);
+    }
+
+    jwt.verify(token, SECRET_KEY, (err, user) => {
+        if(err){
+            //Erro "Forbidden", o servidor entendeu a requisição mas não possui permissão
+            return res.sendStatus(403);
+        }
+
+        req.user = user;
+        next();
+    });
+}
+
+//Endpoint para validar token
+app.get('/verify-token', authenticateToken, (req,res) => {
+    res.json({
+        valid:true,
+        user: req.user
+    });
+});
+
 
 
 /* ------------------------------ USUARIOS ------------------------------*/
@@ -46,6 +123,14 @@ app.post('/usuarios', async (req, res) => {
     );
 });
 
+
+app.get('/usuario-logado', authenticateToken, (req, res) => {
+    res.json(req.user.usuario); // req.user vem do JWT
+});
+
+
+/*
+
 // LOGIN DO USUARIO
 app.post('/login', (request, response) => {
     const { cpf, senha } = request.body;
@@ -75,6 +160,8 @@ app.post('/login', (request, response) => {
         }
     );
 });
+
+*/
 
 // BUSCAR USUARIOS POR ID
 app.get('/usuarios/:id', (req, res) => {
@@ -408,11 +495,9 @@ app.get('/medidas/:id_usuario',(req, res) => {
 
 
 // REGISTRAR HIDRATAÇÃO
-app.post('/hidratacao', (req, res) =>{
-    const {
-        quantidade,
-        id_usuario
-    } = req.body;
+app.post('/hidratacao', authenticateToken, (req, res) =>{
+    const { quantidade } = req.body;
+    const id_usuario = req.user.usuario.id;
 
     const sql = `
         INSERT INTO historico_hidratacao
@@ -451,36 +536,26 @@ app.get('/hidratacao',(req, res) => {
 })
 
 // CONSULTAR HISTORICO HIDRATACAO POR USUARIO E DIA
-app.get('/hidratacao/:id_usuario/valorDiario',(req, res) => {
-    const {id_usuario} = req.params;
+app.get('/hidratacao/valorDiario', authenticateToken, (req, res) => {
+    const id_usuario = req.user.usuario.id;
 
-    db.all(` SELECT 
-                SUM(quantidade) as valor_diario 
-             FROM 
-                historico_hidratacao 
-             WHERE 
-                id_usuario = ? AND
-                data_hora_medicao >= date('now','localtime') and data_hora_medicao < date('now','localtime', '+1 day')`,
-             [id_usuario],(err,rows) => {
-        if(err){
-            return res.status(500).json({
-                message:'Erro ao buscar medidas'
-            })
-        }
-        if(!rows){
-            return res.status(404).json({
-                message: 'Nenhuma medida encontrada para este usuario'
-            })
-        }
-        res.json(rows)
-    })
-})
+    db.get(`
+        SELECT COALESCE(SUM(quantidade), 0) AS valor_diario
+        FROM historico_hidratacao
+        WHERE id_usuario = ? AND
+              date(data_hora_medicao) = date('now','localtime')
+    `, [id_usuario], (err, row) => {
+        if (err) return res.status(500).json({ message: 'Erro ao buscar hidratação', details: err });
+        res.json({ valor_diario: row.valor_diario || 0 });
+    });
+});
 
 // CONSULTAR HISTORICO HIDRATACAO POR USUARIO
 app.get('/hidratacao/:id_usuario',(req, res) => {
     const {id_usuario} = req.params;
 
-    db.all(` SELECT * FROM historico_hidratacao WHERE id_usuario = ?`,[id_usuario],(err,rows) => {
+    db.all(` SELECT * FROM historico_hidratacao WHERE id_usuario = ?`,
+        [id_usuario],(err,rows) => {
         if(err){
             return res.status(500).json({
                 message:'Erro ao buscar registros'
@@ -520,6 +595,22 @@ app.put('/usuarios/:id/agua', (req, res) => {
 });
 
 
+// PEGAR DADOS PARA CALCULO DO IMC (ALTURA E PESO)
+app.get('/usuarios/:id/imcData',(req, res) => {
+    const {id} = req.params;
+
+    db.get(`SELECT peso_atual, altura_atual FROM usuarios WHERE id = ?`,
+        [id],(err,rows) => {
+        if(err){
+            res.status(500).json({
+                message: 'Erro ao buscar Registro'
+            })
+        }
+
+        res.json(rows)
+    })
+})
+
 
 
 /* ----------------------------- REFEIÇÃO -----------------------------*/
@@ -528,21 +619,22 @@ app.put('/usuarios/:id/agua', (req, res) => {
 
 
 // REGISTRAR REFEIÇÃO
-app.post('/refeicoes',(req,res) => {
+app.post('/refeicoes', authenticateToken,(req,res) => {  
     const {
-            id_usuario,
-            id_alimento,
-            descricao,
-            tipo_refeicao,
-            categoria,
-            quantidade,
-            total_calorias,
-            total_proteinas,
-            total_sodio,
-            total_fibras,
-            total_gorduras,
-            total_carboidratos
+        id_alimento,
+        descricao,
+        tipo_refeicao,
+        categoria,
+        quantidade,
+        total_calorias,
+        total_proteinas,
+        total_sodio,
+        total_fibras,
+        total_gorduras,
+        total_carboidratos
     } = req.body;
+    const id_usuario = req.user.usuario.id;
+
 
     const sql = `
         INSERT INTO refeicoes (
@@ -561,7 +653,7 @@ app.post('/refeicoes',(req,res) => {
         VALUES (?,?,?,?,?,?,?,?,?,?,?,?)    
         `
     db.run(sql,[
-        id_usuario,
+            id_usuario,
             id_alimento,
             descricao,
             tipo_refeicao,
@@ -583,7 +675,7 @@ app.post('/refeicoes',(req,res) => {
             message: 'Refeição registrada com sucesso'
         })
     })
-})
+});
 
 // CONSULTAR REFEIÇÕES
 app.get('/refeicoes', (req,res) => {
@@ -629,35 +721,32 @@ app.get('/refeicoes/:id_usuario', (req,res) => {
 })
 
 // CONSULTAR HISTORICO REFEICAO POR USUARIO E DIA
-app.get('/refeicoes/:id_usuario/valorDiario',(req, res) => {
-    const {id_usuario} = req.params;
+app.get('/refeicoes/:id_usuario/valorDiario', (req, res) => {
+    const { id_usuario } = req.params;
 
-    db.all(` SELECT 
-                SUM(total_calorias) as total_calorias_diario,
-                SUM(total_proteinas) as total_proteinas_diario,
-                SUM(total_sodio) as total_sodio_diario,
-                SUM(total_fibras) as total_fibras_diario,
-                SUM(total_gorduras) as total_gorduras_diario,
-                SUM(total_carboidratos) as total_carboidratos_diario 
-             FROM 
-                refeicoes 
-             WHERE 
-                id_usuario = ? AND
-                data_hora_refeicao >= date('now','localtime') and data_hora_refeicao < date('now','localtime', '+1 day')`,
-             [id_usuario],(err,rows) => {
-        if(err){
+    db.get(`
+        SELECT 
+            COALESCE(SUM(total_calorias), 0) AS total_calorias_diario,
+            COALESCE(SUM(total_proteinas), 0) AS total_proteinas_diario,
+            COALESCE(SUM(total_sodio), 0) AS total_sodio_diario,
+            COALESCE(SUM(total_fibras), 0) AS total_fibras_diario,
+            COALESCE(SUM(total_gorduras), 0) AS total_gorduras_diario,
+            COALESCE(SUM(total_carboidratos), 0) AS total_carboidratos_diario
+        FROM 
+            refeicoes
+        WHERE 
+            id_usuario = ? AND
+            date(data_hora_refeicao) = date('now','localtime')
+    `, [id_usuario], (err, row) => {
+        if (err) {
             return res.status(500).json({
-                message:'Erro ao buscar medidas'
-            })
+                message: 'Erro ao buscar histórico de refeição',
+                details: err.message
+            });
         }
-        if(!rows){
-            return res.status(404).json({
-                message: 'Nenhuma medida encontrada para este usuario'
-            })
-        }
-        res.json(rows)
-    })
-})
+        res.json(row);
+    });
+});
 
 
 /* ----------------------------- SERVIDOR -----------------------------*/
@@ -666,8 +755,8 @@ app.get('/refeicoes/:id_usuario/valorDiario',(req, res) => {
 
 
 // RODAR O SERVIDOR
-app.listen(3000, () => {
-    console.log('API rodando em http://localhost:3000');
+app.listen(PORT, () => {
+    console.log(`API rodando em http://localhost:${PORT}`);
 });
 
 
