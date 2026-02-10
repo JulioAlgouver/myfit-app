@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { provideRouter } from '@angular/router';
+import { SexoPipe } from './pipes/sexo.pipe';
 
 export const PT_BR_DATE_FORMATS = {
   parse:{
@@ -34,7 +35,7 @@ export const PT_BR_DATE_FORMATS = {
     AngularMaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
     //provideClientHydration(),

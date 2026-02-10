@@ -34,14 +34,14 @@ export class MeuPesoPageComponent implements OnInit {
         // Mapear snake_case para camelCase
         this.usuario = {
           ...res,
-          pesoAtual: res.peso_atual,
-          quadrilAtual: res.quadril_atual,
-          umbigoAtual: res.umbigo_atual,
-          cinturaAtual: res.cintura_atual,
-          bracoAtual: res.braco_atual,
-          coxaAtual: res.coxa_atual,
-          alturaAtual: res.altura_atual,
-          agua: res.agua
+          pesoAtual: res.peso_atual | 0,
+          quadrilAtual: res.quadril_atual | 0,
+          umbigoAtual: res.umbigo_atual | 0,
+          cinturaAtual: res.cintura_atual | 0,
+          bracoAtual: res.braco_atual | 0,
+          coxaAtual: res.coxa_atual | 0,
+          alturaAtual: res.altura_atual | 0,
+          agua: res.agua | 0
         };
       },
       error: err => console.error('Erro ao buscar usuário', err)

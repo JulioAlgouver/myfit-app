@@ -25,6 +25,7 @@ import { ChartPesoComponent } from './chart-peso/chart-peso.component';
 import { ChartMedidasComponent } from './chart-medidas/chart-medidas.component';
 import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-detalhe-refeicoes.component';
 import { NgxEchartsModule } from "ngx-echarts";
+import { SexoPipe } from "../pipes/sexo.pipe";
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { NgxEchartsModule } from "ngx-echarts";
     AngularMaterialModule,
     NgxEchartsModule,
     ChartPesoComponent,
-    ChartMedidasComponent
+    ChartMedidasComponent,
 ],        
     declarations:[
         LoginPageComponent,
@@ -57,6 +58,7 @@ import { NgxEchartsModule } from "ngx-echarts";
         ImcBarProgressComponent,
         TabelaImcComponent,
         ChartDetalheRefeicoesComponent,
+        SexoPipe
   ],
     exports:[
         BrowserAnimationsModule,

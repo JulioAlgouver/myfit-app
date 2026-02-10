@@ -8,7 +8,7 @@ import { ChangePasswordComponent } from '../change-password/change-password.comp
   templateUrl: './profile-page.component.html',
   styleUrls: ['./profile-page.component.scss']
 })
-export class ProfilePageComponent implements OnInit {
+export class ProfilePageComponent implements OnInit{
 
   usuario: any;
 
@@ -16,6 +16,8 @@ export class ProfilePageComponent implements OnInit {
     private userService: UserService,
     private dialog: MatDialog
   ) {}
+
+  
 
   ngOnInit(): void {
     this.userService.getUsuarioLogado().subscribe({

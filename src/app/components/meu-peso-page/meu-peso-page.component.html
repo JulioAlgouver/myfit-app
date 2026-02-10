@@ -5,7 +5,7 @@
         Meu Peso
     </div>
     <div class="data_container">
-        <span><b>Ultima pesagem:</b>{{pesagem?.data_hora_pesagem}}</span>
+        <span><b>Ultima pesagem:</b>{{pesagem?.data_hora_pesagem | date:'dd/MM/yyyy HH:mm:ss':'-0300':'pt-BR'}}</span>
         <span><b>Peso atual:</b>{{usuario?.pesoAtual}} kg</span>
         <a class="slim_button" routerLink="/atualiza-peso" routerLinkActive="active">Atualizar</a>
     </div>

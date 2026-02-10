@@ -38,6 +38,21 @@ export class UserService {
     });
   }
 
+  atualizarSenha(
+    senhaAtual:string,
+    novaSenha:string
+  ){
+    const token = localStorage.getItem('token');
+    return this.http.put(`${this.apiUrl}/update-password`,{
+      senhaAtual,
+      novaSenha,
+    },{
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+  }
+
   atualizarAgua(
     quantidade: Number,
     id:string

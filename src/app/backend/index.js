@@ -199,6 +199,71 @@ app.get('/usuarios', (req, res) => {
     });
 });
 
+// ALTERAR SENHA
+app.put('/update-password', authenticateToken , async (req,res) => {
+    const {
+        senhaAtual,
+        novaSenha
+    } = req.body
+
+    const idUsuario = req.user.usuario.id;
+
+    if(!senhaAtual || !novaSenha){
+        return res.status(400).json({
+            message: 'Senha atual e senha nova são obrigatórias'
+        });
+    }
+
+    db.get(
+        'SELECT senha FROM usuarios WHERE id = ?',
+        [idUsuario],
+        async (err,usuario) => {
+            if(err){
+                return res.status(500).json({
+                    message: 'Erro ao buscar usuário',
+                    details: err
+                });
+            }
+
+            if(!usuario){
+                return res.status(404).json({
+                    message: 'Usuário não encontrado'
+                });
+            }
+
+            //VALIDA SENHA ATUAL
+            const senhaValida = await bcrypt.compare(senhaAtual, usuario.senha);
+            if(!senhaValida){
+                return res.status(401).json({
+                    message: 'Senha atual incorreta'
+                });
+            }
+
+            //CRIPTOGRAFAR NOVA SENHA
+            const novaSenhaHash = await bcrypt.hash(novaSenha,10);
+
+            //ATUALIZAR SENHA NO BANCO
+
+            db.run(
+                'UPDATE usuarios SET senha = ? WHERE id = ?',
+                [novaSenhaHash, idUsuario],
+                (err) => {
+                    if(err) {
+                        return res.status(500).json({
+                            message: 'Erro ao atualizar senha',
+                            details: err
+                        });
+                    }
+
+                    res.json({
+                        message: 'Senha atualizada com sucesso!'
+                    });
+                }
+            );
+        }
+    );
+});
+
 
 
 /* ----------------------------- ALIMENTOS -----------------------------*/
