@@ -19,27 +19,11 @@ export class ChangePasswordComponent implements OnInit {
       {
         senhaAtual: ['', Validators.required],
         novaSenha: ['', Validators.required],
-      },
-      {
-        validators: this.confirmaSenhaNova
       }
     );
   }
 
   ngOnInit() {}
-
-  confirmaSenhaNova(group: AbstractControl): ValidationErrors | null {
-    const senhaNova = group.get('novaSenha')?.value;
-    const confirmaNovaSenha = group.get('confirmaNovaSenha')?.value;
-
-    if (!senhaNova || !confirmaNovaSenha) {
-      return null;
-    }
-
-    return senhaNova === confirmaNovaSenha
-      ? null
-      : { textosDiferentes: true };
-  }
 
   atualizaSenhaUsuario() {
     if (this.form.invalid) {
