@@ -12,6 +12,7 @@ import { AtualizaPesoPageComponent } from './components/atualiza-peso-page/atual
 import { AtualizaMedidasPageComponent } from './components/atualiza-medidas-page/atualiza-medidas-page.component';
 import { MapaRefeicoesPageComponent } from './components/mapa-refeicoes-page/mapa-refeicoes-page.component';
 import { DetalhesPesoPageComponent } from './components/detalhes-peso-page/detalhes-peso-page.component';
+import { TermoComponent } from './components/termo/termo.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'atualiza-peso', component: AtualizaPesoPageComponent },
   { path: 'atualiza-medidas', component: AtualizaMedidasPageComponent },
   { path: 'mapa-refeicoes', component: MapaRefeicoesPageComponent },
-  { path: 'detalhes', component: DetalhesPesoPageComponent }
+  { path: 'detalhes', component: DetalhesPesoPageComponent },
+  { path: 'termo', component: TermoComponent }
 ];
 
 @NgModule({

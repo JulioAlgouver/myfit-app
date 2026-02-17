@@ -26,6 +26,8 @@ import { ChartMedidasComponent } from './chart-medidas/chart-medidas.component';
 import { ChartDetalheRefeicoesComponent } from './chart-detalhe-refeicoes/chart-detalhe-refeicoes.component';
 import { NgxEchartsModule } from "ngx-echarts";
 import { SexoPipe } from "../pipes/sexo.pipe";
+import { TermoComponent } from './termo/termo.component';
+import { AtualizaMetaDialogComponent } from './atualiza-meta-dialog/atualiza-meta-dialog.component';
 
 
 @NgModule({
@@ -58,7 +60,9 @@ import { SexoPipe } from "../pipes/sexo.pipe";
         ImcBarProgressComponent,
         TabelaImcComponent,
         ChartDetalheRefeicoesComponent,
-        SexoPipe
+        SexoPipe,
+        TermoComponent,
+        AtualizaMetaDialogComponent
   ],
     exports:[
         BrowserAnimationsModule,
@@ -80,6 +84,8 @@ import { SexoPipe } from "../pipes/sexo.pipe";
         TabelaImcComponent,
         ChartPesoComponent,
         ChartMedidasComponent,
+        TermoComponent,
+        AtualizaMetaDialogComponent
     ],
 })
 export class ComponentsModule{

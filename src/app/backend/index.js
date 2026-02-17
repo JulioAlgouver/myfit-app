@@ -264,6 +264,49 @@ app.put('/update-password', authenticateToken , async (req,res) => {
     );
 });
 
+//ALTERAR META PESO
+app.put('/atualiza-meta/:id', (req, res) => {
+    const { peso_meta  } = req.body;
+    const { id } = req.params;
+
+    const sql = `
+        UPDATE usuarios SET peso_meta = ? WHERE id = ?
+    `;
+
+    db.run(sql, [peso_meta , id], function(err) {
+        if (err) {
+            return res.status(500).json({
+                message: 'Erro ao atualizar meta',
+                details: err
+            });
+        }
+
+        res.json({
+            message: 'Meta atualizada com sucesso!',
+            changes: this.changes
+        });
+    });
+});
+
+//CONSULTAR META PESO POR USUARIO
+app.get('/usuarios/:id/pesoMeta', (req,res)=>{
+    const {id} = req.params;
+
+    const sql = `
+        SELECT peso_meta FROM usuarios WHERE id = ?
+    `;
+
+    db.get(sql,[id],(err,row)=>{
+        if(err){
+            return res.status(500).json({
+                message:'Erro ao consultar registro',
+                details: err
+            })
+        }
+
+        res.json(row);
+    });
+});
 
 
 /* ----------------------------- ALIMENTOS -----------------------------*/

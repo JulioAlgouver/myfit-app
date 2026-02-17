@@ -1,12 +1,12 @@
-UPDATE alimentos SET caloria = null WHERE caloria = 'NA';
-UPDATE alimentos SET proteina = null WHERE proteina = 'NA';
-UPDATE alimentos SET carboidrato = null WHERE carboidrato = 'NA';
-UPDATE alimentos SET fibra = null WHERE fibra = 'NA';
-UPDATE alimentos SET sodio = null WHERE sodio = 'NA';
-UPDATE alimentos SET lipideo = null WHERE lipideo = 'NA';
+UPDATE alimentos SET caloria = '0,01' WHERE caloria = 0.01;
+UPDATE alimentos SET proteina = '0,01' WHERE proteina = 0.01;
+UPDATE alimentos SET carboidrato = '0,01' WHERE carboidrato = 0.01;
+UPDATE alimentos SET fibra = '0,01' WHERE fibra = 0.01;
+UPDATE alimentos SET sodio = '0,01' WHERE sodio = 0.01;
+UPDATE alimentos SET lipideo = '0,01' WHERE lipideo = 0.01;
 
 -
-SELECT * FROM ALIMENTOS WHERE fibra is null;
+SELECT * FROM ALIMENTOS WHERE sodio is NULL;
 
 ALTER TABLE ALIMENTOS
 ALTER COLUMN caloria DROP NOT NULL;
@@ -20,3 +20,5 @@ DROP TABLE alimentos_temp
 DROP TABLE alimentos;
 
 ALTER TABLE alimentos_temp RENAME TO alimentos;
+
+DELETE FROM ALIMENTOS;

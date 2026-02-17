@@ -8,10 +8,12 @@
     <mat-divider></mat-divider>
     
     <div class="grid-content">
-        <strong>Caminhada</strong>
-        <span><b>Contagem de passos:</b></span>
-        <span><b>Distancia percorrida:</b></span>
-        <span><b>Calorias perdidas:</b></span>
+        <strong>Meu Peso</strong>
+        <span><b>Peso Atual:</b><span>{{pesoAtual}} kg</span></span>
+        <span><b>Meta:</b><span>{{pesoMeta}} kg</span>
+            <button (click)="mostrarTelaAtualizaMeta()"><img src="../../../assets/edit_icon.png"></button>
+        </span>
+        <span><b>Quanto falta:</b><span>{{progresso}} kg</span></span>
         <div class="img-area">
             <img src="../../../assets/feets_icon.png" style="margin-top: 15vw;"/>
         </div>

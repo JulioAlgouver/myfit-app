@@ -16,4 +16,5 @@ export interface IUser{
     coxaAtual: number;
     umbigoAtual: number;
     agua: number;
+    pesoMeta: number;
 }

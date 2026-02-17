@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { HidratacaoService, ValorDiarioResponse } from '../../services/hidratacao.service';
 import { RefeicaoService, ValorRefeicaoDiariResponse } from '../../services/refeicao.service';
+import { number } from 'echarts';
+import { AtualizaMetaDialogComponent } from '../atualiza-meta-dialog/atualiza-meta-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home-page',
@@ -15,18 +18,76 @@ export class HomePageComponent implements OnInit{
   public carboidratoConsumido: Number = 0;
   public gorduraConsumida: Number = 0;
   public fibraConsumida: Number = 0;
+  public pesoAtual: number = 0;
+  public progresso: number = 0;
+  public pesoMeta:number = 0;
   
   erro: string = 'Erro ao carregar valor diario';
   successful: string = '';
 
   constructor(
+    private dialog: MatDialog,
     private userService:UserService,
     private hidratacaoService:HidratacaoService,
     private refeicaoService:RefeicaoService
   ){}
 
   ngOnInit(){
+    this.updateMeta();
+    this.carregarPesoAtual();
     this.carregarValorDiario();
+  }
+
+  updateMeta(){
+    const usuario = localStorage.getItem('usuario');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
+
+    this.userService.consultaMetaPeso(idUsuario).subscribe({
+      next:(response)=>{
+        this.pesoMeta = Number(response.peso_meta || 0);
+      },
+      error:(err)=>{
+        console.log('Erro ao consultar registros');
+      }
+    })
+  }
+
+  calcularQuantoFalta(){
+    
+  }
+
+  mostrarTelaAtualizaMeta(): void {
+      const dialogRef = this.dialog.open(AtualizaMetaDialogComponent, {
+        panelClass: 'change-password-dialog',
+        width: '80vw',
+        maxWidth: '400px',
+        disableClose: false,
+        autoFocus: true,
+        restoreFocus: true
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('Dialog result:', result);
+      });
+    }
+
+  carregarPesoAtual(){
+    const usuario = localStorage.getItem('usuario');
+    const idUsuario = usuario ? JSON.parse(usuario).id : null;
+
+    if(!usuario){
+      this.erro = 'Usuario não encontrado'
+    }
+
+    this.userService.getAlturaPeso(idUsuario).subscribe({
+      next: (response) => {
+          this.pesoAtual = Number(response.peso_atual || 0)
+        console.log(response);
+      },
+      error:(erro) => {
+        return this.erro = 'Erro ao consultar registro';
+      }
+    })
   }
 
   carregarValorDiario() {

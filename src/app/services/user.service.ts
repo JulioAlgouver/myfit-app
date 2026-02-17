@@ -90,12 +90,25 @@ export class UserService {
     });
   }
 
+  atualizaMetaPeso(
+    peso_meta:Number,
+    id:string
+  ){
+    return this.http.put(`${this.apiUrl}/atualiza-meta/${id}`,{
+      peso_meta 
+    });
+  }
+
+  consultaMetaPeso(id:string):Observable<{peso_meta:number}>{
+    return this.http.get<{peso_meta:number}>(`${this.apiUrl}/usuarios/${id}/pesoMeta`)
+  }
+
   loginUsuario(cpf: string, senha: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, { cpf, senha });
   }
 
-  getAlturaPeso(idUsuario:number){
-    return this.http.get(`${this.apiUrl}/usuarios/${idUsuario}/imcdata`)
+  getAlturaPeso(idUsuario:number):Observable<{ peso_atual: number, altura_atual:number }>{
+    return this.http.get<{ peso_atual: number, altura_atual:number }>(`${this.apiUrl}/usuarios/${idUsuario}/imcdata`)
   }
 
   // 🔐 Usuário logado (usa o ID salvo no login)
