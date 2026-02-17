@@ -19,8 +19,8 @@ export class HomePageComponent implements OnInit{
   public gorduraConsumida: Number = 0;
   public fibraConsumida: Number = 0;
   public pesoAtual: number = 0;
-  public progresso: number = 0;
   public pesoMeta:number = 0;
+  public progresso: number = 0;
   
   erro: string = 'Erro ao carregar valor diario';
   successful: string = '';
@@ -42,9 +42,21 @@ export class HomePageComponent implements OnInit{
     const usuario = localStorage.getItem('usuario');
     const idUsuario = usuario ? JSON.parse(usuario).id : null;
 
+    this.userService.getAlturaPeso(idUsuario).subscribe({
+      next:(response)=>{
+        this.pesoAtual = response.peso_atual
+      },
+      error:(err)=>{
+        console.error('Erro ao buscar registros')
+        return err
+      }
+    })
+
     this.userService.consultaMetaPeso(idUsuario).subscribe({
       next:(response)=>{
         this.pesoMeta = Number(response.peso_meta || 0);
+        
+        this.calcularQuantoFalta();
       },
       error:(err)=>{
         console.log('Erro ao consultar registros');
@@ -53,7 +65,7 @@ export class HomePageComponent implements OnInit{
   }
 
   calcularQuantoFalta(){
-    
+     this.progresso = this.pesoAtual - this.pesoMeta;
   }
 
   mostrarTelaAtualizaMeta(): void {

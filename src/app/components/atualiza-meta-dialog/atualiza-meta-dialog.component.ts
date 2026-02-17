@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { number } from 'echarts';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-atualiza-meta-dialog',
@@ -16,7 +17,8 @@ export class AtualizaMetaDialogComponent {
   constructor(
     private fb:FormBuilder,
     private userService:UserService,
-    private router:Router
+    private router:Router,
+    private dialogRef:MatDialogRef<AtualizaMetaDialogComponent>
   ){
     this.form = this.fb.group({
      meta : ['',Validators.required]
@@ -31,7 +33,8 @@ export class AtualizaMetaDialogComponent {
     this.userService.atualizaMetaPeso(meta, idUsuario).subscribe({
       next:()=>{
         console.log('Registro atualizado');
-        this.router.navigate(['/home']);
+        this.dialogRef.close(true);
+        window.location.reload();
       },
       error:(err)=>{
         console.log('Erro:',err);
