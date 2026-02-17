@@ -426,7 +426,15 @@ app.get('/pesagem/:id_usuario', (req, res) => {
     const { id_usuario } = req.params;
 
     db.all(
-        'SELECT * FROM historico_pesagem WHERE id_usuario = ?',
+        `SELECT *
+         FROM (
+            SELECT *
+            FROM historico_pesagem
+            WHERE id_usuario = ?
+            ORDER BY data_hora_pesagem DESC
+            LIMIT 10
+         ) AS ultimos
+         ORDER BY data_hora_pesagem ASC`,
         [id_usuario],
         (err, rows) => {
             if (err) {

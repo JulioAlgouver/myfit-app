@@ -65,7 +65,7 @@ export class HomePageComponent implements OnInit{
   }
 
   calcularQuantoFalta(){
-     this.progresso = this.pesoAtual - this.pesoMeta;
+     this.progresso = this.pesoMeta - this.pesoAtual;
   }
 
   mostrarTelaAtualizaMeta(): void {
