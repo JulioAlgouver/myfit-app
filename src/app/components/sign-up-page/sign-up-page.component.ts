@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
+import { TermoComponent } from '../termo/termo.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-sign-up-page',
@@ -16,7 +18,8 @@ export class SignUpPageComponent {
     constructor(
       private fb: FormBuilder,
       private userService: UserService,
-      private router: Router
+      private router: Router,
+      private dialog: MatDialog
     ){
       this.signUpForm = this.fb.group({
         nome:['', Validators.required],
@@ -35,6 +38,21 @@ export class SignUpPageComponent {
 
     this.router.navigate(['/'])
   }
+
+  showTermoScreen(): void {
+      const dialogRef = this.dialog.open(TermoComponent, {
+        panelClass: 'change-password-dialog',
+        width: '80vw',
+        maxWidth: '400px',
+        disableClose: false,
+        autoFocus: true,
+        restoreFocus: true
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('Dialog result:', result);
+      });
+    }
 
   signUpUser() {
     if(this.signUpForm.invalid){

@@ -59,36 +59,36 @@ export class ChartMedidasComponent implements AfterViewInit{
           datasets: [{
             label: 'Quadril',
             data: dados_quadril,
-            borderColor: 'white',
-            backgroundColor: 'green',
+            borderColor: 'green',
+            backgroundColor: '#9ed2b085',
             fill:true
           },
           {
             label: 'Umbigo',
             data: dados_umbigo,
-            borderColor: 'white',
-            backgroundColor: 'lightblue',
+            borderColor: 'lightblue',
+            backgroundColor: '#96faff85',
             fill:true
           },
           {
             label: 'Cintura',
             data: dados_cintura,
-            borderColor: 'white',
-            backgroundColor: 'red',
+            borderColor: 'red',
+            backgroundColor: '#ff515185',
             fill:true
           },
           {
             label: 'Braço',
             data: dados_braco,
-            borderColor: 'white',
-            backgroundColor: 'orange',
+            borderColor: 'orange',
+            backgroundColor: '#ff400085',
             fill:true
           },
           {
             label: 'Coxa',
             data: dados_coxa,
-            borderColor: 'white',
-            backgroundColor: 'yellow',
+            borderColor: 'yellow',
+            backgroundColor: '#ffe10085',
             fill:true
           },
         ],

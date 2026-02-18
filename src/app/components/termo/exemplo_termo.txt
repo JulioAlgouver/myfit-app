@@ -1,0 +1,185 @@
+TERMO DE USO E POLÍTICA DE PRIVACIDADE
+
+[NOME DO APLICATIVO]
+
+Última atualização: [INSERIR DATA]
+
+Bem-vindo(a) ao [NOME DO APLICATIVO], aplicativo voltado ao acompanhamento de saúde, nutrição e condicionamento físico.
+
+Ao se cadastrar e utilizar a plataforma, o(a) Usuário(a) declara que leu, compreendeu e concorda integralmente com os termos e condições abaixo.
+
+1. OBJETO
+
+O presente Termo regula o uso do aplicativo [NOME DO APLICATIVO], que oferece funcionalidades de:
+
+Registro de dados pessoais
+
+Acompanhamento de peso e medidas corporais
+
+Controle de ingestão de calorias e macronutrientes
+
+Registro de consumo de água
+
+Monitoramento de evolução física
+
+O aplicativo possui caráter informativo e de acompanhamento, não substituindo avaliação médica, nutricional ou profissional de educação física.
+
+2. CADASTRO DO USUÁRIO
+
+Para utilizar a plataforma, o Usuário deverá fornecer informações verdadeiras, completas e atualizadas, incluindo:
+
+Dados pessoais:
+
+Nome
+
+E-mail
+
+CPF
+
+Telefone
+
+Data de nascimento
+
+Sexo
+
+Dados de saúde e acompanhamento físico:
+
+Última pesagem
+
+Peso atual
+
+Medidas corporais (Quadril, Umbigo, Cintura, Braço, Coxa)
+
+Consumo diário de:
+
+Calorias
+
+Proteínas
+
+Carboidratos
+
+Gorduras
+
+Fibras
+
+Quantidade de água ingerida (litros)
+
+O Usuário é responsável pela veracidade das informações fornecidas.
+
+3. TRATAMENTO DE DADOS PESSOAIS (LGPD)
+
+O tratamento de dados pessoais será realizado em conformidade com a Lei nº 13.709/2018 (Lei Geral de Proteção de Dados - LGPD).
+
+3.1 Finalidade do tratamento
+
+Os dados coletados serão utilizados para:
+
+Criar e gerenciar a conta do Usuário
+
+Permitir o acompanhamento de evolução física
+
+Gerar relatórios e métricas personalizadas
+
+Melhorar a experiência no aplicativo
+
+Cumprir obrigações legais e regulatórias
+
+3.2 Dados sensíveis
+
+As informações relacionadas à saúde (peso, medidas corporais, ingestão alimentar, etc.) são consideradas dados sensíveis e serão tratadas com maior nível de segurança e confidencialidade.
+
+O cadastro implica consentimento explícito para o tratamento desses dados.
+
+3.3 Compartilhamento de dados
+
+Os dados não serão vendidos ou comercializados.
+
+Poderão ser compartilhados apenas:
+
+Com prestadores de serviço essenciais ao funcionamento do aplicativo (ex: hospedagem em nuvem)
+
+Mediante obrigação legal ou ordem judicial
+
+4. ARMAZENAMENTO E SEGURANÇA
+
+Adotamos medidas técnicas e administrativas para proteger os dados contra:
+
+Acesso não autorizado
+
+Vazamentos
+
+Alteração indevida
+
+Destruição acidental
+
+Apesar dos esforços, nenhum sistema é completamente seguro, não sendo possível garantir segurança absoluta.
+
+5. DIREITOS DO USUÁRIO
+
+Nos termos da LGPD, o Usuário poderá, a qualquer momento:
+
+Solicitar acesso aos seus dados
+
+Corrigir dados incompletos ou desatualizados
+
+Solicitar exclusão de seus dados
+
+Revogar o consentimento
+
+Solicitar portabilidade dos dados
+
+As solicitações poderão ser feitas através do e-mail: [INSERIR E-MAIL DE CONTATO].
+
+6. RESPONSABILIDADES
+6.1 Do Usuário
+
+Fornecer informações verdadeiras
+
+Manter a confidencialidade de sua senha
+
+Utilizar o aplicativo de forma ética e legal
+
+6.2 Do Aplicativo
+
+O [NOME DO APLICATIVO] não se responsabiliza por:
+
+Decisões tomadas com base nas informações fornecidas pela plataforma
+
+Problemas de saúde decorrentes de dietas ou treinos sem acompanhamento profissional
+
+Uso indevido da conta por terceiros
+
+7. CANCELAMENTO E EXCLUSÃO DE CONTA
+
+O Usuário poderá solicitar a exclusão de sua conta a qualquer momento.
+
+Após a solicitação:
+
+Os dados pessoais serão excluídos, salvo quando houver obrigação legal de retenção.
+
+Dados anonimizados poderão ser mantidos para fins estatísticos.
+
+8. ALTERAÇÕES DO TERMO
+
+Este Termo poderá ser atualizado a qualquer momento. O Usuário será informado sobre alterações relevantes.
+
+O uso continuado do aplicativo após alterações implica concordância com os novos termos.
+
+9. CONTATO
+
+Para dúvidas, solicitações ou assuntos relacionados à privacidade:
+
+E-mail: [INSERIR E-MAIL]
+Empresa: [NOME DA EMPRESA]
+CNPJ: [INSERIR CNPJ]
+Endereço: [INSERIR ENDEREÇO]
+
+10. ACEITE
+
+Ao clicar em “Li e Aceito”, o Usuário declara que:
+
+Leu integralmente este Termo
+
+Está ciente do tratamento de seus dados pessoais e sensíveis
+
+Concorda com todas as disposições aqui previstas
