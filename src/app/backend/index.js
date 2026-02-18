@@ -587,7 +587,15 @@ app.get('/medidas',(req, res) => {
 app.get('/medidas/:id_usuario',(req, res) => {
     const {id_usuario} = req.params;
 
-    db.all(` SELECT * FROM historico_medidas WHERE id_usuario = ?`,[id_usuario],(err,rows) => {
+    db.all(`SELECT *
+            FROM(
+                SELECT *
+                FROM historico_medidas
+                WHERE id_usuario = ?
+                ORDER BY data_hora_medicao DESC
+                LIMIT 10
+            ) AS ultimos
+            ORDER BY data_hora_medicao ASC`,[id_usuario],(err,rows) => {
         if(err){
             return res.status(500).json({
                 message:'Erro ao buscar medidas'

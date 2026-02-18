@@ -1,5 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
+import { IMedidasResponse } from "../interface/medidas-response.interface";
 
 @Injectable({
     providedIn:'root'
@@ -27,5 +29,9 @@ export class MedidaService {
             altura,
             idUsuario,
         });
+    }
+
+    consultaMedidaPorUsuario(id_usuario:number) : Observable<IMedidasResponse[]>{
+        return this.http.get<IMedidasResponse[]>(`${this.apiUrl}/medidas/${id_usuario}`);
     }
 }
