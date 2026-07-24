@@ -12,22 +12,20 @@ import { AtualizaPesoPageComponent } from './components/atualiza-peso-page/atual
 import { AtualizaMedidasPageComponent } from './components/atualiza-medidas-page/atualiza-medidas-page.component';
 import { MapaRefeicoesPageComponent } from './components/mapa-refeicoes-page/mapa-refeicoes-page.component';
 import { DetalhesPesoPageComponent } from './components/detalhes-peso-page/detalhes-peso-page.component';
-import { TermoComponent } from './components/termo/termo.component';
-
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginPageComponent },
   { path: 'sign-up', component: SignUpPageComponent },
-  { path: 'home', component: HomePageComponent },
-  { path: 'agua', component: AguaPageComponent },
-  { path: 'refeicoes', component: RefeicoesPageComponent },
-  { path: 'meu-peso', component: MeuPesoPageComponent },
-  { path: 'perfil', component: ProfilePageComponent },
-  { path: 'atualiza-peso', component: AtualizaPesoPageComponent },
-  { path: 'atualiza-medidas', component: AtualizaMedidasPageComponent },
-  { path: 'mapa-refeicoes', component: MapaRefeicoesPageComponent },
-  { path: 'detalhes', component: DetalhesPesoPageComponent },
-  { path: 'termo', component: TermoComponent }
+  { path: 'home', component: HomePageComponent, canActivate: [authGuard] },
+  { path: 'agua', component: AguaPageComponent, canActivate: [authGuard] },
+  { path: 'refeicoes', component: RefeicoesPageComponent, canActivate: [authGuard] },
+  { path: 'meu-peso', component: MeuPesoPageComponent, canActivate: [authGuard] },
+  { path: 'perfil', component: ProfilePageComponent, canActivate: [authGuard] },
+  { path: 'atualiza-peso', component: AtualizaPesoPageComponent, canActivate: [authGuard] },
+  { path: 'atualiza-medidas', component: AtualizaMedidasPageComponent, canActivate: [authGuard] },
+  { path: 'mapa-refeicoes', component: MapaRefeicoesPageComponent, canActivate: [authGuard] },
+  { path: 'detalhes', component: DetalhesPesoPageComponent, canActivate: [authGuard] },
 ];
 
 @NgModule({

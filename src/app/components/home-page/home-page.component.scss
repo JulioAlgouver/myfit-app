@@ -1,66 +1,150 @@
-.grid-content{
-    width: 70vw;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 5vw;
-
-    strong{
-        font-size: 6vw;
-        margin-bottom: 5vw;
-    }
-
-    span{
-        width: 90vw;
-        display: flex;
-        flex-direction: row;
-        font-size: 3.8vw;
-        line-height: 8vw;
-
-        b{
-            width: 48vw;
-            margin: 0;
+//WEB VERSION
+    .web{
+        display: block;
+        
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #3366637d;
         }
 
-        button{
-            width: 8vw;
-            height: 8vw;
-            margin-left: 2vw;
-            cursor: pointer;
-            background: none;
+        .container{
+            width: 100vw;
+            height: 90vh;
+            display: flex;
+            position: relative;
 
-            img{
-                width: 100%;
-                height: 100%;
+            .left-menu{
+                width: 15vw;
+                height: 90vh;
+                background-color: #122525;
+                
+                li{
+                    font-size: 2vw;
+                    color: whitesmoke;
+                    padding: 1.5vw;
+                }
+
+                li:hover{
+                    cursor: pointer;
+                    background-color: #476c6c;
+                }
+            }
+
+            .right-panel{
+                width: 85vw;
+                height: 5vw;
+
+                .titulo{
+                    width: 85vw;
+                    height: 5vw;
+                    position: relative;
+                    align-content: center;
+
+                    strong{
+                        padding-left: 2vw;
+                        font-size: 2vw;
+                        width: 85vw;
+                    }
+                }
+
+                .content{
+                    width: 85vw;
+                    height: 75vh;
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 1vw;
+
+                    .resumo{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+
+                    .mapa{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+                }
             }
         }
-
-        span{
-            width: auto;
-            font-weight: 800;
-            color: rgb(50, 81, 71);
-        }
-    }
-    
-
-    
-    .img-area{
-        width: 90vw;
-        height: 10%;
-        
-        display: flex;
-        position: absolute;
-        justify-content: right;
-        align-content: center;
-        align-items: center;
-        z-index: 0;
-        
-        img{
-            width: 18vw;
-            opacity: 50%;
-        }
     }
 
+    .app{
+        display: none;
+    }
+
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+        .grid-content{
+            width: 70vw;
+            height: auto;
+        
+            display: flex;
+            flex-direction: column;
+        
+            padding: 5vw;
+        
+            strong{
+                font-size: 6vw;
+                margin-bottom: 5vw;
+            }
+        
+            span{
+                width: 90vw;
+                display: flex;
+                flex-direction: row;
+                font-size: 3.8vw;
+                line-height: 8vw;
+        
+                b{
+                    width: 48vw;
+                    margin: 0;
+                }
+        
+                button{
+                    width: 8vw;
+                    height: 8vw;
+                    margin-left: 2vw;
+                    cursor: pointer;
+                    background: none;
+        
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+        
+                span{
+                    width: auto;
+                    font-weight: 800;
+                    color: rgb(50, 81, 71);
+                }
+            }
+            
+        
+            
+            .img-area{
+                width: 90vw;
+                height: 10%;
+                
+                display: flex;
+                position: absolute;
+                justify-content: right;
+                align-content: center;
+                align-items: center;
+                z-index: 0;
+                
+                img{
+                    width: 18vw;
+                    opacity: 50%;
+                }
+            }
+        }
+    }
 }

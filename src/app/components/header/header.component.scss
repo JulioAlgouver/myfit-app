@@ -1,41 +1,109 @@
-.header-container{
-    width: 100vw;
-    height: 10vh;
-    display: flex;
+.web {
+    display: block;
 
-    background-color: #3366637d;
-
-    .logo{
-        width: 22vw;
+    .header-container {
+        width: 100vw;
         height: 10vh;
-        padding: 3vw;
-        img{
-            width: 15vw;
-            height: 7vh;
-        }        
-    }
-
-    .top-menu-content{
-        position: relative;
         display: flex;
-        justify-content: right;
-        align-content: center;
-        align-items: center;
-        padding-left: 25vw;
+        position: relative;
 
-        span{
-            margin-right: 3vw;
+        background-color: #3366637d;
+
+        .logo {
+            width: 22vw;
+            height: 10vh;
+            padding: 0.5vw;
+            padding-left: 1.5vw;
+            img {
+                width: 4vw;
+                height: 7vh;
+            }
         }
 
-        button{
-            width: 20vw;
-            height: 10vh;
-            border: none;
-            background: none;
+        .top-menu-content {
+            width: 96vw;
+            position: relative;
+            display: flex;
             justify-content: right;
+            align-content: center;
+            align-items: center;
+            padding-right: 1vw;
 
-            img{
-                width: 13vw;
+            span {
+                font-size: 1.5vw;
+                margin-right: 3vw;
+            }
+
+            button {
+                width: 3vw;
+                height: 10vh;
+                border: none;
+                background: none;
+
+                img {
+                    width: 3vw;
+                }
+            }
+
+            button:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.app{
+    display: none;
+}
+
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+        .header-container{
+            width: 100vw;
+            height: 10vh;
+            display: flex;
+
+            background-color: #3366637d;
+
+            .logo{
+                width: 22vw;
+                height: 10vh;
+                padding: 3vw;
+                img{
+                    width: 15vw;
+                    height: 7vh;
+                }        
+            }
+
+            .top-menu-content{
+                position: relative;
+                display: flex;
+                justify-content: right;
+                align-content: center;
+                align-items: center;
+                padding-left: 25vw;
+
+                span{
+                    margin-right: 3vw;
+                }
+
+                button{
+                    width: 20vw;
+                    height: 10vh;
+                    border: none;
+                    background: none;
+                    justify-content: right;
+
+                    img{
+                        width: 13vw;
+                    }
+                }
             }
         }
     }

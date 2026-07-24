@@ -28,6 +28,7 @@ import { NgxEchartsModule } from "ngx-echarts";
 import { SexoPipe } from "../pipes/sexo.pipe";
 import { TermoComponent } from './termo/termo.component';
 import { AtualizaMetaDialogComponent } from './atualiza-meta-dialog/atualiza-meta-dialog.component';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { AtualizaMetaDialogComponent } from './atualiza-meta-dialog/atualiza-met
         ChartDetalheRefeicoesComponent,
         SexoPipe,
         TermoComponent,
-        AtualizaMetaDialogComponent
+        AtualizaMetaDialogComponent,
+        LeftMenuComponent
   ],
     exports:[
         BrowserAnimationsModule,
@@ -85,7 +87,8 @@ import { AtualizaMetaDialogComponent } from './atualiza-meta-dialog/atualiza-met
         ChartPesoComponent,
         ChartMedidasComponent,
         TermoComponent,
-        AtualizaMetaDialogComponent
+        AtualizaMetaDialogComponent,
+        LeftMenuComponent
     ],
 })
 export class ComponentsModule{

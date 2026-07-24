@@ -1,72 +1,187 @@
-.login-register-container {
+//WEB VERSION
+.web{
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(220deg, #45eae9, #a1a1a1);
 
-    .img-content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .img-content{
+        width: 50%;
+        height: 100%;
+        position: relative;
 
-        img {
-            width: 40%;
-            max-width: 200px;
-            height: auto;
+        img{
+            width: 100%;
+            height: 100%;
+            opacity: 50%;
         }
     }
 
-    .form-login {
+    .login-container{
+        width: 50%;
+        height: 100%;
         display: flex;
+        align-items: center;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        margin-bottom: 2rem;
+        
+        .img-content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        .login-input-area {
-            width: 115%;
-            max-width: 400px;
-        }
-
-        button {
-            width: 90%;
-            max-width: 400px;
-            color: white;
-            background-color: #336666;
-            border: solid 1px #122525;
-
-            &:hover {
-                cursor: pointer;
+            img {
+                width: 40%;
+                max-width: 200px;
+                height: auto;
             }
         }
-    }
 
-    .link-recupera-senha {
-        a {
-            font-size: clamp(14px, 4vw, 18px);
-            color: black;
+        .form-login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            .login-input-area {
+                width: 115%;
+                max-width: 400px;
+            }
+
+            button {
+                width: 90%;
+                max-width: 400px;
+                color: white;
+                background-color: #336666;
+                border: solid 1px #122525;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        .link-recupera-senha {
+            a {
+                font-size: clamp(14px, 4vw, 18px);
+                color: black;
+            }
+        }
+
+        .sign-up {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 95%;
+            max-width: 400px;
+            padding: 1rem;
+
+            span {
+                margin-top: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        label {
+            padding-bottom: 2rem;
         }
     }
+}
 
-    .sign-up {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        width: 95%;
-        max-width: 400px;
-        padding: 1rem;
+.app{
+    display: none;
+}
 
-        span {
-            margin-top: 1rem;
-            text-align: center;
+
+//MOBILE VERSION
+@media(max-width:400px) {
+.web{
+    display: none;
+}
+
+.app{
+    display: block;
+    .login-register-container {
+        .img-content {
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 40%;
+                max-width: 200px;
+                height: auto;
+            }
         }
 
-        a {
-            text-decoration: none;
-            color: white;
+        .form-login {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            .login-input-area {
+                width: 115%;
+                max-width: 400px;
+            }
+
+            button {
+                width: 90%;
+                max-width: 400px;
+                color: white;
+                background-color: #336666;
+                border: solid 1px #122525;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .link-recupera-senha {
+            a {
+                font-size: clamp(14px, 4vw, 18px);
+                color: black;
+            }
+        }
+
+        .sign-up {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 95%;
+            max-width: 400px;
+            padding: 1rem;
+
+            span {
+                margin-top: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        label {
+            padding-top: 0.5rem;
         }
     }
-
-    label {
-        padding-top: 0.5rem;
-    }
+}
 }

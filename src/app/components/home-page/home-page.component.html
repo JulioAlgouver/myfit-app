@@ -1,47 +1,78 @@
-<app-header></app-header>
-
-<div class="app-container">
-    <div class="title">
-        Resumo diário
+<!-- WEB VERSION -->
+<div class="web">
+    <div class="header">
+        <app-header></app-header>
     </div>
-
-    <mat-divider></mat-divider>
-    
-    <div class="grid-content">
-        <strong>Meu Peso</strong>
-        <span><b>Peso Atual:</b><span>{{pesoAtual}} kg</span></span>
-        <span><b>Meta:</b><span>{{pesoMeta}} kg</span>
-            <button (click)="mostrarTelaAtualizaMeta()"><img src="../../../assets/edit_icon.png"></button>
-        </span>
-        <span><b>Quanto falta:</b><span>{{progresso}} kg</span></span>
-        <div class="img-area">
-            <img src="../../../assets/peso_icon.png" style="margin-top: 15vw;"/>
+    <div class="container">
+        <div class="left-menu">
+            <app-left-menu></app-left-menu>
         </div>
-    </div>
-    
-    <mat-divider></mat-divider>
+        <div class="right-panel">
+            <div class="titulo">
+                <strong>Resumo diário</strong>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="content">
+                <div class="resumo">
 
-    <div class="grid-content">
-        <strong>Alimentação</strong>
-        <span><b>Caloria consumida:</b><span>{{caloriaConsumida}} kcal</span></span>
-        <span><b>Proteína consumida:</b><span>{{proteinaConsumida}} g</span></span>
-        <span><b>Carboidrato consumido:</b><span>{{carboidratoConsumido}} g</span></span>
-        <span><b>Gordura consumida:</b><span>{{gorduraConsumida}} g</span></span>
-        <span><b>Fibra consumida:</b><span>{{fibraConsumida}} g</span></span>
-        <div class="img-area">
-            <img src="../../../assets/food_icon.png" style="margin-top: 35vw;"/>
-        </div>
-    </div>
+                </div>
+                <mat-divider vertical="true"></mat-divider>
+                <div class="mapa">
 
-    <mat-divider></mat-divider>
-    
-    <div class="grid-content">
-        <strong>Beba Água</strong>
-        <span><b>Agua ingerida (litros):</b><span>{{aguaConsumida}} L</span></span>
-        <div class="img-area">
-            <img src="../../../assets/water_icon.png"/>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<app-footer></app-footer>
+
+<!-- APP VERSION -->
+<div class="app">
+    <app-header></app-header>
+
+    <div class="app-container">
+        <div class="title">
+            Resumo diário
+        </div>
+
+        <mat-divider></mat-divider>
+        
+        <div class="grid-content">
+            <strong>Meu Peso</strong>
+            <span><b>Peso Atual:</b><span>{{pesoAtual}} kg</span></span>
+            <span><b>Meta:</b><span>{{pesoMeta}} kg</span>
+                <button (click)="mostrarTelaAtualizaMeta()"><img src="../../../assets/edit_icon.png"></button>
+            </span>
+            <span><b>Quanto falta:</b><span>{{progresso}} kg</span></span>
+            <div class="img-area">
+                <img src="../../../assets/peso_icon.png" style="margin-top: 15vw;"/>
+            </div>
+        </div>
+        
+        <mat-divider></mat-divider>
+
+        <div class="grid-content">
+            <strong>Alimentação</strong>
+            <span><b>Caloria consumida:</b><span>{{caloriaConsumida}} kcal</span></span>
+            <span><b>Proteína consumida:</b><span>{{proteinaConsumida}} g</span></span>
+            <span><b>Carboidrato consumido:</b><span>{{carboidratoConsumido}} g</span></span>
+            <span><b>Gordura consumida:</b><span>{{gorduraConsumida}} g</span></span>
+            <span><b>Fibra consumida:</b><span>{{fibraConsumida}} g</span></span>
+            <div class="img-area">
+                <img src="../../../assets/food_icon.png" style="margin-top: 35vw;"/>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+        
+        <div class="grid-content">
+            <strong>Beba Água</strong>
+            <span><b>Agua ingerida (litros):</b><span>{{aguaConsumida}} L</span></span>
+            <div class="img-area">
+                <img src="../../../assets/water_icon.png"/>
+            </div>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

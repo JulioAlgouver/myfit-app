@@ -1,136 +1,321 @@
-.login-register-container{
-    .sign-up-header{      
-        width: 100%;
-        height: 20%;
+    .web{
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
         display: flex;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-        padding: 10%;
+        overflow: hidden;
+        background: linear-gradient(220deg, #45eae9, #a1a1a1);
 
-        img{
-            width: 20%;
-            height: auto;
+        .img-content{
+            width: 50vw;
+            height: 100vh;
+            position: relative;
+
+            img{
+                width: 100%;
+                height: 100%;
+                opacity: 50%;
+            }
         }
 
-        strong{
-            font-size: 13vw;
-            font-weight: 600;
-        }
-    }
-
-    .form-container{
-        width: 100%;
-        height: 68%;
-
-        .sign-up-form{
-            width: 100vw;
-            height: 68vh;
-            display: inline-block;
+        .login-register-container{
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            align-content: center;
             flex-direction: column;
             justify-content: space-around;
-            align-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            padding-left: 5vw;
-
-            .input-area{
-                display: flex;
-                height: auto;
-
-                span{
-                    display: inline-block;
-                    width: 25vw;
-                    font-size: 1em;
-                    padding-top: 1.5vw;
-                }
-    
-                .form-field-small{
-                    
-                    font-size: 12px;
-                    left: 5vw;
-                    width: 60vw;
-                    height: 7vh;                
-    
-                    .mat-mdc-text-field-wrapper {
-                        height: 7vh;
-                    }
-    
-                    .mat-mdc-form-field-infix {
-                        min-height: 7px;
-                    }
-    
-                    input {
-                        position: relative;
-                        bottom: 1.2em;
-                        height: 25px;
-                    }
-                }
-            }
-
-            .radio-validator-error{
-                font-size: 12px;
-                color: #f44336; // mesmo vermelho do Angular Material
-                margin-top: -15px;
-            }
-
             
-
-            .accept-terms{
-                width: 90vw;
+            .sign-up-header{      
+                width: 100%;
+                height: 20%;
                 display: flex;
-                justify-content: center;
+                align-content: center;
+                align-items: center;
+                padding: 3em;
 
-                span{
-                    width: 90%;
+                img{
+                    width: 5vw;
+                    height: auto;
+                }
+
+                strong{
+                    font-size: 3em;
+                    font-weight: 600;
+                    padding-left: 3vw;
                 }
             }
 
-            .submit-area{
+            .form-container{
+                width: 100%;
+                height: 80%;
+
+                .sign-up-form{
+                    width: 100%;
+                    display: inline-block;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    padding-left: 8vw;
+                    padding-right: 8vw;
+
+                    .input-area{
+                        display: flex;
+                        height: auto;
+
+                        span{
+                            display: inline-block;
+                            width: 25vw;
+                            font-size: 1.2em;
+                        }
+            
+                        .form-field-small{
+                            
+                            font-size: 12px;
+                            left: 5vw;
+                            width: 60vw;
+                            height: 8vh;
+            
+                            .mat-mdc-text-field-wrapper {
+                                height: 8vh;
+                            }
+            
+                            .mat-mdc-form-field-infix {
+                                min-height: 8px;
+                            }
+            
+                            input {
+                                position: relative;
+                                bottom: 1.2em;
+                                height: 25px;
+                            }
+                        }
+                    }
+
+                    .radio-validator-error{
+                        font-size: 12px;
+                        color: #f44336; // mesmo vermelho do Angular Material
+                        margin-top: -15px;
+                    }
+
+                    .accept-terms{
+                        width: 100%;
+                        display: flex;
+                        position: relative;
+                        justify-content: center;
+
+                        span{
+                            width: 100%;
+                        }
+                    }
+
+                    .submit-area{
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 2em;
+                    }
+
+                    .error-message{
+                        text-align: center;
+                        padding: 3vw;
+                        color: #d70e00;
+                    }
+
+                    .successful-message{
+                        text-align: center;
+                        padding: 3vw;
+                        color: rgb(11, 45, 11);
+                    }            
+                }
+            }
+
+            .footer{
+                width: 100%;
+                
                 display: flex;
-                justify-content: center;
-                margin-top: 5vw;
-            }
+                justify-content: right;
+                align-content: center;
+                align-items: center;
 
-            .error-message{
-                text-align: center;
-                padding: 3vw;
-                color: #d70e00;
-            }
+                button{
+                    width: 4vw;
+                    height: 4vw;
+                    margin-right: 3%;
+                    position: relative;
+                    bottom: 10vh;
+                    border-radius: 100%;
+                    background-color: #336666;
+                    
+                    font-size: 2vw;
+                    color: whitesmoke;
+                    text-align: center;
 
-            .successful-message{
-                text-align: center;
-                padding: 3vw;
-                color: rgb(11, 45, 11);
-            }            
+                    span{
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+                }
+
+                button:hover{
+                    cursor: pointer;
+                }
+            }
         }
     }
 
-    .footer{
-        width: 100%;
-        height: 12%;
-        
-        display: flex;
-        justify-content: right;
-        align-content: center;
-        align-items: center;
-
-        button{
-            width: 17%;
-            height: 68%;
-            margin-right: 3%;
-            border-radius: 100pc;
-            background-color: #336666;
-
-            font-size: 200%;
-            color: whitesmoke;
-            text-align: center;
-
-            span{
-                display: flex;
-                flex-direction: column;
-                padding-bottom: 2vw;
-            }
-        }
+    .app{
+        display: none;
     }
+
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+        .login-register-container{
+            .sign-up-header{      
+                width: 100%;
+                height: 20%;
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                align-items: center;
+                padding: 10%;
+
+                img{
+                    width: 20%;
+                    height: auto;
+                }
+
+                strong{
+                    font-size: 13vw;
+                    font-weight: 600;
+                }
+            }
+
+            .form-container{
+                width: 100%;
+                height: 68%;
+
+                .sign-up-form{
+                    width: 100vw;
+                    height: 68vh;
+                    display: inline-block;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-content: center;
+                    align-items: center;
+                    overflow-x: hidden;
+                    padding-left: 5vw;
+
+                    .input-area{
+                        display: flex;
+                        height: auto;
+
+                        span{
+                            display: inline-block;
+                            width: 25vw;
+                            font-size: 1em;
+                            padding-top: 1.5vw;
+                        }
+            
+                        .form-field-small{
+                            
+                            font-size: 12px;
+                            left: 5vw;
+                            width: 60vw;
+                            height: 7vh;                
+            
+                            .mat-mdc-text-field-wrapper {
+                                height: 7vh;
+                            }
+            
+                            .mat-mdc-form-field-infix {
+                                min-height: 7px;
+                            }
+            
+                            input {
+                                position: relative;
+                                bottom: 1.2em;
+                                height: 25px;
+                            }
+                        }
+                    }
+
+                    .radio-validator-error{
+                        font-size: 12px;
+                        color: #f44336; // mesmo vermelho do Angular Material
+                        margin-top: -15px;
+                    }
+
+                    
+
+                    .accept-terms{
+                        width: 90vw;
+                        display: flex;
+                        justify-content: center;
+
+                        span{
+                            width: 90%;
+                        }
+                    }
+
+                    .submit-area{
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 5vw;
+                    }
+
+                    .error-message{
+                        text-align: center;
+                        padding: 3vw;
+                        color: #d70e00;
+                    }
+
+                    .successful-message{
+                        text-align: center;
+                        padding: 3vw;
+                        color: rgb(11, 45, 11);
+                    }            
+                }
+            }
+
+            .footer{
+                width: 100%;
+                height: 12%;
+                
+                display: flex;
+                justify-content: right;
+                align-content: center;
+                align-items: center;
+
+                button{
+                    width: 17%;
+                    height: 68%;
+                    margin-right: 3%;
+                    border-radius: 100pc;
+                    background-color: #336666;
+
+                    font-size: 200%;
+                    color: whitesmoke;
+                    text-align: center;
+
+                    span{
+                        display: flex;
+                        flex-direction: column;
+                        padding-bottom: 2vw;
+                    }
+                }
+            }
+        } 
+    }   
 }
