@@ -1,61 +1,147 @@
-.app-container{
-    .user-info-field{
-        display: flex;
-        flex-direction: column;
-        margin-top: 5vw;
-        padding-bottom: 5vw;
-        box-shadow: rgba(128, 128, 128, 0.203) 5px 2px 5px;
+//WEB VERSION
+    .web{
+        display: block;
+        
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #3366637d;
+        }
 
-        p{
+        .container{
+            width: 100vw;
+            height: 90vh;
             display: flex;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
+            position: relative;
 
-            strong{
-                width: 25vw;
-                font-weight: 600;
+            .left-menu{
+                width: 15vw;
+                height: 90vh;
+                background-color: #122525;
+                
+                li{
+                    font-size: 2vw;
+                    color: whitesmoke;
+                    padding: 1.5vw;
+                }
+
+                li:hover{
+                    cursor: pointer;
+                    background-color: #476c6c;
+                }
             }
 
-            span{
-                width: 60vw;
+            .right-panel{
+                width: 85vw;
+                height: 5vw;
+
+                .titulo{
+                    width: 85vw;
+                    height: 5vw;
+                    position: relative;
+                    align-content: center;
+
+                    strong{
+                        padding-left: 2vw;
+                        font-size: 2vw;
+                        width: 85vw;
+                    }
+                }
+
+                .content{
+                    width: 85vw;
+                    height: 75vh;
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 1vw;
+
+                    .resumo{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+
+                    .mapa{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+                }
             }
         }
     }
 
-    .security-field{
+    .app{
+        display: none;
+    }
+
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+    .web{
+        display: none;
+    }
+
+    .app{
         display: block;
 
-        strong{
-            position: relative;
-            font-size: 7vw;
-            left: 5vw;
-            top: -4vw;
-        }
-
-        img{
-            position: relative;
-            width: 15vw;
-            height: auto;
-            justify-content: right;
-            left: 50vw;
-            top: 5vw;
-            opacity: 40%;
-        }
-
-        button{
-            width: 40vw;
-            height: 10vw;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            justify-self: center;
-
-            border-radius: 6vw;
-            background-color: #122525;
-            color: whitesmoke;
+        .app-container{
+            .user-info-field{
+                display: flex;
+                flex-direction: column;
+                margin-top: 5vw;
+                padding-bottom: 5vw;
+                box-shadow: rgba(128, 128, 128, 0.203) 5px 2px 5px;
+        
+                p{
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    align-items: center;
+        
+                    strong{
+                        width: 25vw;
+                        font-weight: 600;
+                    }
+        
+                    span{
+                        width: 60vw;
+                    }
+                }
+            }
+        
+            .security-field{
+                display: block;
+        
+                strong{
+                    position: relative;
+                    font-size: 7vw;
+                    left: 5vw;
+                    top: -4vw;
+                }
+        
+                img{
+                    position: relative;
+                    width: 15vw;
+                    height: auto;
+                    justify-content: right;
+                    left: 50vw;
+                    top: 5vw;
+                    opacity: 40%;
+                }
+        
+                button{
+                    width: 40vw;
+                    height: 10vw;
+        
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    justify-self: center;
+        
+                    border-radius: 6vw;
+                    background-color: #122525;
+                    color: whitesmoke;
+                }
+            }
         }
     }
 }

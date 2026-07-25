@@ -1,65 +1,156 @@
-.selection_field{
-    width: 90vw;
-    height: auto;
-    padding-top: 7vw;
-    margin: 5vw;
-
-    position: relative;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-
-    .row{
-        width: 100%;
-        position: relative;
-        justify-content: space-around;
-        align-content: center;
-
-
-        button{
-            background: none;
-            width: 30vw;
-            height: 30vw;
-            margin: 1vw;
+//WEB VERSION
+    .web{
+        display: block;
+        
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #3366637d;
         }
 
-        p{
-            padding-top: 3vw;
-        }
-
-        img{
-            width: 85%;
-            height: auto;
-        }
-    }
-
-    .sendButton{
-        position: relative;
-        margin-top: 8vw;
-    }
-
-    .radioButtonGroup{
-        display: flex;
-        width: 30vw;
-        height: auto;
-
-        .radioButtomItem{
+        .container{
+            width: 100vw;
+            height: 90vh;
             display: flex;
-            background: none;
-            width: 100%;
-            height: 30vw;
-            margin: 1vw;
-            justify-content: center;
+            position: relative;
 
-            p{
-                padding-top: 5vw;
+            .left-menu{
+                width: 15vw;
+                height: 90vh;
+                background-color: #122525;
+                
+                li{
+                    font-size: 2vw;
+                    color: whitesmoke;
+                    padding: 1.5vw;
+                }
+
+                li:hover{
+                    cursor: pointer;
+                    background-color: #476c6c;
+                }
             }
 
-            img{
-                width: 100%;
-                height: auto;
+            .right-panel{
+                width: 85vw;
+                height: 5vw;
+
+                .titulo{
+                    width: 85vw;
+                    height: 5vw;
+                    position: relative;
+                    align-content: center;
+
+                    strong{
+                        padding-left: 2vw;
+                        font-size: 2vw;
+                        width: 85vw;
+                    }
+                }
+
+                .content{
+                    width: 85vw;
+                    height: 75vh;
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 1vw;
+
+                    .resumo{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+
+                    .mapa{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+                }
             }
         }
     }
-}
+
+    .app{
+        display: none;
+    }
+
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+
+        .app-container{
+            display: block;
+    
+            .selection_field{
+                width: 90vw;
+                height: auto;
+                padding-top: 7vw;
+                margin: 5vw;
+        
+                position: relative;
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+        
+                .row{
+                    width: 100%;
+                    position: relative;
+                    justify-content: space-around;
+                    align-content: center;
+        
+        
+                    button{
+                        background: none;
+                        width: 30vw;
+                        height: 30vw;
+                        margin: 1vw;
+                    }
+        
+                    p{
+                        padding-top: 3vw;
+                    }
+        
+                    img{
+                        width: 85%;
+                        height: auto;
+                    }
+                }
+        
+                .sendButton{
+                    position: relative;
+                    margin-top: 8vw;
+                }
+        
+                .radioButtonGroup{
+                    display: flex;
+                    width: 30vw;
+                    height: auto;
+        
+                    .radioButtomItem{
+                        display: flex;
+                        background: none;
+                        width: 100%;
+                        height: 30vw;
+                        margin: 1vw;
+                        justify-content: center;
+        
+                        p{
+                            padding-top: 5vw;
+                        }
+        
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}    

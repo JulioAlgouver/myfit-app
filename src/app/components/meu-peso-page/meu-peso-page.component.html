@@ -1,30 +1,61 @@
-<app-header></app-header>
+<!-- WEB VERSION -->
+<div class="web">
+    <div class="header">
+        <app-header></app-header>
+    </div>
+    <div class="container">
+        <div class="left-menu">
+            <app-left-menu></app-left-menu>
+        </div>
+        <div class="right-panel">
+            <div class="titulo">
+                <strong>Meu Peso</strong>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="content">
+                <div class="resumo">
 
-<div class="app-container">
-    <div class="title">
-        Meu Peso
-    </div>
-    <div class="data_container">
-        <span><b>Ultima pesagem:</b>{{pesagem?.data_hora_pesagem | date:'dd/MM/yyyy HH:mm:ss':'-0300':'pt-BR'}}</span>
-        <span><b>Peso atual:</b>{{usuario?.pesoAtual}} kg</span>
-        <a class="slim_button" routerLink="/atualiza-peso" routerLinkActive="active">Atualizar</a>
-    </div>
-    <mat-divider></mat-divider>
-    <div class="data_container">
-        <strong>Medida Corporal</strong>
-        <span><b>Quadril:</b>{{usuario?.quadrilAtual}} cm</span>
-        <span><b>Umbigo:</b>{{usuario?.umbigoAtual}} cm</span>
-        <span><b>Cintura:</b>{{usuario?.cinturaAtual}} cm</span>
-        <span><b>Braço:</b>{{usuario?.bracoAtual}} cm</span>
-        <span><b>Coxa:</b>{{usuario?.coxaAtual}} cm</span>
-        <img src="../../../assets/body.png"/>
-        <br/>
-        <a class="slim_button" routerLink="/atualiza-medidas" routerLinkActive="active">Atualizar</a>        
-    </div>
-    <mat-divider></mat-divider>
-    <div class="data_container">
-        <button class="send_button"><a routerLink="/detalhes">Ver Detalhes</a></button>
+                </div>
+                <mat-divider vertical="true"></mat-divider>
+                <div class="mapa">
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<app-footer></app-footer>
+<!-- APP VERSION -->
+<div class="app">
+
+    <app-header></app-header>
+    
+    <div class="app-container">
+        <div class="title">
+            Meu Peso
+        </div>
+        <div class="data_container">
+            <span><b>Ultima pesagem:</b>{{pesagem?.data_hora_pesagem | date:'dd/MM/yyyy HH:mm:ss':'-0300':'pt-BR'}}</span>
+            <span><b>Peso atual:</b>{{usuario?.pesoAtual}} kg</span>
+            <a class="slim_button" routerLink="/atualiza-peso" routerLinkActive="active">Atualizar</a>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="data_container">
+            <strong>Medida Corporal</strong>
+            <span><b>Quadril:</b>{{usuario?.quadrilAtual}} cm</span>
+            <span><b>Umbigo:</b>{{usuario?.umbigoAtual}} cm</span>
+            <span><b>Cintura:</b>{{usuario?.cinturaAtual}} cm</span>
+            <span><b>Braço:</b>{{usuario?.bracoAtual}} cm</span>
+            <span><b>Coxa:</b>{{usuario?.coxaAtual}} cm</span>
+            <img src="../../../assets/body.png"/>
+            <br/>
+            <a class="slim_button" routerLink="/atualiza-medidas" routerLinkActive="active">Atualizar</a>        
+        </div>
+        <mat-divider></mat-divider>
+        <div class="data_container">
+            <button class="send_button"><a routerLink="/detalhes">Ver Detalhes</a></button>
+        </div>
+    </div>
+    
+    <app-footer></app-footer>
+</div>

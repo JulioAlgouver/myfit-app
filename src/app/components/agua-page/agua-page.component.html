@@ -1,72 +1,103 @@
-<app-header></app-header>
-
-<div class="app-container">
-  <div class="title">
-    Beba Água
-  </div>
-
-  <div class="progressBar_content">
-    <div class="progress-wrapper">
-      <mat-progress-bar
-        mode="determinate"
-        [value]="percentualAtingido"
-        class="progressBar">
-      </mat-progress-bar>
-
-      <span class="progress-text">
-        {{aguaConsumida}}ml / {{meta}}ml<br/>
-        <span>Meta Diária</span>
-      </span>
+<!-- WEB VERSION -->
+<div class="web">
+    <div class="header">
+        <app-header></app-header>
     </div>
-  </div>
-  <div class="divider">
-    <mat-divider></mat-divider>
-  </div>
+    <div class="container">
+        <div class="left-menu">
+            <app-left-menu></app-left-menu>
+        </div>
+        <div class="right-panel">
+            <div class="titulo">
+                <strong>Beba Água</strong>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="content">
+                <div class="resumo">
 
-  <div class="selection_field">
-    <form [formGroup]="form">
-      <div class="row">
-        <mat-radio-group class="radioButtonGroup" 
-                         aria-label="Selecione uma opção"
-                         formControlName="quantidade">
-          <div class="row">
-            <mat-radio-button class="radioButtomItem" value="200" name="AguaPageRadioButton" #AguaPageRadioButton><img src="../../../assets/caneca_agua.png"/><p>200ml</p></mat-radio-button>
-            <mat-radio-button class="radioButtomItem" value="1000" #AguaPageRadioButton><img src="../../../assets/copo_agua_2.png"/><p>1000ml</p></mat-radio-button>
-          </div>
-          <div class="row">
-            <mat-radio-button class="radioButtomItem" value="350" #AguaPageRadioButton><img src="../../../assets/garrafa_agua.png"/><p>350ml</p></mat-radio-button>
-            <mat-radio-button class="radioButtomItem" value="1500" #AguaPageRadioButton><img src="../../../assets/garrafa_agua_2.png"/><p>1500ml</p></mat-radio-button>
-          </div>
-          <div class="row">
-            <mat-radio-button class="radioButtomItem" value="600" #AguaPageRadioButton><img src="../../../assets/garrafa_agua_3.png"/><p>600ml</p></mat-radio-button>
-            <mat-radio-button class="radioButtomItem" value="2000" #AguaPageRadioButton><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></mat-radio-button>          
-          </div>
-        </mat-radio-group>
-      </div>
-      <div class="sendButton">
-        <button type="button" class="send_button" (click)="beberAgua()">Beber Água</button>
-      </div>
-    </form>
-  </div>
+                </div>
+                <mat-divider vertical="true"></mat-divider>
+                <div class="mapa">
 
-<!--
-  <div class="selection_field">
-    <div class="row">
-      <button (click)="acrescenta200ml()"><img src="../../../assets/caneca_agua.png"/><p>200ml</p></button>
-      <button (click)="acrescenta350ml()"><img src="../../../assets/copo_agua_2.png"/><p>350ml</p></button>
-      <button (click)="acrescenta600ml()"><img src="../../../assets/garrafa_agua.png"/><p>600ml</p></button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <button (click)="acrescenta1000ml()"><img src="../../../assets/garrafa_agua_2.png"/><p>1000ml</p></button>
-      <button (click)="acrescenta1500ml()"><img src="../../../assets/garrafa_agua_3.png"/><p>1500ml</p></button>
-      <button (click)="acrescenta2000ml()"><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></button>
-    </div>
-    <div class="sendButton">
-      <button class="send_button">Beber Água</button>
-    </div>
-  </div>
--->
-
 </div>
 
-<app-footer></app-footer>
+<!-- APP VERSION -->
+<div class="app">
+  <app-header></app-header>
+
+  <div class="app-container">
+    <div class="title">
+      Beba Água
+    </div>
+
+    <div class="progressBar_content">
+      <div class="progress-wrapper">
+        <mat-progress-bar
+          mode="determinate"
+          [value]="percentualAtingido"
+          class="progressBar">
+        </mat-progress-bar>
+
+        <span class="progress-text">
+          {{aguaConsumida}}ml / {{meta}}ml<br/>
+          <span>Meta Diária</span>
+        </span>
+      </div>
+    </div>
+    <div class="divider">
+      <mat-divider></mat-divider>
+    </div>
+
+    <div class="selection_field">
+      <form [formGroup]="form">
+        <div class="row">
+          <mat-radio-group class="radioButtonGroup" 
+                          aria-label="Selecione uma opção"
+                          formControlName="quantidade">
+            <div class="row">
+              <mat-radio-button class="radioButtomItem" value="200" name="AguaPageRadioButton" #AguaPageRadioButton><img src="../../../assets/caneca_agua.png"/><p>200ml</p></mat-radio-button>
+              <mat-radio-button class="radioButtomItem" value="1000" #AguaPageRadioButton><img src="../../../assets/copo_agua_2.png"/><p>1000ml</p></mat-radio-button>
+            </div>
+            <div class="row">
+              <mat-radio-button class="radioButtomItem" value="350" #AguaPageRadioButton><img src="../../../assets/garrafa_agua.png"/><p>350ml</p></mat-radio-button>
+              <mat-radio-button class="radioButtomItem" value="1500" #AguaPageRadioButton><img src="../../../assets/garrafa_agua_2.png"/><p>1500ml</p></mat-radio-button>
+            </div>
+            <div class="row">
+              <mat-radio-button class="radioButtomItem" value="600" #AguaPageRadioButton><img src="../../../assets/garrafa_agua_3.png"/><p>600ml</p></mat-radio-button>
+              <mat-radio-button class="radioButtomItem" value="2000" #AguaPageRadioButton><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></mat-radio-button>          
+            </div>
+          </mat-radio-group>
+        </div>
+        <div class="sendButton">
+          <button type="button" class="send_button" (click)="beberAgua()">Beber Água</button>
+        </div>
+      </form>
+    </div>
+
+  <!--
+    <div class="selection_field">
+      <div class="row">
+        <button (click)="acrescenta200ml()"><img src="../../../assets/caneca_agua.png"/><p>200ml</p></button>
+        <button (click)="acrescenta350ml()"><img src="../../../assets/copo_agua_2.png"/><p>350ml</p></button>
+        <button (click)="acrescenta600ml()"><img src="../../../assets/garrafa_agua.png"/><p>600ml</p></button>
+      </div>
+      <div class="row">
+        <button (click)="acrescenta1000ml()"><img src="../../../assets/garrafa_agua_2.png"/><p>1000ml</p></button>
+        <button (click)="acrescenta1500ml()"><img src="../../../assets/garrafa_agua_3.png"/><p>1500ml</p></button>
+        <button (click)="acrescenta2000ml()"><img src="../../../assets/jarra_agua.png"/><p>2000ml</p></button>
+      </div>
+      <div class="sendButton">
+        <button class="send_button">Beber Água</button>
+      </div>
+    </div>
+  -->
+
+  </div>
+
+  <app-footer></app-footer>
+
+</div>

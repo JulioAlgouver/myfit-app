@@ -1,71 +1,101 @@
-<app-header></app-header>
-
-<div class="app-container">
-    <div class="title">
-        Refeições
+<!-- WEB VERSION -->
+<div class="web">
+    <div class="header">
+        <app-header></app-header>
     </div>
-    <div class="form_container">
-        <form class="form_nova_refeicao" [formGroup]="form" (submit)="registrarRefeicao()">
-            <strong>Registre sua refeição:</strong>
-            
-            <div class="grid">
-                <span>O que você comeu/bebeu?</span>
-                <mat-form-field class="inputField">
-                    <mat-label>Alimento</mat-label>
-                    <input
-                        type="text"
-                        placeholder="Digite o nome do alimento"
-                        matInput
-                        formControlName="alimento"
-                        [matAutocomplete]="auto">
-                    <mat-autocomplete #auto="matAutocomplete">
-                        <mat-option 
-                            *ngFor="let alimento of filteredAlimentos | async" 
-                            [value]="alimento.descricao"
-                            (onSelectionChange)="onSelectFood(alimento)">
-                            {{alimento.descricao}}
-                        </mat-option>
-                    </mat-autocomplete>
-                    <mat-error *ngIf="form.get('alimento')?.hasError('required')">Campo Obrigatório</mat-error>
-                </mat-form-field>
-            </div>            
-
-            <div class="grid">
-                <span>Quantas gramas/ml?</span>
-                <mat-form-field class="inputField">
-                    <mat-label>Quantidade (g/ml)</mat-label>
-                    <input
-                        type="text"
-                        matInput
-                        formControlName="quantidade"
-                        required
-                    />
-                    <mat-error *ngIf="form.get('quantidade')?.hasError('required')">Campo Obrigatório</mat-error>
-                </mat-form-field>
+    <div class="container">
+        <div class="left-menu">
+            <app-left-menu></app-left-menu>
+        </div>
+        <div class="right-panel">
+            <div class="titulo">
+                <strong>Refeições</strong>
             </div>
+            <mat-divider></mat-divider>
+            <div class="content">
+                <div class="resumo">
 
-            <div class="grid">
-                <span>Período da Refeição</span>
-                <mat-form-field class="inputField">
-                    <mat-label>Período</mat-label>
-                    <mat-select formControlName="tipo_refeicao">
-                        <mat-option [value]="'Café da Manhã'">Café da Manhã</mat-option>
-                        <mat-option [value]="'Almoço'">Almoço</mat-option>
-                        <mat-option [value]="'Lanche'">Lanche</mat-option>
-                        <mat-option [value]="'Café da Tarde'">Café da Tarde</mat-option>
-                        <mat-option [value]="'Jantar'">Jantar</mat-option>
-                        <mat-option [value]="'Ceia'">Ceia</mat-option>
-                    </mat-select>
-                    <mat-error *ngIf="form.get('tipo_refeicao')?.hasError('required')">Campo Obrigatório</mat-error>
-                </mat-form-field>
+                </div>
+                <mat-divider vertical="true"></mat-divider>
+                <div class="mapa">
+
+                </div>
             </div>
-            <button type="submit" class="send_button">Adicionar</button>
-        </form>
-    </div>
-    <mat-divider></mat-divider>
-    <div class="mapa">
-        <button class="send_button"><a routerLink="/mapa-refeicoes">Mapa de Refeições</a></button>
+        </div>
     </div>
 </div>
 
-<app-footer></app-footer>
+<!-- APP VERSION -->
+<div class="app">
+    <app-header></app-header>
+
+    <div class="app-container">
+        <div class="title">
+            Refeições
+        </div>
+        <div class="form_container">
+            <form class="form_nova_refeicao" [formGroup]="form" (submit)="registrarRefeicao()">
+                <strong>Registre sua refeição:</strong>
+                
+                <div class="grid">
+                    <span>O que você comeu/bebeu?</span>
+                    <mat-form-field class="inputField">
+                        <mat-label>Alimento</mat-label>
+                        <input
+                            type="text"
+                            placeholder="Digite o nome do alimento"
+                            matInput
+                            formControlName="alimento"
+                            [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option 
+                                *ngFor="let alimento of filteredAlimentos | async" 
+                                [value]="alimento.descricao"
+                                (onSelectionChange)="onSelectFood(alimento)">
+                                {{alimento.descricao}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <mat-error *ngIf="form.get('alimento')?.hasError('required')">Campo Obrigatório</mat-error>
+                    </mat-form-field>
+                </div>            
+
+                <div class="grid">
+                    <span>Quantas gramas/ml?</span>
+                    <mat-form-field class="inputField">
+                        <mat-label>Quantidade (g/ml)</mat-label>
+                        <input
+                            type="text"
+                            matInput
+                            formControlName="quantidade"
+                            required
+                        />
+                        <mat-error *ngIf="form.get('quantidade')?.hasError('required')">Campo Obrigatório</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="grid">
+                    <span>Período da Refeição</span>
+                    <mat-form-field class="inputField">
+                        <mat-label>Período</mat-label>
+                        <mat-select formControlName="tipo_refeicao">
+                            <mat-option [value]="'Café da Manhã'">Café da Manhã</mat-option>
+                            <mat-option [value]="'Almoço'">Almoço</mat-option>
+                            <mat-option [value]="'Lanche'">Lanche</mat-option>
+                            <mat-option [value]="'Café da Tarde'">Café da Tarde</mat-option>
+                            <mat-option [value]="'Jantar'">Jantar</mat-option>
+                            <mat-option [value]="'Ceia'">Ceia</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('tipo_refeicao')?.hasError('required')">Campo Obrigatório</mat-error>
+                    </mat-form-field>
+                </div>
+                <button type="submit" class="send_button">Adicionar</button>
+            </form>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="mapa">
+            <button class="send_button"><a routerLink="/mapa-refeicoes">Mapa de Refeições</a></button>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+</div>

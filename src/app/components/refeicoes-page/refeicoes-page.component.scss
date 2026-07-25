@@ -1,44 +1,131 @@
-.form_nova_refeicao{
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    padding: 4vw;
+//WEB VERSION
+    .web{
+        display: block;
+        
+        .header{
+            width: 100vw;
+            height: 10vh;
+            background-color: #3366637d;
+        }
 
-    strong{
-        width: 100%;
-        font-size: 5vw;
-        font-weight: 500;
-        text-align: left;
-        margin-bottom: 5vw;
+        .container{
+            width: 100vw;
+            height: 90vh;
+            display: flex;
+            position: relative;
+
+            .left-menu{
+                width: 15vw;
+                height: 90vh;
+                background-color: #122525;
+                
+                li{
+                    font-size: 2vw;
+                    color: whitesmoke;
+                    padding: 1.5vw;
+                }
+
+                li:hover{
+                    cursor: pointer;
+                    background-color: #476c6c;
+                }
+            }
+
+            .right-panel{
+                width: 85vw;
+                height: 5vw;
+
+                .titulo{
+                    width: 85vw;
+                    height: 5vw;
+                    position: relative;
+                    align-content: center;
+
+                    strong{
+                        padding-left: 2vw;
+                        font-size: 2vw;
+                        width: 85vw;
+                    }
+                }
+
+                .content{
+                    width: 85vw;
+                    height: 75vh;
+                    display: flex;
+                    flex-direction: row;
+                    padding-top: 1vw;
+
+                    .resumo{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+
+                    .mapa{
+                        width: 42.5vw;
+                        height: 75vh;
+                    }
+                }
+            }
+        }
     }
 
-    .grid{
-        margin-bottom: 2vw;
+    .app{
+        display: none;
+    }
 
-        span{
-            display: inline-flex;
-            margin-bottom: 2vw;
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+        
+        .form_nova_refeicao{
+            width: 100vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            padding: 4vw;
+        
+            strong{
+                width: 100%;
+                font-size: 5vw;
+                font-weight: 500;
+                text-align: left;
+                margin-bottom: 5vw;
+            }
+        
+            .grid{
+                margin-bottom: 2vw;
+        
+                span{
+                    display: inline-flex;
+                    margin-bottom: 2vw;
+                }
+                
+                .inputField{
+                    width: 95%;
+                }
+        
+            }
         }
         
-        .inputField{
-            width: 95%;
+        .mapa{
+            width: 100vw;
+            height: 8vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            a{
+                color: white;
+            }
         }
-
-    }
-}
-
-.mapa{
-    width: 100vw;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    a{
-        color: white;
     }
 }
