@@ -13,12 +13,20 @@
             </div>
             <mat-divider></mat-divider>
             <div class="content">
-                <div class="resumo">
-
+                <div class="user-info-field">
+                    <p><strong>Nome:</strong> <span>{{usuario?.nome}}</span></p>
+                    <p><strong>E-mail:</strong> <span>{{usuario?.email}}</span></p>
+                    <p><strong>CPF:</strong> <span>{{usuario?.cpf}}</span></p>
+                    <p><strong>Telefone:</strong> <span>{{usuario?.telefone}}</span></p>
+                    <p><strong>Data Nasc:</strong> <span>{{usuario?.data_nascimento | date:'dd/MM/yyyy':'':'pt-br'}}</span></p>
+                    <p><strong>Sexo:</strong> <span>{{usuario?.sexo | sexoLabel }}</span></p>
                 </div>
                 <mat-divider vertical="true"></mat-divider>
-                <div class="mapa">
-
+                <div class="security-field">
+                    <strong>Segurança</strong>
+                    <img src="../../../assets/security.png"/>
+                    <br/>
+                    <button mat-button (click)="showPasswordScreen()">Alterar Senha</button>
                 </div>
             </div>
         </div>

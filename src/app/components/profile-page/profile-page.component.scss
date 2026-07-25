@@ -55,14 +55,64 @@
                     flex-direction: row;
                     padding-top: 1vw;
 
-                    .resumo{
-                        width: 42.5vw;
+                    .user-info-field{
+                        width: 45vw;
                         height: 75vh;
+                        padding-top: 1vw;
+                        padding-left: 3vw;
+
+                        p{
+                            display: flex;
+                            justify-content: center;
+                            align-content: center;
+                            align-items: center;
+                
+                            strong{
+                                width: 25vw;
+                                font-weight: 600;
+                            }
+                
+                            span{
+                                width: 60vw;
+                            }
+                        }
                     }
 
-                    .mapa{
-                        width: 42.5vw;
-                        height: 75vh;
+                    .security-field{
+                        display: block;
+
+                        strong{
+                            position: relative;
+                            bottom: 3vw;
+                            left: 2vw;
+                            font-size: 2vw;
+                            font-weight: 500;
+                        }
+                
+                        img{
+                            width: 6vw;
+                            height: auto;
+                            position: relative;
+                            justify-content: right;
+                            opacity: 40%;
+                            left: 20vw;
+                        }
+                
+                        button{
+                            width: 25vw;
+                            height: 4vw;
+                            margin-top: 3vw;
+                            left: 7vw;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            align-content: center;
+                            justify-self: center;
+                
+                            border-radius: 1vw;
+                            background-color: #122525;
+                            color: whitesmoke;
+                        }
                     }
                 }
             }
@@ -129,7 +179,8 @@
         
                 button{
                     width: 40vw;
-                    height: 10vw;
+                    height: 8vw;
+                    border-radius: 2vw;
         
                     display: flex;
                     justify-content: center;
@@ -137,7 +188,6 @@
                     align-content: center;
                     justify-self: center;
         
-                    border-radius: 6vw;
                     background-color: #122525;
                     color: whitesmoke;
                 }
