@@ -1,124 +1,263 @@
-.app-container{
-    overflow-y: scroll;
-
-    .chart-area{
-        width: 100vw;
-        height: 30vh;
-        padding: 5vw;
-        margin-bottom: 5vw;
-    
-        .chart{
-            display: flex;
-            position: relative;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-            margin-top: 5vw;
-            width: 85vw;
-            height: 27vh;
+//WEB VERSION
+    .web{
+        overflow: hidden;
+        display: block;
+        
+        .app-container{
+            overflow: hidden;
+            .chart-area{
+                width: 50vw;
+                height: 30vh;
+                padding: 2vw;
+                margin-bottom: 5vw;
             
-            .chart-object{
-                position: relative;
-                justify-content: center;
-                display: flex;
-                width: 60%;
-                height: 90%;
-                border-radius: 100%;
-                box-shadow: -0 0.5vw 5vw rgba(104, 104, 104, 0.666);
-            }
-        }
-    }
-
-    .label-caloria-consumida{
-        width: 100vw;
-        height: auto;
-        text-align: center;
-        padding-top: 10vw;
-        margin-bottom: 5vw;
-
-        span{
-            font-size: 5vw;
-        }
-    }
-    
-    .legenda{
-        display: flex;
-        width: 100vw;
-        height: 30vh;
-        padding: 5vw;
-    
-        .descricao{
-            display: flex;
-            flex-direction: column;
-            width: 60vw;
-            height: 25vh;
-            text-align: left;
-            font-size: 3.5vw;
-    
-            span{
-                position: relative;
-                padding-left: 15vw;
-                font-weight: 400;
-            }
-    
-            .item{
-                .item-icon{
+                .chart{
                     display: flex;
                     position: relative;
-                    width: 12vw;
-                    height: 3vh;
-                    border-radius: 5vw;
-                    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.309);
-                    bottom: 5.5vw;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                    margin-top: 2vw;
+                    width: 25em;
+                    height: 15em;
+                    
+                    .chart-object{
+                        position: relative;
+                        justify-content: center;
+                        display: flex;
+                        width: 60%;
+                        height: 90%;
+                        border-radius: 100%;
+                        box-shadow: -0 0.5vw 5vw rgba(104, 104, 104, 0.666);
+                    }
+                }
+            }
+        
+            .label-caloria-consumida{
+                width: 25vw;
+                height: auto;
+                text-align: center;
+                padding-top: 3vw;
+                margin-bottom: 2vw;
+        
+                span{
+                    font-size: 1.5vw;
+                }
+            }
+            
+            .legenda{
+                display: flex;
+                width: 45vw;
+                height: 30vh;
+                padding: 5vw;
+            
+                .descricao{
+                    display: flex;
+                    position: relative;
+                    flex-direction: column;
+                    width: 60vw;
+                    height: 10vh;
+                    text-align: left;
+                    font-size: 1vw;
+            
+                    span{
+                        top: -4.5vw;
+                        position: relative;
+                        padding-left: 6vw;
+                        font-weight: 400;
+                    }
+            
+                    .item{
+                        .item-icon{
+                            display: flex;
+                            position: relative;
+                            width: 5vw;
+                            height: 1vh;
+                            border-radius: 5vw;
+                            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.309);
+                            bottom: 5.5vw;
+                        }
+                    }
+                }
+            
+                .valor_em_g{
+                    position: relative;
+                    flex-direction: column;
+                    display: flex;
+                    top: -4vw;
+                    line-height: 1.8vw; 
+                    width: 14vw;
+                    height: 15vh;
+                    text-align: center;
+                    font-size: 1vw;
+                    bottom: 2vw;
+                    
+                    span{
+                        position: relative;
+                        font-weight: 400;
+                        bottom: 0.5vw;
+                    }
+                }
+            
+                .valor_em_perc{
+                    position: relative;
+                    flex-direction: column;
+                    display: flex;
+                    width: 14vw;
+                    height: 25vh;
+                    text-align: center;
+                    font-size: 1vw;
+                    top: -4vw;
+                    line-height: 1.8vw; 
+                    bottom: 2vw; 
+            
+                    span{
+                        position: relative;
+                        font-weight: 400;
+                        bottom: 0.5vw;
+                    }
                 }
             }
         }
-    
-        .valor_em_g{
-            position: relative;
-            flex-direction: column;
-            display: flex;
-            width: 14vw;
-            height: 25vh;
-            text-align: center;
-            font-size: 3.5vw;
-            line-height: 11.5vw; 
-            bottom: 2vw;
-            
-            span{
-                position: relative;
-                font-weight: 400;
-                bottom: 0.5vw;
-            }
-        }
-    
-        .valor_em_perc{
-            position: relative;
-            flex-direction: column;
-            display: flex;
-            width: 14vw;
-            height: 25vh;
-            text-align: center;
-            font-size: 3.5vw;
-            line-height: 11.5vw; 
-            bottom: 2vw; 
-    
-            span{
-                position: relative;
-                font-weight: 400;
-                bottom: 0.5vw;
-            }
-        }
     }
-    
-    .btn-area{
-        width: 100vw;
-        margin-bottom: 10vw;
-    
-        button{
-            position: relative;
-            top: 4vw;
-            left: 25vw;
+
+    .app{
+        display: none;
+    }
+
+//MOBILE VERSION
+@media screen and (max-width:400px) {
+
+    .web{
+        display: none;
+    }
+
+    .app{
+        display: block;
+        
+        .app-container{
+            overflow-y: scroll;
+        
+            .chart-area{
+                width: 100vw;
+                height: 30vh;
+                padding: 5vw;
+                margin-bottom: 5vw;
+            
+                .chart{
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: center;
+                    margin-top: 5vw;
+                    width: 85vw;
+                    height: 27vh;
+                    
+                    .chart-object{
+                        position: relative;
+                        justify-content: center;
+                        display: flex;
+                        width: 60%;
+                        height: 90%;
+                        border-radius: 100%;
+                        box-shadow: -0 0.5vw 5vw rgba(104, 104, 104, 0.666);
+                    }
+                }
+            }
+        
+            .label-caloria-consumida{
+                width: 100vw;
+                height: auto;
+                text-align: center;
+                padding-top: 10vw;
+                margin-bottom: 5vw;
+        
+                span{
+                    font-size: 5vw;
+                }
+            }
+            
+            .legenda{
+                display: flex;
+                width: 100vw;
+                height: 30vh;
+                padding: 5vw;
+            
+                .descricao{
+                    display: flex;
+                    flex-direction: column;
+                    width: 60vw;
+                    height: 25vh;
+                    text-align: left;
+                    font-size: 3.5vw;
+            
+                    span{
+                        position: relative;
+                        padding-left: 15vw;
+                        font-weight: 400;
+                    }
+            
+                    .item{
+                        .item-icon{
+                            display: flex;
+                            position: relative;
+                            width: 12vw;
+                            height: 3vh;
+                            border-radius: 5vw;
+                            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.309);
+                            bottom: 5.5vw;
+                        }
+                    }
+                }
+            
+                .valor_em_g{
+                    position: relative;
+                    flex-direction: column;
+                    display: flex;
+                    width: 14vw;
+                    height: 25vh;
+                    text-align: center;
+                    font-size: 3.5vw;
+                    line-height: 11.5vw; 
+                    bottom: 2vw;
+                    
+                    span{
+                        position: relative;
+                        font-weight: 400;
+                        bottom: 0.5vw;
+                    }
+                }
+            
+                .valor_em_perc{
+                    position: relative;
+                    flex-direction: column;
+                    display: flex;
+                    width: 14vw;
+                    height: 25vh;
+                    text-align: center;
+                    font-size: 3.5vw;
+                    line-height: 11.5vw; 
+                    bottom: 2vw; 
+            
+                    span{
+                        position: relative;
+                        font-weight: 400;
+                        bottom: 0.5vw;
+                    }
+                }
+            }
+            
+            .btn-area{
+                width: 100vw;
+                margin-bottom: 10vw;
+            
+                button{
+                    position: relative;
+                    top: 4vw;
+                    left: 25vw;
+                }
+            }
         }
     }
 }

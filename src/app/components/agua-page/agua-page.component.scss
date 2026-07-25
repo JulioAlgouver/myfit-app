@@ -55,14 +55,88 @@
                     flex-direction: row;
                     padding-top: 1vw;
 
-                    .resumo{
-                        width: 42.5vw;
-                        height: 75vh;
+                    .progressBar_content{
+                        width: 60vw;
+                        left: 20vh;
+                        position: relative;
+                        display: flex;
                     }
 
-                    .mapa{
-                        width: 42.5vw;
-                        height: 75vh;
+                    .selection_field{
+                        width: 60vw;
+                        height: auto;
+                        padding-top: 7vw;
+                        right: 50vw;
+                
+                        position: relative;
+                        display: grid;
+                        justify-content: center;
+                        align-content: center;
+                        align-items: center;
+                
+                        .row{
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            align-content: center;
+                
+                
+                            button{
+                                background: none;
+                                width: 8vw;
+                                height: 5vw;
+                                margin: 1vw;
+                            }
+                
+                            p{
+                                padding-top: 3vw;
+                            }
+                
+                            img{
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                
+                        .sendButton{
+                            position: relative;
+                            display: flex;
+                            margin-top: 5vh;
+                            left: 5vw;
+
+                            button{
+                                height: 3vw;
+                                border-radius: 2vh;
+                            }
+
+                            button:hover{
+                                cursor: pointer;
+                            }
+                        }
+                
+                        .radioButtonGroup{
+                            display: flex;
+                            width: 30vw;
+                            height: auto;
+                
+                            .radioButtomItem{
+                                display: flex;
+                                background: none;
+                                width: 70%;
+                                height: 8w;
+                                margin: 0.5vw;
+                                justify-content: center;
+                
+                                p{
+                                    padding-top: 5vw;
+                                }
+                
+                                img{
+                                    width: 6vw;
+                                    height: auto;
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -1,61 +1,117 @@
-<app-header></app-header>
+<div class="web">
+    <div class="app-container">
 
-<div class="app-container">
-    <div class="title">
-        <span>Mapa Nutricional</span>
-    </div>
-    <div class="chart-area">
-        <strong>Como está sua refeição hoje?</strong>
-        
-        <div class="chart">
-            <div class="chart-object">
-                <app-chart-detalhe-refeicoes></app-chart-detalhe-refeicoes>
+        <div class="chart-area">
+                <strong>Como está sua refeição hoje?</strong>
+                
+                <div class="chart">
+                    <div class="chart-object">
+                        <app-chart-detalhe-refeicoes></app-chart-detalhe-refeicoes>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <div class="label-caloria-consumida">
-        <span><b>Caloria Consumida: {{caloriaConsumuda}} kcal</b></span>
-        <br/>
-    </div>
-
-    <mat-divider></mat-divider>
     
-    <div class="legenda">
-        <div class="descricao">
-            <div class="item">
-                <span>Proteina Consumida:</span><div class="item-icon" style="background-color: #45eae9;"></div> 
-                <span>Carboidrato Consumido:</span><div class="item-icon" style="background-color: #336666;"></div>
-                <span>Gordura Consumida:</span><div class="item-icon" style="background-color: #55b5e5;"></div>
-                <span>Fibra Consumida:</span><div class="item-icon" style="background-color: #d3f6f6;"></div> 
-                <span>Sodio Consumido:</span><div class="item-icon" style="background-color: #b0c3c3;"></div>
+            <div class="label-caloria-consumida">
+                <span><b>Caloria Consumida: {{caloriaConsumuda}} kcal</b></span>
+                <br/>
             </div>
-        </div>
-
-        <mat-divider vertical="true"></mat-divider>
-
-        <div class="valor_em_g">
-            <span> {{proteinaConsumida}} g</span>
-            <span> {{carboidratoConsumido}} g</span>
-            <span> {{gorduraConsumida}} g</span>
-            <span> {{fibraConsumida}} g</span>
-            <span> {{sodioConsumido}} g</span>
-        </div>
-
-        <mat-divider vertical="true"></mat-divider>
-
-        <div class="valor_em_perc">
-            <span>{{proteinaEmPercent}} %</span>
-            <span>{{carboidratoEmPercent}} %</span>
-            <span>{{gorduraEmPercent}} %</span>
-            <span>{{fibraEmPercent}} %</span>
-            <span>{{sodioEmPercent}} %</span>
-        </div>
-    </div>
-
-    <div class="btn-area">
-        <button routerLink="/refeicoes" class="cancel_button">Voltar</button>
+    
+            <mat-divider></mat-divider>
+            
+            <div class="legenda">
+                <div class="descricao">
+                    <div class="item">
+                        <span>Proteina Consumida:</span><div class="item-icon" style="background-color: #45eae9;"></div> 
+                        <span>Carboidrato Consumido:</span><div class="item-icon" style="background-color: #336666;"></div>
+                        <span>Gordura Consumida:</span><div class="item-icon" style="background-color: #55b5e5;"></div>
+                        <span>Fibra Consumida:</span><div class="item-icon" style="background-color: #d3f6f6;"></div> 
+                        <span>Sodio Consumido:</span><div class="item-icon" style="background-color: #b0c3c3;"></div>
+                    </div>
+                </div>
+    
+                <mat-divider vertical="true"></mat-divider>
+    
+                <div class="valor_em_g">
+                    <span> {{proteinaConsumida}} g</span>
+                    <span> {{carboidratoConsumido}} g</span>
+                    <span> {{gorduraConsumida}} g</span>
+                    <span> {{fibraConsumida}} g</span>
+                    <span> {{sodioConsumido}} g</span>
+                </div>
+    
+                <mat-divider vertical="true"></mat-divider>
+    
+                <div class="valor_em_perc">
+                    <span>{{proteinaEmPercent}} %</span>
+                    <span>{{carboidratoEmPercent}} %</span>
+                    <span>{{gorduraEmPercent}} %</span>
+                    <span>{{fibraEmPercent}} %</span>
+                    <span>{{sodioEmPercent}} %</span>
+                </div>
+            </div>
     </div>
 </div>
 
-<app-clean-footer></app-clean-footer>
+<div class="app">
+    <app-header></app-header>
+
+    <div class="app-container">
+        <div class="title">
+            <span>Mapa Nutricional</span>
+        </div>
+        <div class="chart-area">
+            <strong>Como está sua refeição hoje?</strong>
+            
+            <div class="chart">
+                <div class="chart-object">
+                    <app-chart-detalhe-refeicoes></app-chart-detalhe-refeicoes>
+                </div>
+            </div>
+        </div>
+
+        <div class="label-caloria-consumida">
+            <span><b>Caloria Consumida: {{caloriaConsumuda}} kcal</b></span>
+            <br/>
+        </div>
+
+        <mat-divider></mat-divider>
+        
+        <div class="legenda">
+            <div class="descricao">
+                <div class="item">
+                    <span>Proteina Consumida:</span><div class="item-icon" style="background-color: #45eae9;"></div> 
+                    <span>Carboidrato Consumido:</span><div class="item-icon" style="background-color: #336666;"></div>
+                    <span>Gordura Consumida:</span><div class="item-icon" style="background-color: #55b5e5;"></div>
+                    <span>Fibra Consumida:</span><div class="item-icon" style="background-color: #d3f6f6;"></div> 
+                    <span>Sodio Consumido:</span><div class="item-icon" style="background-color: #b0c3c3;"></div>
+                </div>
+            </div>
+
+            <mat-divider vertical="true"></mat-divider>
+
+            <div class="valor_em_g">
+                <span> {{proteinaConsumida}} g</span>
+                <span> {{carboidratoConsumido}} g</span>
+                <span> {{gorduraConsumida}} g</span>
+                <span> {{fibraConsumida}} g</span>
+                <span> {{sodioConsumido}} g</span>
+            </div>
+
+            <mat-divider vertical="true"></mat-divider>
+
+            <div class="valor_em_perc">
+                <span>{{proteinaEmPercent}} %</span>
+                <span>{{carboidratoEmPercent}} %</span>
+                <span>{{gorduraEmPercent}} %</span>
+                <span>{{fibraEmPercent}} %</span>
+                <span>{{sodioEmPercent}} %</span>
+            </div>
+        </div>
+
+        <div class="btn-area">
+            <button routerLink="/refeicoes" class="cancel_button">Voltar</button>
+        </div>
+    </div>
+
+    <app-clean-footer></app-clean-footer>
+</div>
