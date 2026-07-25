@@ -1,6 +1,7 @@
 //WEB VERSION
     .web{
         display: block;
+        overflow: hidden;
         
         .header{
             width: 100vw;
@@ -48,22 +49,44 @@
                     }
                 }
 
-                .content{
-                    width: 85vw;
-                    height: 75vh;
+                .form_nova_refeicao{
+                    width: 60vw;
+                    height: auto;
                     display: flex;
-                    flex-direction: row;
-                    padding-top: 1vw;
+                    flex-direction: column;
 
-                    .resumo{
-                        width: 42.5vw;
-                        height: 75vh;
+                    padding-top: 2vw;
+                    padding-left: 4vw;
+                
+                    strong{
+                        width: 100%;
+                        font-size: 1.5vw;
+                        font-weight: 300;
+                        text-align: left;
+                        margin-bottom: 2vw;
                     }
+                
+                    .grid{
+                
+                        span{
+                            display: inline-flex;
+                            margin-bottom: 1vw;
+                        }
+                        
+                        .inputField{
+                            width: 95%;
+                        }
+                
+                    }
+                }
 
-                    .mapa{
-                        width: 42.5vw;
-                        height: 75vh;
-                    }
+                button{
+                    width: 40vw;
+                    height: 6vh;
+                    border-radius: 1vw;
+                    margin-left: 20vw;
+                    margin-top: 1vw;
+                    cursor: pointer;
                 }
             }
         }

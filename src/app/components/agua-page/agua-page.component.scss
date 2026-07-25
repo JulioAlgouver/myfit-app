@@ -60,6 +60,10 @@
                         left: 20vh;
                         position: relative;
                         display: flex;
+                    
+                        .progress-text{
+                            margin-top: 1vw;
+                        }
                     }
 
                     .selection_field{

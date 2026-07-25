@@ -1,20 +1,47 @@
-<div class="container">
-    <div class="title">
-        Atualizar Meta
-    </div>
-    <mat-divider></mat-divider>
-    <div class="form-container">
-        <form class="form" [formGroup]="form">
-            <mat-form-field>
-                <input 
-                    type="text" 
-                    matInput
-                    formControlName="meta"
-                    required
-                />
-                <mat-error *ngIf="form">Campo Obrigatório</mat-error>
-            </mat-form-field>
-            <button class="confirm_button" (click)="atualizaMeta()">Salvar</button>
-        </form>
-    </div>
-</div>
+<!-- WEB -->
+<div class="web">
+     <div class="container">
+         <div class="title">
+             Atualizar Meta
+         </div>
+         <mat-divider></mat-divider>
+         <div class="form-container">
+             <form class="form" [formGroup]="form">
+                 <mat-form-field>
+                     <input 
+                         type="text" 
+                         matInput
+                         formControlName="meta"
+                         required
+                     />
+                     <mat-error *ngIf="form">Campo Obrigatório</mat-error>
+                 </mat-form-field>
+                 <button class="confirm_button" (click)="atualizaMeta()">Salvar</button>
+             </form>
+         </div>
+     </div>
+ </div>
+
+<!-- APP -->
+ <div class="app">
+     <div class="container">
+         <div class="title">
+             Atualizar Meta
+         </div>
+         <mat-divider></mat-divider>
+         <div class="form-container">
+             <form class="form" [formGroup]="form">
+                 <mat-form-field>
+                     <input 
+                         type="text" 
+                         matInput
+                         formControlName="meta"
+                         required
+                     />
+                     <mat-error *ngIf="form">Campo Obrigatório</mat-error>
+                 </mat-form-field>
+                 <button class="confirm_button" (click)="atualizaMeta()">Salvar</button>
+             </form>
+         </div>
+     </div>
+ </div>
