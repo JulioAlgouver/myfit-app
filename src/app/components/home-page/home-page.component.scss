@@ -48,8 +48,58 @@
                     }
                 }
 
+                .grid-content{
+                    width: 40vw;
+                    height: auto;
+                
+                    display: flex;
+                    flex-direction: column;
+                
+                    padding-left: 4vw;
+                
+                    strong{
+                        font-size: 2vw;
+                        margin-top: 2vw;
+                        margin-bottom: 2vw;
+                    }
+                
+                    span{
+                        width: 35vw;
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 2vh;
+                        line-height: 3vh;
+                
+                        b{
+                            width: 25vw;
+                            margin: 0;
+                        }
+                
+                        button{
+                            display: flex;
+                            position: relative;
+                            width: 3vh;
+                            height: 3vh;
+                            margin-left: 2vw;
+                            cursor: pointer;
+                            background: none;
+                
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                
+                        span{
+                            width: auto;
+                            font-weight: 800;
+                            color: rgb(50, 81, 71);
+                        }
+                    }
+                }
+
                 .content{
-                    width: 85vw;
+                    width: 40vw;
                     height: 75vh;
                     display: flex;
                     flex-direction: row;
